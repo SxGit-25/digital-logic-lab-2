@@ -20,12 +20,28 @@ module alarm_ctrl #(
     output reg  [15:0] leds,
     output wire        buzzer
 );
+    // Elaboration-time ceil(log2(count)), with one bit for count == 1.
+    // Verilog-2001 constant function for Quartus II 9.1 compatibility.
+    function integer count_width;
+        input integer count;
+        integer remaining;
+        begin
+            remaining = count - 1;
+            count_width = 0;
+            while (remaining > 0) begin
+                count_width = count_width + 1;
+                remaining = remaining >> 1;
+            end
+            if (count_width < 1) count_width = 1;
+        end
+    endfunction
+
     localparam [1:0] SYS_SELF = 2'd1;
     localparam [1:0] SYS_RUN  = 2'd3;
 
-    integer carrier_us;
-    integer rhythm_ms;
-    integer rhythm_period_ms;
+    reg [count_width(CARRIER_HALF_US)-1:0] carrier_us;
+    reg [9:0] rhythm_ms;
+    reg [9:0] rhythm_period_ms;
     reg carrier;
     reg sound_gate;
 
@@ -66,7 +82,7 @@ module alarm_ctrl #(
                 carrier_us <= 0;
                 carrier    <= ~carrier;
             end else begin
-                carrier_us <= carrier_us + 1;
+                carrier_us <= carrier_us + 1'b1;
             end
         end
     end
@@ -78,10 +94,11 @@ module alarm_ctrl #(
             sound_gate <= 1'b0;
         end else if (tick_ms) begin
             sound_gate <= (rhythm_ms < 50);
-            if (rhythm_ms == rhythm_period_ms - 1)
+            // Also wrap when the selected period shrinks below the current count.
+            if (rhythm_ms >= rhythm_period_ms - 1)
                 rhythm_ms <= 0;
             else
-                rhythm_ms <= rhythm_ms + 1;
+                rhythm_ms <= rhythm_ms + 1'b1;
         end
     end
 endmodule

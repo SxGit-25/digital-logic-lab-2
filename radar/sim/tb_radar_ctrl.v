@@ -43,6 +43,38 @@ module tb_radar_ctrl;
         .hist_seen(hist_seen)
     );
 
+`ifdef BASELINE_COMPARE
+    wire [1:0] old_state;
+    wire old_servo_enable, old_measure_start, old_measure_cancel, old_current_valid;
+    wire [2:0] old_angle_idx, old_sample_idx, old_current_level;
+    wire [11:0] old_current_distance;
+    wire [2:0] old_h0, old_h1, old_h2, old_h3, old_h4;
+    wire [4:0] old_hist_valid, old_hist_seen;
+    radar_ctrl_baseline #(
+        .SELF_TEST_MS(2), .STANDBY_MS(2), .SLOT_MS(8), .SETTLE_MS(1)
+    ) baseline (
+        .clk(clk), .rst(rst), .tick_ms(1'b1), .system_on(system_on),
+        .angle_applied(angle_applied), .measure_busy(measure_busy),
+        .measure_done(measure_done), .distance_mm(distance_mm),
+        .distance_valid(distance_valid), .system_state(old_state),
+        .servo_enable(old_servo_enable), .angle_idx(old_angle_idx),
+        .measure_start(old_measure_start), .measure_cancel(old_measure_cancel),
+        .sample_idx(old_sample_idx), .current_distance(old_current_distance),
+        .current_valid(old_current_valid), .current_level(old_current_level),
+        .hist_level0(old_h0), .hist_level1(old_h1), .hist_level2(old_h2),
+        .hist_level3(old_h3), .hist_level4(old_h4), .hist_valid(old_hist_valid),
+        .hist_seen(old_hist_seen)
+    );
+    always @(posedge clk) begin
+      #1;
+      if ({state,servo_enable,angle_idx,measure_start,measure_cancel,sample_idx,
+           current_distance,current_valid,current_level,h0,h1,h2,h3,h4,hist_valid,hist_seen} !==
+          {old_state,old_servo_enable,old_angle_idx,old_measure_start,old_measure_cancel,old_sample_idx,
+           old_current_distance,old_current_valid,old_current_level,old_h0,old_h1,old_h2,old_h3,old_h4,old_hist_valid,old_hist_seen})
+        $fatal(1,"radar_ctrl baseline output mismatch at %0t",$time);
+    end
+`endif
+
     always @(posedge clk) begin
         angle_applied <= 1'b0;
         measure_done  <= 1'b0;

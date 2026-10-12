@@ -9,11 +9,27 @@ module timebase #(
     output reg  tick_ms,
     output reg  blink_2hz
 );
+    // Elaboration-time ceil(log2(count)), with one bit for count == 1.
+    // Verilog-2001 constant function for Quartus II 9.1 compatibility.
+    function integer count_width;
+        input integer count;
+        integer remaining;
+        begin
+            remaining = count - 1;
+            count_width = 0;
+            while (remaining > 0) begin
+                count_width = count_width + 1;
+                remaining = remaining >> 1;
+            end
+            if (count_width < 1) count_width = 1;
+        end
+    endfunction
+
     localparam integer CYCLES_PER_US = CLK_HZ / 1_000_000;
 
-    integer us_div;
-    integer us_in_ms;
-    integer ms_in_half_blink;
+    reg [count_width(CYCLES_PER_US)-1:0] us_div;
+    reg [9:0] us_in_ms;
+    reg [7:0] ms_in_half_blink;
 
     initial begin
         if ((CLK_HZ < 1_000_000) || ((CLK_HZ % 1_000_000) != 0)) begin
@@ -45,13 +61,13 @@ module timebase #(
                         ms_in_half_blink <= 0;
                         blink_2hz        <= ~blink_2hz;
                     end else begin
-                        ms_in_half_blink <= ms_in_half_blink + 1;
+                        ms_in_half_blink <= ms_in_half_blink + 1'b1;
                     end
                 end else begin
-                    us_in_ms <= us_in_ms + 1;
+                    us_in_ms <= us_in_ms + 1'b1;
                 end
             end else begin
-                us_div <= us_div + 1;
+                us_div <= us_div + 1'b1;
             end
         end
     end

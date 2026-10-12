@@ -32,6 +32,22 @@ module radar_ctrl #(
     output reg  [4:0]  hist_valid,
     output reg  [4:0]  hist_seen
 );
+    // Elaboration-time ceil(log2(count)), with one bit for count == 1.
+    // Verilog-2001 constant function for Quartus II 9.1 compatibility.
+    function integer count_width;
+        input integer count;
+        integer remaining;
+        begin
+            remaining = count - 1;
+            count_width = 0;
+            while (remaining > 0) begin
+                count_width = count_width + 1;
+                remaining = remaining >> 1;
+            end
+            if (count_width < 1) count_width = 1;
+        end
+    endfunction
+
     localparam [1:0] SYS_OFF     = 2'd0;
     localparam [1:0] SYS_SELF    = 2'd1;
     localparam [1:0] SYS_STANDBY = 2'd2;
@@ -42,9 +58,10 @@ module radar_ctrl #(
     localparam [2:0] PH_WAIT_MEASURE  = 3'd2;
     localparam [2:0] PH_HOLD          = 3'd3;
 
-    integer state_ms;
-    integer slot_ms;
-    integer settle_ms;
+    localparam integer STATE_MS = (SELF_TEST_MS > STANDBY_MS) ? SELF_TEST_MS : STANDBY_MS;
+    reg [count_width(STATE_MS)-1:0] state_ms;
+    reg [count_width(SLOT_MS)-1:0] slot_ms;
+    reg [count_width(SETTLE_MS)-1:0] settle_ms;
     reg [2:0] phase;
     reg direction_up;
 
@@ -128,7 +145,7 @@ module radar_ctrl #(
                                 angle_idx    <= 3'd0;
                                 servo_enable <= 1'b1;
                             end else begin
-                                state_ms <= state_ms + 1;
+                                state_ms <= state_ms + 1'b1;
                             end
                         end
                     end
@@ -147,7 +164,7 @@ module radar_ctrl #(
                                 current_valid    <= 1'b0;
                                 current_level    <= 3'd0;
                             end else begin
-                                state_ms <= state_ms + 1;
+                                state_ms <= state_ms + 1'b1;
                             end
                         end
                     end
@@ -218,7 +235,7 @@ module radar_ctrl #(
                                     end
                                 end
                             end else begin
-                                slot_ms <= slot_ms + 1;
+                                slot_ms <= slot_ms + 1'b1;
                                 if (phase == PH_SETTLE) begin
                                     if (settle_ms == SETTLE_MS - 1) begin
                                         if (!measure_busy) begin
@@ -227,7 +244,7 @@ module radar_ctrl #(
                                             phase         <= PH_WAIT_MEASURE;
                                         end
                                     end else begin
-                                        settle_ms <= settle_ms + 1;
+                                        settle_ms <= settle_ms + 1'b1;
                                     end
                                 end
                             end

@@ -1,7 +1,8 @@
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM1270T144C5
 set_global_assignment -name TOP_LEVEL_ENTITY radar_top
-set_global_assignment -name POWER_UP_DONT_CARE OFF
+set_global_assignment -name ALLOW_POWER_UP_DONT_CARE OFF
+set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 set_global_assignment -name SDC_FILE radar.sdc
 
@@ -11,6 +12,7 @@ set_global_assignment -name VERILOG_FILE ../rtl/switch_filter.v
 set_global_assignment -name VERILOG_FILE ../rtl/servo_pwm.v
 set_global_assignment -name VERILOG_FILE ../rtl/ultrasonic.v
 set_global_assignment -name VERILOG_FILE ../rtl/radar_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/bin12_to_bcd.v
 set_global_assignment -name VERILOG_FILE ../rtl/display_compose.v
 set_global_assignment -name VERILOG_FILE ../rtl/seg_scan.v
 set_global_assignment -name VERILOG_FILE ../rtl/matrix_scan.v
@@ -24,14 +26,14 @@ set_location_assignment PIN_95 -to echo
 set_location_assignment PIN_51 -to servo
 set_location_assignment PIN_60 -to buzzer
 
-set_location_assignment PIN_80  -to led[0]
-set_location_assignment PIN_79  -to led[1]
-set_location_assignment PIN_78  -to led[2]
-set_location_assignment PIN_77  -to led[3]
-set_location_assignment PIN_76  -to led[4]
-set_location_assignment PIN_75  -to led[5]
-set_location_assignment PIN_74  -to led[6]
-set_location_assignment PIN_73  -to led[7]
+set_location_assignment PIN_80 -to led[0]
+set_location_assignment PIN_79 -to led[1]
+set_location_assignment PIN_78 -to led[2]
+set_location_assignment PIN_77 -to led[3]
+set_location_assignment PIN_76 -to led[4]
+set_location_assignment PIN_75 -to led[5]
+set_location_assignment PIN_74 -to led[6]
+set_location_assignment PIN_73 -to led[7]
 set_location_assignment PIN_144 -to led[8]
 set_location_assignment PIN_143 -to led[9]
 set_location_assignment PIN_142 -to led[10]
@@ -58,14 +60,14 @@ set_location_assignment PIN_70 -to cat_n[5]
 set_location_assignment PIN_30 -to cat_n[6]
 set_location_assignment PIN_31 -to cat_n[7]
 
-set_location_assignment PIN_8 -to matrix_row_n[0]
-set_location_assignment PIN_7 -to matrix_row_n[1]
-set_location_assignment PIN_6 -to matrix_row_n[2]
-set_location_assignment PIN_5 -to matrix_row_n[3]
-set_location_assignment PIN_4 -to matrix_row_n[4]
-set_location_assignment PIN_3 -to matrix_row_n[5]
-set_location_assignment PIN_2 -to matrix_row_n[6]
-set_location_assignment PIN_1 -to matrix_row_n[7]
+set_location_assignment PIN_1 -to matrix_row_n[0]
+set_location_assignment PIN_2 -to matrix_row_n[1]
+set_location_assignment PIN_3 -to matrix_row_n[2]
+set_location_assignment PIN_4 -to matrix_row_n[3]
+set_location_assignment PIN_5 -to matrix_row_n[4]
+set_location_assignment PIN_6 -to matrix_row_n[5]
+set_location_assignment PIN_7 -to matrix_row_n[6]
+set_location_assignment PIN_8 -to matrix_row_n[7]
 
 set_location_assignment PIN_22 -to matrix_col_r[0]
 set_location_assignment PIN_21 -to matrix_col_r[1]
@@ -85,4 +87,7 @@ set_location_assignment PIN_40 -to matrix_col_g[5]
 set_location_assignment PIN_39 -to matrix_col_g[6]
 set_location_assignment PIN_38 -to matrix_col_g[7]
 
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "*"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to *
+
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

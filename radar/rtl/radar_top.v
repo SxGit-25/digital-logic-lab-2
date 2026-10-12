@@ -54,6 +54,7 @@ module radar_top #(
     wire [4:0] hist_valid;
     wire [4:0] hist_seen;
     wire [31:0] digit_codes;
+    wire [15:0] distance_bcd;
     wire [2:0] matrix_row_idx;
     wire [23:0] row_colors;
     wire [6:0] seg_bus;
@@ -113,9 +114,14 @@ module radar_top #(
         .hist_seen(hist_seen)
     );
 
+    bin12_to_bcd u_bcd (
+        .clk(clk), .rst(rst), .binary(current_distance),
+        .bcd(distance_bcd)
+    );
+
     display_compose u_compose (
         .system_state(system_state), .blink_2hz(blink_2hz),
-        .angle_idx(angle_idx), .current_distance(current_distance),
+        .angle_idx(angle_idx), .distance_bcd(distance_bcd),
         .current_valid(current_valid), .hist_level0(hist_level0),
         .hist_level1(hist_level1), .hist_level2(hist_level2),
         .hist_level3(hist_level3), .hist_level4(hist_level4),

@@ -1,1 +1,5 @@
 .DS_Store
+**/sim/build/
+**/sim/tools/iverilog/
+**/constraints/db/
+**/constraints/incremental_db/

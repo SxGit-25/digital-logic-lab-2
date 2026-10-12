@@ -4,7 +4,7 @@ module display_compose (
     input  wire [1:0]  system_state,
     input  wire        blink_2hz,
     input  wire [2:0]  angle_idx,
-    input  wire [11:0] current_distance,
+    input  wire [15:0] distance_bcd,
     input  wire        current_valid,
     input  wire [2:0]  hist_level0,
     input  wire [2:0]  hist_level1,
@@ -35,7 +35,6 @@ module display_compose (
     reg [3:0] a2, a1, a0;
     reg [3:0] d3, d2, d1, d0;
     reg [2:0] c0, c1, c2, c3, c4;
-    integer remainder;
 
     function [2:0] visible_color;
         input       seen;
@@ -76,13 +75,10 @@ module display_compose (
             default: begin a2 = DIGIT_DASH; a1 = DIGIT_DASH; a0 = DIGIT_DASH; end
         endcase
 
-        remainder = current_distance;
-        d3 = remainder / 1000;
-        remainder = remainder % 1000;
-        d2 = remainder / 100;
-        remainder = remainder % 100;
-        d1 = remainder / 10;
-        d0 = remainder % 10;
+        d3 = distance_bcd[15:12];
+        d2 = distance_bcd[11:8];
+        d1 = distance_bcd[7:4];
+        d0 = distance_bcd[3:0];
 
         case (system_state)
             SYS_SELF:

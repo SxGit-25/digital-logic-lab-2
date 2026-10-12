@@ -29,6 +29,23 @@
 
 运行仿真：
 
+Windows（本机若已有便携 Icarus 可直接运行；从 GitHub 克隆后请通过 `-IverilogBin` 指定 Icarus 的 `bin` 目录）：
+
+```powershell
+.\sim\run_tests.ps1
+```
+
+Quartus II 9.1 在中文/隐藏目录下可能错误解析路径，使用以下入口在临时英文盘符下编译：
+
+```powershell
+.\verification\compile.ps1
+```
+
+最新编译报告及下载文件位于 `verification/optimized/constraints/`。
+资源优化前代码和报告保留在 `verification/baseline/`，详细对比见 `verification/资源优化与回归报告.md`。
+
+Linux / 已安装 Icarus 的 shell：
+
 ```sh
 cd radar
 ./sim/run_tests.sh

@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Sun Sep 20 17:34:51 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : continuous_scan
+Top-level Entity Name : continuous_scan_top
+Family : MAX II
+Total logic elements : 153
+Total pins : 60
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

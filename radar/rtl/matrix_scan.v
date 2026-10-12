@@ -13,8 +13,24 @@ module matrix_scan #(
     output reg  [7:0]  col_r,
     output reg  [7:0]  col_g
 );
+    // Elaboration-time ceil(log2(count)), with one bit for count == 1.
+    // Verilog-2001 constant function for Quartus II 9.1 compatibility.
+    function integer count_width;
+        input integer count;
+        integer remaining;
+        begin
+            remaining = count - 1;
+            count_width = 0;
+            while (remaining > 0) begin
+                count_width = count_width + 1;
+                remaining = remaining >> 1;
+            end
+            if (count_width < 1) count_width = 1;
+        end
+    endfunction
+
     reg [1:0] pwm_phase;
-    integer phase_us;
+    reg [count_width(PHASE_US)-1:0] phase_us;
     reg [1:0] blank_stage;
     integer i;
 
@@ -76,7 +92,7 @@ module matrix_scan #(
                 end
                 blank_stage <= 2'd1;
             end else begin
-                phase_us <= phase_us + 1;
+                phase_us <= phase_us + 1'b1;
             end
         end
     end
