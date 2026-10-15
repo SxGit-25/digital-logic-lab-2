@@ -1,0 +1,49 @@
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM1270T144C5
+set_global_assignment -name TOP_LEVEL_ENTITY radar_unified_scan
+set_global_assignment -name VERILOG_FILE radar_unified_scan.v
+set_global_assignment -name ALLOW_POWER_UP_DONT_CARE OFF
+set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER ON
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name AUTO_RESOURCE_SHARING ON
+set_global_assignment -name MUX_RESTRUCTURE ON
+set_location_assignment PIN_18 -to clk
+set_global_assignment -name SDC_FILE scan.sdc
+set_instance_assignment -name VIRTUAL_PIN ON -to rst
+set_instance_assignment -name VIRTUAL_PIN ON -to tick_us
+set_instance_assignment -name VIRTUAL_PIN ON -to tick_ms
+set_instance_assignment -name VIRTUAL_PIN ON -to enable
+set_instance_assignment -name VIRTUAL_PIN ON -to continuous_mode
+set_instance_assignment -name VIRTUAL_PIN ON -to measure_busy
+set_instance_assignment -name VIRTUAL_PIN ON -to measure_done
+set_instance_assignment -name VIRTUAL_PIN ON -to distance_mm
+set_instance_assignment -name VIRTUAL_PIN ON -to distance_valid
+set_instance_assignment -name VIRTUAL_PIN ON -to system_state
+set_instance_assignment -name VIRTUAL_PIN ON -to servo
+set_instance_assignment -name VIRTUAL_PIN ON -to servo_enable
+set_instance_assignment -name VIRTUAL_PIN ON -to angle_bcd
+set_instance_assignment -name VIRTUAL_PIN ON -to direction_up
+set_instance_assignment -name VIRTUAL_PIN ON -to measure_start
+set_instance_assignment -name VIRTUAL_PIN ON -to measure_cancel
+set_instance_assignment -name VIRTUAL_PIN ON -to sample_angle_bcd
+set_instance_assignment -name VIRTUAL_PIN ON -to sample_direction_up
+set_instance_assignment -name VIRTUAL_PIN ON -to sample_idx
+set_instance_assignment -name VIRTUAL_PIN ON -to current_distance
+set_instance_assignment -name VIRTUAL_PIN ON -to current_valid
+set_instance_assignment -name VIRTUAL_PIN ON -to current_level
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_level0
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_level1
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_level2
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_level3
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_level4
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_valid
+set_instance_assignment -name VIRTUAL_PIN ON -to hist_seen
+set_instance_assignment -name VIRTUAL_PIN ON -to step_event
+set_instance_assignment -name VIRTUAL_PIN ON -to sample_event
+set_instance_assignment -name VIRTUAL_PIN ON -to frame_start
+set_instance_assignment -name VIRTUAL_PIN ON -to fast_busy
+set_instance_assignment -name VIRTUAL_PIN ON -to distance_bcd
+set_instance_assignment -name VIRTUAL_PIN ON -to current_bcd
+set_instance_assignment -name VIRTUAL_PIN ON -to measurement_pending
+
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1

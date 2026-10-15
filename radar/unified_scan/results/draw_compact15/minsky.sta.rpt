@@ -1,0 +1,708 @@
+TimeQuest Timing Analyzer report for minsky
+Thu Oct 15 15:12:08 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Fmax Summary
+  7. Setup Summary
+  8. Hold Summary
+  9. Recovery Summary
+ 10. Removal Summary
+ 11. Minimum Pulse Width Summary
+ 12. Setup: 'clk'
+ 13. Hold: 'clk'
+ 14. Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Setup Transfers
+ 20. Hold Transfers
+ 21. Report TCCS
+ 22. Report RSKM
+ 23. Unconstrained Paths
+ 24. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name      ; minsky                                           ;
+; Device Family      ; MAX II                                           ;
+; Device Name        ; EPM1270T144C5                                    ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Slow Model                                       ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; minsky.sdc    ; OK     ; Thu Oct 15 15:12:08 2026 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 58.89 MHz ; 58.89 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------+
+; Setup Summary                 ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 3.018 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.746 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-------------------------------+
+; Minimum Pulse Width Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 9.734 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                                                             ;
++-------+------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                      ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.018 ; lcd_bus:bus|state.TURN                         ; lcd_data[6]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.163      ;
+; 3.018 ; lcd_bus:bus|state.TURN                         ; lcd_data[7]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.163      ;
+; 3.045 ; lcd_bus:bus|state.TURN                         ; lcd_data[3]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.136      ;
+; 3.045 ; lcd_bus:bus|state.TURN                         ; lcd_data[4]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.136      ;
+; 3.045 ; lcd_bus:bus|state.TURN                         ; lcd_data[5]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.136      ;
+; 3.185 ; lcd_bus:bus|state.IDLE                         ; lcd_cs_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.996      ;
+; 3.296 ; lcd_bus:bus|state.IDLE                         ; lcd_data[6]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.885      ;
+; 3.296 ; lcd_bus:bus|state.IDLE                         ; lcd_data[7]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.885      ;
+; 3.323 ; lcd_bus:bus|state.IDLE                         ; lcd_data[3]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.858      ;
+; 3.323 ; lcd_bus:bus|state.IDLE                         ; lcd_data[4]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.858      ;
+; 3.323 ; lcd_bus:bus|state.IDLE                         ; lcd_data[5]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.858      ;
+; 3.338 ; lcd_init:init|state[2]                         ; lcd_rst_n                                                                 ; clk          ; clk         ; 20.000       ; -3.819     ; 7.843      ;
+; 3.520 ; lcd_init:init|state[1]                         ; lcd_rst_n                                                                 ; clk          ; clk         ; 20.000       ; -3.819     ; 7.661      ;
+; 3.594 ; lcd_bus:bus|state.TURN                         ; lcd_cs_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.587      ;
+; 3.614 ; lcd_init:init|state[3]                         ; lcd_rst_n                                                                 ; clk          ; clk         ; 20.000       ; -3.819     ; 7.567      ;
+; 3.734 ; lcd_bus:bus|state.TURN                         ; lcd_data[1]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.447      ;
+; 3.745 ; lcd_bus:bus|reading                            ; lcd_data[6]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.436      ;
+; 3.745 ; lcd_bus:bus|reading                            ; lcd_data[7]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.436      ;
+; 3.746 ; lcd_bus:bus|state.TURN                         ; lcd_data[0]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.435      ;
+; 3.746 ; lcd_bus:bus|state.TURN                         ; lcd_data[2]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.435      ;
+; 3.772 ; lcd_bus:bus|reading                            ; lcd_data[3]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.409      ;
+; 3.772 ; lcd_bus:bus|reading                            ; lcd_data[4]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.409      ;
+; 3.772 ; lcd_bus:bus|reading                            ; lcd_data[5]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.409      ;
+; 3.810 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[6]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.857     ;
+; 3.888 ; lcd_bus:bus|reading                            ; lcd_wr_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.293      ;
+; 3.946 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[6]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.721     ;
+; 3.988 ; lcd_init:init|state[0]                         ; lcd_rst_n                                                                 ; clk          ; clk         ; 20.000       ; -3.819     ; 7.193      ;
+; 4.012 ; lcd_bus:bus|state.IDLE                         ; lcd_data[1]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.169      ;
+; 4.024 ; lcd_bus:bus|state.IDLE                         ; lcd_data[0]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.157      ;
+; 4.024 ; lcd_bus:bus|state.IDLE                         ; lcd_data[2]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 7.157      ;
+; 4.126 ; radar_minsky_draw_compact:draw|state.ADD_BEGIN ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|carry     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.541     ;
+; 4.126 ; radar_minsky_draw_compact:draw|state.ADD_BEGIN ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.541     ;
+; 4.133 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[6]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.534     ;
+; 4.276 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[1]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.391     ;
+; 4.276 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[2]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.391     ;
+; 4.276 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.391     ;
+; 4.276 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[4]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.391     ;
+; 4.302 ; lcd_bus:bus|reading                            ; lcd_rd_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 6.879      ;
+; 4.310 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.357     ;
+; 4.347 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.320     ;
+; 4.412 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[1]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.255     ;
+; 4.412 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[2]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.255     ;
+; 4.412 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.255     ;
+; 4.412 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[4]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.255     ;
+; 4.436 ; radar_minsky_draw_compact:draw|state.ADD_BITS  ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|carry     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.231     ;
+; 4.436 ; radar_minsky_draw_compact:draw|state.ADD_BITS  ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.231     ;
+; 4.446 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.221     ;
+; 4.461 ; lcd_bus:bus|reading                            ; lcd_data[1]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 6.720      ;
+; 4.473 ; lcd_bus:bus|reading                            ; lcd_data[0]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 6.708      ;
+; 4.473 ; lcd_bus:bus|reading                            ; lcd_data[2]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 6.708      ;
+; 4.483 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|degrees_left[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.184     ;
+; 4.514 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[6]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.153     ;
+; 4.599 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[1]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.068     ;
+; 4.599 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[2]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.068     ;
+; 4.599 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.068     ;
+; 4.599 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[4]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.068     ;
+; 4.607 ; radar_minsky_draw_compact:draw|state.ADD_BEGIN ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.060     ;
+; 4.633 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 15.034     ;
+; 4.654 ; lcd_bus:bus|saved_write_data[1]                ; lcd_data[1]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 6.527      ;
+; 4.670 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|degrees_left[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.997     ;
+; 4.719 ; lcd_bus:bus|state.ACTIVE                       ; lcd_wr_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 6.462      ;
+; 4.768 ; lcd_bus:bus|saved_write_data[7]                ; lcd_data[7]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 6.413      ;
+; 4.884 ; radar_minsky_draw_compact:draw|state.ADD_BEGIN ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[21] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.783     ;
+; 4.917 ; radar_minsky_draw_compact:draw|state.ADD_BITS  ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.750     ;
+; 4.949 ; radar_minsky_draw_compact:draw|axis            ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|carry     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.718     ;
+; 4.949 ; radar_minsky_draw_compact:draw|axis            ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.718     ;
+; 4.980 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[1]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.687     ;
+; 4.980 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[2]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.687     ;
+; 4.980 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.687     ;
+; 4.980 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[4]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.687     ;
+; 5.010 ; radar_minsky_draw_compact:draw|second_op       ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|carry     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.657     ;
+; 5.010 ; radar_minsky_draw_compact:draw|second_op       ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.657     ;
+; 5.014 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.653     ;
+; 5.017 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|flush_left[0]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.650     ;
+; 5.017 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|flush_left[1]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.650     ;
+; 5.019 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|flush_left[2]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.648     ;
+; 5.051 ; lcd_init:init|state[2]                         ; radar_minsky_draw_compact:draw|degrees_left[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.616     ;
+; 5.124 ; lcd_bus:bus|state.ACTIVE                       ; lcd_rd_n                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 6.057      ;
+; 5.153 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|flush_left[0]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.514     ;
+; 5.153 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|flush_left[1]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.514     ;
+; 5.155 ; lcd_init:init|state[0]                         ; radar_minsky_draw_compact:draw|flush_left[2]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.512     ;
+; 5.194 ; radar_minsky_draw_compact:draw|state.ADD_BITS  ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[21] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.473     ;
+; 5.241 ; lcd_bus:bus|saved_write_data[3]                ; lcd_data[3]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.940      ;
+; 5.243 ; lcd_bus:bus|saved_write_data[6]                ; lcd_data[6]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.938      ;
+; 5.322 ; lcd_bus:bus|saved_write_data[4]                ; lcd_data[4]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.859      ;
+; 5.340 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|flush_left[0]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.327     ;
+; 5.340 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|flush_left[1]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.327     ;
+; 5.342 ; lcd_init:init|state[3]                         ; radar_minsky_draw_compact:draw|flush_left[2]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.325     ;
+; 5.380 ; lcd_bus:bus|saved_write_data[2]                ; lcd_data[2]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.801      ;
+; 5.396 ; lcd_bus:bus|saved_write_data[0]                ; lcd_data[0]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.785      ;
+; 5.430 ; radar_minsky_draw_compact:draw|axis            ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.237     ;
+; 5.469 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|flush_left[3]                              ; clk          ; clk         ; 20.000       ; 0.000      ; 14.198     ;
+; 5.491 ; radar_minsky_draw_compact:draw|second_op       ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[16]     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.176     ;
+; 5.499 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|degrees_left[0]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.168     ;
+; 5.502 ; lcd_bus:bus|saved_write_data[5]                ; lcd_data[5]                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.679      ;
+; 5.581 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|target_radius[1]                           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.086     ;
+; 5.581 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|target_radius[0]                           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.086     ;
+; 5.581 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|target_radius[3]                           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.086     ;
+; 5.581 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|target_radius[2]                           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.086     ;
+; 5.581 ; lcd_init:init|state[1]                         ; radar_minsky_draw_compact:draw|target_radius[5]                           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.086     ;
++-------+------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                                                                             ;
++-------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                   ; To Node                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.746 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[0]        ; clk          ; clk         ; 0.000        ; 3.819      ; 4.786      ;
+; 0.751 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[2]        ; clk          ; clk         ; 0.000        ; 3.819      ; 4.791      ;
+; 0.757 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[1]        ; clk          ; clk         ; 0.000        ; 3.819      ; 4.797      ;
+; 0.794 ; radius[4]                                                                   ; radar_minsky_draw_compact:draw|target_radius[1]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.834      ;
+; 0.798 ; radius[4]                                                                   ; radar_minsky_draw_compact:draw|target_radius[2]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.838      ;
+; 0.799 ; radius[4]                                                                   ; radar_minsky_draw_compact:draw|target_radius[0]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.839      ;
+; 0.831 ; radius[0]                                                                   ; radar_minsky_draw_compact:draw|target_valid                                 ; clk          ; clk         ; 0.000        ; 3.819      ; 4.871      ;
+; 0.882 ; rst                                                                         ; lcd_bus:bus|saved_write_data[1]                                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.922      ;
+; 0.882 ; rst                                                                         ; lcd_bus:bus|saved_write_data[4]                                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.922      ;
+; 0.904 ; radius[4]                                                                   ; radar_minsky_draw_compact:draw|target_radius[4]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.944      ;
+; 0.909 ; rst                                                                         ; lcd_bus:bus|lcd_a0                                                          ; clk          ; clk         ; 0.000        ; 3.819      ; 4.949      ;
+; 0.909 ; rst                                                                         ; lcd_bus:bus|saved_write_data[3]                                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.949      ;
+; 0.921 ; radius_valid                                                                ; radar_minsky_draw_compact:draw|target_valid                                 ; clk          ; clk         ; 0.000        ; 3.819      ; 4.961      ;
+; 0.921 ; radius[2]                                                                   ; radar_minsky_draw_compact:draw|target_radius[1]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.961      ;
+; 0.925 ; radius[2]                                                                   ; radar_minsky_draw_compact:draw|target_radius[2]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.965      ;
+; 0.926 ; radius[2]                                                                   ; radar_minsky_draw_compact:draw|target_radius[0]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 4.966      ;
+; 1.010 ; direction_up                                                                ; radar_minsky_draw_compact:draw|degrees_left[7]                              ; clk          ; clk         ; 0.000        ; 3.819      ; 5.050      ;
+; 1.044 ; rst                                                                         ; lcd_init:init|index[0]                                                      ; clk          ; clk         ; 0.000        ; 3.819      ; 5.084      ;
+; 1.063 ; radius[2]                                                                   ; radar_minsky_draw_compact:draw|target_valid                                 ; clk          ; clk         ; 0.000        ; 3.819      ; 5.103      ;
+; 1.078 ; lcd_init:init|state[1]                                                      ; lcd_init:init|state[1]                                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_bus:bus|timer[0]                                                        ; lcd_bus:bus|timer[0]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_bus:bus|timer[1]                                                        ; lcd_bus:bus|timer[1]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_bus:bus|timer[2]                                                        ; lcd_bus:bus|timer[2]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_bus:bus|timer[3]                                                        ; lcd_bus:bus|timer[3]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_init:init|timer[0]                                                      ; lcd_init:init|timer[0]                                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.085 ; radius[5]                                                                   ; radar_minsky_draw_compact:draw|target_radius[2]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.125      ;
+; 1.086 ; radius[5]                                                                   ; radar_minsky_draw_compact:draw|target_radius[1]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.126      ;
+; 1.086 ; radius[5]                                                                   ; radar_minsky_draw_compact:draw|target_radius[0]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.126      ;
+; 1.100 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[4]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.140      ;
+; 1.101 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[1]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.141      ;
+; 1.104 ; rst                                                                         ; lcd_bus:bus|read_data[1]                                                    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.144      ;
+; 1.109 ; radius[5]                                                                   ; radar_minsky_draw_compact:draw|target_radius[5]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.149      ;
+; 1.110 ; rst                                                                         ; lcd_bus:bus|read_data[2]                                                    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.150      ;
+; 1.112 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[15]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.152      ;
+; 1.113 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[2]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.153      ;
+; 1.114 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[16]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.154      ;
+; 1.118 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[7]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.158      ;
+; 1.119 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[17]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.159      ;
+; 1.125 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[18]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.165      ;
+; 1.137 ; radius[3]                                                                   ; radar_minsky_draw_compact:draw|target_radius[3]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.177      ;
+; 1.139 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[0]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.179      ;
+; 1.157 ; radius[0]                                                                   ; radar_minsky_draw_compact:draw|target_radius[0]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.197      ;
+; 1.179 ; rst                                                                         ; radar_minsky_draw_compact:draw|state.AFTER_RAY                              ; clk          ; clk         ; 0.000        ; 3.819      ; 5.219      ;
+; 1.209 ; rst                                                                         ; radar_minsky_draw_compact:draw|degrees_left[0]                              ; clk          ; clk         ; 0.000        ; 3.819      ; 5.249      ;
+; 1.222 ; radius[1]                                                                   ; radar_minsky_draw_compact:draw|target_radius[1]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.262      ;
+; 1.224 ; rst                                                                         ; radar_minsky_draw_compact:draw|state.VECTOR_RESET                           ; clk          ; clk         ; 0.000        ; 3.819      ; 5.264      ;
+; 1.284 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[0]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.324      ;
+; 1.292 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[3]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.332      ;
+; 1.294 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[6]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.334      ;
+; 1.300 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[5]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.340      ;
+; 1.303 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[1]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.343      ;
+; 1.305 ; radius[3]                                                                   ; radar_minsky_draw_compact:draw|target_radius[1]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.345      ;
+; 1.308 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[3]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.348      ;
+; 1.309 ; radius[3]                                                                   ; radar_minsky_draw_compact:draw|target_radius[2]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.349      ;
+; 1.310 ; radius[3]                                                                   ; radar_minsky_draw_compact:draw|target_radius[0]                             ; clk          ; clk         ; 0.000        ; 3.819      ; 5.350      ;
+; 1.317 ; rst                                                                         ; lcd_bus:bus|read_data[0]                                                    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.357      ;
+; 1.320 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[8]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.360      ;
+; 1.324 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[9]    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.364      ;
+; 1.325 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[16]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.365      ;
+; 1.326 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[10]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.366      ;
+; 1.330 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[12]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.370      ;
+; 1.332 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[13]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.372      ;
+; 1.333 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[11]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.373      ;
+; 1.345 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[20]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.385      ;
+; 1.352 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[19]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.392      ;
+; 1.354 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|x_acc[20]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.394      ;
+; 1.356 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[17]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.396      ;
+; 1.357 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|y_acc[18]   ; clk          ; clk         ; 0.000        ; 3.819      ; 5.397      ;
+; 1.404 ; rst                                                                         ; radar_minsky_draw_compact:draw|state.PIXEL                                  ; clk          ; clk         ; 0.000        ; 3.819      ; 5.444      ;
+; 1.413 ; rst                                                                         ; radar_minsky_draw_compact:draw|state.ROT_BEGIN                              ; clk          ; clk         ; 0.000        ; 3.819      ; 5.453      ;
+; 1.414 ; rst                                                                         ; radar_minsky_draw_compact:draw|second_op                                    ; clk          ; clk         ; 0.000        ; 3.819      ; 5.454      ;
+; 1.415 ; rst                                                                         ; radar_minsky_draw_compact:draw|state.ROT_BITS                               ; clk          ; clk         ; 0.000        ; 3.819      ; 5.455      ;
+; 1.429 ; rst                                                                         ; lcd_init:init|state[2]                                                      ; clk          ; clk         ; 0.000        ; 3.819      ; 5.469      ;
+; 1.431 ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|source_sign ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|source_sign ; clk          ; clk         ; 0.000        ; 0.000      ; 1.652      ;
+; 1.450 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[14]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.490      ;
+; 1.455 ; rst                                                                         ; radar_minsky_draw_compact:draw|phase[2]                                     ; clk          ; clk         ; 0.000        ; 3.819      ; 5.495      ;
+; 1.457 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[15]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.497      ;
+; 1.461 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[13]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.501      ;
+; 1.474 ; rst                                                                         ; radar_minsky_draw_compact:draw|phase[3]                                     ; clk          ; clk         ; 0.000        ; 3.819      ; 5.514      ;
+; 1.479 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[9]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.519      ;
+; 1.482 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[5]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.522      ;
+; 1.483 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[12]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.523      ;
+; 1.483 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[6]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.523      ;
+; 1.486 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[7]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.526      ;
+; 1.487 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[4]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.527      ;
+; 1.489 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[4]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.529      ;
+; 1.490 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[11]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.530      ;
+; 1.492 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[8]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.532      ;
+; 1.493 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[5]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.533      ;
+; 1.498 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[1]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.538      ;
+; 1.499 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[6]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.539      ;
+; 1.500 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[3]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.540      ;
+; 1.501 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[7]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.541      ;
+; 1.502 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[8]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.542      ;
+; 1.502 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[9]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.542      ;
+; 1.503 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[0]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.543      ;
+; 1.503 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|s[2]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.543      ;
+; 1.503 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[10]       ; clk          ; clk         ; 0.000        ; 3.819      ; 5.543      ;
+; 1.504 ; rst                                                                         ; radar_minsky_draw_compact:draw|minsky_serial_registers:datapath|c[3]        ; clk          ; clk         ; 0.000        ; 3.819      ; 5.544      ;
+; 1.521 ; rst                                                                         ; lcd_init:init|state[0]                                                      ; clk          ; clk         ; 0.000        ; 3.819      ; 5.561      ;
++-------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk'                                                                                                  ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                      ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|done                            ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|done                            ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|lcd_a0                          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|lcd_a0                          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[0]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[0]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[1]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[1]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[2]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[2]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[3]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[3]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[4]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[4]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[5]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[5]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[6]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[6]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|read_data[7]                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|read_data[7]                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|reading                         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|reading                         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[0]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[0]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[1]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[1]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[2]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[2]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[3]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[3]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[4]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[4]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[5]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[5]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[6]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[6]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[7]             ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|saved_write_data[7]             ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|state.ACTIVE                    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|state.ACTIVE                    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|state.HOLD                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|state.HOLD                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|state.IDLE                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|state.IDLE                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|state.SETUP                     ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|state.SETUP                     ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|state.TURN                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|state.TURN                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|timer[0]                        ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|timer[0]                        ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|timer[1]                        ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|timer[1]                        ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|timer[2]                        ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|timer[2]                        ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|timer[3]                        ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|timer[3]                        ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_bus:bus|timer[4]                        ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_bus:bus|timer[4]                        ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|index[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|index[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|index[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|index[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|index[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|index[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|pending                       ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|pending                       ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|state[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|state[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|state[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|state[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|state[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|state[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|state[3]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|state[3]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[0]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[1]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[2]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[3]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[3]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[4]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[4]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[5]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[5]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[6]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[6]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; lcd_init:init|timer[7]                      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; lcd_init:init|timer[7]                      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_minsky_draw_compact:draw|axis         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_minsky_draw_compact:draw|axis         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[0] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[0] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[1] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[1] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[2] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[2] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[3] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_minsky_draw_compact:draw|bit_index[3] ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; angle_bcd[*]   ; clk        ; 12.877 ; 12.877 ; Rise       ; clk             ;
+;  angle_bcd[0]  ; clk        ; 11.855 ; 11.855 ; Rise       ; clk             ;
+;  angle_bcd[1]  ; clk        ; 12.591 ; 12.591 ; Rise       ; clk             ;
+;  angle_bcd[2]  ; clk        ; 12.403 ; 12.403 ; Rise       ; clk             ;
+;  angle_bcd[3]  ; clk        ; 12.563 ; 12.563 ; Rise       ; clk             ;
+;  angle_bcd[4]  ; clk        ; 12.877 ; 12.877 ; Rise       ; clk             ;
+;  angle_bcd[5]  ; clk        ; 12.412 ; 12.412 ; Rise       ; clk             ;
+;  angle_bcd[6]  ; clk        ; 12.748 ; 12.748 ; Rise       ; clk             ;
+;  angle_bcd[7]  ; clk        ; 12.320 ; 12.320 ; Rise       ; clk             ;
+;  angle_bcd[8]  ; clk        ; 10.284 ; 10.284 ; Rise       ; clk             ;
+;  angle_bcd[9]  ; clk        ; 12.276 ; 12.276 ; Rise       ; clk             ;
+;  angle_bcd[10] ; clk        ; 12.834 ; 12.834 ; Rise       ; clk             ;
+;  angle_bcd[11] ; clk        ; 12.636 ; 12.636 ; Rise       ; clk             ;
+; delay_tick     ; clk        ; 7.563  ; 7.563  ; Rise       ; clk             ;
+; direction_up   ; clk        ; 9.327  ; 9.327  ; Rise       ; clk             ;
+; lcd_data[*]    ; clk        ; 4.364  ; 4.364  ; Rise       ; clk             ;
+;  lcd_data[0]   ; clk        ; 4.082  ; 4.082  ; Rise       ; clk             ;
+;  lcd_data[1]   ; clk        ; 4.091  ; 4.091  ; Rise       ; clk             ;
+;  lcd_data[2]   ; clk        ; 3.878  ; 3.878  ; Rise       ; clk             ;
+;  lcd_data[3]   ; clk        ; 3.493  ; 3.493  ; Rise       ; clk             ;
+;  lcd_data[4]   ; clk        ; 2.969  ; 2.969  ; Rise       ; clk             ;
+;  lcd_data[5]   ; clk        ; 3.192  ; 3.192  ; Rise       ; clk             ;
+;  lcd_data[6]   ; clk        ; 3.999  ; 3.999  ; Rise       ; clk             ;
+;  lcd_data[7]   ; clk        ; 4.364  ; 4.364  ; Rise       ; clk             ;
+; radius[*]      ; clk        ; 4.159  ; 4.159  ; Rise       ; clk             ;
+;  radius[0]     ; clk        ; 1.711  ; 1.711  ; Rise       ; clk             ;
+;  radius[1]     ; clk        ; 3.795  ; 3.795  ; Rise       ; clk             ;
+;  radius[2]     ; clk        ; 1.617  ; 1.617  ; Rise       ; clk             ;
+;  radius[3]     ; clk        ; 2.248  ; 2.248  ; Rise       ; clk             ;
+;  radius[4]     ; clk        ; 2.277  ; 2.277  ; Rise       ; clk             ;
+;  radius[5]     ; clk        ; 4.159  ; 4.159  ; Rise       ; clk             ;
+; radius_valid   ; clk        ; 1.475  ; 1.475  ; Rise       ; clk             ;
+; request        ; clk        ; 9.305  ; 9.305  ; Rise       ; clk             ;
+; rst            ; clk        ; 7.364  ; 7.364  ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; angle_bcd[*]   ; clk        ; -1.578 ; -1.578 ; Rise       ; clk             ;
+;  angle_bcd[0]  ; clk        ; -1.578 ; -1.578 ; Rise       ; clk             ;
+;  angle_bcd[1]  ; clk        ; -3.342 ; -3.342 ; Rise       ; clk             ;
+;  angle_bcd[2]  ; clk        ; -3.522 ; -3.522 ; Rise       ; clk             ;
+;  angle_bcd[3]  ; clk        ; -3.602 ; -3.602 ; Rise       ; clk             ;
+;  angle_bcd[4]  ; clk        ; -3.105 ; -3.105 ; Rise       ; clk             ;
+;  angle_bcd[5]  ; clk        ; -3.364 ; -3.364 ; Rise       ; clk             ;
+;  angle_bcd[6]  ; clk        ; -2.560 ; -2.560 ; Rise       ; clk             ;
+;  angle_bcd[7]  ; clk        ; -2.638 ; -2.638 ; Rise       ; clk             ;
+;  angle_bcd[8]  ; clk        ; -1.963 ; -1.963 ; Rise       ; clk             ;
+;  angle_bcd[9]  ; clk        ; -3.044 ; -3.044 ; Rise       ; clk             ;
+;  angle_bcd[10] ; clk        ; -3.602 ; -3.602 ; Rise       ; clk             ;
+;  angle_bcd[11] ; clk        ; -3.404 ; -3.404 ; Rise       ; clk             ;
+; delay_tick     ; clk        ; -3.421 ; -3.421 ; Rise       ; clk             ;
+; direction_up   ; clk        ; -1.010 ; -1.010 ; Rise       ; clk             ;
+; lcd_data[*]    ; clk        ; -2.415 ; -2.415 ; Rise       ; clk             ;
+;  lcd_data[0]   ; clk        ; -3.528 ; -3.528 ; Rise       ; clk             ;
+;  lcd_data[1]   ; clk        ; -3.537 ; -3.537 ; Rise       ; clk             ;
+;  lcd_data[2]   ; clk        ; -3.324 ; -3.324 ; Rise       ; clk             ;
+;  lcd_data[3]   ; clk        ; -2.939 ; -2.939 ; Rise       ; clk             ;
+;  lcd_data[4]   ; clk        ; -2.415 ; -2.415 ; Rise       ; clk             ;
+;  lcd_data[5]   ; clk        ; -2.638 ; -2.638 ; Rise       ; clk             ;
+;  lcd_data[6]   ; clk        ; -3.445 ; -3.445 ; Rise       ; clk             ;
+;  lcd_data[7]   ; clk        ; -3.810 ; -3.810 ; Rise       ; clk             ;
+; radius[*]      ; clk        ; -0.794 ; -0.794 ; Rise       ; clk             ;
+;  radius[0]     ; clk        ; -0.831 ; -0.831 ; Rise       ; clk             ;
+;  radius[1]     ; clk        ; -1.222 ; -1.222 ; Rise       ; clk             ;
+;  radius[2]     ; clk        ; -0.921 ; -0.921 ; Rise       ; clk             ;
+;  radius[3]     ; clk        ; -1.137 ; -1.137 ; Rise       ; clk             ;
+;  radius[4]     ; clk        ; -0.794 ; -0.794 ; Rise       ; clk             ;
+;  radius[5]     ; clk        ; -1.085 ; -1.085 ; Rise       ; clk             ;
+; radius_valid   ; clk        ; -0.921 ; -0.921 ; Rise       ; clk             ;
+; request        ; clk        ; -1.545 ; -1.545 ; Rise       ; clk             ;
+; rst            ; clk        ; -0.746 ; -0.746 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; done         ; clk        ; 6.588  ; 6.588  ; Rise       ; clk             ;
+; dropped[*]   ; clk        ; 7.328  ; 7.328  ; Rise       ; clk             ;
+;  dropped[0]  ; clk        ; 6.283  ; 6.283  ; Rise       ; clk             ;
+;  dropped[1]  ; clk        ; 6.365  ; 6.365  ; Rise       ; clk             ;
+;  dropped[2]  ; clk        ; 6.184  ; 6.184  ; Rise       ; clk             ;
+;  dropped[3]  ; clk        ; 6.825  ; 6.825  ; Rise       ; clk             ;
+;  dropped[4]  ; clk        ; 7.328  ; 7.328  ; Rise       ; clk             ;
+;  dropped[5]  ; clk        ; 6.113  ; 6.113  ; Rise       ; clk             ;
+;  dropped[6]  ; clk        ; 6.050  ; 6.050  ; Rise       ; clk             ;
+;  dropped[7]  ; clk        ; 6.645  ; 6.645  ; Rise       ; clk             ;
+; lcd_a0       ; clk        ; 8.627  ; 8.627  ; Rise       ; clk             ;
+; lcd_cs_n     ; clk        ; 11.815 ; 11.815 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; 11.982 ; 11.982 ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; 11.254 ; 11.254 ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; 11.266 ; 11.266 ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; 11.254 ; 11.254 ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; 11.955 ; 11.955 ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; 11.955 ; 11.955 ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; 11.955 ; 11.955 ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; 11.982 ; 11.982 ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; 11.982 ; 11.982 ; Rise       ; clk             ;
+; lcd_rd_n     ; clk        ; 10.698 ; 10.698 ; Rise       ; clk             ;
+; lcd_rst_n    ; clk        ; 11.662 ; 11.662 ; Rise       ; clk             ;
+; lcd_wr_n     ; clk        ; 11.112 ; 11.112 ; Rise       ; clk             ;
+; ready        ; clk        ; 7.554  ; 7.554  ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; done         ; clk        ; 6.588  ; 6.588  ; Rise       ; clk             ;
+; dropped[*]   ; clk        ; 6.050  ; 6.050  ; Rise       ; clk             ;
+;  dropped[0]  ; clk        ; 6.283  ; 6.283  ; Rise       ; clk             ;
+;  dropped[1]  ; clk        ; 6.365  ; 6.365  ; Rise       ; clk             ;
+;  dropped[2]  ; clk        ; 6.184  ; 6.184  ; Rise       ; clk             ;
+;  dropped[3]  ; clk        ; 6.825  ; 6.825  ; Rise       ; clk             ;
+;  dropped[4]  ; clk        ; 7.328  ; 7.328  ; Rise       ; clk             ;
+;  dropped[5]  ; clk        ; 6.113  ; 6.113  ; Rise       ; clk             ;
+;  dropped[6]  ; clk        ; 6.050  ; 6.050  ; Rise       ; clk             ;
+;  dropped[7]  ; clk        ; 6.645  ; 6.645  ; Rise       ; clk             ;
+; lcd_a0       ; clk        ; 8.627  ; 8.627  ; Rise       ; clk             ;
+; lcd_cs_n     ; clk        ; 11.406 ; 11.406 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; 9.498  ; 9.498  ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; 9.604  ; 9.604  ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; 10.346 ; 10.346 ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; 9.620  ; 9.620  ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; 9.759  ; 9.759  ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; 9.678  ; 9.678  ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; 9.498  ; 9.498  ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; 9.757  ; 9.757  ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; 10.232 ; 10.232 ; Rise       ; clk             ;
+; lcd_rd_n     ; clk        ; 9.876  ; 9.876  ; Rise       ; clk             ;
+; lcd_rst_n    ; clk        ; 11.012 ; 11.012 ; Rise       ; clk             ;
+; lcd_wr_n     ; clk        ; 10.281 ; 10.281 ; Rise       ; clk             ;
+; ready        ; clk        ; 7.554  ; 7.554  ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 9308     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 9308     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 15:12:06 2026
+Info: Command: quartus_sta minsky -c minsky
+Info: qsta_default_script.tcl version: #2
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Reading SDC File: 'minsky.sdc'
+Info: Worst-case setup slack is 3.018
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     3.018         0.000 clk 
+Info: Worst-case hold slack is 0.746
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.746         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 9.734
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.734         0.000 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is fully constrained for setup requirements
+Info: Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4371 megabytes
+    Info: Processing ended: Thu Oct 15 15:12:08 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

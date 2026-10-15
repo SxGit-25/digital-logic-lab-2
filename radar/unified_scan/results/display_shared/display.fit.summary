@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 15 20:36:51 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : display
+Top-level Entity Name : radar_display_shared
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 137 / 1,270 ( 11 % )
+Total pins : 1 / 116 ( < 1 % )
+Total virtual pins : 104
+UFM blocks : 0 / 1 ( 0 % )

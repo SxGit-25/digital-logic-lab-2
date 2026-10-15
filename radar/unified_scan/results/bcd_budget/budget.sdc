@@ -1,0 +1,6 @@
+create_clock -name clk -period 20.000 [get_ports clk]
+set_false_path -from [get_ports echo_async] -to [get_registers {*|echo_meta}]
+set_input_delay -clock clk -max 5.000 [get_ports {rst tick_us tick_ms measure_start cancel}]
+set_input_delay -clock clk -min 0.000 [get_ports {rst tick_us tick_ms measure_start cancel}]
+set_output_delay -clock clk -max 5.000 [all_outputs]
+set_output_delay -clock clk -min 0.000 [all_outputs]

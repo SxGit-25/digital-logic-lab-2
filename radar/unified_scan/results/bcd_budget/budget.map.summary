@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 20:37:18 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : budget
+Top-level Entity Name : ultrasonic_bcd_budget
+Family : MAX II
+Total logic elements : 149
+Total pins : 37
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

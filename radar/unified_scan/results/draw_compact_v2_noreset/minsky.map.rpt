@@ -1,0 +1,534 @@
+Analysis & Synthesis report for minsky
+Thu Oct 15 15:17:02 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |minsky_lcd_compact_v2_test_top|lcd_bus:bus|state
+  9. State Machine - |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|state
+ 10. Registers Protected by Synthesis
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for radar_minsky_draw_compact_v2:draw
+ 15. Parameter Settings for User Entity Instance: lcd_init:init
+ 16. Parameter Settings for User Entity Instance: radar_minsky_draw_compact_v2:draw
+ 17. Parameter Settings for User Entity Instance: radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath
+ 18. Parameter Settings for User Entity Instance: lcd_bus:bus
+ 19. Port Connectivity Checks: "radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath"
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 15:17:02 2026    ;
+; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; minsky                                   ;
+; Top-level Entity Name       ; minsky_lcd_compact_v2_test_top           ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 515                                      ;
+; Total pins                  ; 14                                       ;
+; Total virtual pins          ; 33                                       ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                    ;
++----------------------------------------------------------------------------+--------------------------------+--------------------+
+; Option                                                                     ; Setting                        ; Default Value      ;
++----------------------------------------------------------------------------+--------------------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5                  ;                    ;
+; Top-level entity name                                                      ; minsky_lcd_compact_v2_test_top ; minsky             ;
+; Family name                                                                ; MAX II                         ; Stratix II         ;
+; Restructure Multiplexers                                                   ; On                             ; Auto               ;
+; Power-Up Don't Care                                                        ; Off                            ; On                 ;
+; Optimization Technique                                                     ; Area                           ; Balanced           ;
+; Auto Resource Sharing                                                      ; On                             ; Off                ;
+; Use smart compilation                                                      ; Off                            ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                 ;
+; Enable compact report table                                                ; Off                            ; Off                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                            ; Off                ;
+; Preserve fewer node names                                                  ; On                             ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                            ; Off                ;
+; Verilog Version                                                            ; Verilog_2001                   ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993                      ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                           ; Auto               ;
+; Safe State Machine                                                         ; Off                            ; Off                ;
+; Extract Verilog State Machines                                             ; On                             ; On                 ;
+; Extract VHDL State Machines                                                ; On                             ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                            ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                           ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                            ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                             ; On                 ;
+; Parallel Synthesis                                                         ; On                             ; On                 ;
+; NOT Gate Push-Back                                                         ; On                             ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                            ; Off                ;
+; Remove Duplicate Registers                                                 ; On                             ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                            ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                            ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                            ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                            ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                            ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                             ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                            ; Off                ;
+; Carry Chain Length                                                         ; 70                             ; 70                 ;
+; Auto Carry Chains                                                          ; On                             ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                             ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                            ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto                           ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                             ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                             ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                            ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                             ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                            ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                             ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                            ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                              ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation ;
+; HDL message level                                                          ; Level2                         ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                            ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                            ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                            ; 100                ;
+; Clock MUX Protection                                                       ; On                             ; On                 ;
+; Block Design Naming                                                        ; Auto                           ; Auto               ;
+; Synthesis Effort                                                           ; Auto                           ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                             ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium                         ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                           ; Auto               ;
++----------------------------------------------------------------------------+--------------------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+
+; lcd_bus.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/lcd_bus.v                        ;
+; lcd_init.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/lcd_init.v                       ;
+; minsky_lcd_compact_v2_test_top.v ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/minsky_lcd_compact_v2_test_top.v ;
+; minsky_serial_datapath.v         ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/minsky_serial_datapath.v         ;
+; radar_minsky_draw_compact_v2.v   ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/radar_minsky_draw_compact_v2.v   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 515   ;
+;     -- Combinational with no register       ; 329   ;
+;     -- Register only                        ; 10    ;
+;     -- Combinational with a register        ; 176   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 230   ;
+;     -- 3 input functions                    ; 113   ;
+;     -- 2 input functions                    ; 157   ;
+;     -- 1 input functions                    ; 4     ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 467   ;
+;     -- arithmetic mode                      ; 48    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 34    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 186   ;
+; Total logic cells in carry chains           ; 56    ;
+; Virtual pins                                ; 33    ;
+; I/O pins                                    ; 14    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 186   ;
+; Total fan-out                               ; 1976  ;
+; Average fan-out                             ; 3.52  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                ; Library Name ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------+--------------+
+; |minsky_lcd_compact_v2_test_top          ; 515 (4)     ; 186          ; 0          ; 14   ; 33           ; 329 (4)      ; 10 (0)            ; 176 (0)          ; 56 (0)          ; 0 (0)      ; |minsky_lcd_compact_v2_test_top                                                                    ; work         ;
+;    |lcd_bus:bus|                         ; 92 (92)     ; 29           ; 0          ; 0    ; 0            ; 63 (63)      ; 5 (5)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |minsky_lcd_compact_v2_test_top|lcd_bus:bus                                                        ; work         ;
+;    |lcd_init:init|                       ; 90 (90)     ; 16           ; 0          ; 0    ; 0            ; 74 (74)      ; 3 (3)             ; 13 (13)          ; 8 (8)           ; 0 (0)      ; |minsky_lcd_compact_v2_test_top|lcd_init:init                                                      ; work         ;
+;    |radar_minsky_draw_compact_v2:draw|   ; 329 (219)   ; 141          ; 0          ; 0    ; 0            ; 188 (158)    ; 2 (0)             ; 139 (61)         ; 48 (48)         ; 0 (0)      ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw                                  ; work         ;
+;       |minsky_serial_registers:datapath| ; 110 (110)   ; 80           ; 0          ; 0    ; 0            ; 30 (30)      ; 2 (2)             ; 78 (78)          ; 0 (0)           ; 0 (0)      ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath ; work         ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |minsky_lcd_compact_v2_test_top|lcd_bus:bus|state                ;
++--------------+--------------+-------------+------------+------------+------------+
+; Name         ; state.ACTIVE ; state.SETUP ; state.TURN ; state.IDLE ; state.HOLD ;
++--------------+--------------+-------------+------------+------------+------------+
+; state.IDLE   ; 0            ; 0           ; 0          ; 0          ; 0          ;
+; state.TURN   ; 0            ; 0           ; 1          ; 1          ; 0          ;
+; state.SETUP  ; 0            ; 1           ; 0          ; 1          ; 0          ;
+; state.ACTIVE ; 1            ; 0           ; 0          ; 1          ; 0          ;
+; state.HOLD   ; 0            ; 0           ; 0          ; 1          ; 1          ;
++--------------+--------------+-------------+------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|state                                                                                                                                ;
++--------------------+--------------------+-----------------+-----------+----------------+-----------------+-------------+-----------------+----------------+-----------------+--------------+--------------+------------+
+; Name               ; state.VECTOR_RESET ; state.AFTER_RAY ; state.RMW ; state.ADD_BITS ; state.ADD_BEGIN ; state.PIXEL ; state.RAY_RESET ; state.ROT_BITS ; state.ROT_BEGIN ; state.DEGREE ; state.ORIENT ; state.IDLE ;
++--------------------+--------------------+-----------------+-----------+----------------+-----------------+-------------+-----------------+----------------+-----------------+--------------+--------------+------------+
+; state.IDLE         ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 0          ;
+; state.ORIENT       ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 1            ; 1          ;
+; state.DEGREE       ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 1            ; 0            ; 1          ;
+; state.ROT_BEGIN    ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 1               ; 0            ; 0            ; 1          ;
+; state.ROT_BITS     ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 1              ; 0               ; 0            ; 0            ; 1          ;
+; state.RAY_RESET    ; 0                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 1               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.PIXEL        ; 0                  ; 0               ; 0         ; 0              ; 0               ; 1           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.ADD_BEGIN    ; 0                  ; 0               ; 0         ; 0              ; 1               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.ADD_BITS     ; 0                  ; 0               ; 0         ; 1              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.RMW          ; 0                  ; 0               ; 1         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.AFTER_RAY    ; 0                  ; 1               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
+; state.VECTOR_RESET ; 1                  ; 0               ; 0         ; 0              ; 0               ; 0           ; 0               ; 0              ; 0               ; 0            ; 0            ; 1          ;
++--------------------+--------------------+-----------------+-----------+----------------+-----------------+-------------+-----------------+----------------+-----------------+--------------+--------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                             ;
++----------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++----------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; radar_minsky_draw_compact_v2:draw|dropped[7] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[6] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[5] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[4] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[3] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[2] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[1] ; yes                                                              ; yes                                        ;
+; radar_minsky_draw_compact_v2:draw|dropped[0] ; yes                                                              ; yes                                        ;
++----------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++-------------------------------------------+--------------------+
+; Register name                             ; Reason for Removal ;
++-------------------------------------------+--------------------+
+; lcd_bus:bus|state~4                       ; Lost fanout        ;
+; lcd_bus:bus|state~5                       ; Lost fanout        ;
+; radar_minsky_draw_compact_v2:draw|state~3 ; Lost fanout        ;
+; radar_minsky_draw_compact_v2:draw|state~4 ; Lost fanout        ;
+; radar_minsky_draw_compact_v2:draw|state~5 ; Lost fanout        ;
+; radar_minsky_draw_compact_v2:draw|state~6 ; Lost fanout        ;
+; Total Number of Removed Registers = 6     ;                    ;
++-------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 186   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 127   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|phase[0]                                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|end_same                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_bus:bus|read_data[7]                                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|target_radius[0]                           ;
+; 6:1                ; 22 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath|y_acc[2]  ;
+; 6:1                ; 22 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath|x_acc[17] ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath|c[15]     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath|s[12]     ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 20 LEs               ; 5 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|position_count[5]                          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|position_count[3]                          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|flush_left[0]                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|flush_left[3]                              ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 3 LEs                ; 27 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_init:init|index[2]                                                       ;
+; 23:1               ; 7 bits    ; 105 LEs       ; 21 LEs               ; 84 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_init:init|timer[5]                                                       ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_init:init|state[3]                                                       ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 26 LEs               ; 18 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_bus:bus|saved_write_data[5]                                              ;
+; 25:1               ; 3 bits    ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; Yes        ; |minsky_lcd_compact_v2_test_top|lcd_bus:bus|saved_write_data[1]                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |minsky_lcd_compact_v2_test_top|radar_minsky_draw_compact_v2:draw|state                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Source assignments for radar_minsky_draw_compact_v2:draw   ;
++---------------------------+-------+------+-----------------+
+; Assignment                ; Value ; From ; To              ;
++---------------------------+-------+------+-----------------+
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[7]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[7]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[7]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[6]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[6]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[6]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[5]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[5]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[5]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[4]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[4]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[4]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[3]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[3]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[3]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[2]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[2]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[2]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[1]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[1]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[1]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[0]~reg0 ;
+; PRESERVE_REGISTER         ; on    ; -    ; dropped[0]~reg0 ;
+; PRESERVE_FANOUT_FREE_NODE ; on    ; -    ; dropped[0]~reg0 ;
++---------------------------+-------+------+-----------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_init:init ;
++------------------+----------+------------------------------+
+; Parameter Name   ; Value    ; Type                         ;
++------------------+----------+------------------------------+
+; CONTRAST         ; 00011100 ; Unsigned Binary              ;
+; RESET_CYCLES     ; 50000    ; Signed Integer               ;
+; WAIT_CYCLES      ; 1000000  ; Signed Integer               ;
+; WAIT_TICK_CYCLES ; 50000    ; Signed Integer               ;
++------------------+----------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_minsky_draw_compact_v2:draw ;
++-----------------+-------+------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                 ;
++-----------------+-------+------------------------------------------------------+
+; ENABLE_READBACK ; 1     ; Signed Integer                                       ;
+; KEEP_END_BATCH  ; 1     ; Signed Integer                                       ;
+; FRACTION_BITS   ; 15    ; Signed Integer                                       ;
+; ROT_SHIFT       ; 7     ; Signed Integer                                       ;
+; PHASE_BITS      ; 6     ; Signed Integer                                       ;
+; PHASE_ADD       ; 15    ; Signed Integer                                       ;
+; PHASE_INITIAL   ; 63    ; Signed Integer                                       ;
+; MICRO_BASE      ; 2     ; Signed Integer                                       ;
++-----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath ;
++----------------+------------------------+-----------------------------------------------------------------------+
+; Parameter Name ; Value                  ; Type                                                                  ;
++----------------+------------------------+-----------------------------------------------------------------------+
+; FRACTION_BITS  ; 15                     ; Signed Integer                                                        ;
+; ROT_SHIFT      ; 7                      ; Signed Integer                                                        ;
+; XY_INITIAL     ; 0000000100000000000000 ; Unsigned Binary                                                       ;
+; RESET_DATA     ; 0                      ; Signed Integer                                                        ;
++----------------+------------------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_bus:bus ;
++-----------------+-------+--------------------------------+
+; Parameter Name  ; Value ; Type                           ;
++-----------------+-------+--------------------------------+
+; ENABLE_READBACK ; 1     ; Signed Integer                 ;
+; SETUP_CYCLES    ; 4     ; Signed Integer                 ;
+; WRITE_CYCLES    ; 6     ; Signed Integer                 ;
+; READ_CYCLES     ; 10    ; Signed Integer                 ;
+; HOLD_CYCLES     ; 6     ; Signed Integer                 ;
+; TURN_CYCLES     ; 20    ; Signed Integer                 ;
+; STABLE_WRITE    ; 0     ; Signed Integer                 ;
++-----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath"                         ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; c            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; x_acc[14..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_acc[14..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_acc[21]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 15:17:01 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off minsky -c minsky
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 1 design units, including 1 entities, in source file minsky_lcd_compact_v2_test_top.v
+    Info: Found entity 1: minsky_lcd_compact_v2_test_top
+Info: Found 2 design units, including 2 entities, in source file minsky_serial_datapath.v
+    Info: Found entity 1: minsky_serial_datapath
+    Info: Found entity 2: minsky_serial_registers
+Info: Found 1 design units, including 1 entities, in source file radar_minsky_draw_compact_v2.v
+    Info: Found entity 1: radar_minsky_draw_compact_v2
+Info: Elaborating entity "minsky_lcd_compact_v2_test_top" for the top level hierarchy
+Info: Elaborating entity "lcd_init" for hierarchy "lcd_init:init"
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(57): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(57): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(69): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(73): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(76): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(77): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(80): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "radar_minsky_draw_compact_v2" for hierarchy "radar_minsky_draw_compact_v2:draw"
+Warning (10230): Verilog HDL assignment warning at radar_minsky_draw_compact_v2.v(47): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at radar_minsky_draw_compact_v2.v(48): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at radar_minsky_draw_compact_v2.v(82): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at radar_minsky_draw_compact_v2.v(101): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at radar_minsky_draw_compact_v2.v(145): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "minsky_serial_registers" for hierarchy "radar_minsky_draw_compact_v2:draw|minsky_serial_registers:datapath"
+Warning (10230): Verilog HDL assignment warning at minsky_serial_datapath.v(59): truncated value with size 32 to match size of target (22)
+Warning (10230): Verilog HDL assignment warning at minsky_serial_datapath.v(89): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "lcd_bus" for hierarchy "lcd_bus:bus"
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(56): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(57): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(59): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(60): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(64): truncated value with size 32 to match size of target (5)
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "lcd_bus:bus|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_bus:bus|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_minsky_draw_compact_v2:draw|state~3" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_minsky_draw_compact_v2:draw|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_minsky_draw_compact_v2:draw|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_minsky_draw_compact_v2:draw|state~6" lost all its fanouts during netlist optimizations.
+Info: Implemented 562 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
+    Info: Implemented 15 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 515 logic cells
+Info: Design contains 33 virtual pins; timing numbers associated with paths containing virtual pins are estimates
+    Info: Pin "rst" is virtual input pin
+    Info: Pin "request" is virtual input pin
+    Info: Pin "angle_bcd[9]" is virtual input pin
+    Info: Pin "angle_bcd[10]" is virtual input pin
+    Info: Pin "angle_bcd[11]" is virtual input pin
+    Info: Pin "angle_bcd[4]" is virtual input pin
+    Info: Pin "angle_bcd[5]" is virtual input pin
+    Info: Pin "angle_bcd[6]" is virtual input pin
+    Info: Pin "angle_bcd[0]" is virtual input pin
+    Info: Pin "angle_bcd[1]" is virtual input pin
+    Info: Pin "angle_bcd[2]" is virtual input pin
+    Info: Pin "angle_bcd[3]" is virtual input pin
+    Info: Pin "angle_bcd[7]" is virtual input pin
+    Info: Pin "angle_bcd[8]" is virtual input pin
+    Info: Pin "delay_tick" is virtual input pin
+    Info: Pin "direction_up" is virtual input pin
+    Info: Pin "radius[0]" is virtual input pin
+    Info: Pin "radius[5]" is virtual input pin
+    Info: Pin "radius[3]" is virtual input pin
+    Info: Pin "radius[4]" is virtual input pin
+    Info: Pin "radius[1]" is virtual input pin
+    Info: Pin "radius[2]" is virtual input pin
+    Info: Pin "radius_valid" is virtual input pin
+    Info: Pin "ready" is virtual output pin
+    Info: Pin "done" is virtual output pin
+    Info: Pin "dropped[0]" is virtual output pin
+    Info: Pin "dropped[1]" is virtual output pin
+    Info: Pin "dropped[2]" is virtual output pin
+    Info: Pin "dropped[3]" is virtual output pin
+    Info: Pin "dropped[4]" is virtual output pin
+    Info: Pin "dropped[5]" is virtual output pin
+    Info: Pin "dropped[6]" is virtual output pin
+    Info: Pin "dropped[7]" is virtual output pin
+Info: Generated suppressed messages file C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/minsky.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4404 megabytes
+    Info: Processing ended: Thu Oct 15 15:17:02 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Metro/AppData/Local/Temp/radar_minsky_8cb570363d2241ea957aeefd3e797f2a/minsky.map.smsg.
+
+

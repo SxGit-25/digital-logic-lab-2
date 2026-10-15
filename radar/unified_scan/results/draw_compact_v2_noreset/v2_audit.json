@@ -1,0 +1,41 @@
+{
+  "module": "radar_minsky_draw_compact_v2",
+  "rtl_sha256": "b8c6f6646723543edf72ab2b563ddc014152cf9ef067cae18b0d0931c2a6f53a",
+  "fit_le": 328,
+  "controller_le": 219,
+  "datapath_le": 109,
+  "component_with_bus_init_le": 506,
+  "setup_slack_ns": 2.21,
+  "hold_slack_ns": 0.85,
+  "draw_200le_target_met": false,
+  "changes": [
+    "Flattened degrees/bit/phase write enables.",
+    "Shared eight-bit orientation/radius position_count and increment/decrement.",
+    "Shared five-bit serial/RMW counter and increment.",
+    "Core optional RESET_DATA=1 defaults preserve all existing clients; v2 sets0.",
+    "dropped[7:0] has preserve/noprune synthesis attributes."
+  ],
+  "initialization_proof": {
+    "phase": "Loaded PHASE_INITIAL on accept before DEGREE.",
+    "position_count": "Loaded initial first-ray angle on accept before ORIENT; RAY_RESET initializes radius0; AFTER_RAY loads each later orientation distance.",
+    "bit_index": "ROT_BEGIN and ADD_BEGIN load0 before arithmetic; PIXEL selected loads0 before RMW.",
+    "c_s": "VECTOR_RESET issues command7 before any orientation; each accepted request always passes VECTOR_RESET.",
+    "x_y": "RAY_RESET issues command6 before any PIXEL or ray addition.",
+    "carry_source_sign": "Each ROT_BEGIN/ADD_BEGIN uses begin_command to initialize before run_bits."
+  },
+  "endpoint_deadline_lower_bound": {
+    "erase_rays": 11,
+    "erase_pixels_per_ray": 40,
+    "minimum_write_cycles": 16,
+    "minimum_read_cycles": 40,
+    "writes_per_rmw": 6,
+    "reads_per_rmw": 2,
+    "minimum_total_cycles": 77440,
+    "minimum_total_ms_at_50MHz": 1.5488,
+    "excludes": [
+      "B ray",
+      "request/done handshake overhead",
+      "all bit-serial arithmetic"
+    ]
+  }
+}

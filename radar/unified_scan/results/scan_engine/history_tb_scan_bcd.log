@@ -1,0 +1,2 @@
+PASS tb_scan_bcd isolated flag1 BCD thresholds 0199/0200/0399/0400/0599/0600/0799/0800/1200/4000 invalid/history; binary output zero
+tb_scan_bcd.v:49: $finish called at 7001000 (1ps)

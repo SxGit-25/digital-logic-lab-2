@@ -1,0 +1,2 @@
+PASS global timebase/scan ratios frames=45 ms=909 q=3639 blink=3 slots=9 fast_steps=405 full_PWM=45 samples=9
+tb_global_budget.v:77: $finish called at 18200080000 (1ps)

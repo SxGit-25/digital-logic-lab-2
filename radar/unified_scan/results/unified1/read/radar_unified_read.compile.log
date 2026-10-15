@@ -1,0 +1,76 @@
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Shell
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Oct 15 15:14:46 2026
+Info: Command: quartus_sh --flow compile radar_unified_read
+Info: Quartus(args): compile radar_unified_read
+Info: Project Name = R:/lcd_p4/radar_unified_read
+Info: Revision Name = radar_unified_read
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 15:14:46 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off radar_unified_read -c radar_unified_read
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/timebase.v
+    Info: Found entity 1: timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_filter.v
+    Info: Found entity 1: switch_filter
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic.v
+    Info: Found entity 1: ultrasonic
+Info: Found 1 design units, including 1 entities, in source file /rtl/bin12_to_bcd.v
+    Info: Found entity 1: bin12_to_bcd
+Info: Found 1 design units, including 1 entities, in source file /rtl/display_compose.v
+    Info: Found entity 1: display_compose
+Info: Found 1 design units, including 1 entities, in source file /rtl/seg_scan.v
+    Info: Found entity 1: seg_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/matrix_scan.v
+    Info: Found entity 1: matrix_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_ctrl.v
+    Info: Found entity 1: alarm_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_unified_scan.v
+    Info: Found entity 1: radar_unified_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_unified_top.v
+    Info: Found entity 1: radar_unified_top
+Info: Found 2 design units, including 2 entities, in source file /rtl/minsky_serial_datapath.v
+    Info: Found entity 1: minsky_serial_datapath
+    Info: Found entity 2: minsky_serial_registers
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_minsky_draw_compact.v
+    Info: Found entity 1: radar_minsky_draw_compact
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 3 design units, including 3 entities, in source file radar_unified_variants.v
+    Info: Found entity 1: radar_unified_read_top
+    Info: Found entity 2: radar_unified_safe_top
+    Info: Found entity 3: radar_unified_noend_top
+Info: Elaborating entity "radar_unified_read_top" for the top level hierarchy
+Error (10130): Verilog HDL error at radar_unified_variants.v(3): parameter "ENABLE_1" is not a formal parameter of instantiated module File: R:/lcd_p4/radar_unified_variants.v Line: 3
+Error (10130): Verilog HDL error at radar_unified_variants.v(3): parameter "KEEP_1" is not a formal parameter of instantiated module File: R:/lcd_p4/radar_unified_variants.v Line: 3
+Error: Can't elaborate top-level user hierarchy
+Info: Generated suppressed messages file R:/lcd_p4/radar_unified_read.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 3 errors, 0 warnings
+    Error: Peak virtual memory: 4395 megabytes
+    Error: Processing ended: Thu Oct 15 15:14:47 2026
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+Error: Quartus II Full Compilation was unsuccessful. 5 errors, 0 warnings
+Error: Flow compile (for project R:/lcd_p4/radar_unified_read) was not successful
+Error: ERROR: Error(s) found while running an executable. See report file(s) for error message(s). Message log indicates which executable was run last.
+

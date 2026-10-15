@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 19:57:32 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : scan
+Top-level Entity Name : radar_unified_scan
+Family : MAX II
+Total logic elements : 298
+Total pins : 2
+Total virtual pins : 132
+UFM blocks : 0 / 1 ( 0 % )

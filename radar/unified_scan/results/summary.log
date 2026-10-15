@@ -1,0 +1,9 @@
+{'build': 'final_compare/bcd', 'fitter_success': False, 'fitter_le': 1415, 'registers': 556, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/bcd_safe', 'fitter_success': True, 'fitter_le': 992, 'registers': 375, 'io': 75, 'ufm': 0, 'slack_ns': {"Setup 'clk'": 3.769, "Hold 'clk'": 1.078, "Minimum Pulse Width 'clk'": 9.734}, 'resource_demand_only': False}
+{'build': 'final_compare/behind', 'fitter_success': False, 'fitter_le': 1461, 'registers': 606, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/degree2', 'fitter_success': False, 'fitter_le': 1475, 'registers': 603, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/f14', 'fitter_success': False, 'fitter_le': 1455, 'registers': 601, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/noend', 'fitter_success': False, 'fitter_le': 1442, 'registers': 602, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/read', 'fitter_success': False, 'fitter_le': 1457, 'registers': 603, 'io': 75, 'ufm': 0, 'slack_ns': {}, 'resource_demand_only': True}
+{'build': 'final_compare/safe', 'fitter_success': True, 'fitter_le': 1029, 'registers': 422, 'io': 75, 'ufm': 0, 'slack_ns': {"Setup 'clk'": 3.881, "Hold 'clk'": 1.078, "Minimum Pulse Width 'clk'": 9.734}, 'resource_demand_only': False}
+{'build': 'scan_fit2', 'fitter_success': True, 'fitter_le': 288, 'registers': 139, 'io': 1, 'ufm': 0, 'slack_ns': {"Setup 'clk'": 2.714, "Hold 'clk'": 0.726, "Minimum Pulse Width 'clk'": 9.734}, 'resource_demand_only': False}

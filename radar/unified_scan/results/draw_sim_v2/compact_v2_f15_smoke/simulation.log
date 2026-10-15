@@ -1,0 +1,4 @@
+PASS_FUNCTIONAL Minsky draw F=15 K=7 scenarios=26 pixels=3454 A=84 B=26 bus_transactions=27632 dropped=255; all pixels/RAM/order/vector/latches verified
+TIMING_RESULT max_busy_cycles=127237 max_busy_ns=2544740 endpoint_max_cycles=127237 endpoint_max_ns=2544740 requests_failing_strict_under_1ms=6
+FATAL: tb_minsky_draw.v:132: DEADLINE_FAIL: each request including endpoint must finish strictly below 1ms
+       Time: 22286080000  Scope: tb_minsky_draw

@@ -1,0 +1,2 @@
+FATAL: st7565_model.v:51: Incomplete clear before display on
+       Time: 92570790000  Scope: tb_unified_top.model0

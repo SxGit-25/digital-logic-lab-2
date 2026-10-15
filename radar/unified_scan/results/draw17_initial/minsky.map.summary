@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 15:06:49 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : minsky
+Top-level Entity Name : minsky_lcd_test_top
+Family : MAX II
+Total logic elements : 628
+Total pins : 14
+Total virtual pins : 33
+UFM blocks : 0 / 1 ( 0 % )

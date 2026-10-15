@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 20:50:56 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : radar_unified_bcd_safe
+Top-level Entity Name : radar_unified_bcd_safe_top
+Family : MAX II
+Total logic elements : 959
+Total pins : 75
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

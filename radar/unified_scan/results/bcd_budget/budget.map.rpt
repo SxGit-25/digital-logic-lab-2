@@ -1,0 +1,297 @@
+Analysis & Synthesis report for budget
+Thu Oct 15 20:37:18 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |ultrasonic_bcd_budget|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |ultrasonic_bcd_budget
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 20:37:18 2026    ;
+; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; budget                                   ;
+; Top-level Entity Name       ; ultrasonic_bcd_budget                    ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 149                                      ;
+; Total pins                  ; 37                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                           ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Option                                                                     ; Setting               ; Default Value      ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5         ;                    ;
+; Top-level entity name                                                      ; ultrasonic_bcd_budget ; budget             ;
+; Family name                                                                ; MAX II                ; Stratix II         ;
+; Optimization Technique                                                     ; Area                  ; Balanced           ;
+; Auto Resource Sharing                                                      ; On                    ; Off                ;
+; Use smart compilation                                                      ; Off                   ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                 ;
+; Enable compact report table                                                ; Off                   ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                  ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                   ; Off                ;
+; Preserve fewer node names                                                  ; On                    ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                   ; Off                ;
+; Verilog Version                                                            ; Verilog_2001          ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993             ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                  ; Auto               ;
+; Safe State Machine                                                         ; Off                   ; Off                ;
+; Extract Verilog State Machines                                             ; On                    ; On                 ;
+; Extract VHDL State Machines                                                ; On                    ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                   ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                  ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                   ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                    ; On                 ;
+; Parallel Synthesis                                                         ; On                    ; On                 ;
+; NOT Gate Push-Back                                                         ; On                    ; On                 ;
+; Power-Up Don't Care                                                        ; On                    ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                   ; Off                ;
+; Remove Duplicate Registers                                                 ; On                    ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                   ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                   ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                   ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                   ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                   ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                    ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                   ; Off                ;
+; Carry Chain Length                                                         ; 70                    ; 70                 ;
+; Auto Carry Chains                                                          ; On                    ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                    ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                   ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto                  ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                    ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                    ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                   ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                    ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                   ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                     ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation    ; Normal compilation ;
+; HDL message level                                                          ; Level2                ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                   ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                   ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                   ; 100                ;
+; Clock MUX Protection                                                       ; On                    ; On                 ;
+; Block Design Naming                                                        ; Auto                  ; Auto               ;
+; Synthesis Effort                                                           ; Auto                  ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                    ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium                ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                  ; Auto               ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+
+; ultrasonic_bcd_budget.v          ; yes             ; User Verilog HDL File  ; C:/Users/Metro/AppData/Local/Temp/radar_bcd_budget_4866623a7a614f3ea677f2377ad45ea7/ultrasonic_bcd_budget.v ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 149   ;
+;     -- Combinational with no register       ; 76    ;
+;     -- Register only                        ; 18    ;
+;     -- Combinational with a register        ; 55    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 58    ;
+;     -- 3 input functions                    ; 18    ;
+;     -- 2 input functions                    ; 52    ;
+;     -- 1 input functions                    ; 2     ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 128   ;
+;     -- arithmetic mode                      ; 21    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 27    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 73    ;
+; Total logic cells in carry chains           ; 25    ;
+; I/O pins                                    ; 37    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 73    ;
+; Total fan-out                               ; 601   ;
+; Average fan-out                             ; 3.23  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name    ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
+; |ultrasonic_bcd_budget     ; 149 (149)   ; 73           ; 0          ; 37   ; 0            ; 76 (76)      ; 18 (18)           ; 55 (55)          ; 25 (25)         ; 0 (0)      ; |ultrasonic_bcd_budget ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ultrasonic_bcd_budget|state                                                                                ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+------------+
+; Name            ; state.FINISH ; state.COMMIT ; state.COUNT ; state.WAIT_RISE ; state.WAIT_LOW ; state.TRIGGER ; state.IDLE ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+------------+
+; state.IDLE      ; 0            ; 0            ; 0           ; 0               ; 0              ; 0             ; 0          ;
+; state.TRIGGER   ; 0            ; 0            ; 0           ; 0               ; 0              ; 1             ; 1          ;
+; state.WAIT_LOW  ; 0            ; 0            ; 0           ; 0               ; 1              ; 0             ; 1          ;
+; state.WAIT_RISE ; 0            ; 0            ; 0           ; 1               ; 0              ; 0             ; 1          ;
+; state.COUNT     ; 0            ; 0            ; 1           ; 0               ; 0              ; 0             ; 1          ;
+; state.COMMIT    ; 0            ; 1            ; 0           ; 0               ; 0              ; 0             ; 1          ;
+; state.FINISH    ; 1            ; 0            ; 0           ; 0               ; 0              ; 0             ; 1          ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state~6                               ; Lost fanout        ;
+; state~7                               ; Lost fanout        ;
+; state~8                               ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |ultrasonic_bcd_budget|distance_valid~reg0 ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |ultrasonic_bcd_budget|work[11]            ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |ultrasonic_bcd_budget|timer[4]            ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; Yes        ; |ultrasonic_bcd_budget|radius[1]~reg0      ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |ultrasonic_bcd_budget|mod25[1]            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ultrasonic_bcd_budget|work[12]            ;
+; 15:1               ; 9 bits    ; 90 LEs        ; 9 LEs                ; 81 LEs                 ; Yes        ; |ultrasonic_bcd_budget|phase[2]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ultrasonic_bcd_budget|distance_level      ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 40 LEs               ; 15 LEs                 ; No         ; |ultrasonic_bcd_budget|state               ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |ultrasonic_bcd_budget|state               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ultrasonic_bcd_budget ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; TRIG_US        ; 15    ; Signed Integer                                               ;
+; TIMEOUT_US     ; 30000 ; Signed Integer                                               ;
+; ENABLE_RADIUS  ; 1     ; Signed Integer                                               ;
+; USE_MS_TIMEOUT ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 20:37:18 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off budget -c budget
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file ultrasonic_bcd_budget.v
+    Info: Found entity 1: ultrasonic_bcd_budget
+Info: Elaborating entity "ultrasonic_bcd_budget" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at ultrasonic_bcd_budget.v(49): truncated value with size 32 to match size of target (3)
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info: Register "state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "state~8" lost all its fanouts during netlist optimizations.
+Info: Implemented 186 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 30 output pins
+    Info: Implemented 149 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4402 megabytes
+    Info: Processing ended: Thu Oct 15 20:37:18 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

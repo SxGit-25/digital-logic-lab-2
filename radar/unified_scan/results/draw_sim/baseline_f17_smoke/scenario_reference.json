@@ -1,0 +1,261 @@
+{
+  "candidate": "f17",
+  "smoke": true,
+  "f": 17,
+  "k": 8,
+  "phase_bits": 5,
+  "phase_add": 15,
+  "phase_initial": 16,
+  "micro_base": 4,
+  "reference_source": "E:\\codex\\\u6570\u7535\u5b9e\u9a8c2\\radar\\unified_scan\\results\\minsky\\minsky_schedule_search.py",
+  "vector_evaluation": {
+    "k": 8,
+    "fraction_bits": 17,
+    "signed_register_bits": 19,
+    "base_microsteps": 4,
+    "numerator": 15,
+    "denominator": 32,
+    "initial_phase": 16,
+    "maximum_pixel_euclidean_error_px": 0.8735212896426087,
+    "maximum_unrounded_vector_error_px": 0.26704865160838126,
+    "angle_after_45_steps": 44.87315018285318,
+    "maximum_direction_angle_error_degrees": 0.31871741004488285,
+    "maximum_magnitude_error_px_at_radius_48": 0.09631349895918184
+  },
+  "scenarios": [
+    {
+      "index": 0,
+      "angle": 0,
+      "direction_up": 1,
+      "radius": 0,
+      "valid": false,
+      "erase_rays": 11,
+      "rmw_pixels": 443
+    },
+    {
+      "index": 1,
+      "angle": 1,
+      "direction_up": 1,
+      "radius": 2,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 2,
+      "angle": 10,
+      "direction_up": 1,
+      "radius": 12,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 3,
+      "angle": 45,
+      "direction_up": 1,
+      "radius": 24,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 4,
+      "angle": 90,
+      "direction_up": 1,
+      "radius": 36,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 5,
+      "angle": 170,
+      "direction_up": 1,
+      "radius": 48,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 43
+    },
+    {
+      "index": 6,
+      "angle": 180,
+      "direction_up": 1,
+      "radius": 48,
+      "valid": false,
+      "erase_rays": 0,
+      "rmw_pixels": 3
+    },
+    {
+      "index": 7,
+      "angle": 180,
+      "direction_up": 0,
+      "radius": 48,
+      "valid": false,
+      "erase_rays": 11,
+      "rmw_pixels": 443
+    },
+    {
+      "index": 8,
+      "angle": 179,
+      "direction_up": 0,
+      "radius": 18,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 9,
+      "angle": 90,
+      "direction_up": 0,
+      "radius": 28,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 10,
+      "angle": 10,
+      "direction_up": 0,
+      "radius": 8,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 11,
+      "angle": 1,
+      "direction_up": 0,
+      "radius": 48,
+      "valid": false,
+      "erase_rays": 0,
+      "rmw_pixels": 3
+    },
+    {
+      "index": 12,
+      "angle": 0,
+      "direction_up": 1,
+      "radius": 0,
+      "valid": false,
+      "erase_rays": 11,
+      "rmw_pixels": 443
+    },
+    {
+      "index": 13,
+      "angle": 90,
+      "direction_up": 1,
+      "radius": 8,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 14,
+      "angle": 90,
+      "direction_up": 1,
+      "radius": 18,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 15,
+      "angle": 90,
+      "direction_up": 1,
+      "radius": 28,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 16,
+      "angle": 91,
+      "direction_up": 1,
+      "radius": 13,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 17,
+      "angle": 180,
+      "direction_up": 0,
+      "radius": 36,
+      "valid": true,
+      "erase_rays": 11,
+      "rmw_pixels": 444
+    },
+    {
+      "index": 18,
+      "angle": 179,
+      "direction_up": 0,
+      "radius": 24,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 19,
+      "angle": 0,
+      "direction_up": 1,
+      "radius": 48,
+      "valid": false,
+      "erase_rays": 11,
+      "rmw_pixels": 443
+    },
+    {
+      "index": 20,
+      "angle": 1,
+      "direction_up": 1,
+      "radius": 0,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 21,
+      "angle": 2,
+      "direction_up": 1,
+      "radius": 2,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 44
+    },
+    {
+      "index": 22,
+      "angle": 3,
+      "direction_up": 1,
+      "radius": 48,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 43
+    },
+    {
+      "index": 23,
+      "angle": 4,
+      "direction_up": 1,
+      "radius": 48,
+      "valid": false,
+      "erase_rays": 1,
+      "rmw_pixels": 43
+    },
+    {
+      "index": 24,
+      "angle": 5,
+      "direction_up": 1,
+      "radius": 49,
+      "valid": true,
+      "erase_rays": 1,
+      "rmw_pixels": 43
+    },
+    {
+      "index": 25,
+      "angle": 180,
+      "direction_up": 0,
+      "radius": 28,
+      "valid": true,
+      "erase_rays": 11,
+      "rmw_pixels": 444
+    }
+  ]
+}

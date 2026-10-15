@@ -1,0 +1,156 @@
+{
+  "tested": 45792,
+  "search": "F8..16,k6..9,base=floor(ideal microsteps), power-of-two denominator1..256, reduced numerator0..D, phase in {0,D/4,D/2,3D/4,D-1}",
+  "pixel_passing": 89,
+  "minimum_fraction_bits_with_pixel_and_min6": 14,
+  "simplest_zero_collision_by_fraction_bits": [
+    {
+      "k": 7,
+      "fraction_bits": 14,
+      "signed_register_bits": 16,
+      "base_microsteps": 2,
+      "numerator": 61,
+      "denominator": 256,
+      "initial_phase": 255,
+      "maximum_pixel_euclidean_error_px": 0.9670206079705231,
+      "maximum_unrounded_vector_error_px": 0.43156069853570295,
+      "angle_after_45_steps": 44.859611705432094,
+      "maximum_direction_angle_error_degrees": 0.4963193330675608,
+      "maximum_magnitude_error_px_at_radius_48": 0.3680677277851423,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 74
+    },
+    {
+      "k": 7,
+      "fraction_bits": 15,
+      "signed_register_bits": 17,
+      "base_microsteps": 2,
+      "numerator": 15,
+      "denominator": 64,
+      "initial_phase": 63,
+      "maximum_pixel_euclidean_error_px": 0.9135117221578992,
+      "maximum_unrounded_vector_error_px": 0.36203259470046334,
+      "angle_after_45_steps": 44.98150834471123,
+      "maximum_direction_angle_error_degrees": 0.43148171467845486,
+      "maximum_magnitude_error_px_at_radius_48": 0.1907669285919109,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 78
+    },
+    {
+      "k": 8,
+      "fraction_bits": 16,
+      "signed_register_bits": 18,
+      "base_microsteps": 4,
+      "numerator": 15,
+      "denominator": 32,
+      "initial_phase": 31,
+      "maximum_pixel_euclidean_error_px": 0.8884963111174815,
+      "maximum_unrounded_vector_error_px": 0.29610423414061826,
+      "angle_after_45_steps": 45.038252296879584,
+      "maximum_direction_angle_error_degrees": 0.33535158561190315,
+      "maximum_magnitude_error_px_at_radius_48": 0.18240297782869952,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 82
+    }
+  ],
+  "collision_checked_candidates": [
+    {
+      "k": 7,
+      "fraction_bits": 14,
+      "signed_register_bits": 16,
+      "base_microsteps": 2,
+      "numerator": 61,
+      "denominator": 256,
+      "initial_phase": 255,
+      "maximum_pixel_euclidean_error_px": 0.9670206079705231,
+      "maximum_unrounded_vector_error_px": 0.43156069853570295,
+      "angle_after_45_steps": 44.859611705432094,
+      "maximum_direction_angle_error_degrees": 0.4963193330675608,
+      "maximum_magnitude_error_px_at_radius_48": 0.3680677277851423,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 74
+    },
+    {
+      "k": 7,
+      "fraction_bits": 15,
+      "signed_register_bits": 17,
+      "base_microsteps": 2,
+      "numerator": 15,
+      "denominator": 64,
+      "initial_phase": 63,
+      "maximum_pixel_euclidean_error_px": 0.9135117221578992,
+      "maximum_unrounded_vector_error_px": 0.36203259470046334,
+      "angle_after_45_steps": 44.98150834471123,
+      "maximum_direction_angle_error_degrees": 0.43148171467845486,
+      "maximum_magnitude_error_px_at_radius_48": 0.1907669285919109,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 78
+    },
+    {
+      "k": 8,
+      "fraction_bits": 16,
+      "signed_register_bits": 18,
+      "base_microsteps": 4,
+      "numerator": 15,
+      "denominator": 32,
+      "initial_phase": 31,
+      "maximum_pixel_euclidean_error_px": 0.8884963111174815,
+      "maximum_unrounded_vector_error_px": 0.29610423414061826,
+      "angle_after_45_steps": 45.038252296879584,
+      "maximum_direction_angle_error_degrees": 0.33535158561190315,
+      "maximum_magnitude_error_px_at_radius_48": 0.18240297782869952,
+      "erase_check": {
+        "at_minimum_6": {
+          "minimum_radius": 6,
+          "behind_hits": 0,
+          "example": null
+        },
+        "first_zero_minimum": 6
+      },
+      "inverse_roundtrip_exact": true,
+      "all_data_register_bits": 82
+    }
+  ],
+  "production_rtl_changed": false,
+  "note": "Alternative numerical candidates only. Default frozen k8/F17 RTL unaffected."
+}

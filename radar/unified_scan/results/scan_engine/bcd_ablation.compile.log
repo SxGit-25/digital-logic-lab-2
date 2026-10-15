@@ -1,0 +1,4 @@
+compile_exit_code=0
+tb_scan_bcd.v:16: warning: Instantiating module radar_unified_scan with dangling input port 38 (global_frame_us) floating.
+tb_scan_bcd.v:16: warning: Instantiating module radar_unified_scan with dangling input port 39 (global_frame_tick) floating.
+simulation_exit_code=0

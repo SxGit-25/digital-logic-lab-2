@@ -1,0 +1,55 @@
+RUN new ns=3999011
+RUN old ns=3999011
+MEASURE new n=0 ns=4999011 offset_ns=1000000 angle=000 active_pulse=500
+MEASURE old ns=4999011 offset_ns=1000000 idx=0
+FAST begin slot=1 ns=5999011 frame_us=4000 active_pulse=500
+TEST phase injection: frame boundary in 10us while fast walk is active
+INTERMEDIATE ns=6009011 active_pulse=600 angle=010 fast=1
+FAST end ns=6044011 duration_ns=45000 angle=045 command_pulse=1000
+MEASURE new n=1 ns=6999011 offset_ns=3000000 angle=045 active_pulse=600
+FAST begin slot=2 ns=7999011 frame_us=1990 active_pulse=600
+FAST end ns=8044011 duration_ns=45000 angle=090 command_pulse=1500
+MEASURE new n=2 ns=8999011 offset_ns=5000000 angle=090 active_pulse=600
+FAST begin slot=3 ns=9999011 frame_us=3990 active_pulse=600
+FAST end ns=10044011 duration_ns=45000 angle=135 command_pulse=2000
+MEASURE new n=3 ns=10999011 offset_ns=7000000 angle=135 active_pulse=600
+FAST begin slot=4 ns=11999011 frame_us=5990 active_pulse=600
+FAST end ns=12044011 duration_ns=45000 angle=180 command_pulse=2500
+MEASURE new n=4 ns=12999011 offset_ns=9000000 angle=180 active_pulse=600
+FAST begin slot=5 ns=13999011 frame_us=7990 active_pulse=600
+FAST end ns=14044011 duration_ns=45000 angle=135 command_pulse=2000
+MEASURE new n=5 ns=14999011 offset_ns=11000000 angle=135 active_pulse=600
+FAST begin slot=6 ns=15999011 frame_us=9990 active_pulse=600
+FAST end ns=16044011 duration_ns=45000 angle=090 command_pulse=1500
+MEASURE new n=6 ns=16999011 offset_ns=13000000 angle=090 active_pulse=600
+FAST begin slot=7 ns=17999011 frame_us=11990 active_pulse=600
+FAST end ns=18044011 duration_ns=45000 angle=045 command_pulse=1000
+MEASURE new n=7 ns=18999011 offset_ns=15000000 angle=045 active_pulse=600
+FAST begin slot=8 ns=19999011 frame_us=13990 active_pulse=600
+FAST end ns=20044011 duration_ns=45000 angle=000 command_pulse=500
+MEASURE new n=8 ns=20999011 offset_ns=17000000 angle=000 active_pulse=600
+FAST begin slot=9 ns=21999011 frame_us=15990 active_pulse=600
+FAST end ns=22044011 duration_ns=45000 angle=045 command_pulse=1000
+MEASURE new n=9 ns=22999011 offset_ns=19000000 angle=045 active_pulse=600
+FAST begin slot=10 ns=23999011 frame_us=17990 active_pulse=600
+FAST end ns=24044011 duration_ns=45000 angle=090 command_pulse=1500
+MEASURE new n=10 ns=24999011 offset_ns=21000000 angle=090 active_pulse=600
+FAST begin slot=11 ns=25999011 frame_us=19990 active_pulse=600
+INTERMEDIATE ns=26009011 active_pulse=1600 angle=100 fast=1
+FAST end ns=26044011 duration_ns=45000 angle=135 command_pulse=2000
+MEASURE new n=11 ns=26999011 offset_ns=23000000 angle=135 active_pulse=1600
+FAST begin slot=12 ns=27999011 frame_us=1990 active_pulse=1600
+FAST end ns=28044011 duration_ns=45000 angle=180 command_pulse=2500
+MEASURE new n=12 ns=28999011 offset_ns=25000000 angle=180 active_pulse=1600
+FAST begin slot=13 ns=29999011 frame_us=3990 active_pulse=1600
+FAST end ns=30044011 duration_ns=45000 angle=135 command_pulse=2000
+MEASURE new n=13 ns=30999011 offset_ns=27000000 angle=135 active_pulse=1600
+FAST begin slot=14 ns=31999011 frame_us=5990 active_pulse=1600
+FAST end ns=32044011 duration_ns=45000 angle=090 command_pulse=1500
+MEASURE new n=14 ns=32999011 offset_ns=29000000 angle=090 active_pulse=1600
+FAST begin slot=15 ns=33999011 frame_us=7990 active_pulse=1600
+FAST end ns=34044011 duration_ns=45000 angle=045 command_pulse=1000
+MEASURE new n=15 ns=34999011 offset_ns=31000000 angle=045 active_pulse=1600
+FAST begin slot=16 ns=35999011 frame_us=9990 active_pulse=1600
+PASS tb_scan_engine production=0 mode=0 hold=0 degree=1 samples=16 commits=16 steps=675 frames=3 intermediate_pulses=2
+tb_scan_engine.v:182: $finish called at 36000000000 (1ps)

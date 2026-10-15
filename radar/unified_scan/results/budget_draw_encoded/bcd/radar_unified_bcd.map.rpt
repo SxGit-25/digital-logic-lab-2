@@ -1,0 +1,819 @@
+Analysis & Synthesis report for radar_unified_bcd
+Thu Oct 15 20:57:15 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|state
+  9. State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|blank_stage
+ 10. State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|settle_phase
+ 11. State Machine - |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state
+ 12. Registers Protected by Synthesis
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for radar_unified_top:system|radar_lcd_micro:draw
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |radar_unified_bcd_top
+ 19. Parameter Settings for User Entity Instance: radar_unified_top:system
+ 20. Parameter Settings for User Entity Instance: radar_unified_top:system|reset_ctrl:u_reset
+ 21. Parameter Settings for User Entity Instance: radar_unified_top:system|radar_global_timebase_alarm:u_timebase
+ 22. Parameter Settings for User Entity Instance: radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic
+ 23. Parameter Settings for User Entity Instance: radar_unified_top:system|radar_unified_scan:scan
+ 24. Parameter Settings for User Entity Instance: radar_unified_top:system|alarm_global:u_alarm
+ 25. Parameter Settings for User Entity Instance: radar_unified_top:system|radar_lcd_micro:draw
+ 26. Parameter Settings for User Entity Instance: radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath
+ 27. Parameter Settings for User Entity Instance: radar_unified_top:system|lcd_bus_phase:bus
+ 28. Port Connectivity Checks: "radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath"
+ 29. Port Connectivity Checks: "radar_unified_top:system|radar_lcd_micro:draw"
+ 30. Port Connectivity Checks: "radar_unified_top:system|radar_unified_scan:scan"
+ 31. Port Connectivity Checks: "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic"
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 20:57:15 2026    ;
+; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; radar_unified_bcd                        ;
+; Top-level Entity Name       ; radar_unified_bcd_top                    ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 1,144                                    ;
+; Total pins                  ; 75                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                           ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Option                                                                     ; Setting               ; Default Value      ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5         ;                    ;
+; Top-level entity name                                                      ; radar_unified_bcd_top ; radar_unified_bcd  ;
+; Family name                                                                ; MAX II                ; Stratix II         ;
+; Restructure Multiplexers                                                   ; On                    ; Auto               ;
+; Power-Up Don't Care                                                        ; Off                   ; On                 ;
+; Optimization Technique                                                     ; Area                  ; Balanced           ;
+; Auto Resource Sharing                                                      ; On                    ; Off                ;
+; Use smart compilation                                                      ; Off                   ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                 ;
+; Enable compact report table                                                ; Off                   ; Off                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                   ; Off                ;
+; Preserve fewer node names                                                  ; On                    ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                   ; Off                ;
+; Verilog Version                                                            ; Verilog_2001          ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993             ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                  ; Auto               ;
+; Safe State Machine                                                         ; Off                   ; Off                ;
+; Extract Verilog State Machines                                             ; On                    ; On                 ;
+; Extract VHDL State Machines                                                ; On                    ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                   ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                  ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                   ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                    ; On                 ;
+; Parallel Synthesis                                                         ; On                    ; On                 ;
+; NOT Gate Push-Back                                                         ; On                    ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                   ; Off                ;
+; Remove Duplicate Registers                                                 ; On                    ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                   ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                   ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                   ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                   ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                   ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                    ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                   ; Off                ;
+; Carry Chain Length                                                         ; 70                    ; 70                 ;
+; Auto Carry Chains                                                          ; On                    ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                    ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                   ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto                  ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                    ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                    ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                   ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                    ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                   ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                     ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation    ; Normal compilation ;
+; HDL message level                                                          ; Level2                ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                   ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                   ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                   ; 100                ;
+; Clock MUX Protection                                                       ; On                    ; On                 ;
+; Block Design Naming                                                        ; Auto                  ; Auto               ;
+; Synthesis Effort                                                           ; Auto                  ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                    ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium                ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                  ; Auto               ;
++----------------------------------------------------------------------------+-----------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------------+-----------------+------------------------+----------------------------------------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type              ; File Name with Absolute Path           ;
++----------------------------------------+-----------------+------------------------+----------------------------------------+
+; ../rtl/reset_ctrl.v                    ; yes             ; User Verilog HDL File  ; R:/rtl/reset_ctrl.v                    ;
+; ../rtl/radar_unified_scan.v            ; yes             ; User Verilog HDL File  ; R:/rtl/radar_unified_scan.v            ;
+; ../rtl/radar_unified_top.v             ; yes             ; User Verilog HDL File  ; R:/rtl/radar_unified_top.v             ;
+; ../rtl/minsky_serial_datapath.v        ; yes             ; User Verilog HDL File  ; R:/rtl/minsky_serial_datapath.v        ;
+; radar_unified_variants.v               ; yes             ; User Verilog HDL File  ; R:/lcd_p4/radar_unified_variants.v     ;
+; ../rtl/radar_lcd_micro.v               ; yes             ; User Verilog HDL File  ; R:/rtl/radar_lcd_micro.v               ;
+; ../rtl/lcd_bus_phase.v                 ; yes             ; User Verilog HDL File  ; R:/rtl/lcd_bus_phase.v                 ;
+; ../rtl/radar_display_shared.v          ; yes             ; User Verilog HDL File  ; R:/rtl/radar_display_shared.v          ;
+; ../rtl/radar_global_timebase_alarm.v   ; yes             ; User Verilog HDL File  ; R:/rtl/radar_global_timebase_alarm.v   ;
+; ../rtl/alarm_global.v                  ; yes             ; User Verilog HDL File  ; R:/rtl/alarm_global.v                  ;
+; ../rtl/switch_pair_sampled.v           ; yes             ; User Verilog HDL File  ; R:/rtl/switch_pair_sampled.v           ;
+; ../rtl/radar_display_gated.v           ; yes             ; User Verilog HDL File  ; R:/rtl/radar_display_gated.v           ;
+; ../rtl/ultrasonic_bcd_budget_compact.v ; yes             ; User Verilog HDL File  ; R:/rtl/ultrasonic_bcd_budget_compact.v ;
++----------------------------------------+-----------------+------------------------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 1144  ;
+;     -- Combinational with no register       ; 716   ;
+;     -- Register only                        ; 40    ;
+;     -- Combinational with a register        ; 388   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 530   ;
+;     -- 3 input functions                    ; 212   ;
+;     -- 2 input functions                    ; 340   ;
+;     -- 1 input functions                    ; 21    ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1012  ;
+;     -- arithmetic mode                      ; 132   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 96    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 428   ;
+; Total logic cells in carry chains           ; 153   ;
+; I/O pins                                    ; 75    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 428   ;
+; Total fan-out                               ; 4445  ;
+; Average fan-out                             ; 3.65  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                     ;
++----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                          ; Library Name ;
++----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; |radar_unified_bcd_top                                               ; 1144 (1)    ; 428          ; 0          ; 75   ; 0            ; 716 (1)      ; 40 (0)            ; 388 (0)          ; 153 (0)         ; 0 (0)      ; |radar_unified_bcd_top                                                                                       ; work         ;
+;    |radar_unified_top:system|                                        ; 1143 (16)   ; 428          ; 0          ; 0    ; 0            ; 715 (16)     ; 40 (0)            ; 388 (0)          ; 153 (0)         ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system                                                              ; work         ;
+;       |alarm_global:u_alarm|                                         ; 15 (15)     ; 0            ; 0          ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm                                         ; work         ;
+;       |lcd_bus_phase:bus|                                            ; 62 (62)     ; 29           ; 0          ; 0    ; 0            ; 33 (33)      ; 8 (8)             ; 21 (21)          ; 6 (6)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus                                            ; work         ;
+;       |radar_display_gated:u_display|                                ; 172 (31)    ; 36           ; 0          ; 0    ; 0            ; 136 (31)     ; 1 (0)             ; 35 (0)           ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display                                ; work         ;
+;          |radar_display_shared:core|                                 ; 141 (141)   ; 36           ; 0          ; 0    ; 0            ; 105 (105)    ; 1 (1)             ; 35 (35)          ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core      ; work         ;
+;       |radar_global_timebase_alarm:u_timebase|                       ; 67 (67)     ; 47           ; 0          ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 47 (47)          ; 38 (38)         ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase                       ; work         ;
+;       |radar_lcd_micro:draw|                                         ; 422 (309)   ; 133          ; 0          ; 0    ; 0            ; 289 (256)    ; 2 (0)             ; 131 (53)         ; 32 (32)         ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw                                         ; work         ;
+;          |minsky_serial_registers:datapath|                          ; 113 (113)   ; 80           ; 0          ; 0    ; 0            ; 33 (33)      ; 2 (2)             ; 78 (78)          ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath        ; work         ;
+;       |radar_unified_scan:scan|                                      ; 236 (236)   ; 103          ; 0          ; 0    ; 0            ; 133 (133)    ; 12 (12)           ; 91 (91)          ; 57 (57)         ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan                                      ; work         ;
+;       |reset_ctrl:u_reset|                                           ; 8 (8)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset                                           ; work         ;
+;       |switch_pair_sampled:u_switch_pair|                            ; 9 (9)       ; 8            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair                            ; work         ;
+;       |ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic| ; 136 (136)   ; 67           ; 0          ; 0    ; 0            ; 69 (69)      ; 17 (17)           ; 50 (50)          ; 20 (20)         ; 0 (0)      ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic ; work         ;
++----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  Sequential Encoding
++-------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|state                              ;
++---------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name                ; state.state_bit_4 ; state.state_bit_3 ; state.state_bit_2 ; state.state_bit_1 ; state.state_bit_0 ;
++---------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; state.INIT_RESET    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; state.ORIENT        ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ;
+; state.DEGREE        ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; state.ROT_BEGIN     ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ;
+; state.ROT_BITS      ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ;
+; state.RAY_RESET     ; 0                 ; 0                 ; 1                 ; 0                 ; 1                 ;
+; state.PIXEL         ; 0                 ; 0                 ; 1                 ; 1                 ; 0                 ;
+; state.ADD_BEGIN     ; 0                 ; 0                 ; 1                 ; 1                 ; 1                 ;
+; state.ADD_BITS      ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ;
+; state.RMW           ; 0                 ; 1                 ; 0                 ; 0                 ; 1                 ;
+; state.AFTER_RAY     ; 0                 ; 1                 ; 0                 ; 1                 ; 0                 ;
+; state.VECTOR_RESET  ; 0                 ; 1                 ; 0                 ; 1                 ; 1                 ;
+; state.IDLE          ; 0                 ; 1                 ; 1                 ; 0                 ; 0                 ;
+; state.INIT_WAIT     ; 0                 ; 1                 ; 1                 ; 0                 ; 1                 ;
+; state.INIT_SEND     ; 0                 ; 1                 ; 1                 ; 1                 ; 0                 ;
+; state.CONVERT_ANGLE ; 0                 ; 1                 ; 1                 ; 1                 ; 1                 ;
+; state.ANGLE_OFFSET  ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ;
++---------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|blank_stage ;
++----------------+----------------+----------------+----------------------------------------------------------------------------------+
+; Name           ; blank_stage.00 ; blank_stage.10 ; blank_stage.01                                                                   ;
++----------------+----------------+----------------+----------------------------------------------------------------------------------+
+; blank_stage.01 ; 0              ; 0              ; 0                                                                                ;
+; blank_stage.00 ; 1              ; 0              ; 1                                                                                ;
+; blank_stage.10 ; 0              ; 1              ; 1                                                                                ;
++----------------+----------------+----------------+----------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|settle_phase ;
++-----------------+-----------------+-----------------+------------------------------------------------+
+; Name            ; settle_phase.00 ; settle_phase.10 ; settle_phase.01                                ;
++-----------------+-----------------+-----------------+------------------------------------------------+
+; settle_phase.00 ; 0               ; 0               ; 0                                              ;
+; settle_phase.01 ; 1               ; 0               ; 1                                              ;
+; settle_phase.10 ; 1               ; 1               ; 0                                              ;
++-----------------+-----------------+-----------------+------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+-------------------+
+; Name            ; state.FINISH ; state.COMMIT ; state.COUNT ; state.WAIT_RISE ; state.WAIT_LOW ; state.TRIGGER ; state.IDLE        ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+-------------------+
+; state.IDLE      ; 0            ; 0            ; 0           ; 0               ; 0              ; 0             ; 0                 ;
+; state.TRIGGER   ; 0            ; 0            ; 0           ; 0               ; 0              ; 1             ; 1                 ;
+; state.WAIT_LOW  ; 0            ; 0            ; 0           ; 0               ; 1              ; 0             ; 1                 ;
+; state.WAIT_RISE ; 0            ; 0            ; 0           ; 1               ; 0              ; 0             ; 1                 ;
+; state.COUNT     ; 0            ; 0            ; 1           ; 0               ; 0              ; 0             ; 1                 ;
+; state.COMMIT    ; 0            ; 1            ; 0           ; 0               ; 0              ; 0             ; 1                 ;
+; state.FINISH    ; 1            ; 0            ; 0           ; 0               ; 0              ; 0             ; 1                 ;
++-----------------+--------------+--------------+-------------+-----------------+----------------+---------------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                         ;
++----------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                            ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++----------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[7] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[6] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[5] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[4] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[3] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[2] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[1] ; yes                                                              ; yes                                        ;
+; radar_unified_top:system|radar_lcd_micro:draw|dropped[0] ; yes                                                              ; yes                                        ;
++----------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+; Register name                                                                                   ; Reason for Removal                                                                                    ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[0]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[0] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[1]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[1] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[2]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[2] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[3]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[3] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[4]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[4] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[5]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[5] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[6]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[6] ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|cat_n[7]       ; Merged with radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[7] ;
+; radar_unified_top:system|radar_unified_scan:scan|angle_bcd[10..11]                              ; Merged with radar_unified_top:system|radar_unified_scan:scan|angle_bcd[9]                             ;
+; radar_unified_top:system|radar_unified_scan:scan|sample_angle_bcd[11]                           ; Merged with radar_unified_top:system|radar_unified_scan:scan|sample_angle_bcd[9]                      ;
+; radar_unified_top:system|radar_unified_scan:scan|angle_bcd[9]                                   ; Stuck at GND due to stuck port data_in                                                                ;
+; radar_unified_top:system|radar_unified_scan:scan|sample_angle_bcd[9..10]                        ; Stuck at GND due to stuck port data_in                                                                ;
+; radar_unified_top:system|radar_lcd_micro:draw|state~3                                           ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_lcd_micro:draw|state~4                                           ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_lcd_micro:draw|state~5                                           ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_lcd_micro:draw|state~6                                           ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_lcd_micro:draw|state~7                                           ; Lost fanout                                                                                           ;
+; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~6   ; Lost fanout                                                                                           ;
+; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~7   ; Lost fanout                                                                                           ;
+; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~8   ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_unified_scan:scan|settle_phase.01                                ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_unified_scan:scan|settle_phase.10                                ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_unified_scan:scan|settle_phase.00                                ; Lost fanout                                                                                           ;
+; radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|blank_stage.00 ; Lost fanout                                                                                           ;
+; Total Number of Removed Registers = 26                                                          ;                                                                                                       ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 428   ;
+; Number of registers using Synchronous Clear  ; 85    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 324   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------+
+; Inverted Register Statistics                                 ;
++----------------------------------------------------+---------+
+; Inverted Register                                  ; Fan out ;
++----------------------------------------------------+---------+
+; radar_unified_top:system|reset_ctrl:u_reset|active ; 52      ;
+; Total number of inverted registers = 1             ;         ;
++----------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|phase[1]                                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|sample_angle_bcd[7]                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|color_phase[1]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair|previous[1]                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|tick_ms                              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|us_div[2]                            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|command_pulse_us[0]                                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|seg[3]              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|radius[0]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|end_same                                               ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|frame_us[12]                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|pulse_remainder[2]                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|rhythm_phase[2]                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|us_in_ms[1]                          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|hist_level0[1]                                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|hist_level4[1]                                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|hist_level2[0]                                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|hist_level1[2]                                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|hist_level3[1]                                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|angle_bcd[2]                                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|angle_bcd[0]                                        ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|active_pulse_us[2]                                  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase|ms_in_125[0]                         ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus|phase[3]                                                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|bit_index[3]                                           ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|target_radius[3]                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|angle_bcd[5]                                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|angle_bcd[4]                                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|col_g[7]            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[7]            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|row_n[0]            ;
+; 6:1                ; 22 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath|y_acc[2]              ;
+; 6:1                ; 22 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath|x_acc[8]              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|sample_idx[1]                                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|fast_steps[1]                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|fast_us[0]                                          ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath|c[8]                  ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath|s[9]                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|col_r[2]            ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|col_g[1]            ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|col_g[6]            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[11]       ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|timer[0]       ;
+; 10:1               ; 11 bits   ; 66 LEs        ; 11 LEs               ; 55 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan|timer_ms[6]                                         ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[13]       ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|position_count[6]                                      ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|micro_left[2]                                          ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|flush_left[3]                                          ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|position_count[4]                                      ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|position_count[1]                                      ;
+; 15:1               ; 9 bits    ; 90 LEs        ; 9 LEs                ; 81 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|phase[3]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus|saved_write_data[7]                                       ;
+; 23:1               ; 3 bits    ; 45 LEs        ; 33 LEs               ; 12 LEs                 ; Yes        ; |radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus|saved_write_data[2]                                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|position_delta[7]                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|color[2]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|color               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|color               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|color               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|color               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|blank_stage         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|Mux19               ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|Mux19               ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|Mux22               ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|Mux16               ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|digit[2]            ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 40 LEs               ; 15 LEs                 ; No         ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state          ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state          ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 12 LEs               ; 21 LEs                 ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|state                                                  ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|state                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Source assignments for radar_unified_top:system|radar_lcd_micro:draw ;
++---------------------------+------------+------+----------------------+
+; Assignment                ; Value      ; From ; To                   ;
++---------------------------+------------+------+----------------------+
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[7]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[7]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[7]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[6]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[6]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[6]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[5]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[5]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[5]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[4]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[4]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[4]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[3]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[3]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[3]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[2]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[2]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[2]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[1]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[1]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[1]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[0]~reg0      ;
+; PRESERVE_REGISTER         ; on         ; -    ; dropped[0]~reg0      ;
+; PRESERVE_FANOUT_FREE_NODE ; on         ; -    ; dropped[0]~reg0      ;
+; STATE_MACHINE_PROCESSING  ; SEQUENTIAL ; -    ; state                ;
++---------------------------+------------+------+----------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |radar_unified_bcd_top ;
++-----------------+-------+-------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                        ;
++-----------------+-------+-------------------------------------------------------------+
+; SETTLE_FROM_PWM ; 0     ; Signed Integer                                              ;
++-----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system ;
++------------------------+----------+-----------------------------------+
+; Parameter Name         ; Value    ; Type                              ;
++------------------------+----------+-----------------------------------+
+; CLK_HZ                 ; 50000000 ; Signed Integer                    ;
+; SELF_TEST_MS           ; 2000     ; Signed Integer                    ;
+; STANDBY_MS             ; 2000     ; Signed Integer                    ;
+; SLOT_MS                ; 2000     ; Signed Integer                    ;
+; SETTLE_MS              ; 300      ; Signed Integer                    ;
+; SWITCH_MS              ; 20       ; Signed Integer                    ;
+; CONTINUOUS_STEP_MS     ; 60       ; Signed Integer                    ;
+; FAST_STEP_US           ; 16       ; Signed Integer                    ;
+; ENABLE_READBACK        ; 1        ; Signed Integer                    ;
+; KEEP_END_BATCH         ; 1        ; Signed Integer                    ;
+; SETTLE_FROM_PWM        ; 0        ; Signed Integer                    ;
+; MEASUREMENT_BCD        ; 1        ; Signed Integer                    ;
+; CONTINUOUS_DEGREE_STEP ; 1        ; Signed Integer                    ;
+; MINSKY_F               ; 15       ; Signed Integer                    ;
+; MINSKY_K               ; 7        ; Signed Integer                    ;
+; MINSKY_PHASE_BITS      ; 6        ; Signed Integer                    ;
+; MINSKY_PHASE_ADD       ; 15       ; Signed Integer                    ;
+; MINSKY_PHASE_INITIAL   ; 63       ; Signed Integer                    ;
+; MINSKY_MICRO_BASE      ; 2        ; Signed Integer                    ;
++------------------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|reset_ctrl:u_reset ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; RESET_CYCLES   ; 16    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|radar_global_timebase_alarm:u_timebase ;
++------------------+----------+--------------------------------------------------------------------------------+
+; Parameter Name   ; Value    ; Type                                                                           ;
++------------------+----------+--------------------------------------------------------------------------------+
+; CLK_HZ           ; 50000000 ; Signed Integer                                                                 ;
+; SWITCH_SAMPLE_MS ; 20       ; Signed Integer                                                                 ;
++------------------+----------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; TRIG_US        ; 15    ; Signed Integer                                                                                            ;
+; TIMEOUT_US     ; 30000 ; Signed Integer                                                                                            ;
+; ENABLE_RADIUS  ; 1     ; Signed Integer                                                                                            ;
+; USE_MS_TIMEOUT ; 1     ; Signed Integer                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|radar_unified_scan:scan ;
++------------------------+-------+--------------------------------------------------------------+
+; Parameter Name         ; Value ; Type                                                         ;
++------------------------+-------+--------------------------------------------------------------+
+; SELF_TEST_MS           ; 2000  ; Signed Integer                                               ;
+; STANDBY_MS             ; 2000  ; Signed Integer                                               ;
+; SLOT_MS                ; 2000  ; Signed Integer                                               ;
+; SETTLE_MS              ; 300   ; Signed Integer                                               ;
+; CONTINUOUS_STEP_MS     ; 60    ; Signed Integer                                               ;
+; FAST_STEP_US           ; 16    ; Signed Integer                                               ;
+; HOLD_FAST_PWM          ; 1     ; Signed Integer                                               ;
+; CONTINUOUS_DEGREE_STEP ; 1     ; Signed Integer                                               ;
+; DISTANCE_IS_BCD        ; 1     ; Signed Integer                                               ;
+; USE_GLOBAL_TIMING      ; 1     ; Signed Integer                                               ;
+; SETTLE_FROM_PWM        ; 0     ; Signed Integer                                               ;
++------------------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|alarm_global:u_alarm ;
++----------------+------------------+--------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                   ;
++----------------+------------------+--------------------------------------------------------+
+; BLUE_MASK      ; 1111000000000000 ; Unsigned Binary                                        ;
+; GREEN_MASK     ; 0000111100000000 ; Unsigned Binary                                        ;
+; YELLOW_MASK    ; 0000000011110000 ; Unsigned Binary                                        ;
+; RED_MASK       ; 0000000000001111 ; Unsigned Binary                                        ;
++----------------+------------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|radar_lcd_micro:draw ;
++-----------------+----------+---------------------------------------------------------------+
+; Parameter Name  ; Value    ; Type                                                          ;
++-----------------+----------+---------------------------------------------------------------+
+; ENABLE_READBACK ; 1        ; Signed Integer                                                ;
+; CONTRAST        ; 00011100 ; Unsigned Binary                                               ;
+; KEEP_END_BATCH  ; 1        ; Signed Integer                                                ;
+; FRACTION_BITS   ; 15       ; Signed Integer                                                ;
+; ROT_SHIFT       ; 7        ; Signed Integer                                                ;
+; PHASE_BITS      ; 6        ; Signed Integer                                                ;
+; PHASE_ADD       ; 15       ; Signed Integer                                                ;
+; PHASE_INITIAL   ; 63       ; Signed Integer                                                ;
+; MICRO_BASE      ; 2        ; Signed Integer                                                ;
++-----------------+----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath ;
++----------------+------------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value                  ; Type                                                                              ;
++----------------+------------------------+-----------------------------------------------------------------------------------+
+; FRACTION_BITS  ; 15                     ; Signed Integer                                                                    ;
+; ROT_SHIFT      ; 7                      ; Signed Integer                                                                    ;
+; XY_INITIAL     ; 0000000100000000000000 ; Unsigned Binary                                                                   ;
+; RESET_DATA     ; 0                      ; Signed Integer                                                                    ;
++----------------+------------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_unified_top:system|lcd_bus_phase:bus ;
++-----------------+-------+---------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                          ;
++-----------------+-------+---------------------------------------------------------------+
+; ENABLE_READBACK ; 1     ; Signed Integer                                                ;
+; SETUP_CYCLES    ; 4     ; Signed Integer                                                ;
+; WRITE_CYCLES    ; 6     ; Signed Integer                                                ;
+; READ_CYCLES     ; 10    ; Signed Integer                                                ;
+; HOLD_CYCLES     ; 6     ; Signed Integer                                                ;
+; TURN_CYCLES     ; 20    ; Signed Integer                                                ;
++-----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath"             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; c            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; x_acc[14..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_acc[14..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_acc[21]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_unified_top:system|radar_lcd_micro:draw"                                                              ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dropped ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; ready   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; done    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_unified_top:system|radar_unified_scan:scan"                                                                    ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                  ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; distance_mm      ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; current_bcd      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; current_distance ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; servo_enable     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; sample_idx       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; frame_start      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; fast_busy        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic"                             ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                  ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; distance_level ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 20:57:11 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off radar_unified_bcd -c radar_unified_bcd
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/timebase.v
+    Info: Found entity 1: timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_filter.v
+    Info: Found entity 1: switch_filter
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic.v
+    Info: Found entity 1: ultrasonic
+Info: Found 1 design units, including 1 entities, in source file /rtl/bin12_to_bcd.v
+    Info: Found entity 1: bin12_to_bcd
+Info: Found 1 design units, including 1 entities, in source file /rtl/display_compose.v
+    Info: Found entity 1: display_compose
+Info: Found 1 design units, including 1 entities, in source file /rtl/seg_scan.v
+    Info: Found entity 1: seg_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/matrix_scan.v
+    Info: Found entity 1: matrix_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_ctrl.v
+    Info: Found entity 1: alarm_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_unified_scan.v
+    Info: Found entity 1: radar_unified_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_unified_top.v
+    Info: Found entity 1: radar_unified_top
+Info: Found 2 design units, including 2 entities, in source file /rtl/minsky_serial_datapath.v
+    Info: Found entity 1: minsky_serial_datapath
+    Info: Found entity 2: minsky_serial_registers
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_minsky_draw_compact.v
+    Info: Found entity 1: radar_minsky_draw_compact
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 8 design units, including 8 entities, in source file radar_unified_variants.v
+    Info: Found entity 1: radar_unified_read_top
+    Info: Found entity 2: radar_unified_safe_top
+    Info: Found entity 3: radar_unified_noend_top
+    Info: Found entity 4: radar_unified_bcd_top
+    Info: Found entity 5: radar_unified_bcd_safe_top
+    Info: Found entity 6: radar_unified_degree2_top
+    Info: Found entity 7: radar_unified_behind_top
+    Info: Found entity 8: radar_unified_f14_top
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_minsky_draw_compact_v2.v
+    Info: Found entity 1: radar_minsky_draw_compact_v2
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic_bcd_experiment.v
+    Info: Found entity 1: ultrasonic_bcd_experiment
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_lcd_micro.v
+    Info: Found entity 1: radar_lcd_micro
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus_phase.v
+    Info: Found entity 1: lcd_bus_phase
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic_bcd_budget.v
+    Info: Found entity 1: ultrasonic_bcd_budget
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_global_timebase.v
+    Info: Found entity 1: radar_global_timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_display_shared.v
+    Info: Found entity 1: radar_display_shared
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_global_timebase_alarm.v
+    Info: Found entity 1: radar_global_timebase_alarm
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_global.v
+    Info: Found entity 1: alarm_global
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_pair_sampled.v
+    Info: Found entity 1: switch_pair_sampled
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_display_gated.v
+    Info: Found entity 1: radar_display_gated
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic_bcd_budget_compact.v
+    Info: Found entity 1: ultrasonic_bcd_budget_compact
+Info: Elaborating entity "radar_unified_bcd_top" for the top level hierarchy
+Info: Elaborating entity "radar_unified_top" for hierarchy "radar_unified_top:system"
+Info: Elaborating entity "reset_ctrl" for hierarchy "radar_unified_top:system|reset_ctrl:u_reset"
+Info: Elaborating entity "radar_global_timebase_alarm" for hierarchy "radar_unified_top:system|radar_global_timebase_alarm:u_timebase"
+Info: Elaborating entity "switch_pair_sampled" for hierarchy "radar_unified_top:system|switch_pair_sampled:u_switch_pair"
+Info: Elaborating entity "ultrasonic_bcd_budget_compact" for hierarchy "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic"
+Warning (10230): Verilog HDL assignment warning at ultrasonic_bcd_budget_compact.v(49): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "radar_unified_scan" for hierarchy "radar_unified_top:system|radar_unified_scan:scan"
+Warning (10230): Verilog HDL assignment warning at radar_unified_scan.v(261): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "radar_display_gated" for hierarchy "radar_unified_top:system|radar_display_gated:u_display"
+Info: Elaborating entity "radar_display_shared" for hierarchy "radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core"
+Warning (10230): Verilog HDL assignment warning at radar_display_shared.v(91): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "alarm_global" for hierarchy "radar_unified_top:system|alarm_global:u_alarm"
+Info: Elaborating entity "radar_lcd_micro" for hierarchy "radar_unified_top:system|radar_lcd_micro:draw"
+Warning (10230): Verilog HDL assignment warning at radar_lcd_micro.v(45): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at radar_lcd_micro.v(46): truncated value with size 32 to match size of target (6)
+Warning (10036): Verilog HDL or VHDL warning at radar_lcd_micro.v(57): object "pending" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at radar_lcd_micro.v(80): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at radar_lcd_micro.v(112): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at radar_lcd_micro.v(179): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "minsky_serial_registers" for hierarchy "radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath"
+Warning (10230): Verilog HDL assignment warning at minsky_serial_datapath.v(59): truncated value with size 32 to match size of target (22)
+Warning (10230): Verilog HDL assignment warning at minsky_serial_datapath.v(89): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "lcd_bus_phase" for hierarchy "radar_unified_top:system|lcd_bus_phase:bus"
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: 12 registers lost all their fanouts during netlist optimizations. The first 12 are displayed below.
+    Info: Register "radar_unified_top:system|radar_lcd_micro:draw|state~3" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_lcd_micro:draw|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_lcd_micro:draw|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_lcd_micro:draw|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_lcd_micro:draw|state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|state~8" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_unified_scan:scan|settle_phase.01" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_unified_scan:scan|settle_phase.10" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_unified_scan:scan|settle_phase.00" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core|blank_stage.00" lost all its fanouts during netlist optimizations.
+Info: Implemented 1219 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 63 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 1144 logic cells
+Info: Generated suppressed messages file R:/lcd_p4/radar_unified_bcd.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4411 megabytes
+    Info: Processing ended: Thu Oct 15 20:57:15 2026
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in R:/lcd_p4/radar_unified_bcd.map.smsg.
+
+

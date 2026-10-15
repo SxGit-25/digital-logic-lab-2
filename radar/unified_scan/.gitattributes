@@ -1,0 +1,3 @@
+# Preserve original reports and source snapshots byte-for-byte for SHA256 audit.
+results/** -text
+results.zip -text

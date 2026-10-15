@@ -1,0 +1,40 @@
+{
+  "rtl_sha256": "a8337ffa092ae689fe3f789f5bf066e505184a228685f88a4628c1e52bcec856",
+  "fraction_bits": 17,
+  "rot_shift": 8,
+  "base_microsteps": 4,
+  "numerator": 15,
+  "denominator": 32,
+  "initial_phase": 16,
+  "total_commands": 24871,
+  "commands_by_code": [
+    1341,
+    1295,
+    1341,
+    1317,
+    9179,
+    9221,
+    681,
+    496
+  ],
+  "direction_vectors": 181,
+  "ray_points": 8869,
+  "negative_x_points": 4210,
+  "random_deposited_commands": 4096,
+  "maximum_pixel_euclidean_error_px": 0.8735212896426087,
+  "erase_check": {
+    "at_minimum_6": {
+      "minimum_radius": 6,
+      "behind_hits": 0,
+      "example": null
+    },
+    "first_zero_minimum": 6
+  },
+  "phase_roundtrip_exact": true,
+  "vector_roundtrip_exact": true,
+  "clock_pauses_and_busy_requests": true,
+  "initial_xy": 65536,
+  "definition": "Signed high7 accumulator bits equal floor((r*coefficient+half)/2^F), including negative x. All arithmetic wraps to F+2 or F+7 bits.",
+  "stage": "C:\\Users\\Metro\\AppData\\Local\\Temp\\minsky_serial_37dlez_g",
+  "complete_drawing_or_LE_claim": false
+}

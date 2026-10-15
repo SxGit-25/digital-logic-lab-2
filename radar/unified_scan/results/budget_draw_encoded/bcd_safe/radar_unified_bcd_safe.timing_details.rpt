@@ -1,0 +1,822 @@
+----------------
+; Command Info ;
+----------------
+Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 3.733 
+
+Tcl Command:
+    report_timing -setup -file radar_unified_bcd_safe.timing_details.rpt -npaths 5 -detail full_path
+
+Options:
+    -setup 
+    -npaths 5 
+    -detail full_path 
+    -file {radar_unified_bcd_safe.timing_details.rpt} 
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Summary of Paths                                                                                                                                                                                                ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                       ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.733 ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_0 ; lcd_rst_n                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.448      ;
+; 3.859 ; radar_unified_top:system|lcd_bus_phase:bus|lcd_rd_n             ; lcd_rd_n                                                        ; clk          ; clk         ; 20.000       ; -3.819     ; 7.322      ;
+; 3.884 ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_1 ; lcd_rst_n                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.297      ;
+; 4.058 ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.609     ;
+; 4.058 ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.609     ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+Path #1: Setup slack is 3.733 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_0 ;
+; To Node            ; lcd_rst_n                                                       ;
+; Launch Clock       ; clk                                                             ;
+; Latch Clock        ; clk                                                             ;
+; Data Arrival Time  ; 11.267                                                          ;
+; Data Required Time ; 15.000                                                          ;
+; Slack              ; 3.733                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+; Statistics                                                                            ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Property                  ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship        ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew                ; -3.819 ;       ;             ;            ;       ;       ;
+; Data Delay                ; 7.448  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels    ;        ; 1     ;             ;            ;       ;       ;
+; Physical Delays           ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path             ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                   ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                    ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 2     ; 4.010       ; 53         ; 0.994 ; 3.016 ;
+;    Cell                   ;        ; 3     ; 3.062       ; 41         ; 0.000 ; 2.322 ;
+;    uTco                   ;        ; 1     ; 0.376       ; 5          ; 0.376 ; 0.376 ;
+;  Required Path            ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    Clock Network (Lumped) ;        ; 1     ; 0.000       ;            ; 0.000 ; 0.000 ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location       ; Element                                                         ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;                ; launch edge time                                                ;
+; 3.819    ; 3.819   ;    ;      ;        ;                ; clock path                                                      ;
+;   0.000  ;   0.000 ;    ;      ;        ;                ; source latency                                                  ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_18         ; clk                                                             ;
+;   1.163  ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5   ; clk|combout                                                     ;
+;   2.901  ;   1.738 ; RR ; IC   ; 1      ; LC_X14_Y5_N2   ; system|draw|state.state_bit_0|clk                               ;
+;   3.819  ;   0.918 ; RR ; CELL ; 1      ; LC_X14_Y5_N2   ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_0 ;
+; 11.267   ; 7.448   ;    ;      ;        ;                ; data path                                                       ;
+;   4.195  ;   0.376 ;    ; uTco ; 1      ; LC_X14_Y5_N2   ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_0 ;
+;   4.195  ;   0.000 ; RR ; CELL ; 7      ; LC_X14_Y5_N2   ; system|draw|state.state_bit_0|regout                            ;
+;   5.189  ;   0.994 ; RR ; IC   ; 1      ; LC_X14_Y5_N3   ; system|draw|state.INIT_RESET~0|datab                            ;
+;   5.929  ;   0.740 ; RR ; CELL ; 4      ; LC_X14_Y5_N3   ; system|draw|state.INIT_RESET~0|combout                          ;
+;   8.945  ;   3.016 ; RR ; IC   ; 1      ; IOC_X16_Y11_N1 ; lcd_rst_n|datain                                                ;
+;   11.267 ;   2.322 ; RR ; CELL ; 0      ; PIN_109        ; lcd_rst_n                                                       ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+
++--------------------------------------------------------------------------+
+; Data Required Path                                                       ;
++----------+---------+----+------+--------+----------+---------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location ; Element             ;
++----------+---------+----+------+--------+----------+---------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;          ; latch edge time     ;
+; 20.000   ; 0.000   ;    ;      ;        ;          ; clock path          ;
+;   20.000 ;   0.000 ; R  ;      ;        ;          ; clock network delay ;
+; 15.000   ; -5.000  ; R  ; oExt ; 0      ; PIN_109  ; lcd_rst_n           ;
++----------+---------+----+------+--------+----------+---------------------+
+
+
+Path #2: Setup slack is 3.859 
+===============================================================================
++--------------------------------------------------------------------------+
+; Path Summary                                                             ;
++--------------------+-----------------------------------------------------+
+; Property           ; Value                                               ;
++--------------------+-----------------------------------------------------+
+; From Node          ; radar_unified_top:system|lcd_bus_phase:bus|lcd_rd_n ;
+; To Node            ; lcd_rd_n                                            ;
+; Launch Clock       ; clk                                                 ;
+; Latch Clock        ; clk                                                 ;
+; Data Arrival Time  ; 11.141                                              ;
+; Data Required Time ; 15.000                                              ;
+; Slack              ; 3.859                                               ;
++--------------------+-----------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+; Statistics                                                                            ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Property                  ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship        ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew                ; -3.819 ;       ;             ;            ;       ;       ;
+; Data Delay                ; 7.322  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels    ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays           ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path             ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                   ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                    ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 1     ; 4.624       ; 63         ; 4.624 ; 4.624 ;
+;    Cell                   ;        ; 2     ; 2.322       ; 31         ; 0.000 ; 2.322 ;
+;    uTco                   ;        ; 1     ; 0.376       ; 5          ; 0.376 ; 0.376 ;
+;  Required Path            ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    Clock Network (Lumped) ;        ; 1     ; 0.000       ;            ; 0.000 ; 0.000 ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                            ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                             ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;              ; launch edge time                                    ;
+; 3.819    ; 3.819   ;    ;      ;        ;              ; clock path                                          ;
+;   0.000  ;   0.000 ;    ;      ;        ;              ; source latency                                      ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                 ;
+;   1.163  ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                         ;
+;   2.901  ;   1.738 ; RR ; IC   ; 1      ; LC_X14_Y7_N5 ; system|bus|lcd_rd_n|clk                             ;
+;   3.819  ;   0.918 ; RR ; CELL ; 1      ; LC_X14_Y7_N5 ; radar_unified_top:system|lcd_bus_phase:bus|lcd_rd_n ;
+; 11.141   ; 7.322   ;    ;      ;        ;              ; data path                                           ;
+;   4.195  ;   0.376 ;    ; uTco ; 1      ; LC_X14_Y7_N5 ; radar_unified_top:system|lcd_bus_phase:bus|lcd_rd_n ;
+;   4.195  ;   0.000 ; RR ; CELL ; 2      ; LC_X14_Y7_N5 ; system|bus|lcd_rd_n|regout                          ;
+;   8.819  ;   4.624 ; RR ; IC   ; 1      ; IOC_X0_Y4_N5 ; lcd_rd_n|datain                                     ;
+;   11.141 ;   2.322 ; RR ; CELL ; 0      ; PIN_32       ; lcd_rd_n                                            ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------+
+
++--------------------------------------------------------------------------+
+; Data Required Path                                                       ;
++----------+---------+----+------+--------+----------+---------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location ; Element             ;
++----------+---------+----+------+--------+----------+---------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;          ; latch edge time     ;
+; 20.000   ; 0.000   ;    ;      ;        ;          ; clock path          ;
+;   20.000 ;   0.000 ; R  ;      ;        ;          ; clock network delay ;
+; 15.000   ; -5.000  ; R  ; oExt ; 0      ; PIN_32   ; lcd_rd_n            ;
++----------+---------+----+------+--------+----------+---------------------+
+
+
+Path #3: Setup slack is 3.884 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_1 ;
+; To Node            ; lcd_rst_n                                                       ;
+; Launch Clock       ; clk                                                             ;
+; Latch Clock        ; clk                                                             ;
+; Data Arrival Time  ; 11.116                                                          ;
+; Data Required Time ; 15.000                                                          ;
+; Slack              ; 3.884                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+; Statistics                                                                            ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Property                  ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship        ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew                ; -3.819 ;       ;             ;            ;       ;       ;
+; Data Delay                ; 7.297  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels    ;        ; 1     ;             ;            ;       ;       ;
+; Physical Delays           ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path             ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                   ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                    ;        ;       ;             ;            ;       ;       ;
+;    IC                     ;        ; 2     ; 4.088       ; 56         ; 1.072 ; 3.016 ;
+;    Cell                   ;        ; 3     ; 2.833       ; 38         ; 0.000 ; 2.322 ;
+;    uTco                   ;        ; 1     ; 0.376       ; 5          ; 0.376 ; 0.376 ;
+;  Required Path            ;        ;       ;             ;            ;       ;       ;
+;   Clock                   ;        ;       ;             ;            ;       ;       ;
+;    Clock Network (Lumped) ;        ; 1     ; 0.000       ;            ; 0.000 ; 0.000 ;
++---------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location       ; Element                                                         ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;                ; launch edge time                                                ;
+; 3.819    ; 3.819   ;    ;      ;        ;                ; clock path                                                      ;
+;   0.000  ;   0.000 ;    ;      ;        ;                ; source latency                                                  ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_18         ; clk                                                             ;
+;   1.163  ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5   ; clk|combout                                                     ;
+;   2.901  ;   1.738 ; RR ; IC   ; 1      ; LC_X14_Y5_N6   ; system|draw|state.state_bit_1|clk                               ;
+;   3.819  ;   0.918 ; RR ; CELL ; 1      ; LC_X14_Y5_N6   ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_1 ;
+; 11.116   ; 7.297   ;    ;      ;        ;                ; data path                                                       ;
+;   4.195  ;   0.376 ;    ; uTco ; 1      ; LC_X14_Y5_N6   ; radar_unified_top:system|radar_lcd_micro:draw|state.state_bit_1 ;
+;   4.195  ;   0.000 ; RR ; CELL ; 7      ; LC_X14_Y5_N6   ; system|draw|state.state_bit_1|regout                            ;
+;   5.267  ;   1.072 ; RR ; IC   ; 1      ; LC_X14_Y5_N3   ; system|draw|state.INIT_RESET~0|datac                            ;
+;   5.778  ;   0.511 ; RR ; CELL ; 4      ; LC_X14_Y5_N3   ; system|draw|state.INIT_RESET~0|combout                          ;
+;   8.794  ;   3.016 ; RR ; IC   ; 1      ; IOC_X16_Y11_N1 ; lcd_rst_n|datain                                                ;
+;   11.116 ;   2.322 ; RR ; CELL ; 0      ; PIN_109        ; lcd_rst_n                                                       ;
++----------+---------+----+------+--------+----------------+-----------------------------------------------------------------+
+
++--------------------------------------------------------------------------+
+; Data Required Path                                                       ;
++----------+---------+----+------+--------+----------+---------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location ; Element             ;
++----------+---------+----+------+--------+----------+---------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;          ; latch edge time     ;
+; 20.000   ; 0.000   ;    ;      ;        ;          ; clock path          ;
+;   20.000 ;   0.000 ; R  ;      ;        ;          ; clock network delay ;
+; 15.000   ; -5.000  ; R  ; oExt ; 0      ; PIN_109  ; lcd_rst_n           ;
++----------+---------+----+------+--------+----------+---------------------+
+
+
+Path #4: Setup slack is 4.058 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+; To Node            ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[1] ;
+; Launch Clock       ; clk                                                             ;
+; Latch Clock        ; clk                                                             ;
+; Data Arrival Time  ; 19.428                                                          ;
+; Data Required Time ; 23.486                                                          ;
+; Slack              ; 4.058                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship     ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000  ;       ;             ;            ;       ;       ;
+; Data Delay             ; 15.609 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 6     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 7     ; 10.603      ; 67         ; 0.661 ; 3.253 ;
+;    Cell                ;        ; 8     ; 4.630       ; 29         ; 0.000 ; 1.243 ;
+;    uTco                ;        ; 1     ; 0.376       ; 2          ; 0.376 ; 0.376 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                        ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                         ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;              ; launch edge time                                                ;
+; 3.819    ; 3.819   ;    ;      ;        ;              ; clock path                                                      ;
+;   0.000  ;   0.000 ;    ;      ;        ;              ; source latency                                                  ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                             ;
+;   1.163  ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                     ;
+;   2.901  ;   1.738 ; RR ; IC   ; 1      ; LC_X7_Y5_N5  ; system|scan|timer_ms[0]|clk                                     ;
+;   3.819  ;   0.918 ; RR ; CELL ; 1      ; LC_X7_Y5_N5  ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+; 19.428   ; 15.609  ;    ;      ;        ;              ; data path                                                       ;
+;   4.195  ;   0.376 ;    ; uTco ; 1      ; LC_X7_Y5_N5  ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+;   4.195  ;   0.000 ; RR ; CELL ; 2      ; LC_X7_Y5_N5  ; system|scan|timer_ms[0]|regout                                  ;
+;   5.582  ;   1.387 ; RR ; IC   ; 1      ; LC_X7_Y5_N0  ; system|scan|Equal23~0|datac                                     ;
+;   6.093  ;   0.511 ; RR ; CELL ; 2      ; LC_X7_Y5_N0  ; system|scan|Equal23~0|combout                                   ;
+;   7.947  ;   1.854 ; RR ; IC   ; 1      ; LC_X8_Y5_N7  ; system|scan|Equal23~3|datac                                     ;
+;   8.458  ;   0.511 ; RR ; CELL ; 5      ; LC_X8_Y5_N7  ; system|scan|Equal23~3|combout                                   ;
+;   10.377 ;   1.919 ; RR ; IC   ; 1      ; LC_X7_Y6_N2  ; system|scan|fast_steps[5]~2|dataa                               ;
+;   11.291 ;   0.914 ; RR ; CELL ; 13     ; LC_X7_Y6_N2  ; system|scan|fast_steps[5]~2|combout                             ;
+;   12.026 ;   0.735 ; RR ; IC   ; 1      ; LC_X7_Y6_N0  ; system|scan|history_write~0|datab                               ;
+;   12.766 ;   0.740 ; RR ; CELL ; 6      ; LC_X7_Y6_N0  ; system|scan|history_write~0|combout                             ;
+;   13.560 ;   0.794 ; RR ; IC   ; 1      ; LC_X7_Y6_N1  ; system|scan|hist_seen~0|datac                                   ;
+;   14.071 ;   0.511 ; RR ; CELL ; 4      ; LC_X7_Y6_N1  ; system|scan|hist_seen~0|combout                                 ;
+;   17.324 ;   3.253 ; RR ; IC   ; 1      ; LC_X5_Y7_N3  ; system|scan|hist_level3[1]~0|datad                              ;
+;   17.524 ;   0.200 ; RR ; CELL ; 3      ; LC_X5_Y7_N3  ; system|scan|hist_level3[1]~0|combout                            ;
+;   18.185 ;   0.661 ; RR ; IC   ; 1      ; LC_X5_Y7_N8  ; system|scan|hist_level3[1]|ena                                  ;
+;   19.428 ;   1.243 ; RR ; CELL ; 2      ; LC_X5_Y7_N8  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[1] ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                         ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;              ; latch edge time                                                 ;
+; 23.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                      ;
+;   20.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                  ;
+;   20.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                             ;
+;   21.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                     ;
+;   22.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X5_Y7_N8  ; system|scan|hist_level3[1]|clk                                  ;
+;   23.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X5_Y7_N8  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[1] ;
+; 23.486   ; -0.333  ;    ; uTsu ; 2      ; LC_X5_Y7_N8  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[1] ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+
+
+Path #5: Setup slack is 4.058 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+; To Node            ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[2] ;
+; Launch Clock       ; clk                                                             ;
+; Latch Clock        ; clk                                                             ;
+; Data Arrival Time  ; 19.428                                                          ;
+; Data Required Time ; 23.486                                                          ;
+; Slack              ; 4.058                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship     ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000  ;       ;             ;            ;       ;       ;
+; Data Delay             ; 15.609 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 6     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 7     ; 10.603      ; 67         ; 0.661 ; 3.253 ;
+;    Cell                ;        ; 8     ; 4.630       ; 29         ; 0.000 ; 1.243 ;
+;    uTco                ;        ; 1     ; 0.376       ; 2          ; 0.376 ; 0.376 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;        ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                        ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                         ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;              ; launch edge time                                                ;
+; 3.819    ; 3.819   ;    ;      ;        ;              ; clock path                                                      ;
+;   0.000  ;   0.000 ;    ;      ;        ;              ; source latency                                                  ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                             ;
+;   1.163  ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                     ;
+;   2.901  ;   1.738 ; RR ; IC   ; 1      ; LC_X7_Y5_N5  ; system|scan|timer_ms[0]|clk                                     ;
+;   3.819  ;   0.918 ; RR ; CELL ; 1      ; LC_X7_Y5_N5  ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+; 19.428   ; 15.609  ;    ;      ;        ;              ; data path                                                       ;
+;   4.195  ;   0.376 ;    ; uTco ; 1      ; LC_X7_Y5_N5  ; radar_unified_top:system|radar_unified_scan:scan|timer_ms[0]    ;
+;   4.195  ;   0.000 ; RR ; CELL ; 2      ; LC_X7_Y5_N5  ; system|scan|timer_ms[0]|regout                                  ;
+;   5.582  ;   1.387 ; RR ; IC   ; 1      ; LC_X7_Y5_N0  ; system|scan|Equal23~0|datac                                     ;
+;   6.093  ;   0.511 ; RR ; CELL ; 2      ; LC_X7_Y5_N0  ; system|scan|Equal23~0|combout                                   ;
+;   7.947  ;   1.854 ; RR ; IC   ; 1      ; LC_X8_Y5_N7  ; system|scan|Equal23~3|datac                                     ;
+;   8.458  ;   0.511 ; RR ; CELL ; 5      ; LC_X8_Y5_N7  ; system|scan|Equal23~3|combout                                   ;
+;   10.377 ;   1.919 ; RR ; IC   ; 1      ; LC_X7_Y6_N2  ; system|scan|fast_steps[5]~2|dataa                               ;
+;   11.291 ;   0.914 ; RR ; CELL ; 13     ; LC_X7_Y6_N2  ; system|scan|fast_steps[5]~2|combout                             ;
+;   12.026 ;   0.735 ; RR ; IC   ; 1      ; LC_X7_Y6_N0  ; system|scan|history_write~0|datab                               ;
+;   12.766 ;   0.740 ; RR ; CELL ; 6      ; LC_X7_Y6_N0  ; system|scan|history_write~0|combout                             ;
+;   13.560 ;   0.794 ; RR ; IC   ; 1      ; LC_X7_Y6_N1  ; system|scan|hist_seen~0|datac                                   ;
+;   14.071 ;   0.511 ; RR ; CELL ; 4      ; LC_X7_Y6_N1  ; system|scan|hist_seen~0|combout                                 ;
+;   17.324 ;   3.253 ; RR ; IC   ; 1      ; LC_X5_Y7_N3  ; system|scan|hist_level3[1]~0|datad                              ;
+;   17.524 ;   0.200 ; RR ; CELL ; 3      ; LC_X5_Y7_N3  ; system|scan|hist_level3[1]~0|combout                            ;
+;   18.185 ;   0.661 ; RR ; IC   ; 1      ; LC_X5_Y7_N9  ; system|scan|hist_level3[2]|ena                                  ;
+;   19.428 ;   1.243 ; RR ; CELL ; 1      ; LC_X5_Y7_N9  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[2] ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                         ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;              ; latch edge time                                                 ;
+; 23.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                      ;
+;   20.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                  ;
+;   20.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                             ;
+;   21.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                     ;
+;   22.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X5_Y7_N9  ; system|scan|hist_level3[2]|clk                                  ;
+;   23.819 ;   0.918 ; RR ; CELL ; 1      ; LC_X5_Y7_N9  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[2] ;
+; 23.486   ; -0.333  ;    ; uTsu ; 1      ; LC_X5_Y7_N9  ; radar_unified_top:system|radar_unified_scan:scan|hist_level3[2] ;
++----------+---------+----+------+--------+--------------+-----------------------------------------------------------------+
+
+
+----------------
+; Command Info ;
+----------------
+Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 1.078 
+
+Tcl Command:
+    report_timing -append -hold -file radar_unified_bcd_safe.timing_details.rpt -npaths 5 -detail full_path
+
+Options:
+    -hold 
+    -npaths 5 
+    -detail full_path 
+    -file {radar_unified_bcd_safe.timing_details.rpt} 
+    -append 
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Summary of Paths                                                                                                                                                                                                                                                                            ;
++-------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                            ; To Node                                                                                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.078 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig           ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.398 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[2]        ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.619      ;
+; 1.412 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[3]        ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.633      ;
+; 1.421 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[11]       ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.642      ;
++-------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+Path #1: Hold slack is 1.078 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                    ;
++--------------------+--------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                      ;
++--------------------+--------------------------------------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
+; To Node            ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
+; Launch Clock       ; clk                                                                                        ;
+; Latch Clock        ; clk                                                                                        ;
+; Data Arrival Time  ; 5.118                                                                                      ;
+; Data Required Time ; 4.040                                                                                      ;
+; Slack              ; 1.078                                                                                      ;
++--------------------+--------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.299 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    Cell                ;       ; 1     ; 0.923       ; 71         ; 0.923 ; 0.923 ;
+;    uTco                ;       ; 1     ; 0.376       ; 28         ; 0.376 ; 0.376 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                  ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                    ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; launch edge time                                                                           ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                 ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                             ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                        ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X11_Y7_N9 ; system|g_bcd_measurement.u_ultrasonic|trig|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X11_Y7_N9 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
+; 5.118   ; 1.299   ;    ;      ;        ;              ; data path                                                                                  ;
+;   4.195 ;   0.376 ;    ; uTco ; 2      ; LC_X11_Y7_N9 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
+;   5.118 ;   0.923 ; RR ; CELL ; 2      ; LC_X11_Y7_N9 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                                 ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                    ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; latch edge time                                                                            ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                 ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                             ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                        ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X11_Y7_N9 ; system|g_bcd_measurement.u_ultrasonic|trig|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X11_Y7_N9 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
+; 4.040   ; 0.221   ;    ; uTh  ; 2      ; LC_X11_Y7_N9 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|trig ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------+
+
+
+Path #2: Hold slack is 1.078 
+===============================================================================
++---------------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                              ;
++--------------------+------------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                                ;
++--------------------+------------------------------------------------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+; To Node            ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+; Launch Clock       ; clk                                                                                                  ;
+; Latch Clock        ; clk                                                                                                  ;
+; Data Arrival Time  ; 5.118                                                                                                ;
+; Data Required Time ; 4.040                                                                                                ;
+; Slack              ; 1.078                                                                                                ;
++--------------------+------------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.299 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    Cell                ;       ; 1     ; 0.923       ; 71         ; 0.923 ; 0.923 ;
+;    uTco                ;       ; 1     ; 0.376       ; 28         ; 0.376 ; 0.376 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                              ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; launch edge time                                                                                     ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                           ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                  ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                          ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X11_Y7_N7 ; system|g_bcd_measurement.u_ultrasonic|distance_valid|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X11_Y7_N7 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+; 5.118   ; 1.299   ;    ;      ;        ;              ; data path                                                                                            ;
+;   4.195 ;   0.376 ;    ; uTco ; 2      ; LC_X11_Y7_N7 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+;   5.118 ;   0.923 ; RR ; CELL ; 2      ; LC_X11_Y7_N7 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                                           ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                              ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; latch edge time                                                                                      ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                           ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                  ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                          ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X11_Y7_N7 ; system|g_bcd_measurement.u_ultrasonic|distance_valid|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X11_Y7_N7 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
+; 4.040   ; 0.221   ;    ; uTh  ; 2      ; LC_X11_Y7_N7 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_valid ;
++---------+---------+----+------+--------+--------------+------------------------------------------------------------------------------------------------------+
+
+
+Path #3: Hold slack is 1.398 
+===============================================================================
++----------------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                               ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                                 ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[2]         ;
+; To Node            ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[2] ;
+; Launch Clock       ; clk                                                                                                   ;
+; Latch Clock        ; clk                                                                                                   ;
+; Data Arrival Time  ; 5.438                                                                                                 ;
+; Data Required Time ; 4.040                                                                                                 ;
+; Slack              ; 1.398                                                                                                 ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.619 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.963       ; 59         ; 0.963 ; 0.963 ;
+;    Cell                ;       ; 2     ; 0.280       ; 17         ; 0.000 ; 0.280 ;
+;    uTco                ;       ; 1     ; 0.376       ; 23         ; 0.376 ; 0.376 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                             ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                               ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; launch edge time                                                                                      ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                            ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                        ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                   ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                           ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y5_N0 ; system|g_bcd_measurement.u_ultrasonic|work[2]|clk                                                     ;
+;   3.819 ;   0.918 ; RR ; CELL ; 1      ; LC_X12_Y5_N0 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[2]         ;
+; 5.438   ; 1.619   ;    ;      ;        ;              ; data path                                                                                             ;
+;   4.195 ;   0.376 ;    ; uTco ; 1      ; LC_X12_Y5_N0 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[2]         ;
+;   4.195 ;   0.000 ; RR ; CELL ; 5      ; LC_X12_Y5_N0 ; system|g_bcd_measurement.u_ultrasonic|work[2]|regout                                                  ;
+;   5.158 ;   0.963 ; RR ; IC   ; 1      ; LC_X12_Y5_N3 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[2]|datac                                           ;
+;   5.438 ;   0.280 ; RR ; CELL ; 2      ; LC_X12_Y5_N3 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[2] ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                                            ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                               ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; latch edge time                                                                                       ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                            ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                        ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                   ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                           ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y5_N3 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[2]|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X12_Y5_N3 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[2] ;
+; 4.040   ; 0.221   ;    ; uTh  ; 2      ; LC_X12_Y5_N3 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[2] ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+
+
+Path #4: Hold slack is 1.412 
+===============================================================================
++----------------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                               ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                                 ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[3]         ;
+; To Node            ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[3] ;
+; Launch Clock       ; clk                                                                                                   ;
+; Latch Clock        ; clk                                                                                                   ;
+; Data Arrival Time  ; 5.452                                                                                                 ;
+; Data Required Time ; 4.040                                                                                                 ;
+; Slack              ; 1.412                                                                                                 ;
++--------------------+-------------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.633 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.977       ; 59         ; 0.977 ; 0.977 ;
+;    Cell                ;       ; 2     ; 0.280       ; 17         ; 0.000 ; 0.280 ;
+;    uTco                ;       ; 1     ; 0.376       ; 23         ; 0.376 ; 0.376 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                             ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                               ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; launch edge time                                                                                      ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                            ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                        ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                   ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                           ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y6_N5 ; system|g_bcd_measurement.u_ultrasonic|work[3]|clk                                                     ;
+;   3.819 ;   0.918 ; RR ; CELL ; 1      ; LC_X12_Y6_N5 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[3]         ;
+; 5.452   ; 1.633   ;    ;      ;        ;              ; data path                                                                                             ;
+;   4.195 ;   0.376 ;    ; uTco ; 1      ; LC_X12_Y6_N5 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[3]         ;
+;   4.195 ;   0.000 ; RR ; CELL ; 4      ; LC_X12_Y6_N5 ; system|g_bcd_measurement.u_ultrasonic|work[3]|regout                                                  ;
+;   5.172 ;   0.977 ; RR ; IC   ; 1      ; LC_X12_Y6_N2 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[3]|datac                                           ;
+;   5.452 ;   0.280 ; RR ; CELL ; 1      ; LC_X12_Y6_N2 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[3] ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                                            ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                               ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; latch edge time                                                                                       ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                            ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                        ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                   ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                           ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y6_N2 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[3]|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 1      ; LC_X12_Y6_N2 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[3] ;
+; 4.040   ; 0.221   ;    ; uTh  ; 1      ; LC_X12_Y6_N2 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[3] ;
++---------+---------+----+------+--------+--------------+-------------------------------------------------------------------------------------------------------+
+
+
+Path #5: Hold slack is 1.421 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                                ;
++--------------------+--------------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                                  ;
++--------------------+--------------------------------------------------------------------------------------------------------+
+; From Node          ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[11]         ;
+; To Node            ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[11] ;
+; Launch Clock       ; clk                                                                                                    ;
+; Latch Clock        ; clk                                                                                                    ;
+; Data Arrival Time  ; 5.461                                                                                                  ;
+; Data Required Time ; 4.040                                                                                                  ;
+; Slack              ; 1.421                                                                                                  ;
++--------------------+--------------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.642 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.986       ; 60         ; 0.986 ; 0.986 ;
+;    Cell                ;       ; 2     ; 0.280       ; 17         ; 0.000 ; 0.280 ;
+;    uTco                ;       ; 1     ; 0.376       ; 22         ; 0.376 ; 0.376 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 1.738       ; 45         ; 1.738 ; 1.738 ;
+;    Cell                ;       ; 2     ; 2.081       ; 54         ; 0.918 ; 1.163 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                              ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                                ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; launch edge time                                                                                       ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                             ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                         ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                    ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                            ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y6_N6 ; system|g_bcd_measurement.u_ultrasonic|work[11]|clk                                                     ;
+;   3.819 ;   0.918 ; RR ; CELL ; 1      ; LC_X12_Y6_N6 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[11]         ;
+; 5.461   ; 1.642   ;    ;      ;        ;              ; data path                                                                                              ;
+;   4.195 ;   0.376 ;    ; uTco ; 1      ; LC_X12_Y6_N6 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|work[11]         ;
+;   4.195 ;   0.000 ; RR ; CELL ; 3      ; LC_X12_Y6_N6 ; system|g_bcd_measurement.u_ultrasonic|work[11]|regout                                                  ;
+;   5.181 ;   0.986 ; RR ; IC   ; 1      ; LC_X12_Y6_N4 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[11]|datac                                           ;
+;   5.461 ;   0.280 ; RR ; CELL ; 2      ; LC_X12_Y6_N4 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[11] ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                                             ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location     ; Element                                                                                                ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;              ; latch edge time                                                                                        ;
+; 3.819   ; 3.819   ;    ;      ;        ;              ; clock path                                                                                             ;
+;   0.000 ;   0.000 ;    ;      ;        ;              ; source latency                                                                                         ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_18       ; clk                                                                                                    ;
+;   1.163 ;   1.163 ; RR ; CELL ; 296    ; IOC_X0_Y7_N5 ; clk|combout                                                                                            ;
+;   2.901 ;   1.738 ; RR ; IC   ; 1      ; LC_X12_Y6_N4 ; system|g_bcd_measurement.u_ultrasonic|distance_bcd[11]|clk                                             ;
+;   3.819 ;   0.918 ; RR ; CELL ; 2      ; LC_X12_Y6_N4 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[11] ;
+; 4.040   ; 0.221   ;    ; uTh  ; 2      ; LC_X12_Y6_N4 ; radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|distance_bcd[11] ;
++---------+---------+----+------+--------+--------------+--------------------------------------------------------------------------------------------------------+
+
+

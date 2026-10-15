@@ -7,6 +7,7 @@ module st7565_model(input wire rst_n,cs_n,rd_n,wr_n,a0,
  reg dummy=1,contrast_pending=0,display_on=0;
  reg [7:0] drive=8'hzz;
  integer reads=0,writes=0,clear_writes=0,commands=0;
+ integer reset_clear_writes=0,init_commands=0;
  time wr_start=0,rd_start=0,last_wr=0,last_rd=0,last_change=0,release_at=0;
  time last_wr_end=0,last_rd_end=0;
  reg [7:0] expected_init[0:7];
@@ -22,6 +23,7 @@ module st7565_model(input wire rst_n,cs_n,rd_n,wr_n,a0,
  always @(negedge host_oe) release_at=$time;
  always @(negedge rst_n) begin
   page=0;col=0;buffer=8'hxx;dummy=1;contrast_pending=0;display_on=0;
+  reset_clear_writes=0;init_commands=0;
  end
  always @(negedge wr_n) if(rst_n && !cs_n) begin
   if(!rd_n || !host_oe) $fatal(1,"Invalid write ownership");
@@ -40,15 +42,17 @@ module st7565_model(input wire rst_n,cs_n,rd_n,wr_n,a0,
    if(!display_on) begin
     if(data!==0) $fatal(1,"Clear data not zero");
     clear_writes=clear_writes+1;
+    reset_clear_writes=reset_clear_writes+1;
    end
    col=col==131 ? 0 : col+1;
   end else begin
-   if(commands<8 && data!==expected_init[commands]) $fatal(1,"Initialization sequence mismatch");
+   if(init_commands<8 && data!==expected_init[init_commands]) $fatal(1,"Initialization sequence mismatch");
    commands=commands+1;
+   init_commands=init_commands+1;
    if(contrast_pending) contrast_pending=0;
    else if(data==8'h81) contrast_pending=1;
    else if(data==8'haf) begin
-    if(clear_writes!=1056) $fatal(1,"Incomplete clear before display on");
+    if(reset_clear_writes!=1056) $fatal(1,"Incomplete clear before display on");
     display_on=1;
    end
    else if(data[7:4]==4'hb) begin page=data[2:0];dummy=1;end

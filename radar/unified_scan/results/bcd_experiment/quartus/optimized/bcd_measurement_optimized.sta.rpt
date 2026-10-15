@@ -1,0 +1,664 @@
+TimeQuest Timing Analyzer report for bcd_measurement_optimized
+Thu Oct 15 15:03:01 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Fmax Summary
+  7. Setup Summary
+  8. Hold Summary
+  9. Recovery Summary
+ 10. Removal Summary
+ 11. Minimum Pulse Width Summary
+ 12. Setup: 'clk'
+ 13. Hold: 'clk'
+ 14. Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Setup Transfers
+ 20. Hold Transfers
+ 21. Report TCCS
+ 22. Report RSKM
+ 23. Unconstrained Paths
+ 24. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name      ; bcd_measurement_optimized                        ;
+; Device Family      ; MAX II                                           ;
+; Device Name        ; EPM1270T144C5                                    ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Slow Model                                       ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------+
+; SDC File List                                                     ;
++-------------------------------+--------+--------------------------+
+; SDC File Path                 ; Status ; Read at                  ;
++-------------------------------+--------+--------------------------+
+; bcd_measurement_optimized.sdc ; OK     ; Thu Oct 15 15:03:01 2026 ;
++-------------------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 55.18 MHz ; 55.18 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------+
+; Setup Summary                 ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.877 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.078 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-------------------------------+
+; Minimum Pulse Width Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 9.734 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                      ;
++-------+-------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.877 ; ultrasonic:measurement|distance_mm[5]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.304      ;
+; 1.884 ; ultrasonic:measurement|distance_mm[5]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.297      ;
+; 1.927 ; ultrasonic:measurement|distance_mm[8]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.254      ;
+; 1.934 ; ultrasonic:measurement|distance_mm[8]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.247      ;
+; 2.049 ; ultrasonic:measurement|distance_mm[4]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.132      ;
+; 2.074 ; ultrasonic:measurement|distance_mm[8]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.107      ;
+; 2.101 ; ultrasonic:measurement|distance_mm[7]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.080      ;
+; 2.108 ; ultrasonic:measurement|distance_mm[7]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.073      ;
+; 2.131 ; ultrasonic:measurement|distance_mm[4]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.050      ;
+; 2.138 ; ultrasonic:measurement|distance_mm[4]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 9.043      ;
+; 2.296 ; ultrasonic:measurement|distance_mm[6]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.885      ;
+; 2.378 ; ultrasonic:measurement|distance_mm[5]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.803      ;
+; 2.378 ; ultrasonic:measurement|distance_mm[6]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.803      ;
+; 2.385 ; ultrasonic:measurement|distance_mm[6]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.796      ;
+; 2.415 ; ultrasonic:measurement|distance_mm[11]    ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.766      ;
+; 2.422 ; ultrasonic:measurement|distance_mm[11]    ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.759      ;
+; 2.433 ; ultrasonic:measurement|distance_mm[7]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.748      ;
+; 2.454 ; ultrasonic:measurement|distance_mm[3]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.727      ;
+; 2.536 ; ultrasonic:measurement|distance_mm[3]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.645      ;
+; 2.543 ; ultrasonic:measurement|distance_mm[3]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.638      ;
+; 2.777 ; ultrasonic:measurement|distance_mm[9]     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.404      ;
+; 2.784 ; ultrasonic:measurement|distance_mm[9]     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.397      ;
+; 3.015 ; ultrasonic:measurement|distance_mm[10]    ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.166      ;
+; 3.022 ; ultrasonic:measurement|distance_mm[10]    ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.159      ;
+; 3.034 ; ultrasonic:measurement|distance_mm[10]    ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.147      ;
+; 3.047 ; ultrasonic:measurement|distance_mm[9]     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.134      ;
+; 3.115 ; ultrasonic:measurement|distance_valid     ; distance_level[2]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.066      ;
+; 3.120 ; ultrasonic:measurement|distance_valid     ; distance_level[1]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 8.061      ;
+; 3.245 ; ultrasonic:measurement|distance_mm[11]    ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.936      ;
+; 3.745 ; ultrasonic:measurement|distance_valid     ; distance_level[0]                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.436      ;
+; 4.110 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.557     ;
+; 4.110 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.557     ;
+; 4.112 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.555     ;
+; 4.116 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.551     ;
+; 4.116 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.551     ;
+; 4.117 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 15.550     ;
+; 4.146 ; measure_start                             ; ultrasonic:measurement|state.WAIT_RISE  ; clk          ; clk         ; 20.000       ; 3.819      ; 14.340     ;
+; 4.465 ; rst                                       ; ultrasonic:measurement|state.WAIT_RISE  ; clk          ; clk         ; 20.000       ; 3.819      ; 14.021     ;
+; 4.500 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|radius_valid     ; clk          ; clk         ; 20.000       ; 0.000      ; 15.167     ;
+; 4.908 ; bin12_to_bcd_bcd_legacy:converter|bcd[10] ; distance_bcd[10]                        ; clk          ; clk         ; 20.000       ; -3.819     ; 6.273      ;
+; 4.914 ; rst                                       ; ultrasonic:measurement|state.WAIT_LOW   ; clk          ; clk         ; 20.000       ; 3.819      ; 13.572     ;
+; 4.915 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.752     ;
+; 4.915 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.752     ;
+; 4.917 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.750     ;
+; 4.921 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.746     ;
+; 4.921 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.746     ;
+; 4.922 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.745     ;
+; 4.939 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.728     ;
+; 4.939 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.728     ;
+; 4.941 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.726     ;
+; 4.945 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.722     ;
+; 4.945 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.722     ;
+; 4.946 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.721     ;
+; 4.970 ; ultrasonic:measurement|state.DONE         ; measure_busy                            ; clk          ; clk         ; 20.000       ; -3.819     ; 6.211      ;
+; 4.988 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[1]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.679     ;
+; 5.225 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.442     ;
+; 5.225 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.442     ;
+; 5.227 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.440     ;
+; 5.231 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.436     ;
+; 5.231 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.436     ;
+; 5.232 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.435     ;
+; 5.238 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[10]  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.429     ;
+; 5.239 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[7]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.428     ;
+; 5.240 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[6]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.427     ;
+; 5.255 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[8]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.412     ;
+; 5.256 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[3]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.411     ;
+; 5.259 ; rst                                       ; ultrasonic:measurement|state.COUNT_HIGH ; clk          ; clk         ; 20.000       ; 3.819      ; 13.227     ;
+; 5.260 ; rst                                       ; ultrasonic:measurement|state.TRIGGER    ; clk          ; clk         ; 20.000       ; 3.819      ; 13.226     ;
+; 5.264 ; ultrasonic:measurement|distance_valid     ; distance_valid                          ; clk          ; clk         ; 20.000       ; -3.819     ; 5.917      ;
+; 5.297 ; ultrasonic:measurement|radius[2]          ; radius[2]                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.884      ;
+; 5.302 ; ultrasonic:measurement|radius[1]          ; radius[1]                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.879      ;
+; 5.305 ; ultrasonic:measurement|distance_work[9]   ; ultrasonic:measurement|radius_valid     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.362     ;
+; 5.324 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[11]  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.343     ;
+; 5.328 ; ultrasonic:measurement|distance_work[10]  ; ultrasonic:measurement|distance_mm[0]   ; clk          ; clk         ; 20.000       ; 0.000      ; 14.339     ;
+; 5.329 ; measure_start                             ; ultrasonic:measurement|state.WAIT_LOW   ; clk          ; clk         ; 20.000       ; 3.819      ; 13.157     ;
+; 5.329 ; ultrasonic:measurement|distance_work[7]   ; ultrasonic:measurement|radius_valid     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.338     ;
+; 5.335 ; ultrasonic:measurement|radius[0]          ; radius[0]                               ; clk          ; clk         ; 20.000       ; -3.819     ; 5.846      ;
+; 5.364 ; ultrasonic:measurement|state.IDLE         ; measure_busy                            ; clk          ; clk         ; 20.000       ; -3.819     ; 5.817      ;
+; 5.428 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.239     ;
+; 5.428 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.239     ;
+; 5.430 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.237     ;
+; 5.434 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.233     ;
+; 5.434 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.233     ;
+; 5.435 ; ultrasonic:measurement|distance_work[8]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.232     ;
+; 5.449 ; bin12_to_bcd_bcd_legacy:converter|bcd[5]  ; distance_bcd[5]                         ; clk          ; clk         ; 20.000       ; -3.819     ; 5.732      ;
+; 5.474 ; ultrasonic:measurement|measure_done       ; measure_done                            ; clk          ; clk         ; 20.000       ; -3.819     ; 5.707      ;
+; 5.493 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.174     ;
+; 5.493 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.174     ;
+; 5.495 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.172     ;
+; 5.499 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.168     ;
+; 5.499 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.168     ;
+; 5.500 ; ultrasonic:measurement|distance_work[0]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.167     ;
+; 5.608 ; cancel                                    ; ultrasonic:measurement|state.WAIT_RISE  ; clk          ; clk         ; 20.000       ; 3.819      ; 12.878     ;
+; 5.615 ; ultrasonic:measurement|distance_work[5]   ; ultrasonic:measurement|radius_valid     ; clk          ; clk         ; 20.000       ; 0.000      ; 14.052     ;
+; 5.633 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[0]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.034     ;
+; 5.633 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[1]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.034     ;
+; 5.635 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[4]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.032     ;
+; 5.639 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[2]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.028     ;
+; 5.639 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[5]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.028     ;
+; 5.640 ; ultrasonic:measurement|distance_work[6]   ; ultrasonic:measurement|radius[3]        ; clk          ; clk         ; 20.000       ; 0.000      ; 14.027     ;
++-------+-------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                      ;
++-------+-------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.078 ; ultrasonic:measurement|distance_valid           ; ultrasonic:measurement|distance_valid            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; ultrasonic:measurement|trig                     ; ultrasonic:measurement|trig                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; ultrasonic:measurement|echo_started             ; ultrasonic:measurement|echo_started              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; ultrasonic:measurement|echo_over4000            ; ultrasonic:measurement|echo_over4000             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.640 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[0]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.861      ;
+; 1.670 ; ultrasonic:measurement|state.WAIT_LOW           ; ultrasonic:measurement|state.WAIT_LOW            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.891      ;
+; 1.690 ; ultrasonic:measurement|state.COUNT_HIGH         ; ultrasonic:measurement|state.COUNT_HIGH          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.911      ;
+; 1.693 ; bin12_to_bcd_bcd_legacy:converter|bit_count[3]  ; bin12_to_bcd_bcd_legacy:converter|bit_count[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.914      ;
+; 1.701 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[27] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[27]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.922      ;
+; 1.705 ; ultrasonic:measurement|trigger_us[1]            ; ultrasonic:measurement|trigger_us[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.926      ;
+; 1.707 ; ultrasonic:measurement|trigger_us[1]            ; ultrasonic:measurement|trigger_us[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.928      ;
+; 1.710 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[26] ; bin12_to_bcd_bcd_legacy:converter|bcd[15]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.931      ;
+; 1.756 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.977      ;
+; 1.811 ; measure_start                                   ; ultrasonic:measurement|g_radius.radius_over1200  ; clk          ; clk         ; 0.000        ; 3.819      ; 5.851      ;
+; 1.899 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[4]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.120      ;
+; 1.901 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[21] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[22]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.122      ;
+; 1.918 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[3]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[4]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.139      ;
+; 1.920 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[8]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[9]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.141      ;
+; 1.924 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[5]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[6]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.145      ;
+; 1.971 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.192      ;
+; 1.972 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15] ; bin12_to_bcd_bcd_legacy:converter|bcd[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.193      ;
+; 1.973 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[16]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.194      ;
+; 1.991 ; ultrasonic:measurement|state.DONE               ; ultrasonic:measurement|measure_done              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.212      ;
+; 1.994 ; ultrasonic:measurement|state.DONE               ; ultrasonic:measurement|state.IDLE                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.215      ;
+; 1.995 ; ultrasonic:measurement|trigger_us[2]            ; ultrasonic:measurement|trigger_us[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.216      ;
+; 2.003 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[25] ; bin12_to_bcd_bcd_legacy:converter|bcd[14]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.224      ;
+; 2.011 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.232      ;
+; 2.017 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[25] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[26]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.238      ;
+; 2.019 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[20]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.240      ;
+; 2.020 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19] ; bin12_to_bcd_bcd_legacy:converter|bcd[7]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.241      ;
+; 2.021 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19] ; bin12_to_bcd_bcd_legacy:converter|bcd[8]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.242      ;
+; 2.091 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14] ; bin12_to_bcd_bcd_legacy:converter|bcd[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.312      ;
+; 2.107 ; ultrasonic:measurement|distance_work[5]         ; ultrasonic:measurement|distance_work[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; ultrasonic:measurement|distance_work[6]         ; ultrasonic:measurement|distance_work[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.117 ; ultrasonic:measurement|distance_work[7]         ; ultrasonic:measurement|distance_work[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; ultrasonic:measurement|distance_work[8]         ; ultrasonic:measurement|distance_work[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; ultrasonic:measurement|distance_work[3]         ; ultrasonic:measurement|distance_work[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; ultrasonic:measurement|g_radius.radius_work[0]  ; ultrasonic:measurement|g_radius.radius_work[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; ultrasonic:measurement|g_radius.radius_work[1]  ; ultrasonic:measurement|g_radius.radius_work[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.125 ; ultrasonic:measurement|budget_us[7]             ; ultrasonic:measurement|budget_us[7]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.346      ;
+; 2.126 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[9]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[10]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[1]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.129 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[7]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[8]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.350      ;
+; 2.132 ; ultrasonic:measurement|trigger_us[3]            ; ultrasonic:measurement|trigger_us[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.353      ;
+; 2.135 ; ultrasonic:measurement|budget_us[4]             ; ultrasonic:measurement|budget_us[4]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.136 ; ultrasonic:measurement|budget_us[14]            ; ultrasonic:measurement|budget_us[14]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.357      ;
+; 2.137 ; ultrasonic:measurement|budget_us[6]             ; ultrasonic:measurement|budget_us[6]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.358      ;
+; 2.141 ; ultrasonic:measurement|g_radius.radius_mod25[0] ; ultrasonic:measurement|g_radius.radius_mod25[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.362      ;
+; 2.143 ; ultrasonic:measurement|budget_us[9]             ; ultrasonic:measurement|budget_us[9]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.364      ;
+; 2.144 ; bin12_to_bcd_bcd_legacy:converter|bit_count[2]  ; bin12_to_bcd_bcd_legacy:converter|bit_count[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.144 ; bin12_to_bcd_bcd_legacy:converter|bit_count[1]  ; bin12_to_bcd_bcd_legacy:converter|bit_count[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.144 ; ultrasonic:measurement|distance_rem[6]          ; ultrasonic:measurement|distance_rem[6]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.144 ; ultrasonic:measurement|budget_us[8]             ; ultrasonic:measurement|budget_us[8]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.151 ; ultrasonic:measurement|g_radius.radius_mod25[2] ; ultrasonic:measurement|g_radius.radius_mod25[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.372      ;
+; 2.152 ; ultrasonic:measurement|g_radius.radius_mod25[1] ; ultrasonic:measurement|g_radius.radius_mod25[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.373      ;
+; 2.163 ; bin12_to_bcd_bcd_legacy:converter|bit_count[0]  ; bin12_to_bcd_bcd_legacy:converter|bit_count[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.384      ;
+; 2.171 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[26] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[27]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.392      ;
+; 2.175 ; ultrasonic:measurement|distance_rem[1]          ; ultrasonic:measurement|distance_rem[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.396      ;
+; 2.180 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14] ; bin12_to_bcd_bcd_legacy:converter|bcd[4]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.401      ;
+; 2.180 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[27] ; bin12_to_bcd_bcd_legacy:converter|bcd[15]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.401      ;
+; 2.182 ; cancel                                          ; ultrasonic:measurement|g_radius.radius_over1200  ; clk          ; clk         ; 0.000        ; 3.819      ; 6.222      ;
+; 2.189 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[13] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.410      ;
+; 2.190 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[26]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.411      ;
+; 2.206 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24] ; bin12_to_bcd_bcd_legacy:converter|bcd[13]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.427      ;
+; 2.210 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24] ; bin12_to_bcd_bcd_legacy:converter|bcd[14]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.431      ;
+; 2.211 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[13]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.432      ;
+; 2.211 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[25]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.432      ;
+; 2.212 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12] ; bin12_to_bcd_bcd_legacy:converter|bcd[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.212 ; ultrasonic:measurement|distance_work[4]         ; ultrasonic:measurement|distance_work[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.212 ; ultrasonic:measurement|distance_work[9]         ; ultrasonic:measurement|distance_work[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.212 ; ultrasonic:measurement|g_radius.radius_work[2]  ; ultrasonic:measurement|g_radius.radius_work[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.221 ; ultrasonic:measurement|distance_work[11]        ; ultrasonic:measurement|distance_work[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.222 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12] ; bin12_to_bcd_bcd_legacy:converter|bcd[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.443      ;
+; 2.222 ; ultrasonic:measurement|distance_work[10]        ; ultrasonic:measurement|distance_work[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.443      ;
+; 2.223 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[11] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.223 ; ultrasonic:measurement|echo_sync                ; ultrasonic:measurement|echo_prev                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.230 ; ultrasonic:measurement|distance_work[1]         ; ultrasonic:measurement|distance_work[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; ultrasonic:measurement|g_radius.radius_work[4]  ; ultrasonic:measurement|g_radius.radius_work[4]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; ultrasonic:measurement|distance_work[2]         ; ultrasonic:measurement|distance_work[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; ultrasonic:measurement|distance_work[0]         ; ultrasonic:measurement|distance_work[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; ultrasonic:measurement|g_radius.radius_work[3]  ; ultrasonic:measurement|g_radius.radius_work[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; ultrasonic:measurement|g_radius.radius_work[5]  ; ultrasonic:measurement|g_radius.radius_work[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[6]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[7]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.232 ; bin12_to_bcd_bcd_legacy:converter|busy          ; bin12_to_bcd_bcd_legacy:converter|busy           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.453      ;
+; 2.232 ; ultrasonic:measurement|g_radius.radius_mod25[3] ; ultrasonic:measurement|g_radius.radius_mod25[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.453      ;
+; 2.232 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[2]  ; bin12_to_bcd_bcd_legacy:converter|shift_reg[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.453      ;
+; 2.233 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[23] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[23]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.454      ;
+; 2.233 ; ultrasonic:measurement|distance_rem[2]          ; ultrasonic:measurement|distance_rem[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.454      ;
+; 2.233 ; ultrasonic:measurement|budget_us[10]            ; ultrasonic:measurement|budget_us[10]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.454      ;
+; 2.236 ; bin12_to_bcd_bcd_legacy:converter|shift_reg[23] ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.457      ;
+; 2.241 ; ultrasonic:measurement|g_radius.radius_mod25[4] ; ultrasonic:measurement|g_radius.radius_mod25[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.462      ;
+; 2.247 ; ultrasonic:measurement|distance_mm[2]           ; bin12_to_bcd_bcd_legacy:converter|last_binary[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.468      ;
+; 2.248 ; ultrasonic:measurement|budget_us[3]             ; ultrasonic:measurement|budget_us[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.469      ;
+; 2.250 ; ultrasonic:measurement|budget_us[0]             ; ultrasonic:measurement|budget_us[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.471      ;
+; 2.250 ; ultrasonic:measurement|budget_us[5]             ; ultrasonic:measurement|budget_us[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.471      ;
+; 2.255 ; ultrasonic:measurement|distance_mm[1]           ; bin12_to_bcd_bcd_legacy:converter|last_binary[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.476      ;
+; 2.260 ; ultrasonic:measurement|budget_us[2]             ; ultrasonic:measurement|budget_us[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.481      ;
+; 2.261 ; ultrasonic:measurement|budget_us[1]             ; ultrasonic:measurement|budget_us[1]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.482      ;
+; 2.271 ; ultrasonic:measurement|distance_rem[4]          ; ultrasonic:measurement|distance_rem[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.492      ;
+; 2.271 ; ultrasonic:measurement|budget_us[12]            ; ultrasonic:measurement|budget_us[12]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.492      ;
++-------+-------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk'                                                                                                        ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                            ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[0]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[0]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[10]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[10]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[11]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[11]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[12]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[12]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[13]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[13]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[14]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[14]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[15]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[15]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[1]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[1]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[2]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[2]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[3]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[3]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[4]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[4]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[5]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[5]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[6]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[6]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[7]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[7]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[8]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[8]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[9]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bcd[9]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|bit_count[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|busy            ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|busy            ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[0]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[0]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[10] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[10] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[11] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[11] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[1]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[1]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[2]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[2]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[3]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[3]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[4]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[4]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[5]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[5]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[6]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[6]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[7]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[7]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[8]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[8]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[9]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|last_binary[9]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[10]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[10]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[11]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[11]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[12]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[13]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[13]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[14]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[15]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[16]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[16]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[17]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[17]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[18]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[18]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[19]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[20]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[20]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[21]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[21]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[22]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[22]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[23]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[23]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; bin12_to_bcd_bcd_legacy:converter|shift_reg[24]   ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; cancel        ; clk        ; 9.392  ; 9.392  ; Rise       ; clk             ;
+; measure_start ; clk        ; 10.854 ; 10.854 ; Rise       ; clk             ;
+; rst           ; clk        ; 10.535 ; 10.535 ; Rise       ; clk             ;
+; tick_us       ; clk        ; 8.977  ; 8.977  ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; cancel        ; clk        ; -2.182 ; -2.182 ; Rise       ; clk             ;
+; measure_start ; clk        ; -1.811 ; -1.811 ; Rise       ; clk             ;
+; rst           ; clk        ; -2.743 ; -2.743 ; Rise       ; clk             ;
+; tick_us       ; clk        ; -3.132 ; -3.132 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; distance_bcd[*]    ; clk        ; 10.092 ; 10.092 ; Rise       ; clk             ;
+;  distance_bcd[0]   ; clk        ; 7.285  ; 7.285  ; Rise       ; clk             ;
+;  distance_bcd[1]   ; clk        ; 8.969  ; 8.969  ; Rise       ; clk             ;
+;  distance_bcd[2]   ; clk        ; 8.456  ; 8.456  ; Rise       ; clk             ;
+;  distance_bcd[3]   ; clk        ; 9.299  ; 9.299  ; Rise       ; clk             ;
+;  distance_bcd[4]   ; clk        ; 9.185  ; 9.185  ; Rise       ; clk             ;
+;  distance_bcd[5]   ; clk        ; 9.551  ; 9.551  ; Rise       ; clk             ;
+;  distance_bcd[6]   ; clk        ; 9.287  ; 9.287  ; Rise       ; clk             ;
+;  distance_bcd[7]   ; clk        ; 7.291  ; 7.291  ; Rise       ; clk             ;
+;  distance_bcd[8]   ; clk        ; 8.489  ; 8.489  ; Rise       ; clk             ;
+;  distance_bcd[9]   ; clk        ; 8.453  ; 8.453  ; Rise       ; clk             ;
+;  distance_bcd[10]  ; clk        ; 10.092 ; 10.092 ; Rise       ; clk             ;
+;  distance_bcd[11]  ; clk        ; 8.439  ; 8.439  ; Rise       ; clk             ;
+;  distance_bcd[12]  ; clk        ; 9.104  ; 9.104  ; Rise       ; clk             ;
+;  distance_bcd[13]  ; clk        ; 8.551  ; 8.551  ; Rise       ; clk             ;
+;  distance_bcd[14]  ; clk        ; 8.553  ; 8.553  ; Rise       ; clk             ;
+;  distance_bcd[15]  ; clk        ; 9.067  ; 9.067  ; Rise       ; clk             ;
+; distance_level[*]  ; clk        ; 13.123 ; 13.123 ; Rise       ; clk             ;
+;  distance_level[0] ; clk        ; 12.951 ; 12.951 ; Rise       ; clk             ;
+;  distance_level[1] ; clk        ; 13.116 ; 13.116 ; Rise       ; clk             ;
+;  distance_level[2] ; clk        ; 13.123 ; 13.123 ; Rise       ; clk             ;
+; distance_valid     ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+; measure_busy       ; clk        ; 10.030 ; 10.030 ; Rise       ; clk             ;
+; measure_done       ; clk        ; 9.526  ; 9.526  ; Rise       ; clk             ;
+; radius[*]          ; clk        ; 9.703  ; 9.703  ; Rise       ; clk             ;
+;  radius[0]         ; clk        ; 9.665  ; 9.665  ; Rise       ; clk             ;
+;  radius[1]         ; clk        ; 9.698  ; 9.698  ; Rise       ; clk             ;
+;  radius[2]         ; clk        ; 9.703  ; 9.703  ; Rise       ; clk             ;
+;  radius[3]         ; clk        ; 8.964  ; 8.964  ; Rise       ; clk             ;
+;  radius[4]         ; clk        ; 8.652  ; 8.652  ; Rise       ; clk             ;
+;  radius[5]         ; clk        ; 8.933  ; 8.933  ; Rise       ; clk             ;
+; radius_valid       ; clk        ; 8.649  ; 8.649  ; Rise       ; clk             ;
+; trig               ; clk        ; 9.129  ; 9.129  ; Rise       ; clk             ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; distance_bcd[*]    ; clk        ; 7.285  ; 7.285  ; Rise       ; clk             ;
+;  distance_bcd[0]   ; clk        ; 7.285  ; 7.285  ; Rise       ; clk             ;
+;  distance_bcd[1]   ; clk        ; 8.969  ; 8.969  ; Rise       ; clk             ;
+;  distance_bcd[2]   ; clk        ; 8.456  ; 8.456  ; Rise       ; clk             ;
+;  distance_bcd[3]   ; clk        ; 9.299  ; 9.299  ; Rise       ; clk             ;
+;  distance_bcd[4]   ; clk        ; 9.185  ; 9.185  ; Rise       ; clk             ;
+;  distance_bcd[5]   ; clk        ; 9.551  ; 9.551  ; Rise       ; clk             ;
+;  distance_bcd[6]   ; clk        ; 9.287  ; 9.287  ; Rise       ; clk             ;
+;  distance_bcd[7]   ; clk        ; 7.291  ; 7.291  ; Rise       ; clk             ;
+;  distance_bcd[8]   ; clk        ; 8.489  ; 8.489  ; Rise       ; clk             ;
+;  distance_bcd[9]   ; clk        ; 8.453  ; 8.453  ; Rise       ; clk             ;
+;  distance_bcd[10]  ; clk        ; 10.092 ; 10.092 ; Rise       ; clk             ;
+;  distance_bcd[11]  ; clk        ; 8.439  ; 8.439  ; Rise       ; clk             ;
+;  distance_bcd[12]  ; clk        ; 9.104  ; 9.104  ; Rise       ; clk             ;
+;  distance_bcd[13]  ; clk        ; 8.551  ; 8.551  ; Rise       ; clk             ;
+;  distance_bcd[14]  ; clk        ; 8.553  ; 8.553  ; Rise       ; clk             ;
+;  distance_bcd[15]  ; clk        ; 9.067  ; 9.067  ; Rise       ; clk             ;
+; distance_level[*]  ; clk        ; 10.647 ; 10.647 ; Rise       ; clk             ;
+;  distance_level[0] ; clk        ; 10.647 ; 10.647 ; Rise       ; clk             ;
+;  distance_level[1] ; clk        ; 11.301 ; 11.301 ; Rise       ; clk             ;
+;  distance_level[2] ; clk        ; 11.076 ; 11.076 ; Rise       ; clk             ;
+; distance_valid     ; clk        ; 9.736  ; 9.736  ; Rise       ; clk             ;
+; measure_busy       ; clk        ; 9.636  ; 9.636  ; Rise       ; clk             ;
+; measure_done       ; clk        ; 9.526  ; 9.526  ; Rise       ; clk             ;
+; radius[*]          ; clk        ; 8.652  ; 8.652  ; Rise       ; clk             ;
+;  radius[0]         ; clk        ; 9.665  ; 9.665  ; Rise       ; clk             ;
+;  radius[1]         ; clk        ; 9.698  ; 9.698  ; Rise       ; clk             ;
+;  radius[2]         ; clk        ; 9.703  ; 9.703  ; Rise       ; clk             ;
+;  radius[3]         ; clk        ; 8.964  ; 8.964  ; Rise       ; clk             ;
+;  radius[4]         ; clk        ; 8.652  ; 8.652  ; Rise       ; clk             ;
+;  radius[5]         ; clk        ; 8.933  ; 8.933  ; Rise       ; clk             ;
+; radius_valid       ; clk        ; 8.649  ; 8.649  ; Rise       ; clk             ;
+; trig               ; clk        ; 9.129  ; 9.129  ; Rise       ; clk             ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5934     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5934     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 15:03:00 2026
+Info: Command: quartus_sta bcd_measurement_optimized -c bcd_measurement_optimized
+Info: qsta_default_script.tcl version: #2
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Reading SDC File: 'bcd_measurement_optimized.sdc'
+Info: Worst-case setup slack is 1.877
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.877         0.000 clk 
+Info: Worst-case hold slack is 1.078
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.078         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 9.734
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.734         0.000 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is fully constrained for setup requirements
+Info: Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4369 megabytes
+    Info: Processing ended: Thu Oct 15 15:03:01 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

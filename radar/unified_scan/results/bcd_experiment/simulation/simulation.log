@@ -1,0 +1,2 @@
+PASS tb_ultrasonic_bcd_experiment cycles=7438473 cases=13 variants=4: fractional rounded, integer294 rounded, fractional floor, fractional free-running; independent numerical/radius/BCD-level oracle; legacy trig/busy/done cycle-identical
+tb_ultrasonic_bcd_experiment.v:86: $finish called at 148769460000 (1ps)

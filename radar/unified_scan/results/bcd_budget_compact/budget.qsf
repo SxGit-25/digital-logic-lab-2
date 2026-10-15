@@ -1,0 +1,11 @@
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM1270T144C5
+set_global_assignment -name TOP_LEVEL_ENTITY ultrasonic_bcd_budget_compact
+set_global_assignment -name VERILOG_FILE ultrasonic_bcd_budget_compact.v
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name AUTO_RESOURCE_SHARING ON
+set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER ON
+set_global_assignment -name SDC_FILE budget.sdc
+set_location_assignment PIN_18 -to clk
+
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1

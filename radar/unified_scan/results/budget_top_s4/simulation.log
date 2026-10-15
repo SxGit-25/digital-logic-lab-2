@@ -1,0 +1,3 @@
+PASS tb_unified_top cycles=1254546 shots=16 basic_samples=7 continuous_samples=8 mode_resets=2 readback_reads=3150
+LCD_COUNTS basic_targets=5 continuous_targets=7 basic_fast_step_drops=180 continuous_drops=0
+tb_budget_top.v:105: $finish called at 25090924000 (1ps)
