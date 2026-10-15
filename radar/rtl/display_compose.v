@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module display_compose (
+module display_compose #(parameter integer SUPPORT_CONTINUOUS = 0) (
     input  wire [1:0]  system_state,
     input  wire        blink_2hz,
     input  wire [2:0]  angle_idx,
@@ -15,7 +15,9 @@ module display_compose (
     input  wire [4:0]  hist_seen,
     input  wire [2:0]  row_idx,
     output reg  [31:0] digit_codes,
-    output reg  [23:0] row_colors
+    output reg  [23:0] row_colors,
+    input wire continuous_mode,
+    input wire [11:0] continuous_angle_bcd
 );
     localparam [1:0] SYS_OFF     = 2'd0;
     localparam [1:0] SYS_SELF    = 2'd1;
@@ -74,6 +76,12 @@ module display_compose (
             3'd4: begin a2 = 4'd1; a1 = 4'd8; a0 = 4'd0; end
             default: begin a2 = DIGIT_DASH; a1 = DIGIT_DASH; a0 = DIGIT_DASH; end
         endcase
+
+        if (SUPPORT_CONTINUOUS && continuous_mode) begin
+            a2 = continuous_angle_bcd[11:8];
+            a1 = continuous_angle_bcd[7:4];
+            a0 = continuous_angle_bcd[3:0];
+        end
 
         d3 = distance_bcd[15:12];
         d2 = distance_bcd[11:8];

@@ -1,0 +1,181 @@
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Shell
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Oct 15 11:59:05 2026
+Info: Command: quartus_sh --flow compile radar_modes
+Info: Quartus(args): compile radar_modes
+Info: Project Name = R:/p3_modes/radar_modes
+Info: Revision Name = radar_modes
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:59:05 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off radar_modes -c radar_modes
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/timebase.v
+    Info: Found entity 1: timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_filter.v
+    Info: Found entity 1: switch_filter
+Info: Found 1 design units, including 1 entities, in source file /rtl/servo_pwm.v
+    Info: Found entity 1: servo_pwm
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic.v
+    Info: Found entity 1: ultrasonic
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_ctrl.v
+    Info: Found entity 1: radar_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/bin12_to_bcd.v
+    Info: Found entity 1: bin12_to_bcd
+Info: Found 1 design units, including 1 entities, in source file /rtl/display_compose.v
+    Info: Found entity 1: display_compose
+Info: Found 1 design units, including 1 entities, in source file /rtl/seg_scan.v
+    Info: Found entity 1: seg_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/matrix_scan.v
+    Info: Found entity 1: matrix_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_ctrl.v
+    Info: Found entity 1: alarm_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_mode_top.v
+    Info: Found entity 1: radar_mode_top
+Info: Elaborating entity "radar_mode_top" for the top level hierarchy
+Info: Elaborating entity "switch_filter" for hierarchy "switch_filter:u_mode_switch"
+Info: Elaborating entity "reset_ctrl" for hierarchy "reset_ctrl:u_reset"
+Info: Elaborating entity "timebase" for hierarchy "timebase:u_timebase"
+Info: Elaborating entity "servo_pwm" for hierarchy "servo_pwm:u_servo"
+Info: Elaborating entity "ultrasonic" for hierarchy "ultrasonic:u_ultrasonic"
+Info: Elaborating entity "radar_ctrl" for hierarchy "radar_ctrl:u_control"
+Info: Elaborating entity "bin12_to_bcd" for hierarchy "bin12_to_bcd:u_bcd"
+Info: Elaborating entity "display_compose" for hierarchy "display_compose:u_compose"
+Info: Elaborating entity "seg_scan" for hierarchy "seg_scan:u_seg"
+Info: Elaborating entity "matrix_scan" for hierarchy "matrix_scan:u_matrix"
+Info: Elaborating entity "alarm_ctrl" for hierarchy "alarm_ctrl:u_alarm"
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "radar_ctrl:u_control|phase~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_ctrl:u_control|phase~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_ctrl:u_control|phase~8" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~9" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~10" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~11" lost all its fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "alarm_ctrl:u_alarm|Add1~5"
+Info: Implemented 1112 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 58 output pins
+    Info: Implemented 1050 logic cells
+Info: Generated suppressed messages file R:/p3_modes/radar_modes.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4408 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:08 2026
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Fitter
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:59:09 2026
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off radar_modes -c radar_modes
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Selected device EPM1270T144C5 for design "radar_modes"
+Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info: Device EPM570T144C5 is compatible
+    Info: Device EPM570T144I5 is compatible
+    Info: Device EPM570T144A5 is compatible
+    Info: Device EPM1270T144I5 is compatible
+    Info: Device EPM1270T144A5 is compatible
+Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
+Info: Reading SDC File: 'radar_modes.sdc'
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 1 clocks
+    Info:   Period   Clock Name
+    Info: ======== ============
+    Info:   20.000          clk
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: Automatically promoted signal "clk" to use Global clock in PIN 18
+Info: Completed Auto Global Promotion Operation
+Info: Starting register packing
+Info: Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+Info: Fitter placement was successful
+Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter routing operations beginning
+Info: Average interconnect usage is 26% of the available device resources
+    Info: Peak interconnect usage is 28% of the available device resources in the region that extends from location X0_Y0 to location X8_Y11
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info: Optimizations that may affect the design's routability were skipped
+    Info: Optimizations that may affect the design's timing were skipped
+Info: Generated suppressed messages file R:/p3_modes/radar_modes.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4528 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:10 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Assembler
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:59:11 2026
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off radar_modes -c radar_modes
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:59:11 2026
+Info: Command: quartus_sta radar_modes -c radar_modes
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+Info: qsta_default_script.tcl version: #2
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4360 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:11 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Reading SDC File: 'radar_modes.sdc'
+Info: Worst-case setup slack is 3.501
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     3.501         0.000 clk 
+Info: Worst-case hold slack is 1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.380         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 9.734
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.734         0.000 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4375 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:12 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II Full Compilation was successful. 0 errors, 0 warnings
+Info: Evaluation of Tcl script e:/quartus/quartusii91/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4255 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:13 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:10

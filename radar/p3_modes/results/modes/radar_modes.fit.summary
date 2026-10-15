@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 15 11:59:10 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : radar_modes
+Top-level Entity Name : radar_mode_top
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 1,033 / 1,270 ( 81 % )
+Total pins : 62 / 116 ( 53 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

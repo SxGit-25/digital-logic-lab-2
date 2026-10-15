@@ -1,0 +1,639 @@
+Analysis & Synthesis report for radar_modes
+Thu Oct 15 11:59:08 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |radar_mode_top|matrix_scan:u_matrix|blank_stage
+  9. State Machine - |radar_mode_top|radar_ctrl:u_control|phase
+ 10. State Machine - |radar_mode_top|ultrasonic:u_ultrasonic|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |radar_mode_top
+ 16. Parameter Settings for User Entity Instance: switch_filter:u_mode_switch
+ 17. Parameter Settings for User Entity Instance: reset_ctrl:u_reset
+ 18. Parameter Settings for User Entity Instance: timebase:u_timebase
+ 19. Parameter Settings for User Entity Instance: switch_filter:u_switch
+ 20. Parameter Settings for User Entity Instance: servo_pwm:u_servo
+ 21. Parameter Settings for User Entity Instance: ultrasonic:u_ultrasonic
+ 22. Parameter Settings for User Entity Instance: radar_ctrl:u_control
+ 23. Parameter Settings for User Entity Instance: display_compose:u_compose
+ 24. Parameter Settings for User Entity Instance: seg_scan:u_seg
+ 25. Parameter Settings for User Entity Instance: matrix_scan:u_matrix
+ 26. Parameter Settings for User Entity Instance: alarm_ctrl:u_alarm
+ 27. Port Connectivity Checks: "radar_ctrl:u_control"
+ 28. Port Connectivity Checks: "servo_pwm:u_servo"
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:59:08 2026    ;
+; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; radar_modes                              ;
+; Top-level Entity Name       ; radar_mode_top                           ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 1,050                                    ;
+; Total pins                  ; 62                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                                      ; radar_mode_top     ; radar_modes        ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Power-Up Don't Care                                                        ; Off                ; On                 ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; ../rtl/reset_ctrl.v              ; yes             ; User Verilog HDL File  ; R:/rtl/reset_ctrl.v          ;
+; ../rtl/timebase.v                ; yes             ; User Verilog HDL File  ; R:/rtl/timebase.v            ;
+; ../rtl/switch_filter.v           ; yes             ; User Verilog HDL File  ; R:/rtl/switch_filter.v       ;
+; ../rtl/servo_pwm.v               ; yes             ; User Verilog HDL File  ; R:/rtl/servo_pwm.v           ;
+; ../rtl/ultrasonic.v              ; yes             ; User Verilog HDL File  ; R:/rtl/ultrasonic.v          ;
+; ../rtl/radar_ctrl.v              ; yes             ; User Verilog HDL File  ; R:/rtl/radar_ctrl.v          ;
+; ../rtl/bin12_to_bcd.v            ; yes             ; User Verilog HDL File  ; R:/rtl/bin12_to_bcd.v        ;
+; ../rtl/display_compose.v         ; yes             ; User Verilog HDL File  ; R:/rtl/display_compose.v     ;
+; ../rtl/seg_scan.v                ; yes             ; User Verilog HDL File  ; R:/rtl/seg_scan.v            ;
+; ../rtl/matrix_scan.v             ; yes             ; User Verilog HDL File  ; R:/rtl/matrix_scan.v         ;
+; ../rtl/alarm_ctrl.v              ; yes             ; User Verilog HDL File  ; R:/rtl/alarm_ctrl.v          ;
+; ../rtl/radar_mode_top.v          ; yes             ; User Verilog HDL File  ; R:/rtl/radar_mode_top.v      ;
++----------------------------------+-----------------+------------------------+------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 1050  ;
+;     -- Combinational with no register       ; 619   ;
+;     -- Register only                        ; 31    ;
+;     -- Combinational with a register        ; 400   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 455   ;
+;     -- 3 input functions                    ; 217   ;
+;     -- 2 input functions                    ; 325   ;
+;     -- 1 input functions                    ; 20    ;
+;     -- 0 input functions                    ; 2     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 845   ;
+;     -- arithmetic mode                      ; 205   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 191   ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 431   ;
+; Total logic cells in carry chains           ; 232   ;
+; I/O pins                                    ; 62    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 431   ;
+; Total fan-out                               ; 4216  ;
+; Average fan-out                             ; 3.79  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                         ; Library Name ;
++----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
+; |radar_mode_top                  ; 1050 (56)   ; 431          ; 0          ; 62   ; 0            ; 619 (55)     ; 31 (0)            ; 400 (1)          ; 232 (0)         ; 0 (0)      ; |radar_mode_top                             ; work         ;
+;    |alarm_ctrl:u_alarm|          ; 55 (55)     ; 20           ; 0          ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 20 (20)          ; 34 (34)         ; 0 (0)      ; |radar_mode_top|alarm_ctrl:u_alarm          ; work         ;
+;    |bin12_to_bcd:u_bcd|          ; 82 (82)     ; 61           ; 0          ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 61 (61)          ; 4 (4)           ; 0 (0)      ; |radar_mode_top|bin12_to_bcd:u_bcd          ; work         ;
+;    |display_compose:u_compose|   ; 99 (99)     ; 0            ; 0          ; 0    ; 0            ; 99 (99)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |radar_mode_top|display_compose:u_compose   ; work         ;
+;    |matrix_scan:u_matrix|        ; 83 (83)     ; 40           ; 0          ; 0    ; 0            ; 43 (43)      ; 0 (0)             ; 40 (40)          ; 8 (8)           ; 0 (0)      ; |radar_mode_top|matrix_scan:u_matrix        ; work         ;
+;    |radar_ctrl:u_control|        ; 214 (214)   ; 88           ; 0          ; 0    ; 0            ; 126 (126)    ; 15 (15)           ; 73 (73)          ; 31 (31)         ; 0 (0)      ; |radar_mode_top|radar_ctrl:u_control        ; work         ;
+;    |reset_ctrl:u_reset|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |radar_mode_top|reset_ctrl:u_reset          ; work         ;
+;    |seg_scan:u_seg|              ; 73 (73)     ; 27           ; 0          ; 0    ; 0            ; 46 (46)      ; 0 (0)             ; 27 (27)          ; 8 (8)           ; 0 (0)      ; |radar_mode_top|seg_scan:u_seg              ; work         ;
+;    |servo_pwm:u_servo|           ; 174 (174)   ; 57           ; 0          ; 0    ; 0            ; 117 (117)    ; 1 (1)             ; 56 (56)          ; 64 (64)         ; 0 (0)      ; |radar_mode_top|servo_pwm:u_servo           ; work         ;
+;    |switch_filter:u_mode_switch| ; 11 (11)     ; 8            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 8 (8)            ; 5 (5)           ; 0 (0)      ; |radar_mode_top|switch_filter:u_mode_switch ; work         ;
+;    |switch_filter:u_switch|      ; 12 (12)     ; 8            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 8 (8)            ; 5 (5)           ; 0 (0)      ; |radar_mode_top|switch_filter:u_switch      ; work         ;
+;    |timebase:u_timebase|         ; 39 (39)     ; 27           ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 27 (27)          ; 24 (24)         ; 0 (0)      ; |radar_mode_top|timebase:u_timebase         ; work         ;
+;    |ultrasonic:u_ultrasonic|     ; 136 (136)   ; 78           ; 0          ; 0    ; 0            ; 58 (58)      ; 0 (0)             ; 78 (78)          ; 49 (49)         ; 0 (0)      ; |radar_mode_top|ultrasonic:u_ultrasonic     ; work         ;
++----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |radar_mode_top|matrix_scan:u_matrix|blank_stage  ;
++----------------+----------------+----------------+----------------+
+; Name           ; blank_stage.00 ; blank_stage.10 ; blank_stage.01 ;
++----------------+----------------+----------------+----------------+
+; blank_stage.01 ; 0              ; 0              ; 0              ;
+; blank_stage.00 ; 1              ; 0              ; 1              ;
+; blank_stage.10 ; 0              ; 1              ; 1              ;
++----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_mode_top|radar_ctrl:u_control|phase                                              ;
++-----------------------+---------------+-----------------------+-----------------------+-----------------+
+; Name                  ; phase.PH_HOLD ; phase.PH_WAIT_MEASURE ; phase.PH_WAIT_APPLIED ; phase.PH_SETTLE ;
++-----------------------+---------------+-----------------------+-----------------------+-----------------+
+; phase.PH_SETTLE       ; 0             ; 0                     ; 0                     ; 0               ;
+; phase.PH_WAIT_APPLIED ; 0             ; 0                     ; 1                     ; 1               ;
+; phase.PH_WAIT_MEASURE ; 0             ; 1                     ; 0                     ; 1               ;
+; phase.PH_HOLD         ; 1             ; 0                     ; 0                     ; 1               ;
++-----------------------+---------------+-----------------------+-----------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |radar_mode_top|ultrasonic:u_ultrasonic|state                                                                    ;
++------------------+------------+---------------+------------------+-----------------+----------------+---------------+------------+
+; Name             ; state.DONE ; state.CONVERT ; state.COUNT_HIGH ; state.WAIT_RISE ; state.WAIT_LOW ; state.TRIGGER ; state.IDLE ;
++------------------+------------+---------------+------------------+-----------------+----------------+---------------+------------+
+; state.IDLE       ; 0          ; 0             ; 0                ; 0               ; 0              ; 0             ; 0          ;
+; state.TRIGGER    ; 0          ; 0             ; 0                ; 0               ; 0              ; 1             ; 1          ;
+; state.WAIT_LOW   ; 0          ; 0             ; 0                ; 0               ; 1              ; 0             ; 1          ;
+; state.WAIT_RISE  ; 0          ; 0             ; 0                ; 1               ; 0              ; 0             ; 1          ;
+; state.COUNT_HIGH ; 0          ; 0             ; 1                ; 0               ; 0              ; 0             ; 1          ;
+; state.CONVERT    ; 0          ; 1             ; 0                ; 0               ; 0              ; 0             ; 1          ;
+; state.DONE       ; 1          ; 0             ; 0                ; 0               ; 0              ; 0             ; 1          ;
++------------------+------------+---------------+------------------+-----------------+----------------+---------------+------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------+----------------------------------------------+
+; Register name                         ; Reason for Removal                           ;
++---------------------------------------+----------------------------------------------+
+; servo_pwm:u_servo|sweep_pulse_us[0]   ; Merged with servo_pwm:u_servo|angle_phase[0] ;
+; radar_ctrl:u_control|phase~6          ; Lost fanout                                  ;
+; radar_ctrl:u_control|phase~7          ; Lost fanout                                  ;
+; radar_ctrl:u_control|phase~8          ; Lost fanout                                  ;
+; ultrasonic:u_ultrasonic|state~9       ; Lost fanout                                  ;
+; ultrasonic:u_ultrasonic|state~10      ; Lost fanout                                  ;
+; ultrasonic:u_ultrasonic|state~11      ; Lost fanout                                  ;
+; Total Number of Removed Registers = 7 ;                                              ;
++---------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 431   ;
+; Number of registers using Synchronous Clear  ; 178   ;
+; Number of registers using Synchronous Load   ; 14    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 355   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; reset_ctrl:u_reset|reset_pipe[15]       ; 119     ;
+; reset_ctrl:u_reset|reset_pipe[14]       ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[13]       ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[12]       ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[11]       ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[10]       ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[9]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[8]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[7]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[6]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[5]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[4]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[3]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[2]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[1]        ; 1       ;
+; reset_ctrl:u_reset|reset_pipe[0]        ; 1       ;
+; Total number of inverted registers = 16 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |radar_mode_top|timebase:u_timebase|us_div[0]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |radar_mode_top|seg_scan:u_seg|seg[6]                     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |radar_mode_top|seg_scan:u_seg|digit_idx[2]               ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |radar_mode_top|alarm_ctrl:u_alarm|carrier_us[1]          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |radar_mode_top|timebase:u_timebase|us_in_ms[5]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[7]             ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |radar_mode_top|bin12_to_bcd:u_bcd|bcd[13]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |radar_mode_top|bin12_to_bcd:u_bcd|shift_reg[14]          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |radar_mode_top|bin12_to_bcd:u_bcd|last_binary[7]         ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |radar_mode_top|bin12_to_bcd:u_bcd|shift_reg[8]           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |radar_mode_top|alarm_ctrl:u_alarm|rhythm_ms[6]           ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|current_distance[1]  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |radar_mode_top|switch_filter:u_switch|stable_ms[4]       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |radar_mode_top|switch_filter:u_mode_switch|stable_ms[4]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |radar_mode_top|timebase:u_timebase|ms_in_half_blink[6]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |radar_mode_top|seg_scan:u_seg|dwell_us[3]                ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |radar_mode_top|ultrasonic:u_ultrasonic|distance_mm[0]    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|row_idx[2]           ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|phase_us[0]          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|servo_pwm:u_servo|active_angle[0]         ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|frame_us[4]             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_mode_top|seg_scan:u_seg|cat_n[6]                   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_mode_top|seg_scan:u_seg|cat_n[3]                   ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[0]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[1]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[2]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[3]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[4]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[5]             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|col_g[6]             ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|hist_level4[2]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|hist_level3[1]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|hist_level2[2]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|hist_level1[1]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|hist_level0[2]       ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|row_n[5]             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|row_n[1]             ;
+; 7:1                ; 11 bits   ; 44 LEs        ; 11 LEs               ; 33 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|state_ms[4]          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |radar_mode_top|matrix_scan:u_matrix|pwm_phase[0]         ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|sweep_pulse_us[10]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|continuous_angle[7]     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |radar_mode_top|ultrasonic:u_ultrasonic|trigger_us[2]     ;
+; 9:1                ; 19 bits   ; 114 LEs       ; 19 LEs               ; 95 LEs                 ; Yes        ; |radar_mode_top|ultrasonic:u_ultrasonic|distance_rem[2]   ;
+; 10:1               ; 15 bits   ; 90 LEs        ; 15 LEs               ; 75 LEs                 ; Yes        ; |radar_mode_top|ultrasonic:u_ultrasonic|echo_us[14]       ;
+; 12:1               ; 11 bits   ; 88 LEs        ; 11 LEs               ; 77 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|slot_ms[2]           ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|continuous_angle_bcd[0] ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 3 LEs                ; 18 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|current_level[2]     ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|continuous_angle_bcd[8] ;
+; 11:1               ; 9 bits    ; 63 LEs        ; 9 LEs                ; 54 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|settle_ms[7]         ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; Yes        ; |radar_mode_top|radar_ctrl:u_control|angle_idx[2]         ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |radar_mode_top|servo_pwm:u_servo|continuous_angle_bcd[5] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |radar_mode_top|radar_ctrl:u_control|sample_idx[2]        ;
+; 13:1               ; 15 bits   ; 120 LEs       ; 15 LEs               ; 105 LEs                ; Yes        ; |radar_mode_top|ultrasonic:u_ultrasonic|budget_us[4]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux30           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux37           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux24           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |radar_mode_top|radar_ctrl:u_control|distance_level       ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |radar_mode_top|servo_pwm:u_servo|selected_pulse_us[4]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux41           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux40           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux30           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|Mux31           ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |radar_mode_top|matrix_scan:u_matrix|blank_stage          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|row_colors[7]   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|row_colors[4]   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|row_colors[0]   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |radar_mode_top|display_compose:u_compose|row_colors[10]  ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |radar_mode_top|radar_ctrl:u_control|phase                ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; No         ; |radar_mode_top|ultrasonic:u_ultrasonic|state             ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; No         ; |radar_mode_top|ultrasonic:u_ultrasonic|state             ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |radar_mode_top|ultrasonic:u_ultrasonic|state             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |radar_mode_top ;
++----------------------+----------+----------------------------------------------+
+; Parameter Name       ; Value    ; Type                                         ;
++----------------------+----------+----------------------------------------------+
+; CLK_HZ               ; 50000000 ; Signed Integer                               ;
+; SELF_TEST_MS         ; 2000     ; Signed Integer                               ;
+; STANDBY_MS           ; 2000     ; Signed Integer                               ;
+; SLOT_MS              ; 2000     ; Signed Integer                               ;
+; SETTLE_MS            ; 300      ; Signed Integer                               ;
+; SWITCH_MS            ; 20       ; Signed Integer                               ;
+; CONTINUOUS_SAMPLE_MS ; 60       ; Signed Integer                               ;
++----------------------+----------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switch_filter:u_mode_switch ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; FILTER_MS      ; 20    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reset_ctrl:u_reset ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; RESET_CYCLES   ; 16    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timebase:u_timebase ;
++----------------+----------+--------------------------------------+
+; Parameter Name ; Value    ; Type                                 ;
++----------------+----------+--------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                       ;
++----------------+----------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switch_filter:u_switch ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; FILTER_MS      ; 20    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: servo_pwm:u_servo ;
++--------------------+-------+-----------------------------------+
+; Parameter Name     ; Value ; Type                              ;
++--------------------+-------+-----------------------------------+
+; SUPPORT_CONTINUOUS ; 1     ; Signed Integer                    ;
++--------------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ultrasonic:u_ultrasonic ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; TRIG_US        ; 15    ; Signed Integer                              ;
+; TIMEOUT_US     ; 30000 ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: radar_ctrl:u_control ;
++----------------------+-------+------------------------------------+
+; Parameter Name       ; Value ; Type                               ;
++----------------------+-------+------------------------------------+
+; SELF_TEST_MS         ; 2000  ; Signed Integer                     ;
+; STANDBY_MS           ; 2000  ; Signed Integer                     ;
+; SLOT_MS              ; 2000  ; Signed Integer                     ;
+; SETTLE_MS            ; 300   ; Signed Integer                     ;
+; SUPPORT_CONTINUOUS   ; 1     ; Signed Integer                     ;
+; CONTINUOUS_SAMPLE_MS ; 60    ; Signed Integer                     ;
++----------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display_compose:u_compose ;
++--------------------+-------+-------------------------------------------+
+; Parameter Name     ; Value ; Type                                      ;
++--------------------+-------+-------------------------------------------+
+; SUPPORT_CONTINUOUS ; 1     ; Signed Integer                            ;
++--------------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg_scan:u_seg ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DIGIT_US       ; 250   ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: matrix_scan:u_matrix ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; PHASE_US       ; 250   ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alarm_ctrl:u_alarm ;
++-----------------+------------------+----------------------------+
+; Parameter Name  ; Value            ; Type                       ;
++-----------------+------------------+----------------------------+
+; BLUE_MASK       ; 1111000000000000 ; Unsigned Binary            ;
+; GREEN_MASK      ; 0000111100000000 ; Unsigned Binary            ;
+; YELLOW_MASK     ; 0000000011110000 ; Unsigned Binary            ;
+; RED_MASK        ; 0000000000001111 ; Unsigned Binary            ;
+; CARRIER_HALF_US ; 250              ; Signed Integer             ;
++-----------------+------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "radar_ctrl:u_control"                                                                              ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sample_idx          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sample_angle        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sample_direction_up ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "servo_pwm:u_servo"                                                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; frame_start ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:59:05 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off radar_modes -c radar_modes
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/timebase.v
+    Info: Found entity 1: timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_filter.v
+    Info: Found entity 1: switch_filter
+Info: Found 1 design units, including 1 entities, in source file /rtl/servo_pwm.v
+    Info: Found entity 1: servo_pwm
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic.v
+    Info: Found entity 1: ultrasonic
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_ctrl.v
+    Info: Found entity 1: radar_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/bin12_to_bcd.v
+    Info: Found entity 1: bin12_to_bcd
+Info: Found 1 design units, including 1 entities, in source file /rtl/display_compose.v
+    Info: Found entity 1: display_compose
+Info: Found 1 design units, including 1 entities, in source file /rtl/seg_scan.v
+    Info: Found entity 1: seg_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/matrix_scan.v
+    Info: Found entity 1: matrix_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_ctrl.v
+    Info: Found entity 1: alarm_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_mode_top.v
+    Info: Found entity 1: radar_mode_top
+Info: Elaborating entity "radar_mode_top" for the top level hierarchy
+Info: Elaborating entity "switch_filter" for hierarchy "switch_filter:u_mode_switch"
+Info: Elaborating entity "reset_ctrl" for hierarchy "reset_ctrl:u_reset"
+Info: Elaborating entity "timebase" for hierarchy "timebase:u_timebase"
+Info: Elaborating entity "servo_pwm" for hierarchy "servo_pwm:u_servo"
+Info: Elaborating entity "ultrasonic" for hierarchy "ultrasonic:u_ultrasonic"
+Info: Elaborating entity "radar_ctrl" for hierarchy "radar_ctrl:u_control"
+Info: Elaborating entity "bin12_to_bcd" for hierarchy "bin12_to_bcd:u_bcd"
+Info: Elaborating entity "display_compose" for hierarchy "display_compose:u_compose"
+Info: Elaborating entity "seg_scan" for hierarchy "seg_scan:u_seg"
+Info: Elaborating entity "matrix_scan" for hierarchy "matrix_scan:u_matrix"
+Info: Elaborating entity "alarm_ctrl" for hierarchy "alarm_ctrl:u_alarm"
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "radar_ctrl:u_control|phase~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_ctrl:u_control|phase~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_ctrl:u_control|phase~8" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~9" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~10" lost all its fanouts during netlist optimizations.
+    Info: Register "ultrasonic:u_ultrasonic|state~11" lost all its fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "alarm_ctrl:u_alarm|Add1~5"
+Info: Implemented 1112 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 58 output pins
+    Info: Implemented 1050 logic cells
+Info: Generated suppressed messages file R:/p3_modes/radar_modes.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4408 megabytes
+    Info: Processing ended: Thu Oct 15 11:59:08 2026
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in R:/p3_modes/radar_modes.map.smsg.
+
+

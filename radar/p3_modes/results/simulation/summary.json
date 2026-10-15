@@ -1,0 +1,19 @@
+{
+  "tb_equivalence": {
+    "pass": true,
+    "log": "PASS top/composer/controller mode0 baseline equivalence: 500000 cycles, two tops, random echo, SW7 restart\ntb_equivalence.v:84: $finish called at 5000006000 (1ps)"
+  },
+  "tb_continuous_servo": {
+    "pass": true,
+    "log": "PASS servo baseline 100000 randomized cycles; continuous 801 full 20000-us frames, 500..2500 us, 0->180->0, binary/BCD/direction every frame\ntb_continuous_servo.v:35: $finish called at 161200066000 (1ps)"
+  },
+  "tb_continuous_ctrl": {
+    "pass": true,
+    "log": "PASS controller:         362 samples all 181 angles x 2 directions; nearest bins 23/68/113/158; crossed-angle echo binding; default 60-ms cadence and busy slot skipping; distance levels/invalid; live BCD; history isolation; alarm LEDs and buzzer carrier\ntb_continuous_ctrl.v:72: $finish called at 271320000 (1ps)"
+  },
+  "tb_modes_integration": {
+    "pass": true,
+    "log": "PASS integration: SW6 both transitions while measuring, cancel/history reset SELF->STANDBY->RUN; real 590-us echo near alarm; noecho; SW7 async all external outputs off; shared timebase\ntb_modes_integration.v:39: $finish called at 605180000 (1ps)"
+  },
+  "baseline": "3231197"
+}

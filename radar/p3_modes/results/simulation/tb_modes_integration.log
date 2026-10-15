@@ -1,0 +1,2 @@
+PASS integration: SW6 both transitions while measuring, cancel/history reset SELF->STANDBY->RUN; real 590-us echo near alarm; noecho; SW7 async all external outputs off; shared timebase
+tb_modes_integration.v:39: $finish called at 605180000 (1ps)

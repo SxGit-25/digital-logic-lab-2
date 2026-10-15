@@ -4,7 +4,9 @@ module radar_ctrl #(
     parameter integer SELF_TEST_MS = 2000,
     parameter integer STANDBY_MS   = 2000,
     parameter integer SLOT_MS      = 2000,
-    parameter integer SETTLE_MS    = 300
+    parameter integer SETTLE_MS    = 300,
+    parameter integer SUPPORT_CONTINUOUS = 0,
+    parameter integer CONTINUOUS_SAMPLE_MS = 60
 ) (
     input  wire        clk,
     input  wire        rst,
@@ -30,7 +32,12 @@ module radar_ctrl #(
     output reg  [2:0]  hist_level3,
     output reg  [2:0]  hist_level4,
     output reg  [4:0]  hist_valid,
-    output reg  [4:0]  hist_seen
+    output reg  [4:0]  hist_seen,
+    input wire continuous_mode,
+    input wire [7:0] continuous_angle,
+    input wire continuous_direction_up,
+    output reg [7:0] sample_angle,
+    output reg sample_direction_up
 );
     // Elaboration-time ceil(log2(count)), with one bit for count == 1.
     // Verilog-2001 constant function for Quartus II 9.1 compatibility.
@@ -60,10 +67,23 @@ module radar_ctrl #(
 
     localparam integer STATE_MS = (SELF_TEST_MS > STANDBY_MS) ? SELF_TEST_MS : STANDBY_MS;
     reg [count_width(STATE_MS)-1:0] state_ms;
-    reg [count_width(SLOT_MS)-1:0] slot_ms;
+    localparam integer SLOT_COUNT_MS = SUPPORT_CONTINUOUS && CONTINUOUS_SAMPLE_MS > SLOT_MS ? CONTINUOUS_SAMPLE_MS : SLOT_MS;
+    reg [count_width(SLOT_COUNT_MS)-1:0] slot_ms;
     reg [count_width(SETTLE_MS)-1:0] settle_ms;
     reg [2:0] phase;
     reg direction_up;
+
+    wire continuous_active = SUPPORT_CONTINUOUS && continuous_mode;
+    function [2:0] nearest_line;
+        input [7:0] degrees;
+        begin
+            if (degrees < 8'd23) nearest_line = 0;
+            else if (degrees < 8'd68) nearest_line = 1;
+            else if (degrees < 8'd113) nearest_line = 2;
+            else if (degrees < 8'd158) nearest_line = 3;
+            else nearest_line = 4;
+        end
+    endfunction
 
     function [2:0] distance_level;
         input [11:0] mm;
@@ -99,6 +119,8 @@ module radar_ctrl #(
             hist_level4     <= 3'd0;
             hist_valid      <= 5'b0;
             hist_seen       <= 5'b0;
+            sample_angle <= 0;
+            sample_direction_up <= 1'b1;
             state_ms        <= 0;
             slot_ms         <= 0;
             settle_ms       <= 0;
@@ -106,6 +128,15 @@ module radar_ctrl #(
             direction_up    <= 1'b1;
         end else begin
             measure_start <= 1'b0;
+
+            // measure_start is registered: ultrasonic accepts it on this
+            // edge. Bind the sample to the applied command on that edge,
+            // including a servo frame change on the preceding edge.
+            if (continuous_active && measure_start) begin
+                sample_idx <= nearest_line(continuous_angle);
+                sample_angle <= continuous_angle;
+                sample_direction_up <= continuous_direction_up;
+            end
 
             if (!system_on) begin
                 system_state     <= SYS_OFF;
@@ -199,7 +230,15 @@ module radar_ctrl #(
                         end
 
                         if (tick_ms) begin
-                            if (slot_ms == SLOT_MS - 1) begin
+                            if (continuous_active) begin
+                                if (slot_ms == CONTINUOUS_SAMPLE_MS - 1) begin
+                                    slot_ms <= 0;
+                                    if (!measure_busy && phase != PH_WAIT_MEASURE) begin
+                                        measure_start <= 1'b1;
+                                        phase <= PH_WAIT_MEASURE;
+                                    end
+                                end else slot_ms <= slot_ms + 1'b1;
+                            end else if (slot_ms == SLOT_MS - 1) begin
                                 // A slot always ends on time.  Anything not
                                 // committed by then becomes an invalid sample.
                                 if ((phase != PH_HOLD) && !measure_done) begin
