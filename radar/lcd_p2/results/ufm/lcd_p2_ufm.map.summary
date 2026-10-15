@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 11:35:06 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : lcd_p2_ufm
+Top-level Entity Name : lcd_p2_ufm_read_test_top
+Family : MAX II
+Total logic elements : 593
+Total pins : 22
+Total virtual pins : 0
+UFM blocks : 1 / 1 ( 100 % )

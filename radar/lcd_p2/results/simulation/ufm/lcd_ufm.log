@@ -1,0 +1,2 @@
+PASS LCD P2: 596 updates, 26245 RMW pixels, 209960 bus transactions; full RAM checked per update; default safety checked
+C:\Users\Metro\AppData\Local\Temp\radar_p2_verify\tb_lcd_p2.v:93: $finish called at 132108140000 (1ps)

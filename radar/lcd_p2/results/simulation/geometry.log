@@ -1,0 +1,166 @@
+{
+  "coordinates": 26607,
+  "unique_unmirrored": 8869,
+  "valid_output_combinations": 8145,
+  "rounded_reference_chebyshev_error": {
+    "0": 8435,
+    "1": 434
+  },
+  "per_axis_error": {
+    "0,0": 8435,
+    "0,1": 228,
+    "1,0": 206
+  },
+  "max_axis_error_against_unrounded_float": 0.5830331203679009,
+  "ufm_case_identical": true,
+  "mirror_identical": true,
+  "max_euclidean_error_against_unrounded_float": 0.7364662030526636,
+  "images": {
+    "alias_after": {
+      "exact_reference_match": true,
+      "target_38_59": 0
+    },
+    "alias_before": {
+      "exact_reference_match": true,
+      "target_38_59": 1
+    },
+    "full_scan": {
+      "exact_reference_match": true,
+      "ring_coverage": {
+        "16": {
+          "total_pixels": 65,
+          "lit_pixels": 65,
+          "missing_pixels": [],
+          "reference_components_8": [
+            65
+          ],
+          "actual_components_8": [
+            65
+          ]
+        },
+        "32": {
+          "total_pixels": 113,
+          "lit_pixels": 112,
+          "missing_pixels": [
+            [
+              96,
+              57
+            ]
+          ],
+          "reference_components_8": [
+            113
+          ],
+          "actual_components_8": [
+            112
+          ]
+        },
+        "48": {
+          "total_pixels": 149,
+          "lit_pixels": 149,
+          "missing_pixels": [],
+          "reference_components_8": [
+            149
+          ],
+          "actual_components_8": [
+            149
+          ]
+        }
+      }
+    },
+    "multiple_targets_turnaround": {
+      "exact_reference_match": true,
+      "ring_coverage": {
+        "16": {
+          "total_pixels": 65,
+          "lit_pixels": 64,
+          "missing_pixels": [
+            [
+              53,
+              52
+            ]
+          ],
+          "reference_components_8": [
+            65
+          ],
+          "actual_components_8": [
+            64
+          ]
+        },
+        "32": {
+          "total_pixels": 113,
+          "lit_pixels": 111,
+          "missing_pixels": [
+            [
+              41,
+              40
+            ],
+            [
+              43,
+              38
+            ]
+          ],
+          "reference_components_8": [
+            113
+          ],
+          "actual_components_8": [
+            111
+          ]
+        },
+        "48": {
+          "total_pixels": 149,
+          "lit_pixels": 149,
+          "missing_pixels": [],
+          "reference_components_8": [
+            149
+          ],
+          "actual_components_8": [
+            149
+          ]
+        }
+      }
+    },
+    "outbound": {
+      "exact_reference_match": true,
+      "ring_coverage": {
+        "16": {
+          "total_pixels": 65,
+          "lit_pixels": 65,
+          "missing_pixels": [],
+          "reference_components_8": [
+            65
+          ],
+          "actual_components_8": [
+            65
+          ]
+        },
+        "32": {
+          "total_pixels": 113,
+          "lit_pixels": 112,
+          "missing_pixels": [
+            [
+              32,
+              57
+            ]
+          ],
+          "reference_components_8": [
+            113
+          ],
+          "actual_components_8": [
+            112
+          ]
+        },
+        "48": {
+          "total_pixels": 149,
+          "lit_pixels": 149,
+          "missing_pixels": [],
+          "reference_components_8": [
+            149
+          ],
+          "actual_components_8": [
+            149
+          ]
+        }
+      }
+    }
+  }
+}

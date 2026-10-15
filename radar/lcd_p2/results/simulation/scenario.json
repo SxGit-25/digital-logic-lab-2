@@ -1,0 +1,356 @@
+{
+  "scenarios": 596,
+  "pixels": 26245,
+  "snapshots": {
+    "180": "outbound",
+    "360": "full_scan",
+    "595": "multiple_targets_turnaround"
+  },
+  "erased_existing_targets": 176,
+  "natural_alias_erase_count": 29,
+  "natural_alias_erase_examples": [
+    {
+      "update": 180,
+      "angle": 180,
+      "erase_angle": 170,
+      "erase_step": 26,
+      "target_angle": 172,
+      "x": 38,
+      "y": 59
+    },
+    {
+      "update": 194,
+      "angle": 166,
+      "erase_angle": 156,
+      "erase_step": 24,
+      "target_angle": 155,
+      "x": 42,
+      "y": 53
+    },
+    {
+      "update": 227,
+      "angle": 133,
+      "erase_angle": 123,
+      "erase_step": 23,
+      "target_angle": 122,
+      "x": 52,
+      "y": 44
+    },
+    {
+      "update": 238,
+      "angle": 122,
+      "erase_angle": 112,
+      "erase_step": 22,
+      "target_angle": 111,
+      "x": 56,
+      "y": 43
+    },
+    {
+      "update": 241,
+      "angle": 119,
+      "erase_angle": 109,
+      "erase_step": 20,
+      "target_angle": 107,
+      "x": 58,
+      "y": 44
+    },
+    {
+      "update": 253,
+      "angle": 107,
+      "erase_angle": 97,
+      "erase_step": 19,
+      "target_angle": 95,
+      "x": 62,
+      "y": 44
+    },
+    {
+      "update": 265,
+      "angle": 95,
+      "erase_angle": 85,
+      "erase_step": 18,
+      "target_angle": 83,
+      "x": 66,
+      "y": 45
+    },
+    {
+      "update": 272,
+      "angle": 88,
+      "erase_angle": 78,
+      "erase_step": 17,
+      "target_angle": 76,
+      "x": 68,
+      "y": 46
+    },
+    {
+      "update": 300,
+      "angle": 60,
+      "erase_angle": 50,
+      "erase_step": 15,
+      "target_angle": 47,
+      "x": 74,
+      "y": 52
+    },
+    {
+      "update": 313,
+      "angle": 47,
+      "erase_angle": 37,
+      "erase_step": 14,
+      "target_angle": 35,
+      "x": 75,
+      "y": 55
+    },
+    {
+      "update": 325,
+      "angle": 35,
+      "erase_angle": 25,
+      "erase_step": 13,
+      "target_angle": 23,
+      "x": 76,
+      "y": 58
+    },
+    {
+      "update": 338,
+      "angle": 22,
+      "erase_angle": 12,
+      "erase_step": 12,
+      "target_angle": 11,
+      "x": 76,
+      "y": 61
+    },
+    {
+      "update": 360,
+      "angle": 0,
+      "erase_angle": 10,
+      "erase_step": 12,
+      "target_angle": 8,
+      "x": 76,
+      "y": 61
+    },
+    {
+      "update": 361,
+      "angle": 90,
+      "erase_angle": 100,
+      "erase_step": 20,
+      "target_angle": 98,
+      "x": 61,
+      "y": 43
+    },
+    {
+      "update": 362,
+      "angle": 90,
+      "erase_angle": 80,
+      "erase_step": 18,
+      "target_angle": 79,
+      "x": 67,
+      "y": 45
+    },
+    {
+      "update": 391,
+      "angle": 16,
+      "erase_angle": 26,
+      "erase_step": 13,
+      "target_angle": 27,
+      "x": 76,
+      "y": 57
+    },
+    {
+      "update": 400,
+      "angle": 25,
+      "erase_angle": 35,
+      "erase_step": 15,
+      "target_angle": 36,
+      "x": 76,
+      "y": 54
+    },
+    {
+      "update": 424,
+      "angle": 49,
+      "erase_angle": 59,
+      "erase_step": 17,
+      "target_angle": 60,
+      "x": 73,
+      "y": 48
+    },
+    {
+      "update": 434,
+      "angle": 59,
+      "erase_angle": 69,
+      "erase_step": 18,
+      "target_angle": 72,
+      "x": 70,
+      "y": 46
+    },
+    {
+      "update": 448,
+      "angle": 73,
+      "erase_angle": 83,
+      "erase_step": 4,
+      "target_angle": 90,
+      "x": 64,
+      "y": 59
+    }
+  ],
+  "ring_alias_erase_count": 119,
+  "ring_alias_erase_examples": [
+    {
+      "update": 180,
+      "angle": 180,
+      "erase_angle": 170,
+      "erase_step": 33,
+      "x": 32,
+      "y": 57
+    },
+    {
+      "update": 184,
+      "angle": 176,
+      "erase_angle": 166,
+      "erase_step": 15,
+      "x": 49,
+      "y": 59
+    },
+    {
+      "update": 184,
+      "angle": 176,
+      "erase_angle": 166,
+      "erase_step": 17,
+      "x": 48,
+      "y": 59
+    },
+    {
+      "update": 192,
+      "angle": 168,
+      "erase_angle": 158,
+      "erase_step": 47,
+      "x": 20,
+      "y": 45
+    },
+    {
+      "update": 193,
+      "angle": 167,
+      "erase_angle": 157,
+      "erase_step": 33,
+      "x": 34,
+      "y": 50
+    },
+    {
+      "update": 195,
+      "angle": 165,
+      "erase_angle": 155,
+      "erase_step": 17,
+      "x": 49,
+      "y": 56
+    },
+    {
+      "update": 197,
+      "angle": 163,
+      "erase_angle": 153,
+      "erase_step": 33,
+      "x": 35,
+      "y": 48
+    },
+    {
+      "update": 202,
+      "angle": 158,
+      "erase_angle": 148,
+      "erase_step": 17,
+      "x": 50,
+      "y": 54
+    },
+    {
+      "update": 204,
+      "angle": 156,
+      "erase_angle": 146,
+      "erase_step": 33,
+      "x": 37,
+      "y": 45
+    },
+    {
+      "update": 208,
+      "angle": 152,
+      "erase_angle": 142,
+      "erase_step": 17,
+      "x": 51,
+      "y": 53
+    },
+    {
+      "update": 209,
+      "angle": 151,
+      "erase_angle": 141,
+      "erase_step": 47,
+      "x": 27,
+      "y": 33
+    },
+    {
+      "update": 210,
+      "angle": 150,
+      "erase_angle": 140,
+      "erase_step": 33,
+      "x": 39,
+      "y": 42
+    },
+    {
+      "update": 215,
+      "angle": 145,
+      "erase_angle": 135,
+      "erase_step": 15,
+      "x": 53,
+      "y": 52
+    },
+    {
+      "update": 215,
+      "angle": 145,
+      "erase_angle": 135,
+      "erase_step": 33,
+      "x": 41,
+      "y": 40
+    },
+    {
+      "update": 220,
+      "angle": 140,
+      "erase_angle": 130,
+      "erase_step": 33,
+      "x": 43,
+      "y": 38
+    },
+    {
+      "update": 221,
+      "angle": 139,
+      "erase_angle": 129,
+      "erase_step": 47,
+      "x": 34,
+      "y": 26
+    },
+    {
+      "update": 222,
+      "angle": 138,
+      "erase_angle": 128,
+      "erase_step": 17,
+      "x": 54,
+      "y": 50
+    },
+    {
+      "update": 226,
+      "angle": 134,
+      "erase_angle": 124,
+      "erase_step": 17,
+      "x": 55,
+      "y": 49
+    },
+    {
+      "update": 226,
+      "angle": 134,
+      "erase_angle": 124,
+      "erase_step": 33,
+      "x": 46,
+      "y": 36
+    },
+    {
+      "update": 232,
+      "angle": 128,
+      "erase_angle": 118,
+      "erase_step": 33,
+      "x": 49,
+      "y": 34
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+PASS ray: 181 angles x 49 observed steps x case/UFM/mirror; 4..48 valid; backpressure, reset, illegal angles, latched input

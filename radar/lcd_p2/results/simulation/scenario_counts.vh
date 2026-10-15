@@ -1,0 +1,2 @@
+`define SCENARIOS 596
+`define PIXELS 26245

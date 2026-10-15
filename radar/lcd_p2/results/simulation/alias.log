@@ -1,0 +1,2 @@
+PASS reproduction: 172deg radius26 target (38,59) is cleared by k180 down / ahead170 step26; precise algorithm collateral erase confirmed
+C:\Users\Metro\AppData\Local\Temp\radar_p2_verify\tb_lcd_alias.v:35: $finish called at 661080000 (1ps)

@@ -1,0 +1,13 @@
+PASS tb_servo_pwm
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_servo_pwm.v:60: $finish called at 210056000 (1ps)
+PASS tb_ultrasonic
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_ultrasonic.v:75: $finish called at 50916000 (1ps)
+PASS tb_radar_ctrl
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_radar_ctrl.v:128: $finish called at 786000 (1ps)
+PASS tb_radar_top
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_radar_top.v:60: $finish called at 110586000 (1ps)
+PASS tb_alarm_ctrl: all four rhythms, period shortening, invalid/off
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_alarm_ctrl.v:44: $finish called at 45596000 (1ps)
+PASS tb_counter_equivalence: 610000 cycles, N=1/3/250/257 HZ=1/3/50/65MHz, ultrasonic TIMEOUT=1/256/257/30000
+C:\Users\Metro\AppData\Local\Temp\lcd_p2_regression_02e2da1d0c8b456fa42e9cf5636ac39d\radar\sim\tb_counter_equivalence.v:68: $finish called at 6100060000 (1ps)
+PASS all 6 regression suites

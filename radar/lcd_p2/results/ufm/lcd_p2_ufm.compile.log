@@ -1,0 +1,234 @@
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Shell
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Oct 15 11:35:04 2026
+Info: Command: quartus_sh --flow compile lcd_p2_ufm
+Info: Quartus(args): compile lcd_p2_ufm
+Info: Project Name = R:/lcd_p2/lcd_p2_ufm
+Info: Revision Name = lcd_p2_ufm
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:35:04 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_p2_ufm -c lcd_p2_ufm
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 3 design units, including 3 entities, in source file lcd_p2_top.v
+    Info: Found entity 1: lcd_p2_top
+    Info: Found entity 2: lcd_p2_case_read_test_top
+    Info: Found entity 3: lcd_p2_ufm_read_test_top
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_sin_lut.v
+    Info: Found entity 1: lcd_sin_lut
+Info: Found 1 design units, including 1 entities, in source file /rtl/ray_engine.v
+    Info: Found entity 1: ray_engine
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_lcd_ctrl.v
+    Info: Found entity 1: radar_lcd_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_p2_core.v
+    Info: Found entity 1: lcd_p2_core
+Info: Elaborating entity "lcd_p2_ufm_read_test_top" for the top level hierarchy
+Info: Elaborating entity "lcd_p2_top" for hierarchy "lcd_p2_top:test_core"
+Warning (10230): Verilog HDL assignment warning at lcd_p2_top.v(31): truncated value with size 32 to match size of target (20)
+Info: Elaborating entity "reset_ctrl" for hierarchy "lcd_p2_top:test_core|reset_ctrl:reset"
+Info: Elaborating entity "lcd_p2_core" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core"
+Info: Elaborating entity "lcd_init" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init"
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(49): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(49): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(54): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(54): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(55): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(58): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(58): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(59): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(61): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "radar_lcd_ctrl" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw"
+Info: Elaborating entity "ray_engine" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray"
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(48): truncated value with size 8 to match size of target (7)
+Info: Elaborating entity "lcd_sin_lut" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut"
+Info: Elaborating entity "altufm_none" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash"
+Info: Elaborated megafunction instantiation "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash"
+Info: Instantiated megafunction "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash" with the following parameter:
+    Info: Parameter "width_ufm_address" = "9"
+    Info: Parameter "lpm_file" = "lcd_sin_q8.mif"
+    Info: Parameter "port_arclkena" = "PORT_UNUSED"
+    Info: Parameter "port_drclkena" = "PORT_UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/altufm_none_5im.tdf
+    Info: Found entity 1: altufm_none_5im
+Info: Elaborating entity "altufm_none_5im" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash|altufm_none_5im:auto_generated"
+Info: Elaborating entity "lcd_bus" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus"
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(52): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(53): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(55): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(56): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(60): truncated value with size 32 to match size of target (5)
+Info: 11 registers lost all their fanouts during netlist optimizations. The first 11 are displayed below.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state~2" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state~3" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~6" lost all its fanouts during netlist optimizations.
+Info: Implemented 616 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 593 logic cells
+    Info: Implemented 1 User Flash Memory blocks
+Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_ufm.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4420 megabytes
+    Info: Processing ended: Thu Oct 15 11:35:06 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Fitter
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:35:06 2026
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lcd_p2_ufm -c lcd_p2_ufm
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Selected device EPM1270T144C5 for design "lcd_p2_ufm"
+Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info: Device EPM570T144C5 is compatible
+    Info: Device EPM570T144I5 is compatible
+    Info: Device EPM570T144A5 is compatible
+    Info: Device EPM1270T144I5 is compatible
+    Info: Device EPM1270T144A5 is compatible
+Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
+Info: Reading SDC File: 'lcd_p2_ufm.sdc'
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 3 clocks
+    Info:   Period   Clock Name
+    Info: ======== ============
+    Info:   20.000          clk
+    Info:  640.000    ufm_arclk
+    Info:  640.000    ufm_drclk
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: Automatically promoted signal "clk" to use Global clock in PIN 18
+Info: Automatically promoted some destinations of signal "lcd_p2_top:test_core|lcd_p2_core:core|comb~1" to use Global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|done" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|erase" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|done" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_B" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE" may be non-global or may not use global clock
+    Info: Destination "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.IDLE" may be non-global or may not use global clock
+    Info: Limited to 10 non-global destinations
+Info: Completed Auto Global Promotion Operation
+Info: Starting register packing
+Info: Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+Info: Fitter placement was successful
+Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter routing operations beginning
+Info: Average interconnect usage is 17% of the available device resources
+    Info: Peak interconnect usage is 23% of the available device resources in the region that extends from location X9_Y0 to location X17_Y11
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info: Optimizations that may affect the design's routability were skipped
+    Info: Optimizations that may affect the design's timing were skipped
+Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_ufm.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4524 megabytes
+    Info: Processing ended: Thu Oct 15 11:35:08 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Assembler
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:35:08 2026
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lcd_p2_ufm -c lcd_p2_ufm
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:35:08 2026
+Info: Command: quartus_sta lcd_p2_ufm -c lcd_p2_ufm
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+Info: qsta_default_script.tcl version: #2
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4359 megabytes
+    Info: Processing ended: Thu Oct 15 11:35:09 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Reading SDC File: 'lcd_p2_ufm.sdc'
+Info: Worst-case setup slack is 2.185
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     2.185         0.000 clk 
+    Info:   298.040         0.000 ufm_drclk 
+    Info:   299.206         0.000 ufm_arclk 
+Info: Worst-case hold slack is 1.055
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.055         0.000 clk 
+    Info:    60.000         0.000 ufm_arclk 
+    Info:    60.000         0.000 ufm_drclk 
+Info: Worst-case recovery slack is 8.451
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     8.451         0.000 clk 
+Info: Worst-case removal slack is 8.646
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     8.646         0.000 clk 
+Info: Worst-case minimum pulse width slack is 9.734
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.734         0.000 clk 
+    Info:   290.000         0.000 ufm_arclk 
+    Info:   290.000         0.000 ufm_drclk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is fully constrained for setup requirements
+Info: Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4372 megabytes
+    Info: Processing ended: Thu Oct 15 11:35:09 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II Full Compilation was successful. 0 errors, 21 warnings
+Info: Evaluation of Tcl script e:/quartus/quartusii91/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4254 megabytes
+    Info: Processing ended: Thu Oct 15 11:35:10 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08

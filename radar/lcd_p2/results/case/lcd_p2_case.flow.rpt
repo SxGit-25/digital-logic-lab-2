@@ -1,0 +1,113 @@
+Flow report for lcd_p2_case
+Thu Oct 15 11:35:02 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Flow Summary                                                         ;
++---------------------------+------------------------------------------+
+; Flow Status               ; Successful - Thu Oct 15 11:35:02 2026    ;
+; Quartus II 64-Bit Version ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name             ; lcd_p2_case                              ;
+; Top-level Entity Name     ; lcd_p2_case_read_test_top                ;
+; Family                    ; MAX II                                   ;
+; Device                    ; EPM1270T144C5                            ;
+; Timing Models             ; Final                                    ;
+; Met timing requirements   ; N/A                                      ;
+; Total logic elements      ; 588 / 1,270 ( 46 % )                     ;
+; Total pins                ; 22 / 116 ( 19 % )                        ;
+; Total virtual pins        ; 0                                        ;
+; UFM blocks                ; 0 / 1 ( 0 % )                            ;
++---------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/15/2026 11:34:57 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lcd_p2_case         ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                           ;
++-------------------------------+---------------------------------+---------------+-------------+------------+
+; Assignment Name               ; Value                           ; Default Value ; Entity Name ; Section Id ;
++-------------------------------+---------------------------------+---------------+-------------+------------+
+; ALLOW_POWER_UP_DONT_CARE      ; Off                             ; On            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID         ; 106650998336547.179203529716932 ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY              ; lcd_p2_case_read_test_top       ; lcd_p2_case   ; --          ; --         ;
+; USE_TIMEQUEST_TIMING_ANALYZER ; On                              ; Off           ; --          ; --         ;
++-------------------------------+---------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4405 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 4524 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4372 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4359 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-metro    ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-metro    ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-metro    ; Windows Vista ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-metro    ; Windows Vista ; 6.2        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lcd_p2_case -c lcd_p2_case
+quartus_fit --read_settings_files=off --write_settings_files=off lcd_p2_case -c lcd_p2_case
+quartus_asm --read_settings_files=off --write_settings_files=off lcd_p2_case -c lcd_p2_case
+quartus_sta lcd_p2_case -c lcd_p2_case
+
+
+
