@@ -1,0 +1,27 @@
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.
+PASS tb_servo_pwm
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_servo_pwm.v:60: $finish called at 210056000 (1ps)
+PASS tb_ultrasonic
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_ultrasonic.v:75: $finish called at 50916000 (1ps)
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.
+PASS tb_radar_ctrl
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_radar_ctrl.v:128: $finish called at 786000 (1ps)
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:122: warning: Instantiating module display_compose with dangling input port 16 (continuous_mode) floating.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\rtl\radar_top.v:122: warning: Instantiating module display_compose with dangling input port 17 (continuous_angle_bcd) floating.
+PASS tb_radar_top
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_radar_top.v:60: $finish called at 110586000 (1ps)
+PASS tb_alarm_ctrl: all four rhythms, period shortening, invalid/off
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_alarm_ctrl.v:44: $finish called at 45596000 (1ps)
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_counter_equivalence.v:23: error: Wrong number of ports. Expecting 13, got 11.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_counter_equivalence.v:23: error: Wrong number of ports. Expecting 13, got 11.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_counter_equivalence.v:23: error: Wrong number of ports. Expecting 13, got 11.
+C:\Users\Metro\AppData\Local\Temp\radar_p4_regression_10b3af7400584e6ebdc31bf78450335b\radar\sim\tb_counter_equivalence.v:23: error: Wrong number of ports. Expecting 13, got 11.
+4 error(s) during elaboration.

@@ -5,7 +5,8 @@ module lcd_p2_core #(
     parameter MIRROR_X=0,
     parameter [5:0] MIN_RADIUS=6,
     parameter integer RESET_CYCLES=50000,
-    parameter integer WAIT_CYCLES=1000000
+    parameter integer WAIT_CYCLES=1000000,
+    parameter FRACTION_BITS=8
 )(
     input wire clk,rst,request,
     input wire [7:0] angle,
@@ -23,7 +24,7 @@ module lcd_p2_core #(
     wire init_request,init_a0,draw_request,draw_read_op,draw_data_op,draw_ready;
     lcd_init #(.RESET_CYCLES(RESET_CYCLES),.WAIT_CYCLES(WAIT_CYCLES)) init(
         clk,rst,bus_ready,bus_done,init_request,init_a0,init_data,lcd_rst_n,initialized);
-    radar_lcd_ctrl #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS)) draw(
+    radar_lcd_ctrl #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),.FRACTION_BITS(FRACTION_BITS)) draw(
         .clk(clk),.rst(rst || !initialized),.request(request && initialized && ENABLE_READBACK),
         .angle(angle),.direction_up(direction_up),.radius(radius),.radius_valid(radius_valid),
         .ready(draw_ready),.done(done),.bus_request(draw_request),

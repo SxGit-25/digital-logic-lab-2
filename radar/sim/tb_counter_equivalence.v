@@ -21,7 +21,7 @@ endmodule
 module compare_ultrasonic #(parameter TRIG=1, TIMEOUT=1)(input clk,rst,start,cancel,echo);
     wire [15:0] actual,expected;
     ultrasonic #(.TRIG_US(TRIG),.TIMEOUT_US(TIMEOUT)) u
-      (clk,rst,1'b1,start,cancel,echo,actual[15],actual[14],actual[13],actual[12:1],actual[0]);
+      (clk,rst,1'b1,start,cancel,echo,actual[15],actual[14],actual[13],actual[12:1],actual[0], , );
     ultrasonic_baseline #(.TRIG_US(TRIG),.TIMEOUT_US(TIMEOUT)) ub
       (clk,rst,1'b1,start,cancel,echo,expected[15],expected[14],expected[13],expected[12:1],expected[0]);
     always @(posedge clk) begin

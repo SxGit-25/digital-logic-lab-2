@@ -2,7 +2,8 @@
 
 module ultrasonic #(
     parameter integer TRIG_US    = 15,
-    parameter integer TIMEOUT_US = 30000
+    parameter integer TIMEOUT_US = 30000,
+    parameter integer ENABLE_RADIUS = 0
 ) (
     input  wire        clk,
     input  wire        rst,
@@ -14,7 +15,9 @@ module ultrasonic #(
     output wire        measure_busy,
     output reg         measure_done,
     output reg  [11:0] distance_mm,
-    output reg         distance_valid
+    output reg         distance_valid,
+    output reg  [5:0]  radius,
+    output reg         radius_valid
 );
     // Elaboration-time ceil(log2(count)), with one bit for count == 1.
     // Verilog-2001 constant function for Quartus II 9.1 compatibility.
@@ -58,6 +61,61 @@ module ultrasonic #(
     wire echo_fall = !echo_sync && echo_prev;
 
     assign measure_busy = (state != IDLE) && (state != DONE);
+
+    // Optional LCD radius path. Observe exactly the original millimetre
+    // increment events, including its initial rounding remainder of 50.
+    // Keep this independent of the original measurement state machine.
+    generate
+        if (ENABLE_RADIUS != 0) begin : g_radius
+            reg [4:0] radius_mod25;
+            reg [5:0] radius_work;
+            reg radius_over1200;
+            always @(posedge clk) begin
+                if (rst) begin
+                    radius <= 6'd0;
+                    radius_valid <= 1'b0;
+                    radius_mod25 <= 5'd0;
+                    radius_work <= 6'd0;
+                    radius_over1200 <= 1'b0;
+                end else if (cancel || ((state == IDLE) && measure_start)) begin
+                    radius_valid <= 1'b0;
+                    radius_mod25 <= 5'd0;
+                    radius_work <= 6'd0;
+                    radius_over1200 <= 1'b0;
+                end else if ((state == WAIT_RISE) && echo_rise) begin
+                    radius_mod25 <= 5'd0;
+                    radius_work <= 6'd0;
+                    radius_over1200 <= 1'b0;
+                end else if ((state == COUNT_HIGH) && !echo_fall && tick_us &&
+                             (budget_us != TIMEOUT_US - 1) &&
+                             (distance_rem >= 7'd83)) begin
+                    if (radius_work == 6'd48) begin
+                        // The first extra millimetre is 1201, not 1200.
+                        radius_over1200 <= 1'b1;
+                    end else if (radius_mod25 == 5'd24) begin
+                        radius_mod25 <= 5'd0;
+                        radius_work <= radius_work + 1'b1;
+                    end else begin
+                        radius_mod25 <= radius_mod25 + 1'b1;
+                    end
+                end else if (state == CONVERT) begin
+                    if ((echo_us >= MIN_ECHO_US) &&
+                        (echo_us <= MAX_ECHO_US) && !echo_sync) begin
+                        radius <= radius_work;
+                        radius_valid <= !radius_over1200;
+                    end else begin
+                        radius <= 6'd0;
+                        radius_valid <= 1'b0;
+                    end
+                end
+            end
+        end else begin : g_no_radius
+            always @(posedge clk) begin
+                radius <= 6'd0;
+                radius_valid <= 1'b0;
+            end
+        end
+    endgenerate
 
     always @(posedge clk) begin
         if (rst) begin

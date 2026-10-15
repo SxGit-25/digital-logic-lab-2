@@ -6,7 +6,9 @@
 module radar_lcd_ctrl #(
     parameter USE_UFM=0,
     parameter MIRROR_X=0,
-    parameter [5:0] MIN_RADIUS=6
+    parameter [5:0] MIN_RADIUS=6,
+    parameter FRACTION_BITS=8,
+    parameter SUPPORT_PLOT_ONLY=0
 )(
     input wire clk,rst,request,
     input wire [7:0] angle,
@@ -19,7 +21,8 @@ module radar_lcd_ctrl #(
     output wire bus_read_op,bus_data_op,
     output wire [7:0] bus_write_data,
     input wire bus_ready,bus_done,
-    input wire [7:0] bus_read_data
+    input wire [7:0] bus_read_data,
+    input wire plot_only
 );
     localparam IDLE=0,START_A=1,START_B=2,RUN=3,RMW=4,WAIT_RAY=5;
     reg [2:0] state;
@@ -35,7 +38,7 @@ module radar_lcd_ctrl #(
     wire ring_point=pixel_step==16 || pixel_step==32 || pixel_step==48;
     wire selected=erase ? !ring_point : (ring_point || (target_valid && pixel_step==target_radius));
     wire pixel_ready=(state==RUN && !selected) || state==WAIT_RAY;
-    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS)) ray(
+    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),.FRACTION_BITS(FRACTION_BITS)) ray(
         .clk(clk),.rst(rst),.start(state==START_A || state==START_B),.angle(ray_angle),
         .busy(ray_busy),.done(ray_done),.pixel_valid(pixel_valid),.pixel_ready(pixel_ready),
         .step(pixel_step),.x(pixel_x),.y(pixel_y));
@@ -75,7 +78,9 @@ module radar_lcd_ctrl #(
                 // Endpoints carry the NEW direction. Clear the complete end
                 // zone before plotting this measurement, then resume normal A/B.
                 flushing_end<=0;
-                if((angle==180 && !direction_up) || (angle==0 && direction_up)) begin
+                if(SUPPORT_PLOT_ONLY && plot_only) begin
+                    ray_angle<=angle;erase<=0;state<=START_B;
+                end else if((angle==180 && !direction_up) || (angle==0 && direction_up)) begin
                     ray_angle<=angle==180 ? 8'd170 : 8'd0;
                     flushing_end<=1;erase<=1;state<=START_A;
                 end else if((direction_up && angle<=170) || (!direction_up && angle>=10)) begin
