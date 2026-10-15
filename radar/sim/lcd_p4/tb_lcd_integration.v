@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module tb_lcd_integration;
+module tb_lcd_integration #(parameter SERIAL_ACCUMULATE=0);
  reg clk=0,rst=1,enable=0;always #10 clk=~clk;
  reg [7:0] beam_angle=0,sample_angle=0;reg beam_direction_up=1,sample_direction_up=1;
  reg measure_start=0,measure_done=0,radius_valid=0;reg [5:0] radius=0;
@@ -9,9 +9,9 @@ module tb_lcd_integration;
  radar_lcd_bridge bridge(clk,rst,enable,beam_angle,beam_direction_up,measure_start,measure_done,
   sample_angle,sample_direction_up,radius,radius_valid,ready,done,
   request,angle,direction_up,draw_radius,valid,plot_only);
- lcd_p4_core #(.ENABLE_READBACK(1),.USE_UFM(0),.RESET_CYCLES(10),.WAIT_CYCLES(20)) dut(
+ lcd_p4_core #(.ENABLE_READBACK(1),.USE_UFM(0),.RESET_CYCLES(10),.WAIT_CYCLES(20),.SERIAL_ACCUMULATE(SERIAL_ACCUMULATE)) dut(
   clk,rst,request,plot_only,angle,direction_up,draw_radius,valid,ready,done,initialized,
-  data,dout,oe,rd,wr,a0,res,cs);
+  data,dout,oe,rd,wr,a0,res,cs,1'b1);
  st7565_model model(res,cs,rd,wr,a0,oe,data);
  integer nonring_writes=0;
  integer a_count=0,b_count=0,updates=0,j,a_before,b_before,beam_count=0,target_count=0;

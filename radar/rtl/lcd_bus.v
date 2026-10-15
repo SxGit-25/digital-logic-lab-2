@@ -8,12 +8,13 @@ module lcd_bus #(
     parameter integer WRITE_CYCLES = 6,
     parameter integer READ_CYCLES = 10,
     parameter integer HOLD_CYCLES = 6,
-    parameter integer TURN_CYCLES = 20
+    parameter integer TURN_CYCLES = 20,
+    parameter STABLE_WRITE=0
 )(
     input wire clk, rst, request, read_op, data_op,
     input wire [7:0] write_data,
     input wire [7:0] data_in,
-    output reg [7:0] data_out,
+    output wire [7:0] data_out,
     output wire data_oe,
     output wire ready,
     output reg done,
@@ -34,6 +35,8 @@ module lcd_bus #(
     reg [2:0] state;
     reg [width(MAX_N)-1:0] timer;
     reg reading;
+    reg [7:0] saved_write_data;
+    assign data_out=STABLE_WRITE ? write_data : saved_write_data;
     assign ready = state==IDLE;
     assign data_oe = !ENABLE_READBACK || (!reading && state!=IDLE && state!=TURN);
     assign lcd_cs_n = state==IDLE || state==TURN;
@@ -41,14 +44,15 @@ module lcd_bus #(
     assign lcd_wr_n = !(!reading && state==ACTIVE);
     always @(posedge clk) begin
         if (rst) begin
-            state<=IDLE; timer<=0; reading<=0; data_out<=0;
+            state<=IDLE; timer<=0; reading<=0; saved_write_data<=0;
             lcd_a0<=0; done<=0; read_data<=0;
         end else begin
             done<=0;
             case(state)
             IDLE: if (request && (!read_op || ENABLE_READBACK)) begin
                 reading<=ENABLE_READBACK && read_op;
-                data_out<=write_data; lcd_a0<=data_op;
+                if(!STABLE_WRITE) saved_write_data<=write_data;
+                lcd_a0<=data_op;
                 if (ENABLE_READBACK && read_op) begin state<=TURN; timer<=TURN_CYCLES-1; end
                 else begin state<=SETUP; timer<=SETUP_CYCLES-1; end
             end

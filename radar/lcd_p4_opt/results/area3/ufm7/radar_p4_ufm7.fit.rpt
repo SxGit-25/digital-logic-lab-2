@@ -1,0 +1,814 @@
+Fitter report for radar_p4_ufm7
+Thu Oct 15 14:36:41 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Resource Usage Summary
+  6. Input Pins
+  7. Output Pins
+  8. Bidir Pins
+  9. I/O Bank Usage
+ 10. All Package Pins
+ 11. Output Pin Default Load For Reported TCO
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Fitter Device Options
+ 18. Fitter Messages
+ 19. Fitter Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++---------------------------+------------------------------------------+
+; Fitter Status             ; Failed - Thu Oct 15 14:36:41 2026        ;
+; Quartus II 64-Bit Version ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name             ; radar_p4_ufm7                            ;
+; Top-level Entity Name     ; radar_p4_ufm7_top                        ;
+; Family                    ; MAX II                                   ;
+; Device                    ; EPM1270T144C5                            ;
+; Timing Models             ; Final                                    ;
+; Total logic elements      ; 1,595 / 1,270 ( 126 % )                  ;
+; Total pins                ; 75 / 116 ( 65 % )                        ;
+; Total virtual pins        ; 0                                        ;
+; UFM blocks                ; 1 / 1 ( 100 % )                          ;
++---------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                              ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                                     ; Setting                        ; Default Value                  ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                                     ; EPM1270T144C5                  ;                                ;
+; Use TimeQuest Timing Analyzer                                              ; On                             ; Off                            ;
+; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
+; Use smart compilation                                                      ; Off                            ; Off                            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
+; Enable compact report table                                                ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                           ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                                ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                                   ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                                ; Off                            ; Off                            ;
+; Optimize Hold Timing                                                       ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                               ; Off                            ; Off                            ;
+; Guarantee I/O Paths Have Zero Hold Time at Fast Corner                     ; On                             ; On                             ;
+; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                            ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                                   ; Off                            ; Off                            ;
+; Regenerate full fit report during ECO compiles                             ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                                 ; On                             ; On                             ;
+; Limit to One Fitting Attempt                                               ; Off                            ; Off                            ;
+; Final Placement Optimizations                                              ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                              ; 1                              ; 1                              ;
+; Slow Slew Rate                                                             ; Off                            ; Off                            ;
+; PCI I/O                                                                    ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                                      ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                                  ; Off                            ; Off                            ;
+; Auto Delay Chains                                                          ; On                             ; On                             ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                               ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                                  ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                            ; Off                            ;
+; Fitter Effort                                                              ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                            ; Normal                         ; Normal                         ;
+; Logic Cell Insertion - Logic Duplication                                   ; Auto                           ; Auto                           ;
+; Auto Register Duplication                                                  ; Auto                           ; Auto                           ;
+; Auto Global Clock                                                          ; On                             ; On                             ;
+; Auto Global Register Control Signals                                       ; On                             ; On                             ;
+; Stop After Congestion Map Generation                                       ; Off                            ; Off                            ;
+; Save Intermediate Fitting Results                                          ; Off                            ; Off                            ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                            ; Off                            ;
+; Use Best Effort Settings for Compilation                                   ; Off                            ; Off                            ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
+;     5-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                              ;
++-----------------------------------+--------------------------------------------------------+
+; Resource                          ; Usage                                                  ;
++-----------------------------------+--------------------------------------------------------+
+; Total logic elements              ; Not available                                          ;
+;                                   ;                                                        ;
+; Total LABs                        ; Not available                                          ;
+; Logic elements in carry chains    ; 319                                                    ;
+; User inserted logic elements      ; 0                                                      ;
+; Virtual pins                      ; 0                                                      ;
+; I/O pins                          ; 75 / 116 ( 65 % )                                      ;
+;     -- Clock pins                 ; 0 / 4 ( 0 % )                                          ;
+; Global signals                    ; 2                                                      ;
+; UFM blocks                        ; 1 / 1 ( 100 % )                                        ;
+; Global clocks                     ; 2 / 4 ( 50 % )                                         ;
+; JTAGs                             ; 0 / 1 ( 0 % )                                          ;
+; Maximum fan-out node              ; clk                                                    ;
+; Maximum fan-out                   ; 657                                                    ;
+; Highest non-global fan-out signal ; radar_lcd_top:system|reset_ctrl:u_reset|reset_pipe[15] ;
+; Highest non-global fan-out        ; 121                                                    ;
+; Total fan-out                     ; 6600                                                   ;
+; Average fan-out                   ; 3.95                                                   ;
++-----------------------------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                           ;
++------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+; Name ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
++------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+; clk  ; Unassigned ; --       ; 657                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; echo ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; sw6  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; sw7  ; Unassigned ; --       ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
++------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; Name            ; Pin #      ; I/O Bank ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; buzzer          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[0]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[1]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[2]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[3]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[4]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[5]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[6]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; cat_n[7]        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; lcd_a0          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; lcd_cs_n        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; lcd_rd_n        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; lcd_rst_n       ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; lcd_wr_n        ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[0]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[10]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[11]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[12]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[13]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[14]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[15]         ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[1]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[2]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[3]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[4]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[5]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[6]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[7]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[8]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led[9]          ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[0] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[1] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[2] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[3] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[4] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[5] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[6] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_g[7] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[0] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[1] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[2] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[3] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[4] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[5] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[6] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_col_r[7] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[0] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[1] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[2] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[3] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[4] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[5] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[6] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; matrix_row_n[7] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_a           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_b           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_c           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_d           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_e           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_f           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; seg_g           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; servo           ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; trig            ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                                                                                                                            ;
++-------------+------------+----------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+---------------------------------------------------------------+---------------------+
+; Name        ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source                                          ; Output Enable Group ;
++-------------+------------+----------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+---------------------------------------------------------------+---------------------+
+; lcd_data[0] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[1] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[2] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[3] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[4] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[5] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[6] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
+; lcd_data[7] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe ; -                   ;
++-------------+------------+----------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+---------------------------------------------------------------+---------------------+
+
+
++----------------------------------------------------------+
+; I/O Bank Usage                                           ;
++----------+----------------+---------------+--------------+
+; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
++----------+----------------+---------------+--------------+
+; 1        ; 0 / 26 ( 0 % ) ; 3.3V          ; --           ;
+; 2        ; 0 / 30 ( 0 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 30 ( 0 % ) ; 3.3V          ; --           ;
+; 4        ; 0 / 30 ( 0 % ) ; 3.3V          ; --           ;
+; Unknown  ; 75             ; --            ;              ;
++----------+----------------+---------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                               ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+; 1        ; 2          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 2        ; 3          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 3        ; 5          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 4        ; 7          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 5        ; 9          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 6        ; 10         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 7        ; 14         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 8        ; 15         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 10       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 11       ; 20         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 12       ; 21         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 13       ; 22         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 14       ; 23         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 15       ; 24         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 16       ; 25         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 17       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 18       ; 26         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 19       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 20       ; 27         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 21       ; 28         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 22       ; 29         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 23       ; 30         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 24       ; 31         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 25       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 26       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 27       ; 33         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 28       ; 36         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 29       ; 37         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 30       ; 41         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 31       ; 44         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 32       ; 47         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 33       ; 50         ; 1        ; #TMS           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 34       ; 51         ; 1        ; #TDI           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 35       ; 52         ; 1        ; #TCK           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 36       ; 53         ; 1        ; #TDO           ; output ;              ;           ; --         ;                 ; --       ; --           ;
+; 37       ; 56         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 38       ; 57         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 39       ; 60         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 40       ; 62         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 41       ; 63         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 42       ; 67         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 43       ; 68         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 44       ; 69         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 45       ; 74         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 46       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 47       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 48       ; 75         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 49       ; 76         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 50       ; 77         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 51       ; 78         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 52       ; 79         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 53       ; 80         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 54       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 55       ; 81         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 56       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 57       ; 82         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 58       ; 83         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 59       ; 84         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 60       ; 85         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 61       ; 86         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 62       ; 87         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 63       ; 88         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 64       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 65       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 66       ; 91         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 67       ; 92         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 68       ; 95         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 69       ; 98         ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 70       ; 101        ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 71       ; 104        ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 72       ; 107        ; 4        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 73       ; 111        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 112        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 75       ; 113        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 76       ; 115        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 77       ; 118        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 78       ; 122        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 79       ; 123        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 80       ; 124        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 81       ; 127        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 82       ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 83       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 84       ; 129        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 85       ; 130        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 86       ; 131        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 87       ; 132        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 88       ; 133        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 89       ; 134        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 90       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 91       ; 135        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 92       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 93       ; 136        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 94       ; 137        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 95       ; 138        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 96       ; 139        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 97       ; 140        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 98       ; 141        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 99       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 100      ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 101      ; 142        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 102      ; 146        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 103      ; 147        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 104      ; 151        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 105      ; 152        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 106      ; 154        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 107      ; 156        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 108      ; 158        ; 3        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 109      ; 164        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 110      ; 165        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 111      ; 166        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 112      ; 171        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 113      ; 174        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 114      ; 177        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 115      ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 116      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 117      ; 180        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 118      ; 181        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 119      ; 182        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 120      ; 183        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 121      ; 184        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 122      ; 185        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 123      ; 186        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 124      ; 187        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 125      ; 188        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 126      ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 127      ; 189        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 128      ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 129      ; 190        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 130      ; 191        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 131      ; 192        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 132      ; 193        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 133      ; 194        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 134      ; 195        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 135      ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 136      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 137      ; 199        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 138      ; 200        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 139      ; 201        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 140      ; 204        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 141      ; 205        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 142      ; 208        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 143      ; 212        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 144      ; 215        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                    ;
++----------------------------+-------+------------------------+
+; I/O Standard               ; Load  ; Termination Resistance ;
++----------------------------+-------+------------------------+
+; 3.3-V LVTTL                ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS               ; 10 pF ; Not Available          ;
+; 2.5 V                      ; 10 pF ; Not Available          ;
+; 1.8 V                      ; 10 pF ; Not Available          ;
+; 1.5 V                      ; 10 pF ; Not Available          ;
+; 3.3V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 2.5V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 3.3-V PCI                  ; 10 pF ; 25 Ohm (Parallel)      ;
++----------------------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                              ;
++-------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                    ; Library Name ;
++-------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |radar_p4_ufm7_top                                    ; 1595 (1)    ; 657          ; 1          ; 75   ; 0            ; 938 (1)      ; 0 (0)             ; 657 (0)          ; 319 (0)         ; 40 (0)     ; |radar_p4_ufm7_top                                                                                                                                                     ; work         ;
+;    |radar_lcd_top:system|                             ; 1594 (58)   ; 657          ; 1          ; 0    ; 0            ; 937 (57)     ; 0 (0)             ; 657 (1)          ; 319 (0)         ; 40 (0)     ; |radar_p4_ufm7_top|radar_lcd_top:system                                                                                                                                ; work         ;
+;       |alarm_ctrl:u_alarm|                            ; 55 (55)     ; 20           ; 0          ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 20 (20)          ; 34 (34)         ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|alarm_ctrl:u_alarm                                                                                                             ; work         ;
+;       |bin12_to_bcd:u_bcd|                            ; 82 (82)     ; 61           ; 0          ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 61 (61)          ; 4 (4)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|bin12_to_bcd:u_bcd                                                                                                             ; work         ;
+;       |display_compose:u_compose|                     ; 74 (74)     ; 0            ; 0          ; 0    ; 0            ; 74 (74)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 18 (18)    ; |radar_p4_ufm7_top|radar_lcd_top:system|display_compose:u_compose                                                                                                      ; work         ;
+;       |lcd_p4_core:lcd_core|                          ; 519 (48)    ; 166          ; 1          ; 0    ; 0            ; 353 (48)     ; 0 (0)             ; 166 (0)          ; 107 (0)         ; 11 (2)     ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core                                                                                                           ; work         ;
+;          |lcd_bus:bus|                                ; 55 (55)     ; 21           ; 0          ; 0    ; 0            ; 34 (34)      ; 0 (0)             ; 21 (21)          ; 0 (0)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus                                                                                               ; work         ;
+;          |lcd_init:init|                              ; 106 (106)   ; 32           ; 0          ; 0    ; 0            ; 74 (74)      ; 0 (0)             ; 32 (32)          ; 24 (24)         ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init                                                                                             ; work         ;
+;          |radar_lcd_ctrl:draw|                        ; 310 (133)   ; 113          ; 1          ; 0    ; 0            ; 197 (111)    ; 0 (0)             ; 113 (22)         ; 83 (26)         ; 9 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw                                                                                       ; work         ;
+;             |ray_engine:ray|                          ; 177 (120)   ; 91           ; 1          ; 0    ; 0            ; 86 (65)      ; 0 (0)             ; 91 (55)          ; 57 (46)         ; 9 (9)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray                                                                        ; work         ;
+;                |lcd_sin_lut:lut|                      ; 57 (57)     ; 36           ; 1          ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 36 (36)          ; 11 (11)         ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut                                                        ; work         ;
+;                   |altufm_none:g_ufm.flash|           ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash                                ; work         ;
+;                      |altufm_none_4im:auto_generated| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash|altufm_none_4im:auto_generated ; work         ;
+;       |matrix_scan:u_matrix|                          ; 82 (82)     ; 40           ; 0          ; 0    ; 0            ; 42 (42)      ; 0 (0)             ; 40 (40)          ; 8 (8)           ; 1 (1)      ; |radar_p4_ufm7_top|radar_lcd_top:system|matrix_scan:u_matrix                                                                                                           ; work         ;
+;       |radar_ctrl:u_control|                          ; 211 (211)   ; 86           ; 0          ; 0    ; 0            ; 125 (125)    ; 0 (0)             ; 86 (86)          ; 20 (20)         ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|radar_ctrl:u_control                                                                                                           ; work         ;
+;       |radar_lcd_bridge:lcd_bridge|                   ; 68 (68)     ; 49           ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 49 (49)          ; 0 (0)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|radar_lcd_bridge:lcd_bridge                                                                                                    ; work         ;
+;       |reset_ctrl:u_reset|                            ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|reset_ctrl:u_reset                                                                                                             ; work         ;
+;       |seg_scan:u_seg|                                ; 74 (74)     ; 27           ; 0          ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 27 (27)          ; 8 (8)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|seg_scan:u_seg                                                                                                                 ; work         ;
+;       |servo_pwm:u_servo|                             ; 124 (124)   ; 51           ; 0          ; 0    ; 0            ; 73 (73)      ; 0 (0)             ; 51 (51)          ; 43 (43)         ; 9 (9)      ; |radar_p4_ufm7_top|radar_lcd_top:system|servo_pwm:u_servo                                                                                                              ; work         ;
+;       |switch_filter:u_mode_switch|                   ; 11 (11)     ; 8            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 8 (8)            ; 5 (5)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|switch_filter:u_mode_switch                                                                                                    ; work         ;
+;       |switch_filter:u_switch|                        ; 12 (12)     ; 8            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 8 (8)            ; 5 (5)           ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|switch_filter:u_switch                                                                                                         ; work         ;
+;       |timebase:u_timebase|                           ; 39 (39)     ; 27           ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 27 (27)          ; 24 (24)         ; 0 (0)      ; |radar_p4_ufm7_top|radar_lcd_top:system|timebase:u_timebase                                                                                                            ; work         ;
+;       |ultrasonic:u_ultrasonic|                       ; 169 (169)   ; 97           ; 0          ; 0    ; 0            ; 72 (72)      ; 0 (0)             ; 97 (97)          ; 61 (61)         ; 1 (1)      ; |radar_p4_ufm7_top|radar_lcd_top:system|ultrasonic:u_ultrasonic                                                                                                        ; work         ;
++-------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------+
+; Delay Chain Summary                        ;
++-----------------+----------+---------------+
+; Name            ; Pin Type ; Pad to Core 0 ;
++-----------------+----------+---------------+
+; sw7             ; Input    ; 0             ;
+; clk             ; Input    ; 0             ;
+; sw6             ; Input    ; 0             ;
+; echo            ; Input    ; 0             ;
+; trig            ; Output   ; --            ;
+; servo           ; Output   ; --            ;
+; buzzer          ; Output   ; --            ;
+; led[0]          ; Output   ; --            ;
+; led[1]          ; Output   ; --            ;
+; led[2]          ; Output   ; --            ;
+; led[3]          ; Output   ; --            ;
+; led[4]          ; Output   ; --            ;
+; led[5]          ; Output   ; --            ;
+; led[6]          ; Output   ; --            ;
+; led[7]          ; Output   ; --            ;
+; led[8]          ; Output   ; --            ;
+; led[9]          ; Output   ; --            ;
+; led[10]         ; Output   ; --            ;
+; led[11]         ; Output   ; --            ;
+; led[12]         ; Output   ; --            ;
+; led[13]         ; Output   ; --            ;
+; led[14]         ; Output   ; --            ;
+; led[15]         ; Output   ; --            ;
+; seg_a           ; Output   ; --            ;
+; seg_b           ; Output   ; --            ;
+; seg_c           ; Output   ; --            ;
+; seg_d           ; Output   ; --            ;
+; seg_e           ; Output   ; --            ;
+; seg_f           ; Output   ; --            ;
+; seg_g           ; Output   ; --            ;
+; cat_n[0]        ; Output   ; --            ;
+; cat_n[1]        ; Output   ; --            ;
+; cat_n[2]        ; Output   ; --            ;
+; cat_n[3]        ; Output   ; --            ;
+; cat_n[4]        ; Output   ; --            ;
+; cat_n[5]        ; Output   ; --            ;
+; cat_n[6]        ; Output   ; --            ;
+; cat_n[7]        ; Output   ; --            ;
+; matrix_row_n[0] ; Output   ; --            ;
+; matrix_row_n[1] ; Output   ; --            ;
+; matrix_row_n[2] ; Output   ; --            ;
+; matrix_row_n[3] ; Output   ; --            ;
+; matrix_row_n[4] ; Output   ; --            ;
+; matrix_row_n[5] ; Output   ; --            ;
+; matrix_row_n[6] ; Output   ; --            ;
+; matrix_row_n[7] ; Output   ; --            ;
+; matrix_col_r[0] ; Output   ; --            ;
+; matrix_col_r[1] ; Output   ; --            ;
+; matrix_col_r[2] ; Output   ; --            ;
+; matrix_col_r[3] ; Output   ; --            ;
+; matrix_col_r[4] ; Output   ; --            ;
+; matrix_col_r[5] ; Output   ; --            ;
+; matrix_col_r[6] ; Output   ; --            ;
+; matrix_col_r[7] ; Output   ; --            ;
+; matrix_col_g[0] ; Output   ; --            ;
+; matrix_col_g[1] ; Output   ; --            ;
+; matrix_col_g[2] ; Output   ; --            ;
+; matrix_col_g[3] ; Output   ; --            ;
+; matrix_col_g[4] ; Output   ; --            ;
+; matrix_col_g[5] ; Output   ; --            ;
+; matrix_col_g[6] ; Output   ; --            ;
+; matrix_col_g[7] ; Output   ; --            ;
+; lcd_rd_n        ; Output   ; --            ;
+; lcd_wr_n        ; Output   ; --            ;
+; lcd_a0          ; Output   ; --            ;
+; lcd_rst_n       ; Output   ; --            ;
+; lcd_cs_n        ; Output   ; --            ;
+; lcd_data[0]     ; Bidir    ; 0             ;
+; lcd_data[1]     ; Bidir    ; 0             ;
+; lcd_data[2]     ; Bidir    ; 0             ;
+; lcd_data[3]     ; Bidir    ; 0             ;
+; lcd_data[4]     ; Bidir    ; 0             ;
+; lcd_data[5]     ; Bidir    ; 0             ;
+; lcd_data[6]     ; Bidir    ; 0             ;
+; lcd_data[7]     ; Bidir    ; 0             ;
++-----------------+----------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------+------------+---------+----------------------------------------+--------+----------------------+------------------+
+; Name                                                                                                               ; Location   ; Fan-Out ; Usage                                  ; Global ; Global Resource Used ; Global Line Name ;
++--------------------------------------------------------------------------------------------------------------------+------------+---------+----------------------------------------+--------+----------------------+------------------+
+; clk                                                                                                                ; Unassigned ; 657     ; Clock                                  ; yes    ; Global Clock         ; Not Available    ;
+; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[0]~16                                                           ; Unassigned ; 8       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier~0                                                                  ; Unassigned ; 9       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[8]~18                                                            ; Unassigned ; 10      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[8]~19                                                            ; Unassigned ; 10      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[13]~1                                                                  ; Unassigned ; 16      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[3]~8                                                             ; Unassigned ; 15      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                                                                       ; Unassigned ; 22      ; Sync. load                             ; no     ; --                   ; --               ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[11]~1                                                          ; Unassigned ; 12      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[8]~9                                                             ; Unassigned ; 31      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|comb~8                                                                   ; Unassigned ; 95      ; Async. clear, Async. load, Sync. clear ; yes    ; Global Clock         ; Not Available    ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|data_oe                                                      ; Unassigned ; 8       ; Output enable                          ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|lcd_a0~1                                                     ; Unassigned ; 2       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|read_data[2]~1                                               ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state~16                                                     ; Unassigned ; 2       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]~8                                                 ; Unassigned ; 4       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|page[1]~3                                                  ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|timer[9]~4                                                 ; Unassigned ; 20      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_angle[6]~4                                       ; Unassigned ; 7       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|count[1]~14                           ; Unassigned ; 6       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|count[1]~17                           ; Unassigned ; 32      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.addr_shift[7]~1 ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state.ADDR      ; Unassigned ; 16      ; Sync. load                             ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5]~2            ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[5]~1                        ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK                            ; Unassigned ; 34      ; Sync. load                             ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|theta[3]~0                            ; Unassigned ; 7       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RUN                                            ; Unassigned ; 17      ; Sync. load                             ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|transaction[2]~10                                    ; Unassigned ; 4       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|transaction[2]~12                                    ; Unassigned ; 4       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|lcd_reset~0                                                                                   ; Unassigned ; 118     ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|matrix_scan:u_matrix|col_r[0]~13                                                              ; Unassigned ; 16      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|matrix_scan:u_matrix|phase_us[0]~16                                                           ; Unassigned ; 8       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|matrix_scan:u_matrix|phase_us[0]~17                                                           ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[1]~3                                                             ; Unassigned ; 5       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|matrix_scan:u_matrix|row_n[0]~7                                                               ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|angle_idx[1]~5                                                           ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|current_distance[10]~1                                                   ; Unassigned ; 12      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|current_level[1]~4                                                       ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|hist_level0[1]~0                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|hist_level1[0]~0                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|hist_level2[0]~0                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|hist_level3[0]~4                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|hist_level4[1]~3                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|sample_angle[1]~1                                                        ; Unassigned ; 9       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|sample_idx[0]~13                                                         ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[6]~20                                                          ; Unassigned ; 9       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[6]~23                                                          ; Unassigned ; 9       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]~27                                                           ; Unassigned ; 11      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]~29                                                           ; Unassigned ; 11      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|angle[2]~0                                                        ; Unassigned ; 16      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|seen_direction~0                                                  ; Unassigned ; 9       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|target_angle[1]~1                                                 ; Unassigned ; 16      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|reset_ctrl:u_reset|reset_pipe[15]                                                             ; Unassigned ; 121     ; Sync. clear, Sync. load                ; no     ; --                   ; --               ;
+; radar_lcd_top:system|seg_scan:u_seg|cat_n[3]~2                                                                     ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|seg_scan:u_seg|digit_idx[1]~1                                                                 ; Unassigned ; 11      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|seg_scan:u_seg|dwell_us[7]~16                                                                 ; Unassigned ; 8       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|seg_scan:u_seg|seg[6]~1                                                                       ; Unassigned ; 7       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|active_angle[2]~1                                                           ; Unassigned ; 3       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[0]~5                                                   ; Unassigned ; 12      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[5]~12                                                  ; Unassigned ; 2       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd~11                                                     ; Unassigned ; 2       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|frame_count[9]~27                                                           ; Unassigned ; 15      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|frame_count[9]~28                                                           ; Unassigned ; 12      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|sweep_pulse_units[3]~2                                                      ; Unassigned ; 13      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|servo_pwm:u_servo|sweep_pulse_units[3]~3                                                      ; Unassigned ; 11      ; Sync. load                             ; no     ; --                   ; --               ;
+; radar_lcd_top:system|switch_filter:u_mode_switch|stable_ms[0]~10                                                   ; Unassigned ; 5       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|switch_filter:u_switch|stable_ms[2]~10                                                        ; Unassigned ; 5       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|switch_filter:u_switch|stable_ms[2]~11                                                        ; Unassigned ; 10      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|timebase:u_timebase|ms_in_half_blink[0]~16                                                    ; Unassigned ; 8       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|timebase:u_timebase|ms_in_half_blink[0]~17                                                    ; Unassigned ; 8       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|timebase:u_timebase|us_in_ms[3]~20                                                            ; Unassigned ; 10      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|timebase:u_timebase|us_in_ms[3]~21                                                            ; Unassigned ; 16      ; Clock enable, Sync. clear              ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[0]~36                                                       ; Unassigned ; 15      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[0]~37                                                       ; Unassigned ; 15      ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[4]~2                                                      ; Unassigned ; 12      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[5]~18                                                   ; Unassigned ; 19      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_us[6]~0                                                          ; Unassigned ; 9       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_us[6]~29                                                         ; Unassigned ; 34      ; Sync. clear, Sync. load                ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_us[6]~30                                                         ; Unassigned ; 15      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|g_radius.radius_mod25[2]~10                                           ; Unassigned ; 5       ; Sync. clear                            ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|g_radius.radius_work[5]~12                                            ; Unassigned ; 11      ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|radius[0]~2                                                           ; Unassigned ; 6       ; Clock enable                           ; no     ; --                   ; --               ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[0]~4                                                       ; Unassigned ; 4       ; Clock enable                           ; no     ; --                   ; --               ;
++--------------------------------------------------------------------------------------------------------------------+------------+---------+----------------------------------------+--------+----------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                       ;
++--------------------------------------------------+------------+---------+----------------------+------------------+
+; Name                                             ; Location   ; Fan-Out ; Global Resource Used ; Global Line Name ;
++--------------------------------------------------+------------+---------+----------------------+------------------+
+; clk                                              ; Unassigned ; 657     ; Global Clock         ; Not Available    ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|comb~8 ; Unassigned ; 95      ; Global Clock         ; Not Available    ;
++--------------------------------------------------+------------+---------+----------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                         ;
++---------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                          ; Fan-Out ;
++---------------------------------------------------------------------------------------------------------------+---------+
+; radar_lcd_top:system|reset_ctrl:u_reset|reset_pipe[15]                                                        ; 121     ;
+; radar_lcd_top:system|lcd_reset~0                                                                              ; 118     ;
+; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]                                                     ; 96      ;
+; radar_lcd_top:system|radar_ctrl:u_control|system_state[0]                                                     ; 92      ;
+; radar_lcd_top:system|switch_filter:u_mode_switch|system_on                                                    ; 61      ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|always0~0                                                    ; 52      ;
+; radar_lcd_top:system|outputs_enabled~0                                                                        ; 52      ;
+; radar_lcd_top:system|servo_pwm:u_servo|direction_up                                                           ; 43      ;
+; radar_lcd_top:system|matrix_scan:u_matrix|pwm_phase~0                                                         ; 40      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]                                              ; 36      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_us[6]~29                                                    ; 34      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK                       ; 34      ;
+; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[1]                                                          ; 33      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|count[1]~17                      ; 32      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|Equal1~0                                              ; 32      ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[8]~9                                                        ; 31      ;
+; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[0]                                                          ; 30      ;
+; radar_lcd_top:system|seg_scan:u_seg|digit_idx[0]                                                              ; 26      ;
+; radar_lcd_top:system|seg_scan:u_seg|digit_idx[1]                                                              ; 24      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]                                              ; 24      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]                                              ; 24      ;
+; radar_lcd_top:system|servo_pwm:u_servo|sweep_endpoint~3                                                       ; 23      ;
+; radar_lcd_top:system|servo_pwm:u_servo|sweep_pulse_units[7]~0                                                 ; 23      ;
+; radar_lcd_top:system|display_compose:u_compose|Equal3~1                                                       ; 23      ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                                                                  ; 22      ;
+; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[2]                                                          ; 21      ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|beam_pending                                                 ; 20      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|timer[9]~4                                            ; 20      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|timer[9]~1                                            ; 20      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[4]~0                                                 ; 20      ;
+; radar_lcd_top:system|timebase:u_timebase|tick_ms                                                              ; 20      ;
+; radar_lcd_top:system|previous_mode                                                                            ; 20      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]                                              ; 20      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[5]~18                                              ; 19      ;
+; radar_lcd_top:system|radar_ctrl:u_control|angle_idx[1]                                                        ; 18      ;
+; radar_lcd_top:system|timebase:u_timebase|tick_us                                                              ; 18      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RUN                                       ; 17      ;
+; radar_lcd_top:system|radar_ctrl:u_control|angle_idx[0]                                                        ; 17      ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|target_angle[1]~1                                            ; 16      ;
+; radar_lcd_top:system|radar_lcd_bridge:lcd_bridge|angle[2]~0                                                   ; 16      ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[13]~1                                                             ; 16      ;
+; radar_lcd_top:system|timebase:u_timebase|us_in_ms[3]~21                                                       ; 16      ;
+; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state.ADDR ; 16      ;
+; radar_lcd_top:system|matrix_scan:u_matrix|col_r[0]~13                                                         ; 16      ;
+; radar_lcd_top:system|radar_ctrl:u_control|angle_idx[2]                                                        ; 16      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|state~21                                                         ; 16      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[0]~37                                                  ; 15      ;
+; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[3]~8                                                        ; 15      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_us[6]~30                                                    ; 15      ;
+; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[0]~36                                                  ; 15      ;
++---------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Fitter Device Options                                              ;
++----------------------------------------------+---------------------+
+; Option                                       ; Setting             ;
++----------------------------------------------+---------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                 ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                 ;
+; Enable device-wide output enable (DEV_OE)    ; Off                 ;
+; Enable INIT_DONE output                      ; Off                 ;
+; Configuration scheme                         ; Passive Serial      ;
+; Reserve all unused pins                      ; As input tri-stated ;
+; Base pin-out file on sameframe device        ; Off                 ;
++----------------------------------------------+---------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Fitter
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 14:36:39 2026
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off radar_p4_ufm7 -c radar_p4_ufm7
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Selected device EPM1270T144C5 for design "radar_p4_ufm7"
+Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info: Device EPM570T144C5 is compatible
+    Info: Device EPM570T144I5 is compatible
+    Info: Device EPM570T144A5 is compatible
+    Info: Device EPM1270T144I5 is compatible
+    Info: Device EPM1270T144A5 is compatible
+Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
+Info: Reading SDC File: 'radar_p4_ufm7.sdc'
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 3 clocks
+    Info:   Period   Clock Name
+    Info: ======== ============
+    Info:   20.000          clk
+    Info:  640.000    ufm_arclk
+    Info:  640.000    ufm_drclk
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: Automatically promoted signal "clk" to use Global clock in PIN 18
+Info: Automatically promoted some destinations of signal "radar_lcd_top:system|lcd_p4_core:lcd_core|comb~8" to use Global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|pending" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RMW" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_REQ" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RUN" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|erase" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|done" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.IDLE" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.START_A" may be non-global or may not use global clock
+    Info: Limited to 10 non-global destinations
+Info: Completed Auto Global Promotion Operation
+Info: Starting register packing
+Info: Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter cannot place all nodes on current device -- Fitter will automatically make another fitting attempt and tightly pack logic elements
+Info: Starting register packing
+Info: Fitter is using Minimize Area packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter cannot place all nodes on current device -- Fitter will automatically make another fitting attempt and tightly pack logic elements
+Info: Starting register packing
+Info: Fitter is using Minimize Area with Chains packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Error: Design contains 1595 blocks of type logic cell.  However, device contains only 1270.
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Error: Can't fit design in device
+Info: Generated suppressed messages file R:/lcd_p4/radar_p4_ufm7.fit.smsg
+Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 0 warnings
+    Error: Peak virtual memory: 4495 megabytes
+    Error: Processing ended: Thu Oct 15 14:36:41 2026
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in R:/lcd_p4/radar_p4_ufm7.fit.smsg.
+
+

@@ -1,0 +1,35 @@
+Ultrasonic echo counter removal: equivalence argument
+
+Baseline: f4507a8. All external pins and ENABLE_RADIUS=0/1 remain unchanged.
+
+1. From a synchronized echo rise until the first 12-bit distance_work wrap,
+   100*distance_work + distance_rem = 17*elapsed_echo_ticks + 50.
+   Both the original echo counter and this accumulator advance on precisely
+   the same COUNT_HIGH edges: tick_us && !echo_fall && budget not expired.
+2. elapsed >= 118 is therefore equivalent to work>20 or
+   (work==20 && rem>=56). elapsed<=23529 is equivalent to work<4000 or
+   (work==4000 && rem<=43).
+3. echo_over4000 is sticky from the work increment 4000->4001. It is set
+   before any work wrap can occur, so arbitrarily long echoes cannot become
+   valid again after one or multiple 4096-mm wraps. Values 4000 with rem>43
+   are already rejected directly before this sticky flag becomes set.
+4. echo_started clears on reset, cancellation, and every accepted start.
+   It sets only on the synchronized WAIT_RISE echo edge. Thus a subsequent
+   WAIT_LOW/WAIT_RISE timeout rejects old retained work, exactly as the old
+   zero raw counter did. These flags reset again when new work resets.
+5. CONVERT, DONE, busy/trig/done timing, millimetre accumulation, radius
+   accumulation, and all clock/reset/cancel priorities otherwise stay intact.
+   Both millimetre and radius validity use the equivalent duration predicate.
+
+Verification:
+- 16 parameter/radius configurations: 3678378 full-output cycle pairs
+  versus f4507a8. TIMEOUT=1/117/118/119/23529/23530/30000/100000;
+  TRIG=1/2/3/4/15/16/31; ENABLE_RADIUS=0/1.
+- Boundaries 117/118/119 and 23528/23529/23530, 24500/29800 raw echoes,
+  80000-tick repeated work wrap, stale work followed by noecho/stuck-high,
+  random reset/cancel/clock pauses/spurious starts/echo edges.
+- Existing tb_ultrasonic passes.
+- Existing radius suite: 15 cases, 167746 original-output cycle comparisons.
+  Only its two deleted raw-counter debug probes now read immutable legacy.
+
+See simulation.log, p3_ctrl.log, verification.txt and ../radius for logs/hashes.

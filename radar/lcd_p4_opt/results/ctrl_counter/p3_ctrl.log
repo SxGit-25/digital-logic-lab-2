@@ -1,0 +1,2 @@
+PASS controller:         362 samples all 181 angles x 2 directions; nearest bins 23/68/113/158; crossed-angle echo binding; default 60-ms cadence and busy slot skipping; distance levels/invalid; live BCD; history isolation; alarm LEDs and buzzer carrier
+tb_continuous_ctrl.v:72: $finish called at 271320000 (1ps)

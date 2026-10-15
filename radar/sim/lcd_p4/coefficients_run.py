@@ -14,7 +14,8 @@ ROOT=RADAR.parent
 def run():
     parser=argparse.ArgumentParser()
     parser.add_argument('--iverilog-bin',type=Path)
-    parser.add_argument('--output',type=Path,default=RADAR/'lcd_p4/results/coefficients')
+    parser.add_argument('--output',type=Path,default=RADAR/'lcd_p4_opt/results/coefficients')
+    parser.add_argument('--serial',action='store_true')
     args=parser.parse_args()
     candidates=[ROOT/'radar/sim/tools/iverilog/app/bin',ROOT/ROOT.name/'radar/sim/tools/iverilog/app/bin']
     binary=args.iverilog_bin or next((p for p in candidates if (p/'iverilog.exe').exists()),None)
@@ -24,7 +25,7 @@ def run():
     for source in (RADAR/'rtl/lcd_sin_lut.v',RADAR/'rtl/ray_engine.v',HERE/'coefficients_tb.v'):
         shutil.copy2(source,stage/source.name)
     commands=[
-        [str(binary/'iverilog.exe'),'-g2012','-s','coefficients_tb','-o','coefficients.vvp','lcd_sin_lut.v','ray_engine.v','coefficients_tb.v'],
+        [str(binary/'iverilog.exe'),'-g2012','-Pcoefficients_tb.SERIAL_ACCUMULATE='+str(int(args.serial)),'-s','coefficients_tb','-o','coefficients.vvp','lcd_sin_lut.v','ray_engine.v','coefficients_tb.v'],
         [str(binary/'vvp.exe'),'coefficients.vvp'],
         [sys.executable,str(HERE/'coefficients_geometry.py'),str(stage)],
     ]

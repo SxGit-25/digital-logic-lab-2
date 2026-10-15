@@ -90,7 +90,7 @@ module tb_ultrasonic_radius;
                        expected_mm, expected_valid, expected_radius, expected_radius_valid);
             cases = cases + 1;
             $display("PASS case=%0d echo_us=%0d mm=%0d valid=%b radius=%0d radius_valid=%b",
-                     cases, dut.echo_us, enabled_outputs[11:0], enabled_outputs[12], radius, radius_valid);
+                     cases, legacy.echo_us, enabled_outputs[11:0], enabled_outputs[12], radius, radius_valid);
             repeat (3) @(negedge clk);
         end
     endtask
@@ -109,7 +109,7 @@ module tb_ultrasonic_radius;
             repeat (width_us + 1) @(negedge clk);
             echo = 0;
             finish_case(expected_mm, expected_valid, expected_radius, expected_radius_valid);
-            if (dut.echo_us != width_us) $fatal(1, "unexpected raw echo duration");
+            if (legacy.echo_us != width_us) $fatal(1, "unexpected raw echo duration");
         end
     endtask
     task millimetre_case;

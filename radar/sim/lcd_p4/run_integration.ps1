@@ -1,4 +1,4 @@
-param([string]$ToolDirectory='')
+param([string]$ToolDirectory='', [string]$ResultsDirectory='')
 $ErrorActionPreference='Stop'
 $root=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 if (!$ToolDirectory) {
@@ -6,7 +6,7 @@ if (!$ToolDirectory) {
  $ToolDirectory=$candidates | Where-Object {Test-Path (Join-Path $_ 'iverilog.exe')} | Select-Object -First 1
  if(!$ToolDirectory){throw 'Provide -ToolDirectory containing iverilog.exe and vvp.exe'}
 }
-$results=Join-Path $root 'radar\lcd_p4\results\integration'
+$results=if($ResultsDirectory){$ResultsDirectory}else{Join-Path $root 'radar\lcd_p4\results\integration'}
 $work=Join-Path ([IO.Path]::GetTempPath()) ('codex_p4_integration_'+[guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Force -Path $results,$work | Out-Null
 $oldTemp=$env:TEMP;$oldTmp=$env:TMP
@@ -22,10 +22,12 @@ try {
  Push-Location $work
  try {
   $rtl=@(Get-ChildItem -Filter '*.v' | Where-Object {$_.Name -notlike 'tb_*'} | ForEach-Object Name)
-  foreach($name in @('bridge','lcd','top','top_readback')) {
+  foreach($name in @('bridge','lcd','lcd_serial','top','top_readback','top_serial_readback')) {
    $tb='tb_'+$name+'_integration'
    $extra=@()
    if($name -eq 'top_readback'){$tb='tb_top_integration';$extra=@('-Ptb_top_integration.READBACK=1')}
+   if($name -eq 'lcd_serial'){$tb='tb_lcd_integration';$extra=@('-Ptb_lcd_integration.SERIAL_ACCUMULATE=1')}
+   if($name -eq 'top_serial_readback'){$tb='tb_top_integration';$extra=@('-Ptb_top_integration.READBACK=1','-Ptb_top_integration.SERIAL_ACCUMULATE=1')}
    $compile=& (Join-Path $ToolDirectory 'iverilog.exe') -g2005-sv -Wall -s $tb @extra -o "$name.vvp" @rtl "$tb.v" 2>&1
    $code=$LASTEXITCODE
    (@("compile_exit_code=$code")+@($compile)) | Set-Content (Join-Path $results "$name.compile.log")
@@ -36,7 +38,7 @@ try {
    if($code -or ($simulation -join "`n") -notmatch "PASS $tb"){throw "$name simulation failed"}
   }
   Get-ChildItem -Filter '*.v' | Get-FileHash -Algorithm SHA256 | Select-Object Hash,@{n='File';e={Split-Path $_.Path -Leaf}} | Export-Csv -NoTypeInformation (Join-Path $results 'sources_sha256.csv')
-  @('baseline_commit=ca8ec99','bridge=PASS','lcd=PASS','top=PASS','top_readback=PASS') | Set-Content (Join-Path $results 'verification.txt')
+  @('baseline_commit=ca8ec99','bridge=PASS','lcd=PASS','lcd_serial=PASS','top=PASS','top_readback=PASS','top_serial_readback=PASS') | Set-Content (Join-Path $results 'verification.txt')
  } finally {Pop-Location}
 } finally {
  $env:TEMP=$oldTemp;$env:TMP=$oldTmp

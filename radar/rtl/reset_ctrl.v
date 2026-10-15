@@ -8,10 +8,17 @@ module reset_ctrl #(
     input  wire clk,
     output wire rst
 );
-    reg [RESET_CYCLES-1:0] reset_pipe = {RESET_CYCLES{1'b1}};
-
-    always @(posedge clk)
-        reset_pipe <= {reset_pipe[RESET_CYCLES-2:0], 1'b0};
-
-    assign rst = reset_pipe[RESET_CYCLES-1];
+    function integer width;
+        input integer count;
+        begin width=1; while ((2**width)<count) width=width+1; end
+    endfunction
+    reg [width(RESET_CYCLES)-1:0] elapsed = 0;
+    reg active = 1'b1;
+    always @(posedge clk) begin
+        if(active) begin
+            if(elapsed==RESET_CYCLES-1) active<=0;
+            else elapsed<=elapsed+1'b1;
+        end
+    end
+    assign rst = active;
 endmodule

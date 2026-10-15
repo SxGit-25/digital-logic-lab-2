@@ -1,0 +1,247 @@
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Shell
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Oct 15 14:40:07 2026
+Info: Command: quartus_sh --flow compile radar_p4_ufm7
+Info: Quartus(args): compile radar_p4_ufm7
+Info: Project Name = R:/lcd_p4/radar_p4_ufm7
+Info: Revision Name = radar_p4_ufm7
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 14:40:07 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off radar_p4_ufm7 -c radar_p4_ufm7
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/timebase.v
+    Info: Found entity 1: timebase
+Info: Found 1 design units, including 1 entities, in source file /rtl/switch_filter.v
+    Info: Found entity 1: switch_filter
+Info: Found 1 design units, including 1 entities, in source file /rtl/servo_pwm.v
+    Info: Found entity 1: servo_pwm
+Info: Found 1 design units, including 1 entities, in source file /rtl/ultrasonic.v
+    Info: Found entity 1: ultrasonic
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_ctrl.v
+    Info: Found entity 1: radar_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/bin12_to_bcd.v
+    Info: Found entity 1: bin12_to_bcd
+Info: Found 1 design units, including 1 entities, in source file /rtl/display_compose.v
+    Info: Found entity 1: display_compose
+Info: Found 1 design units, including 1 entities, in source file /rtl/seg_scan.v
+    Info: Found entity 1: seg_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/matrix_scan.v
+    Info: Found entity 1: matrix_scan
+Info: Found 1 design units, including 1 entities, in source file /rtl/alarm_ctrl.v
+    Info: Found entity 1: alarm_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_sin_lut.v
+    Info: Found entity 1: lcd_sin_lut
+Info: Found 1 design units, including 1 entities, in source file /rtl/ray_engine.v
+    Info: Found entity 1: ray_engine
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_lcd_ctrl.v
+    Info: Found entity 1: radar_lcd_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_lcd_bridge.v
+    Info: Found entity 1: radar_lcd_bridge
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_p4_core.v
+    Info: Found entity 1: lcd_p4_core
+Info: Found 1 design units, including 1 entities, in source file /rtl/radar_lcd_top.v
+    Info: Found entity 1: radar_lcd_top
+Info: Found 6 design units, including 6 entities, in source file radar_p4_variants.v
+    Info: Found entity 1: radar_p4_ufm8_top
+    Info: Found entity 2: radar_p4_case8_top
+    Info: Found entity 3: radar_p4_ufm7_top
+    Info: Found entity 4: radar_p4_case7_top
+    Info: Found entity 5: radar_p4_safe_top
+    Info: Found entity 6: radar_p4_serial7_top
+Info: Elaborating entity "radar_p4_ufm7_top" for the top level hierarchy
+Info: Elaborating entity "radar_lcd_top" for hierarchy "radar_lcd_top:system"
+Info: Elaborating entity "switch_filter" for hierarchy "radar_lcd_top:system|switch_filter:u_mode_switch"
+Info: Elaborating entity "reset_ctrl" for hierarchy "radar_lcd_top:system|reset_ctrl:u_reset"
+Info: Elaborating entity "timebase" for hierarchy "radar_lcd_top:system|timebase:u_timebase"
+Info: Elaborating entity "servo_pwm" for hierarchy "radar_lcd_top:system|servo_pwm:u_servo"
+Warning (10036): Verilog HDL or VHDL warning at servo_pwm.v(41): object "frame_us" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at servo_pwm.v(43): object "sweep_pulse_us" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(77): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(78): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(79): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(80): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(81): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(82): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(96): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(108): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(117): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(125): truncated value with size 32 to match size of target (9)
+Info: Elaborating entity "ultrasonic" for hierarchy "radar_lcd_top:system|ultrasonic:u_ultrasonic"
+Info: Elaborating entity "radar_ctrl" for hierarchy "radar_lcd_top:system|radar_ctrl:u_control"
+Warning (10230): Verilog HDL assignment warning at radar_ctrl.v(75): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at radar_ctrl.v(76): truncated value with size 32 to match size of target (11)
+Info: Elaborating entity "bin12_to_bcd" for hierarchy "radar_lcd_top:system|bin12_to_bcd:u_bcd"
+Info: Elaborating entity "display_compose" for hierarchy "radar_lcd_top:system|display_compose:u_compose"
+Info: Elaborating entity "seg_scan" for hierarchy "radar_lcd_top:system|seg_scan:u_seg"
+Info: Elaborating entity "matrix_scan" for hierarchy "radar_lcd_top:system|matrix_scan:u_matrix"
+Info: Elaborating entity "alarm_ctrl" for hierarchy "radar_lcd_top:system|alarm_ctrl:u_alarm"
+Info: Elaborating entity "radar_lcd_bridge" for hierarchy "radar_lcd_top:system|radar_lcd_bridge:lcd_bridge"
+Info: Elaborating entity "lcd_p4_core" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core"
+Info: Elaborating entity "lcd_init" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init"
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(57): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(57): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(69): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(73): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(76): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(77): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(80): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "radar_lcd_ctrl" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw"
+Info: Elaborating entity "ray_engine" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray"
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(36): truncated value with size 32 to match size of target (13)
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(61): truncated value with size 8 to match size of target (7)
+Info: Elaborating entity "lcd_sin_lut" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut"
+Info: Elaborating entity "altufm_none" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash"
+Info: Elaborated megafunction instantiation "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash"
+Info: Instantiated megafunction "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash" with the following parameter:
+    Info: Parameter "width_ufm_address" = "9"
+    Info: Parameter "lpm_file" = "lcd_sin_q7.mif"
+    Info: Parameter "port_arclkena" = "PORT_UNUSED"
+    Info: Parameter "port_drclkena" = "PORT_UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/altufm_none_4im.tdf
+    Info: Found entity 1: altufm_none_4im
+Info: Elaborating entity "altufm_none_4im" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|altufm_none:g_ufm.flash|altufm_none_4im:auto_generated"
+Info: Elaborating entity "lcd_bus" for hierarchy "radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus"
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(56): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(57): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(59): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(60): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(64): truncated value with size 32 to match size of target (5)
+Info: 19 registers lost all their fanouts during netlist optimizations. The first 19 are displayed below.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state~2" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state~3" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|radar_ctrl:u_control|phase~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|radar_ctrl:u_control|phase~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|radar_ctrl:u_control|phase~8" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|ultrasonic:u_ultrasonic|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|ultrasonic:u_ultrasonic|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|ultrasonic:u_ultrasonic|state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|x_carry" lost all its fanouts during netlist optimizations.
+    Info: Register "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|y_carry" lost all its fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "radar_lcd_top:system|alarm_ctrl:u_alarm|Add1~5"
+Info: Implemented 1682 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 63 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 1606 logic cells
+    Info: Implemented 1 User Flash Memory blocks
+Info: Generated suppressed messages file R:/lcd_p4/radar_p4_ufm7.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4428 megabytes
+    Info: Processing ended: Thu Oct 15 14:40:12 2026
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Fitter
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 14:40:13 2026
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off radar_p4_ufm7 -c radar_p4_ufm7
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Selected device EPM1270T144C5 for design "radar_p4_ufm7"
+Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info: Device EPM570T144C5 is compatible
+    Info: Device EPM570T144I5 is compatible
+    Info: Device EPM570T144A5 is compatible
+    Info: Device EPM1270T144I5 is compatible
+    Info: Device EPM1270T144A5 is compatible
+Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
+Info: Reading SDC File: 'radar_p4_ufm7.sdc'
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 3 clocks
+    Info:   Period   Clock Name
+    Info: ======== ============
+    Info:   20.000          clk
+    Info:  640.000    ufm_arclk
+    Info:  640.000    ufm_drclk
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: Automatically promoted signal "clk" to use Global clock in PIN 18
+Info: Automatically promoted some destinations of signal "radar_lcd_top:system|lcd_p4_core:lcd_core|comb~3" to use Global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|pending" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RMW" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_REQ" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.RUN" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|erase" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|done" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.IDLE" may be non-global or may not use global clock
+    Info: Destination "radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|state.START_A" may be non-global or may not use global clock
+    Info: Limited to 10 non-global destinations
+Info: Completed Auto Global Promotion Operation
+Info: Starting register packing
+Info: Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter cannot place all nodes on current device -- Fitter will automatically make another fitting attempt and tightly pack logic elements
+Info: Starting register packing
+Info: Fitter is using Minimize Area packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter cannot place all nodes on current device -- Fitter will automatically make another fitting attempt and tightly pack logic elements
+Info: Starting register packing
+Info: Fitter is using Minimize Area with Chains packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Started processing fast register assignments
+Info: Finished processing fast register assignments
+Info: Finished register packing
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Error: Design contains 1573 blocks of type logic cell.  However, device contains only 1270.
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Error: Can't fit design in device
+Info: Generated suppressed messages file R:/lcd_p4/radar_p4_ufm7.fit.smsg
+Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 0 warnings
+    Error: Peak virtual memory: 4495 megabytes
+    Error: Processing ended: Thu Oct 15 14:40:14 2026
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+Error: Quartus II Full Compilation was unsuccessful. 4 errors, 35 warnings
+Error: Flow compile (for project R:/lcd_p4/radar_p4_ufm7) was not successful
+Error: ERROR: Error(s) found while running an executable. See report file(s) for error message(s). Message log indicates which executable was run last.
+

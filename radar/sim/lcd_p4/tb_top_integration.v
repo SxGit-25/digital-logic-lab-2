@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
 // Original pins must remain cycle-identical when the LCD path is added.
-module tb_top_integration #(parameter READBACK=0);
+module tb_top_integration #(parameter READBACK=0, SERIAL_ACCUMULATE=0);
  reg clk=0,sw7=0,sw6=0,echo=0;
  always #10 clk=~clk;
  wire [57:0] observed,baseline;
  radar_lcd_top #(.CLK_HZ(1000000),.SELF_TEST_MS(1),.STANDBY_MS(1),
   .SLOT_MS(80),.SETTLE_MS(1),.SWITCH_MS(1),.CONTINUOUS_SAMPLE_MS(60),
-  .ENABLE_READBACK(READBACK),.USE_UFM(0),.LCD_RESET_CYCLES(10),.LCD_WAIT_CYCLES(20)) dut(
+  .ENABLE_READBACK(READBACK),.USE_UFM(0),.LCD_RESET_CYCLES(10),.LCD_WAIT_CYCLES(20),.SERIAL_ACCUMULATE(SERIAL_ACCUMULATE)) dut(
   .clk(clk),.sw7(sw7),.sw6(sw6),.echo(echo),
   .trig(observed[57]),.servo(observed[56]),.buzzer(observed[55]),.led(observed[54:39]),
   .seg_a(observed[38]),.seg_b(observed[37]),.seg_c(observed[36]),.seg_d(observed[35]),

@@ -1,0 +1,11 @@
+Fitter Status : Failed - Thu Oct 15 14:36:41 2026
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : radar_p4_ufm7
+Top-level Entity Name : radar_p4_ufm7_top
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 1,595 / 1,270 ( 126 % )
+Total pins : 75 / 116 ( 65 % )
+Total virtual pins : 0
+UFM blocks : 1 / 1 ( 100 % )

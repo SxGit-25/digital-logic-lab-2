@@ -14,7 +14,9 @@ module radar_lcd_top #(
     parameter MIRROR_X=0,
     parameter [5:0] MIN_RADIUS=6,
     parameter integer LCD_RESET_CYCLES=50000,
-    parameter integer LCD_WAIT_CYCLES=1000000
+    parameter integer LCD_WAIT_CYCLES=1000000,
+    parameter SERIAL_ACCUMULATE=0,
+    parameter integer LCD_WAIT_TICK_CYCLES=LCD_RESET_CYCLES>=CLK_HZ/1000 ? CLK_HZ/1000 : 1
 ) (
     input  wire        clk,
     input  wire        sw7,
@@ -223,8 +225,8 @@ module radar_lcd_top #(
         .draw_radius(draw_radius),.draw_valid(draw_valid),.plot_only(draw_plot_only));
     lcd_p4_core #(.ENABLE_READBACK(ENABLE_READBACK),.USE_UFM(USE_UFM),
         .FRACTION_BITS(FRACTION_BITS),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),
-        .RESET_CYCLES(LCD_RESET_CYCLES),.WAIT_CYCLES(LCD_WAIT_CYCLES)) lcd_core(
-        .clk(clk),.rst(lcd_reset),.request(draw_request),.plot_only(draw_plot_only),
+        .RESET_CYCLES(LCD_RESET_CYCLES),.WAIT_CYCLES(LCD_WAIT_CYCLES),.SERIAL_ACCUMULATE(SERIAL_ACCUMULATE),.WAIT_TICK_CYCLES(LCD_WAIT_TICK_CYCLES)) lcd_core(
+        .clk(clk),.rst(lcd_reset),.delay_tick(tick_ms),.request(draw_request),.plot_only(draw_plot_only),
         .angle(draw_angle),.direction_up(draw_direction),.radius(draw_radius),.radius_valid(draw_valid),
         .ready(lcd_ready),.done(lcd_done),.initialized(lcd_initialized),
         .data_in(lcd_data),.data_out(lcd_data_out),.data_oe(lcd_oe),

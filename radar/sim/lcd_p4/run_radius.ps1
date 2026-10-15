@@ -3,7 +3,7 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
-$results = Join-Path $root 'radar\lcd_p4\results\radius'
+$results = Join-Path $root 'radar\lcd_p4_opt\results\radius'
 New-Item -ItemType Directory -Force -Path $results | Out-Null
 $work = Join-Path ([IO.Path]::GetTempPath()) ('codex_p4_radius_' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $work | Out-Null

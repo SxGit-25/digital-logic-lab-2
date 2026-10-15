@@ -66,9 +66,14 @@ module radar_ctrl #(
     localparam [2:0] PH_HOLD          = 3'd3;
 
     localparam integer STATE_MS = (SELF_TEST_MS > STANDBY_MS) ? SELF_TEST_MS : STANDBY_MS;
-    reg [count_width(STATE_MS)-1:0] state_ms;
+
     localparam integer SLOT_COUNT_MS = SUPPORT_CONTINUOUS && CONTINUOUS_SAMPLE_MS > SLOT_MS ? CONTINUOUS_SAMPLE_MS : SLOT_MS;
-    reg [count_width(SLOT_COUNT_MS)-1:0] slot_ms;
+    // Startup and scan-slot timing never run together. Share their counter;
+    // retain state-specific aliases for diagnostics and existing testbenches.
+    localparam integer TIMER_COUNT_MS = STATE_MS > SLOT_COUNT_MS ? STATE_MS : SLOT_COUNT_MS;
+    reg [count_width(TIMER_COUNT_MS)-1:0] timer_ms;
+    wire [count_width(STATE_MS)-1:0] state_ms = system_state == SYS_RUN ? 0 : timer_ms;
+    wire [count_width(SLOT_COUNT_MS)-1:0] slot_ms = system_state == SYS_RUN ? timer_ms : 0;
     reg [count_width(SETTLE_MS)-1:0] settle_ms;
     reg [2:0] phase;
     reg direction_up;
@@ -109,20 +114,11 @@ module radar_ctrl #(
             measure_start   <= 1'b0;
             measure_cancel  <= 1'b1;
             sample_idx      <= 3'd0;
-            current_distance<= 12'd0;
             current_valid   <= 1'b0;
             current_level   <= 3'd0;
-            hist_level0     <= 3'd0;
-            hist_level1     <= 3'd0;
-            hist_level2     <= 3'd0;
-            hist_level3     <= 3'd0;
-            hist_level4     <= 3'd0;
-            hist_valid      <= 5'b0;
-            hist_seen       <= 5'b0;
             sample_angle <= 0;
             sample_direction_up <= 1'b1;
-            state_ms        <= 0;
-            slot_ms         <= 0;
+            timer_ms        <= 0;
             settle_ms       <= 0;
             phase           <= PH_SETTLE;
             direction_up    <= 1'b1;
@@ -143,18 +139,9 @@ module radar_ctrl #(
                 servo_enable     <= 1'b0;
                 angle_idx        <= 3'd0;
                 measure_cancel   <= 1'b1;
-                current_distance <= 12'd0;
                 current_valid    <= 1'b0;
                 current_level    <= 3'd0;
-                hist_level0      <= 3'd0;
-                hist_level1      <= 3'd0;
-                hist_level2      <= 3'd0;
-                hist_level3      <= 3'd0;
-                hist_level4      <= 3'd0;
-                hist_valid       <= 5'b0;
-                hist_seen        <= 5'b0;
-                state_ms         <= 0;
-                slot_ms          <= 0;
+                timer_ms         <= 0;
                 settle_ms        <= 0;
                 phase            <= PH_SETTLE;
                 direction_up     <= 1'b1;
@@ -164,7 +151,7 @@ module radar_ctrl #(
                 case (system_state)
                     SYS_OFF: begin
                         system_state <= SYS_SELF;
-                        state_ms     <= 0;
+                        timer_ms     <= 0;
                     end
 
                     SYS_SELF: begin
@@ -172,11 +159,11 @@ module radar_ctrl #(
                         if (tick_ms) begin
                             if (state_ms == SELF_TEST_MS - 1) begin
                                 system_state <= SYS_STANDBY;
-                                state_ms     <= 0;
+                                timer_ms     <= 0;
                                 angle_idx    <= 3'd0;
                                 servo_enable <= 1'b1;
                             end else begin
-                                state_ms <= state_ms + 1'b1;
+                                timer_ms <= timer_ms + 1'b1;
                             end
                         end
                     end
@@ -187,15 +174,14 @@ module radar_ctrl #(
                         if (tick_ms) begin
                             if (state_ms == STANDBY_MS - 1) begin
                                 system_state     <= SYS_RUN;
-                                state_ms         <= 0;
-                                slot_ms          <= 0;
+                                timer_ms         <= 0;
                                 settle_ms        <= 0;
                                 phase            <= PH_SETTLE;
                                 direction_up     <= 1'b1;
                                 current_valid    <= 1'b0;
                                 current_level    <= 3'd0;
                             end else begin
-                                state_ms <= state_ms + 1'b1;
+                                timer_ms <= timer_ms + 1'b1;
                             end
                         end
                     end
@@ -209,50 +195,27 @@ module radar_ctrl #(
                         end
 
                         if (measure_done && (phase == PH_WAIT_MEASURE)) begin
-                            current_distance <= distance_mm;
                             current_valid    <= distance_valid;
                             current_level    <= distance_valid ? distance_level(distance_mm) : 3'd0;
                             phase            <= PH_HOLD;
-                            case (sample_idx)
-                                3'd0: hist_level0 <= distance_level(distance_mm);
-                                3'd1: hist_level1 <= distance_level(distance_mm);
-                                3'd2: hist_level2 <= distance_level(distance_mm);
-                                3'd3: hist_level3 <= distance_level(distance_mm);
-                                3'd4: hist_level4 <= distance_level(distance_mm);
-                            endcase
-                            case (sample_idx)
-                                3'd0: begin hist_seen[0] <= 1'b1; hist_valid[0] <= distance_valid; end
-                                3'd1: begin hist_seen[1] <= 1'b1; hist_valid[1] <= distance_valid; end
-                                3'd2: begin hist_seen[2] <= 1'b1; hist_valid[2] <= distance_valid; end
-                                3'd3: begin hist_seen[3] <= 1'b1; hist_valid[3] <= distance_valid; end
-                                3'd4: begin hist_seen[4] <= 1'b1; hist_valid[4] <= distance_valid; end
-                            endcase
                         end
 
                         if (tick_ms) begin
                             if (continuous_active) begin
                                 if (slot_ms == CONTINUOUS_SAMPLE_MS - 1) begin
-                                    slot_ms <= 0;
+                                    timer_ms <= 0;
                                     if (!measure_busy && phase != PH_WAIT_MEASURE) begin
                                         measure_start <= 1'b1;
                                         phase <= PH_WAIT_MEASURE;
                                     end
-                                end else slot_ms <= slot_ms + 1'b1;
+                                end else timer_ms <= timer_ms + 1'b1;
                             end else if (slot_ms == SLOT_MS - 1) begin
                                 // A slot always ends on time.  Anything not
                                 // committed by then becomes an invalid sample.
                                 if ((phase != PH_HOLD) && !measure_done) begin
                                     measure_cancel <= 1'b1;
-                                    case (angle_idx)
-                                        3'd0: begin hist_seen[0] <= 1'b1; hist_valid[0] <= 1'b0; end
-                                        3'd1: begin hist_seen[1] <= 1'b1; hist_valid[1] <= 1'b0; end
-                                        3'd2: begin hist_seen[2] <= 1'b1; hist_valid[2] <= 1'b0; end
-                                        3'd3: begin hist_seen[3] <= 1'b1; hist_valid[3] <= 1'b0; end
-                                        3'd4: begin hist_seen[4] <= 1'b1; hist_valid[4] <= 1'b0; end
-                                    endcase
                                 end
-
-                                slot_ms       <= 0;
+                                timer_ms      <= 0;
                                 settle_ms     <= 0;
                                 phase         <= PH_WAIT_APPLIED;
                                 current_valid <= 1'b0;
@@ -274,7 +237,7 @@ module radar_ctrl #(
                                     end
                                 end
                             end else begin
-                                slot_ms <= slot_ms + 1'b1;
+                                timer_ms <= timer_ms + 1'b1;
                                 if (phase == PH_SETTLE) begin
                                     if (settle_ms == SETTLE_MS - 1) begin
                                         if (!measure_busy) begin
@@ -293,6 +256,40 @@ module radar_ctrl #(
                     default: system_state <= SYS_OFF;
                 endcase
             end
+        end
+    end
+    // Data/history updates use flat shared events instead of the timing FSM's
+    // nested priority tree. A slot expiry never coincides with a commit.
+    wire history_commit = system_on && system_state == SYS_RUN &&
+                          measure_done && phase == PH_WAIT_MEASURE;
+    wire history_expire = system_on && system_state == SYS_RUN && tick_ms &&
+                          !continuous_active && slot_ms == SLOT_MS - 1 &&
+                          phase != PH_HOLD && !measure_done;
+    wire [4:0] history_commit_mask = history_commit ? (5'b00001 << sample_idx) : 5'b00000;
+    wire [4:0] history_expire_mask = history_expire ? (5'b00001 << angle_idx) : 5'b00000;
+    wire [4:0] history_write_mask = history_commit_mask | history_expire_mask;
+    wire [2:0] history_level = distance_level(distance_mm);
+
+    always @(posedge clk) begin
+        if (rst || !system_on) begin
+            current_distance <= 12'd0;
+            hist_level0 <= 3'd0;
+            hist_level1 <= 3'd0;
+            hist_level2 <= 3'd0;
+            hist_level3 <= 3'd0;
+            hist_level4 <= 3'd0;
+            hist_valid <= 5'b00000;
+            hist_seen <= 5'b00000;
+        end else begin
+            if (history_commit) current_distance <= distance_mm;
+            if (history_commit_mask[0]) hist_level0 <= history_level;
+            if (history_commit_mask[1]) hist_level1 <= history_level;
+            if (history_commit_mask[2]) hist_level2 <= history_level;
+            if (history_commit_mask[3]) hist_level3 <= history_level;
+            if (history_commit_mask[4]) hist_level4 <= history_level;
+            hist_seen <= hist_seen | history_write_mask;
+            hist_valid <= (hist_valid & ~history_write_mask) |
+                          (history_commit_mask & {5{distance_valid}});
         end
     end
 endmodule

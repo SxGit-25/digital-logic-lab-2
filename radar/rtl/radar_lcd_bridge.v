@@ -21,8 +21,8 @@ module radar_lcd_bridge(
     output reg plot_only
 );
     reg tracking,seen_direction,epoch,sample_epoch;
-    reg [7:0] seen_angle,beam_pending_angle,target_angle;
-    reg beam_pending,beam_pending_direction,target_pending,target_direction;
+    reg [7:0] seen_angle,target_angle;
+    reg beam_pending,target_pending,target_direction;
     reg [5:0] target_radius;
     reg target_valid;
     reg active;
@@ -35,7 +35,7 @@ module radar_lcd_bridge(
     always @(posedge clk) begin
         if(rst || !enable) begin
             tracking<=0;seen_direction<=1;epoch<=0;sample_epoch<=0;seen_angle<=0;
-            beam_pending<=0;beam_pending_angle<=0;beam_pending_direction<=1;
+            beam_pending<=0;
             target_pending<=0;target_angle<=0;target_direction<=1;
             target_radius<=0;target_valid<=0;active<=0;launch<=0;
             angle<=0;direction_up<=1;draw_radius<=0;draw_valid<=0;plot_only<=0;
@@ -45,7 +45,7 @@ module radar_lcd_bridge(
             if(measure_start) sample_epoch<=current_epoch;
             if(!active && !launch && lcd_ready) begin
                 if(beam_pending) begin
-                    angle<=beam_pending_angle;direction_up<=beam_pending_direction;
+                    angle<=seen_angle;direction_up<=seen_direction;
                     draw_radius<=0;draw_valid<=0;plot_only<=0;
                     beam_pending<=0;active<=1;launch<=1;
                 end else if(target_pending && !turn_event && !beam_event) begin
@@ -56,7 +56,6 @@ module radar_lcd_bridge(
             end
             if(beam_event) begin
                 tracking<=1;seen_angle<=beam_angle;seen_direction<=beam_direction_up;
-                beam_pending_angle<=beam_angle;beam_pending_direction<=beam_direction_up;
                 beam_pending<=1;
             end
             if(turn_event) begin epoch<=~epoch;target_pending<=0;end

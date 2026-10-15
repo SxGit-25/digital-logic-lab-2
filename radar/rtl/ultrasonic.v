@@ -43,9 +43,7 @@ module ultrasonic #(
     localparam [2:0] CONVERT   = 3'd5;
     localparam [2:0] DONE      = 3'd6;
 
-    // 20 mm and 4000 mm boundaries expressed in raw echo microseconds.
-    localparam integer MIN_ECHO_US = 118;
-    localparam integer MAX_ECHO_US = 23529;
+
 
     reg [2:0] state;
     reg echo_meta;
@@ -53,9 +51,20 @@ module ultrasonic #(
     reg echo_prev;
     reg [count_width(TRIG_US)-1:0] trigger_us;
     reg [count_width(TIMEOUT_US)-1:0] budget_us;
-    reg [count_width(TIMEOUT_US)-1:0] echo_us;
+    reg echo_started;
+    reg echo_over4000;
     reg [11:0] distance_work;
     reg [6:0]  distance_rem;
+
+    // During COUNT_HIGH, 100*distance_work + distance_rem equals
+    // 17*elapsed_echo_us + 50. Reuse these sufficient statistics instead of
+    // a second 15-bit elapsed counter. The sticky flag covers work wraparound;
+    // echo_started rejects WAIT_LOW/WAIT_RISE timeout with stale prior work.
+    wire echo_duration_valid = echo_started && !echo_over4000 &&
+        ((distance_work > 12'd20) ||
+         ((distance_work == 12'd20) && (distance_rem >= 7'd56))) &&
+        ((distance_work < 12'd4000) ||
+         ((distance_work == 12'd4000) && (distance_rem <= 7'd43)));
 
     wire echo_rise = echo_sync && !echo_prev;
     wire echo_fall = !echo_sync && echo_prev;
@@ -99,8 +108,7 @@ module ultrasonic #(
                         radius_mod25 <= radius_mod25 + 1'b1;
                     end
                 end else if (state == CONVERT) begin
-                    if ((echo_us >= MIN_ECHO_US) &&
-                        (echo_us <= MAX_ECHO_US) && !echo_sync) begin
+                    if (echo_duration_valid && !echo_sync) begin
                         radius <= radius_work;
                         radius_valid <= !radius_over1200;
                     end else begin
@@ -138,7 +146,8 @@ module ultrasonic #(
             distance_valid   <= 1'b0;
             trigger_us       <= 1'b0;
             budget_us        <= 1'b0;
-            echo_us          <= 1'b0;
+            echo_started <= 1'b0;
+            echo_over4000 <= 1'b0;
             distance_work    <= 12'd0;
             distance_rem     <= 7'd50;
         end else begin
@@ -150,7 +159,8 @@ module ultrasonic #(
                 distance_valid <= 1'b0;
                 trigger_us     <= 1'b0;
                 budget_us      <= 1'b0;
-                echo_us        <= 1'b0;
+                echo_started <= 1'b0;
+                echo_over4000 <= 1'b0;
                 distance_work  <= 12'd0;
                 distance_rem   <= 7'd50;
             end else begin
@@ -163,7 +173,8 @@ module ultrasonic #(
                             distance_valid <= 1'b0;
                             trigger_us     <= 1'b0;
                             budget_us      <= 1'b0;
-                            echo_us        <= 1'b0;
+                            echo_started <= 1'b0;
+                            echo_over4000 <= 1'b0;
                         end
                     end
 
@@ -193,7 +204,8 @@ module ultrasonic #(
 
                     WAIT_RISE: begin
                         if (echo_rise) begin
-                            echo_us <= 1'b0;
+                            echo_started <= 1'b1;
+                            echo_over4000 <= 1'b0;
                             distance_work <= 12'd0;
                             distance_rem  <= 7'd50;
                             state   <= COUNT_HIGH;
@@ -213,11 +225,11 @@ module ultrasonic #(
                                 state <= CONVERT;
                             end else begin
                                 budget_us <= budget_us + 1'b1;
-                                echo_us   <= echo_us + 1'b1;
                                 // distance_mm = round(echo_us * 17 / 100).
                                 // Accumulating the fixed ratio avoids a large
                                 // multiplier/divider on the MAX II device.
                                 if (distance_rem >= 7'd83) begin
+                                    if (distance_work == 12'd4000) echo_over4000 <= 1'b1;
                                     distance_rem  <= distance_rem - 7'd83;
                                     distance_work <= distance_work + 1'b1;
                                 end else begin
@@ -228,8 +240,7 @@ module ultrasonic #(
                     end
 
                     CONVERT: begin
-                        if ((echo_us >= MIN_ECHO_US) &&
-                            (echo_us <= MAX_ECHO_US) && !echo_sync) begin
+                        if (echo_duration_valid && !echo_sync) begin
                             distance_mm    <= distance_work;
                             distance_valid <= 1'b1;
                         end else begin

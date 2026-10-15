@@ -1,0 +1,946 @@
+TimeQuest Timing Analyzer report for radar_p4_safe
+Thu Oct 15 14:40:32 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Fmax Summary
+  7. Setup Summary
+  8. Hold Summary
+  9. Recovery Summary
+ 10. Removal Summary
+ 11. Minimum Pulse Width Summary
+ 12. Setup: 'clk'
+ 13. Hold: 'clk'
+ 14. Recovery: 'clk'
+ 15. Removal: 'clk'
+ 16. Minimum Pulse Width: 'clk'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Recovery Transfers
+ 26. Removal Transfers
+ 27. Report TCCS
+ 28. Report RSKM
+ 29. Unconstrained Paths
+ 30. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name      ; radar_p4_safe                                    ;
+; Device Family      ; MAX II                                           ;
+; Device Name        ; EPM1270T144C5                                    ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Slow Model                                       ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------+
+; SDC File List                                         ;
++-------------------+--------+--------------------------+
+; SDC File Path     ; Status ; Read at                  ;
++-------------------+--------+--------------------------+
+; radar_p4_safe.sdc ; OK     ; Thu Oct 15 14:40:31 2026 ;
++-------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 53.19 MHz ; 53.19 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------+
+; Setup Summary                 ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.200 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.649 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Recovery Summary              ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 9.800 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Removal Summary               ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 5.502 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Minimum Pulse Width Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 9.734 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                                                                       ;
++-------+--------------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                          ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.200 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.981      ;
+; 1.243 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.938      ;
+; 1.480 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.701      ;
+; 1.574 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.607      ;
+; 1.726 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.455      ;
+; 1.765 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.416      ;
+; 1.831 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.350      ;
+; 1.881 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.300      ;
+; 1.906 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.275      ;
+; 1.933 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.248      ;
+; 1.940 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.241      ;
+; 1.972 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.209      ;
+; 1.994 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.187      ;
+; 2.018 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.163      ;
+; 2.066 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.115      ;
+; 2.148 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.033      ;
+; 2.157 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 9.024      ;
+; 2.238 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.943      ;
+; 2.264 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.917      ;
+; 2.294 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.887      ;
+; 2.340 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.841      ;
+; 2.349 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.832      ;
+; 2.355 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.826      ;
+; 2.365 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.816      ;
+; 2.383 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.798      ;
+; 2.461 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.720      ;
+; 2.539 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.642      ;
+; 2.616 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.565      ;
+; 2.656 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[6]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.525      ;
+; 2.685 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.496      ;
+; 2.704 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[2]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.477      ;
+; 2.775 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.406      ;
+; 2.815 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.366      ;
+; 2.840 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.341      ;
+; 2.863 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.318      ;
+; 2.911 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.270      ;
+; 3.039 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[6]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.142      ;
+; 3.102 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 8.079      ;
+; 3.266 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.915      ;
+; 3.287 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.894      ;
+; 3.368 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.813      ;
+; 3.452 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[4]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.729      ;
+; 3.460 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[3]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.721      ;
+; 3.570 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[6]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.611      ;
+; 3.629 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.552      ;
+; 3.671 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.510      ;
+; 3.759 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[5]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.422      ;
+; 3.835 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_data[6]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.346      ;
+; 3.887 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; lcd_data[0]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.294      ;
+; 3.936 ; radar_lcd_top:system|reset_ctrl:u_reset|active                     ; radar_lcd_top:system|ultrasonic:u_ultrasonic|state.COUNT_HIGH   ; clk          ; clk         ; 20.000       ; 0.000      ; 15.731     ;
+; 3.938 ; radar_lcd_top:system|reset_ctrl:u_reset|active                     ; radar_lcd_top:system|ultrasonic:u_ultrasonic|state.TRIGGER      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.729     ;
+; 4.148 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; lcd_data[6]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 7.033      ;
+; 4.206 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[8]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 15.461     ;
+; 4.208 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[2]   ; lcd_data[1]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 6.973      ;
+; 4.224 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[4]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.443     ;
+; 4.238 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[1]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.429     ;
+; 4.271 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_APPLIED ; clk          ; clk         ; 20.000       ; 0.000      ; 15.396     ;
+; 4.274 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_MEASURE ; clk          ; clk         ; 20.000       ; 0.000      ; 15.393     ;
+; 4.338 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.329     ;
+; 4.338 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[0]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.329     ;
+; 4.382 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[0]          ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 15.285     ;
+; 4.401 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 6.780      ;
+; 4.420 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[5]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.247     ;
+; 4.438 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[1]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.229     ;
+; 4.453 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_APPLIED ; clk          ; clk         ; 20.000       ; 0.000      ; 15.214     ;
+; 4.456 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_MEASURE ; clk          ; clk         ; 20.000       ; 0.000      ; 15.211     ;
+; 4.513 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_APPLIED ; clk          ; clk         ; 20.000       ; 0.000      ; 15.154     ;
+; 4.516 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_MEASURE ; clk          ; clk         ; 20.000       ; 0.000      ; 15.151     ;
+; 4.520 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.147     ;
+; 4.520 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[0]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.147     ;
+; 4.526 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; lcd_data[7]                                                     ; clk          ; clk         ; 20.000       ; -3.819     ; 6.655      ;
+; 4.536 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state.ACTIVE ; lcd_wr_n                                                        ; clk          ; clk         ; 20.000       ; -3.819     ; 6.645      ;
+; 4.538 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[3]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_APPLIED ; clk          ; clk         ; 20.000       ; 0.000      ; 15.129     ;
+; 4.541 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[3]              ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_WAIT_MEASURE ; clk          ; clk         ; 20.000       ; 0.000      ; 15.126     ;
+; 4.549 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[0]          ; radar_lcd_top:system|seg_scan:u_seg|seg[4]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.118     ;
+; 4.550 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 15.117     ;
+; 4.563 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[0]          ; radar_lcd_top:system|seg_scan:u_seg|seg[1]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.104     ;
+; 4.571 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[6]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 15.096     ;
+; 4.580 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.087     ;
+; 4.580 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[0]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.087     ;
+; 4.605 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[3]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.062     ;
+; 4.605 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[3]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[0]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.062     ;
+; 4.620 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[1]      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.047     ;
+; 4.621 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2]   ; lcd_rst_n                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.560      ;
+; 4.635 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[2]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 15.032     ;
+; 4.642 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[3]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 15.025     ;
+; 4.673 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[2]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.994     ;
+; 4.680 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[6]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.987     ;
+; 4.680 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[1]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[1]      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.987     ;
+; 4.681 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[1]          ; radar_lcd_top:system|seg_scan:u_seg|seg[0]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.986     ;
+; 4.705 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[3]              ; radar_lcd_top:system|radar_ctrl:u_control|current_level[1]      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.962     ;
+; 4.732 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[4]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]          ; clk          ; clk         ; 20.000       ; 0.000      ; 14.935     ;
+; 4.741 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[8]              ; radar_lcd_top:system|radar_ctrl:u_control|hist_valid[2]         ; clk          ; clk         ; 20.000       ; 0.000      ; 14.926     ;
+; 4.745 ; radar_lcd_top:system|radar_ctrl:u_control|system_state[0]          ; radar_lcd_top:system|seg_scan:u_seg|seg[5]                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.922     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[6]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[7]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[8]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[1]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[2]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
+; 4.785 ; radar_lcd_top:system|radar_ctrl:u_control|current_level[2]         ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[3]            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.882     ;
++-------+--------------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                                                          ;
++-------+-------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                         ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.649 ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[8]            ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[8]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.870      ;
+; 1.650 ; radar_lcd_top:system|switch_filter:u_switch|sw_meta               ; radar_lcd_top:system|switch_filter:u_switch|sw_sync                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
+; 1.651 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[11]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[12]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.872      ;
+; 1.659 ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[2]              ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[2]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.659 ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[9]              ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[9]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.659 ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[9]              ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[9]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.668 ; radar_lcd_top:system|switch_filter:u_mode_switch|sw_meta          ; radar_lcd_top:system|switch_filter:u_mode_switch|sw_sync           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.889      ;
+; 1.668 ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_SETTLE         ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_SETTLE          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.889      ;
+; 1.670 ; radar_lcd_top:system|switch_filter:u_switch|system_on             ; radar_lcd_top:system|switch_filter:u_switch|system_on              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.891      ;
+; 1.674 ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[8]     ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[8]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.676 ; radar_lcd_top:system|switch_filter:u_switch|stable_ms[4]          ; radar_lcd_top:system|switch_filter:u_switch|stable_ms[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.897      ;
+; 1.676 ; radar_lcd_top:system|switch_filter:u_mode_switch|stable_ms[4]     ; radar_lcd_top:system|switch_filter:u_mode_switch|stable_ms[4]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.897      ;
+; 1.676 ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[4]     ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.897      ;
+; 1.677 ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[0]                  ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[0]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.677 ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[1]                  ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[1]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.679 ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[7]     ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.900      ;
+; 1.684 ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[6]     ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.905      ;
+; 1.685 ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[1]                  ; radar_lcd_top:system|seg_scan:u_seg|digit_idx[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.906      ;
+; 1.686 ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]            ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.907      ;
+; 1.688 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[10]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[11]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.909      ;
+; 1.699 ; radar_lcd_top:system|matrix_scan:u_matrix|blank_stage.01          ; radar_lcd_top:system|matrix_scan:u_matrix|blank_stage.10           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.920      ;
+; 1.699 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[1]        ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.920      ;
+; 1.700 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[1]        ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.921      ;
+; 1.707 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_meta            ; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_sync             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.928      ;
+; 1.708 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[26]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[15]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.929      ;
+; 1.708 ; radar_lcd_top:system|matrix_scan:u_matrix|blank_stage.10          ; radar_lcd_top:system|matrix_scan:u_matrix|blank_stage.00           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.929      ;
+; 1.709 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[3]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[3]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.930      ;
+; 1.721 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[26]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[27]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.942      ;
+; 1.722 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[25]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[14]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.943      ;
+; 1.725 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[2]        ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.946      ;
+; 1.725 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[12]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[13]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.946      ;
+; 1.726 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[12]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[14]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.947      ;
+; 1.740 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[0]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[0]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.961      ;
+; 1.747 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[0]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[2]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.968      ;
+; 1.748 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[21]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[10]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.969      ;
+; 1.749 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[21]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[22]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.970      ;
+; 1.751 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[23]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[11]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.972      ;
+; 1.752 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_sync            ; radar_lcd_top:system|ultrasonic:u_ultrasonic|state.WAIT_LOW        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.973      ;
+; 1.753 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[0]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[1]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.974      ;
+; 1.753 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_sync            ; radar_lcd_top:system|ultrasonic:u_ultrasonic|echo_prev             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.974      ;
+; 1.756 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[23]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[12]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.977      ;
+; 1.760 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.981      ;
+; 1.763 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[0]  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.984      ;
+; 1.832 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[9]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.053      ;
+; 1.832 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[2]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.053      ;
+; 1.833 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[8]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.054      ;
+; 1.833 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[5]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.054      ;
+; 1.839 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[7]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.060      ;
+; 1.841 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[3]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.062      ;
+; 1.842 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[4]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.063      ;
+; 1.843 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy                      ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[6]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.064      ;
+; 1.905 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[1]       ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.126      ;
+; 1.908 ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_HOLD           ; radar_lcd_top:system|radar_ctrl:u_control|phase.PH_HOLD            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.129      ;
+; 1.919 ; radar_lcd_top:system|servo_pwm:u_servo|direction_up               ; radar_lcd_top:system|servo_pwm:u_servo|direction_up                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.140      ;
+; 1.919 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[8]              ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[9]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.140      ;
+; 1.926 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[5]              ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[6]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.147      ;
+; 1.928 ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier                   ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.149      ;
+; 1.934 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|pending   ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|pending    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.155      ;
+; 1.936 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.157      ;
+; 1.942 ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[1]              ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[1]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.163      ;
+; 1.945 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[3]       ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.166      ;
+; 1.946 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state.SETUP ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state.ACTIVE ; clk          ; clk         ; 0.000        ; 0.000      ; 2.167      ;
+; 1.947 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[13]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[14]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.168      ;
+; 1.948 ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[1]              ; radar_lcd_top:system|matrix_scan:u_matrix|row_idx[2]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.169      ;
+; 1.952 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[1]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[1]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.173      ;
+; 1.958 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|state.HOLD  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_bus:bus|done         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.179      ;
+; 1.959 ; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[6]    ; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[6]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.180      ;
+; 1.964 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[0]        ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.185      ;
+; 1.965 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[0]        ; radar_lcd_top:system|ultrasonic:u_ultrasonic|trigger_us[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.186      ;
+; 1.970 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[19]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[19]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.191      ;
+; 1.972 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|index[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.193      ;
+; 1.973 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[22]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[23]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.194      ;
+; 1.978 ; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[6]    ; radar_lcd_top:system|servo_pwm:u_servo|continuous_angle_bcd[5]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.199      ;
+; 1.978 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[2]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[2]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.199      ;
+; 1.980 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[22]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[24]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.201      ;
+; 1.983 ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[2]                ; radar_lcd_top:system|reset_ctrl:u_reset|elapsed[3]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.204      ;
+; 1.985 ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[19]             ; radar_lcd_top:system|bin12_to_bcd:u_bcd|shift_reg[20]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.206      ;
+; 1.992 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[5]       ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.213      ;
+; 2.011 ; radar_lcd_top:system|timebase:u_timebase|us_div[5]                ; radar_lcd_top:system|timebase:u_timebase|tick_us                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.232      ;
+; 2.013 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[10]    ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[10]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.234      ;
+; 2.051 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[11]    ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[11]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.272      ;
+; 2.055 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[8]     ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[8]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.276      ;
+; 2.079 ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[11]    ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[11]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.300      ;
+; 2.107 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]             ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|timer[0]  ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|timer[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.108 ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[2]             ; radar_lcd_top:system|radar_ctrl:u_control|timer_ms[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.329      ;
+; 2.111 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_mm[0]       ; radar_lcd_top:system|radar_ctrl:u_control|current_distance[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.332      ;
+; 2.114 ; radar_lcd_top:system|servo_pwm:u_servo|was_enabled                ; radar_lcd_top:system|servo_pwm:u_servo|angle_applied               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.335      ;
+; 2.116 ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[0]              ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[0]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[0]            ; radar_lcd_top:system|radar_ctrl:u_control|hist_seen[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[0]              ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[0]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[7]              ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[7]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[7]              ; radar_lcd_top:system|timebase:u_timebase|us_in_ms[7]               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[1]            ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[2]            ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[5]     ; radar_lcd_top:system|ultrasonic:u_ultrasonic|distance_work[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.125 ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[0]             ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.346      ;
+; 2.125 ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[0]            ; radar_lcd_top:system|radar_ctrl:u_control|settle_ms[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.346      ;
+; 2.125 ; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[7]         ; radar_lcd_top:system|ultrasonic:u_ultrasonic|budget_us[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.346      ;
+; 2.126 ; radar_lcd_top:system|servo_pwm:u_servo|frame_count[3]             ; radar_lcd_top:system|servo_pwm:u_servo|frame_count[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
++-------+-------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'clk'                                                                                                                                                                                                                                             ;
++--------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                        ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 9.800  ; radar_lcd_top:system|reset_ctrl:u_reset|active                   ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 9.867      ;
+; 11.868 ; radar_lcd_top:system|switch_filter:u_mode_switch|system_on       ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 7.799      ;
+; 13.284 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 6.383      ;
+; 13.421 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 6.246      ;
+; 13.547 ; radar_lcd_top:system|previous_mode                               ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 6.120      ;
+; 13.592 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 6.075      ;
+; 13.599 ; radar_lcd_top:system|switch_filter:u_switch|system_on            ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 6.068      ;
+; 13.944 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 20.000       ; 0.000      ; 5.723      ;
++--------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'clk'                                                                                                                                                                                                                                             ;
++-------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                        ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 5.502 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[2] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 5.723      ;
+; 5.847 ; radar_lcd_top:system|switch_filter:u_switch|system_on            ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 6.068      ;
+; 5.854 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[3] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 6.075      ;
+; 5.899 ; radar_lcd_top:system|previous_mode                               ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 6.120      ;
+; 6.025 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[1] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 6.246      ;
+; 6.162 ; radar_lcd_top:system|lcd_p4_core:lcd_core|lcd_init:init|state[0] ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 6.383      ;
+; 7.578 ; radar_lcd_top:system|switch_filter:u_mode_switch|system_on       ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 7.799      ;
+; 9.646 ; radar_lcd_top:system|reset_ctrl:u_reset|active                   ; radar_lcd_top:system|lcd_p4_core:lcd_core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|g_ufm.drshft ; clk          ; clk         ; 0.000        ; 0.000      ; 9.867      ;
++-------+------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk'                                                                                                              ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                  ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[0]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[0]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[1]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[1]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[2]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[2]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[3]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[3]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[4]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[4]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[5]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[5]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[6]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[6]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[7]   ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|carrier_us[7]   ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[4]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[4]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[5]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[5]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[6]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[6]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[7]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[7]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[8]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[8]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[9]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|rhythm_ms[9]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|sound_gate      ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|alarm_ctrl:u_alarm|sound_gate      ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[0]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[0]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[10]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[10]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[11]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[11]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[12]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[12]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[13]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[13]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[14]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[14]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[15]         ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[15]         ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[1]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[1]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[2]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[2]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[3]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[3]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[4]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[4]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[5]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[5]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[6]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[6]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[7]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[7]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[8]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[8]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[9]          ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bcd[9]          ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[0]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[1]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[2]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|bit_count[3]    ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy            ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|busy            ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[0]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[0]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[10] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[10] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[11] ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[11] ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[1]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[1]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[2]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[2]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[3]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[3]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[4]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[4]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[5]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[5]  ;
+; 9.734 ; 10.000       ; 0.266          ; High Pulse Width ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[6]  ;
+; 9.734 ; 10.000       ; 0.266          ; Low Pulse Width  ; clk   ; Rise       ; radar_lcd_top:system|bin12_to_bcd:u_bcd|last_binary[6]  ;
++-------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; sw7       ; clk        ; 15.183 ; 15.183 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; sw7       ; clk        ; -6.796 ; -6.796 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; buzzer           ; clk        ; 17.221 ; 17.221 ; Rise       ; clk             ;
+; cat_n[*]         ; clk        ; 17.302 ; 17.302 ; Rise       ; clk             ;
+;  cat_n[0]        ; clk        ; 16.548 ; 16.548 ; Rise       ; clk             ;
+;  cat_n[1]        ; clk        ; 14.990 ; 14.990 ; Rise       ; clk             ;
+;  cat_n[2]        ; clk        ; 16.425 ; 16.425 ; Rise       ; clk             ;
+;  cat_n[3]        ; clk        ; 15.356 ; 15.356 ; Rise       ; clk             ;
+;  cat_n[4]        ; clk        ; 16.569 ; 16.569 ; Rise       ; clk             ;
+;  cat_n[5]        ; clk        ; 15.423 ; 15.423 ; Rise       ; clk             ;
+;  cat_n[6]        ; clk        ; 17.302 ; 17.302 ; Rise       ; clk             ;
+;  cat_n[7]        ; clk        ; 16.241 ; 16.241 ; Rise       ; clk             ;
+; lcd_a0           ; clk        ; 9.865  ; 9.865  ; Rise       ; clk             ;
+; lcd_cs_n         ; clk        ; 8.867  ; 8.867  ; Rise       ; clk             ;
+; lcd_data[*]      ; clk        ; 13.800 ; 13.800 ; Rise       ; clk             ;
+;  lcd_data[0]     ; clk        ; 13.274 ; 13.274 ; Rise       ; clk             ;
+;  lcd_data[1]     ; clk        ; 13.520 ; 13.520 ; Rise       ; clk             ;
+;  lcd_data[2]     ; clk        ; 13.235 ; 13.235 ; Rise       ; clk             ;
+;  lcd_data[3]     ; clk        ; 13.067 ; 13.067 ; Rise       ; clk             ;
+;  lcd_data[4]     ; clk        ; 12.651 ; 12.651 ; Rise       ; clk             ;
+;  lcd_data[5]     ; clk        ; 13.800 ; 13.800 ; Rise       ; clk             ;
+;  lcd_data[6]     ; clk        ; 12.344 ; 12.344 ; Rise       ; clk             ;
+;  lcd_data[7]     ; clk        ; 12.539 ; 12.539 ; Rise       ; clk             ;
+; lcd_rst_n        ; clk        ; 10.379 ; 10.379 ; Rise       ; clk             ;
+; lcd_wr_n         ; clk        ; 10.464 ; 10.464 ; Rise       ; clk             ;
+; led[*]           ; clk        ; 20.132 ; 20.132 ; Rise       ; clk             ;
+;  led[0]          ; clk        ; 17.480 ; 17.480 ; Rise       ; clk             ;
+;  led[1]          ; clk        ; 17.480 ; 17.480 ; Rise       ; clk             ;
+;  led[2]          ; clk        ; 17.480 ; 17.480 ; Rise       ; clk             ;
+;  led[3]          ; clk        ; 17.508 ; 17.508 ; Rise       ; clk             ;
+;  led[4]          ; clk        ; 17.205 ; 17.205 ; Rise       ; clk             ;
+;  led[5]          ; clk        ; 17.222 ; 17.222 ; Rise       ; clk             ;
+;  led[6]          ; clk        ; 17.222 ; 17.222 ; Rise       ; clk             ;
+;  led[7]          ; clk        ; 17.222 ; 17.222 ; Rise       ; clk             ;
+;  led[8]          ; clk        ; 20.132 ; 20.132 ; Rise       ; clk             ;
+;  led[9]          ; clk        ; 20.132 ; 20.132 ; Rise       ; clk             ;
+;  led[10]         ; clk        ; 19.621 ; 19.621 ; Rise       ; clk             ;
+;  led[11]         ; clk        ; 19.621 ; 19.621 ; Rise       ; clk             ;
+;  led[12]         ; clk        ; 16.564 ; 16.564 ; Rise       ; clk             ;
+;  led[13]         ; clk        ; 16.564 ; 16.564 ; Rise       ; clk             ;
+;  led[14]         ; clk        ; 16.564 ; 16.564 ; Rise       ; clk             ;
+;  led[15]         ; clk        ; 15.958 ; 15.958 ; Rise       ; clk             ;
+; matrix_col_g[*]  ; clk        ; 16.606 ; 16.606 ; Rise       ; clk             ;
+;  matrix_col_g[0] ; clk        ; 16.606 ; 16.606 ; Rise       ; clk             ;
+;  matrix_col_g[1] ; clk        ; 16.405 ; 16.405 ; Rise       ; clk             ;
+;  matrix_col_g[2] ; clk        ; 15.201 ; 15.201 ; Rise       ; clk             ;
+;  matrix_col_g[3] ; clk        ; 16.377 ; 16.377 ; Rise       ; clk             ;
+;  matrix_col_g[4] ; clk        ; 16.589 ; 16.589 ; Rise       ; clk             ;
+;  matrix_col_g[5] ; clk        ; 16.249 ; 16.249 ; Rise       ; clk             ;
+;  matrix_col_g[6] ; clk        ; 15.536 ; 15.536 ; Rise       ; clk             ;
+;  matrix_col_g[7] ; clk        ; 15.559 ; 15.559 ; Rise       ; clk             ;
+; matrix_col_r[*]  ; clk        ; 17.138 ; 17.138 ; Rise       ; clk             ;
+;  matrix_col_r[0] ; clk        ; 16.054 ; 16.054 ; Rise       ; clk             ;
+;  matrix_col_r[1] ; clk        ; 16.318 ; 16.318 ; Rise       ; clk             ;
+;  matrix_col_r[2] ; clk        ; 15.594 ; 15.594 ; Rise       ; clk             ;
+;  matrix_col_r[3] ; clk        ; 16.961 ; 16.961 ; Rise       ; clk             ;
+;  matrix_col_r[4] ; clk        ; 17.138 ; 17.138 ; Rise       ; clk             ;
+;  matrix_col_r[5] ; clk        ; 17.026 ; 17.026 ; Rise       ; clk             ;
+;  matrix_col_r[6] ; clk        ; 16.909 ; 16.909 ; Rise       ; clk             ;
+;  matrix_col_r[7] ; clk        ; 16.037 ; 16.037 ; Rise       ; clk             ;
+; matrix_row_n[*]  ; clk        ; 19.295 ; 19.295 ; Rise       ; clk             ;
+;  matrix_row_n[0] ; clk        ; 17.887 ; 17.887 ; Rise       ; clk             ;
+;  matrix_row_n[1] ; clk        ; 17.609 ; 17.609 ; Rise       ; clk             ;
+;  matrix_row_n[2] ; clk        ; 16.423 ; 16.423 ; Rise       ; clk             ;
+;  matrix_row_n[3] ; clk        ; 19.295 ; 19.295 ; Rise       ; clk             ;
+;  matrix_row_n[4] ; clk        ; 16.927 ; 16.927 ; Rise       ; clk             ;
+;  matrix_row_n[5] ; clk        ; 17.643 ; 17.643 ; Rise       ; clk             ;
+;  matrix_row_n[6] ; clk        ; 16.247 ; 16.247 ; Rise       ; clk             ;
+;  matrix_row_n[7] ; clk        ; 16.945 ; 16.945 ; Rise       ; clk             ;
+; seg_a            ; clk        ; 15.473 ; 15.473 ; Rise       ; clk             ;
+; seg_b            ; clk        ; 16.173 ; 16.173 ; Rise       ; clk             ;
+; seg_c            ; clk        ; 17.725 ; 17.725 ; Rise       ; clk             ;
+; seg_d            ; clk        ; 16.191 ; 16.191 ; Rise       ; clk             ;
+; seg_e            ; clk        ; 16.060 ; 16.060 ; Rise       ; clk             ;
+; seg_f            ; clk        ; 16.705 ; 16.705 ; Rise       ; clk             ;
+; seg_g            ; clk        ; 15.866 ; 15.866 ; Rise       ; clk             ;
+; servo            ; clk        ; 26.744 ; 26.744 ; Rise       ; clk             ;
+; trig             ; clk        ; 17.339 ; 17.339 ; Rise       ; clk             ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; buzzer           ; clk        ; 11.114 ; 11.114 ; Rise       ; clk             ;
+; cat_n[*]         ; clk        ; 9.849  ; 9.849  ; Rise       ; clk             ;
+;  cat_n[0]        ; clk        ; 10.747 ; 10.747 ; Rise       ; clk             ;
+;  cat_n[1]        ; clk        ; 11.297 ; 11.297 ; Rise       ; clk             ;
+;  cat_n[2]        ; clk        ; 10.596 ; 10.596 ; Rise       ; clk             ;
+;  cat_n[3]        ; clk        ; 9.849  ; 9.849  ; Rise       ; clk             ;
+;  cat_n[4]        ; clk        ; 10.929 ; 10.929 ; Rise       ; clk             ;
+;  cat_n[5]        ; clk        ; 11.879 ; 11.879 ; Rise       ; clk             ;
+;  cat_n[6]        ; clk        ; 11.569 ; 11.569 ; Rise       ; clk             ;
+;  cat_n[7]        ; clk        ; 13.179 ; 13.179 ; Rise       ; clk             ;
+; lcd_a0           ; clk        ; 9.865  ; 9.865  ; Rise       ; clk             ;
+; lcd_cs_n         ; clk        ; 8.867  ; 8.867  ; Rise       ; clk             ;
+; lcd_data[*]      ; clk        ; 9.279  ; 9.279  ; Rise       ; clk             ;
+;  lcd_data[0]     ; clk        ; 11.113 ; 11.113 ; Rise       ; clk             ;
+;  lcd_data[1]     ; clk        ; 10.792 ; 10.792 ; Rise       ; clk             ;
+;  lcd_data[2]     ; clk        ; 11.145 ; 11.145 ; Rise       ; clk             ;
+;  lcd_data[3]     ; clk        ; 11.540 ; 11.540 ; Rise       ; clk             ;
+;  lcd_data[4]     ; clk        ; 11.206 ; 11.206 ; Rise       ; clk             ;
+;  lcd_data[5]     ; clk        ; 11.241 ; 11.241 ; Rise       ; clk             ;
+;  lcd_data[6]     ; clk        ; 9.279  ; 9.279  ; Rise       ; clk             ;
+;  lcd_data[7]     ; clk        ; 9.808  ; 9.808  ; Rise       ; clk             ;
+; lcd_rst_n        ; clk        ; 9.772  ; 9.772  ; Rise       ; clk             ;
+; lcd_wr_n         ; clk        ; 10.464 ; 10.464 ; Rise       ; clk             ;
+; led[*]           ; clk        ; 12.043 ; 12.043 ; Rise       ; clk             ;
+;  led[0]          ; clk        ; 12.043 ; 12.043 ; Rise       ; clk             ;
+;  led[1]          ; clk        ; 12.043 ; 12.043 ; Rise       ; clk             ;
+;  led[2]          ; clk        ; 12.043 ; 12.043 ; Rise       ; clk             ;
+;  led[3]          ; clk        ; 12.071 ; 12.071 ; Rise       ; clk             ;
+;  led[4]          ; clk        ; 12.587 ; 12.587 ; Rise       ; clk             ;
+;  led[5]          ; clk        ; 12.604 ; 12.604 ; Rise       ; clk             ;
+;  led[6]          ; clk        ; 12.604 ; 12.604 ; Rise       ; clk             ;
+;  led[7]          ; clk        ; 12.604 ; 12.604 ; Rise       ; clk             ;
+;  led[8]          ; clk        ; 15.514 ; 15.514 ; Rise       ; clk             ;
+;  led[9]          ; clk        ; 15.514 ; 15.514 ; Rise       ; clk             ;
+;  led[10]         ; clk        ; 15.003 ; 15.003 ; Rise       ; clk             ;
+;  led[11]         ; clk        ; 15.003 ; 15.003 ; Rise       ; clk             ;
+;  led[12]         ; clk        ; 13.260 ; 13.260 ; Rise       ; clk             ;
+;  led[13]         ; clk        ; 13.260 ; 13.260 ; Rise       ; clk             ;
+;  led[14]         ; clk        ; 13.260 ; 13.260 ; Rise       ; clk             ;
+;  led[15]         ; clk        ; 12.654 ; 12.654 ; Rise       ; clk             ;
+; matrix_col_g[*]  ; clk        ; 9.857  ; 9.857  ; Rise       ; clk             ;
+;  matrix_col_g[0] ; clk        ; 13.876 ; 13.876 ; Rise       ; clk             ;
+;  matrix_col_g[1] ; clk        ; 9.884  ; 9.884  ; Rise       ; clk             ;
+;  matrix_col_g[2] ; clk        ; 10.168 ; 10.168 ; Rise       ; clk             ;
+;  matrix_col_g[3] ; clk        ; 9.857  ; 9.857  ; Rise       ; clk             ;
+;  matrix_col_g[4] ; clk        ; 10.517 ; 10.517 ; Rise       ; clk             ;
+;  matrix_col_g[5] ; clk        ; 10.251 ; 10.251 ; Rise       ; clk             ;
+;  matrix_col_g[6] ; clk        ; 10.319 ; 10.319 ; Rise       ; clk             ;
+;  matrix_col_g[7] ; clk        ; 10.356 ; 10.356 ; Rise       ; clk             ;
+; matrix_col_r[*]  ; clk        ; 9.792  ; 9.792  ; Rise       ; clk             ;
+;  matrix_col_r[0] ; clk        ; 11.614 ; 11.614 ; Rise       ; clk             ;
+;  matrix_col_r[1] ; clk        ; 9.792  ; 9.792  ; Rise       ; clk             ;
+;  matrix_col_r[2] ; clk        ; 10.378 ; 10.378 ; Rise       ; clk             ;
+;  matrix_col_r[3] ; clk        ; 10.453 ; 10.453 ; Rise       ; clk             ;
+;  matrix_col_r[4] ; clk        ; 10.562 ; 10.562 ; Rise       ; clk             ;
+;  matrix_col_r[5] ; clk        ; 11.212 ; 11.212 ; Rise       ; clk             ;
+;  matrix_col_r[6] ; clk        ; 11.709 ; 11.709 ; Rise       ; clk             ;
+;  matrix_col_r[7] ; clk        ; 12.397 ; 12.397 ; Rise       ; clk             ;
+; matrix_row_n[*]  ; clk        ; 11.031 ; 11.031 ; Rise       ; clk             ;
+;  matrix_row_n[0] ; clk        ; 14.344 ; 14.344 ; Rise       ; clk             ;
+;  matrix_row_n[1] ; clk        ; 14.754 ; 14.754 ; Rise       ; clk             ;
+;  matrix_row_n[2] ; clk        ; 12.227 ; 12.227 ; Rise       ; clk             ;
+;  matrix_row_n[3] ; clk        ; 14.771 ; 14.771 ; Rise       ; clk             ;
+;  matrix_row_n[4] ; clk        ; 12.273 ; 12.273 ; Rise       ; clk             ;
+;  matrix_row_n[5] ; clk        ; 11.708 ; 11.708 ; Rise       ; clk             ;
+;  matrix_row_n[6] ; clk        ; 12.725 ; 12.725 ; Rise       ; clk             ;
+;  matrix_row_n[7] ; clk        ; 11.031 ; 11.031 ; Rise       ; clk             ;
+; seg_a            ; clk        ; 9.685  ; 9.685  ; Rise       ; clk             ;
+; seg_b            ; clk        ; 10.463 ; 10.463 ; Rise       ; clk             ;
+; seg_c            ; clk        ; 12.265 ; 12.265 ; Rise       ; clk             ;
+; seg_d            ; clk        ; 12.624 ; 12.624 ; Rise       ; clk             ;
+; seg_e            ; clk        ; 10.267 ; 10.267 ; Rise       ; clk             ;
+; seg_f            ; clk        ; 12.186 ; 12.186 ; Rise       ; clk             ;
+; seg_g            ; clk        ; 10.580 ; 10.580 ; Rise       ; clk             ;
+; servo            ; clk        ; 12.476 ; 12.476 ; Rise       ; clk             ;
+; trig             ; clk        ; 11.848 ; 11.848 ; Rise       ; clk             ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-----------------+--------+----+----+--------+
+; Input Port ; Output Port     ; RR     ; RF ; FR ; FF     ;
++------------+-----------------+--------+----+----+--------+
+; sw7        ; buzzer          ; 17.319 ;    ;    ; 17.319 ;
+; sw7        ; cat_n[0]        ; 16.646 ;    ;    ; 16.646 ;
+; sw7        ; cat_n[1]        ; 15.088 ;    ;    ; 15.088 ;
+; sw7        ; cat_n[2]        ; 16.523 ;    ;    ; 16.523 ;
+; sw7        ; cat_n[3]        ; 15.454 ;    ;    ; 15.454 ;
+; sw7        ; cat_n[4]        ; 16.667 ;    ;    ; 16.667 ;
+; sw7        ; cat_n[5]        ; 15.521 ;    ;    ; 15.521 ;
+; sw7        ; cat_n[6]        ; 17.400 ;    ;    ; 17.400 ;
+; sw7        ; cat_n[7]        ; 16.339 ;    ;    ; 16.339 ;
+; sw7        ; led[0]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[1]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[2]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[3]          ; 17.606 ;    ;    ; 17.606 ;
+; sw7        ; led[4]          ; 17.303 ;    ;    ; 17.303 ;
+; sw7        ; led[5]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[6]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[7]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[8]          ; 20.230 ;    ;    ; 20.230 ;
+; sw7        ; led[9]          ; 20.230 ;    ;    ; 20.230 ;
+; sw7        ; led[10]         ; 19.719 ;    ;    ; 19.719 ;
+; sw7        ; led[11]         ; 19.719 ;    ;    ; 19.719 ;
+; sw7        ; led[12]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[13]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[14]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[15]         ; 16.056 ;    ;    ; 16.056 ;
+; sw7        ; matrix_col_g[0] ; 16.704 ;    ;    ; 16.704 ;
+; sw7        ; matrix_col_g[1] ; 16.503 ;    ;    ; 16.503 ;
+; sw7        ; matrix_col_g[2] ; 15.299 ;    ;    ; 15.299 ;
+; sw7        ; matrix_col_g[3] ; 16.475 ;    ;    ; 16.475 ;
+; sw7        ; matrix_col_g[4] ; 16.687 ;    ;    ; 16.687 ;
+; sw7        ; matrix_col_g[5] ; 16.347 ;    ;    ; 16.347 ;
+; sw7        ; matrix_col_g[6] ; 15.634 ;    ;    ; 15.634 ;
+; sw7        ; matrix_col_g[7] ; 15.657 ;    ;    ; 15.657 ;
+; sw7        ; matrix_col_r[0] ; 16.152 ;    ;    ; 16.152 ;
+; sw7        ; matrix_col_r[1] ; 16.416 ;    ;    ; 16.416 ;
+; sw7        ; matrix_col_r[2] ; 15.692 ;    ;    ; 15.692 ;
+; sw7        ; matrix_col_r[3] ; 17.059 ;    ;    ; 17.059 ;
+; sw7        ; matrix_col_r[4] ; 17.236 ;    ;    ; 17.236 ;
+; sw7        ; matrix_col_r[5] ; 17.124 ;    ;    ; 17.124 ;
+; sw7        ; matrix_col_r[6] ; 17.007 ;    ;    ; 17.007 ;
+; sw7        ; matrix_col_r[7] ; 16.135 ;    ;    ; 16.135 ;
+; sw7        ; matrix_row_n[0] ; 17.985 ;    ;    ; 17.985 ;
+; sw7        ; matrix_row_n[1] ; 17.707 ;    ;    ; 17.707 ;
+; sw7        ; matrix_row_n[2] ; 16.521 ;    ;    ; 16.521 ;
+; sw7        ; matrix_row_n[3] ; 19.393 ;    ;    ; 19.393 ;
+; sw7        ; matrix_row_n[4] ; 17.025 ;    ;    ; 17.025 ;
+; sw7        ; matrix_row_n[5] ; 17.741 ;    ;    ; 17.741 ;
+; sw7        ; matrix_row_n[6] ; 16.345 ;    ;    ; 16.345 ;
+; sw7        ; matrix_row_n[7] ; 17.043 ;    ;    ; 17.043 ;
+; sw7        ; seg_a           ; 15.571 ;    ;    ; 15.571 ;
+; sw7        ; seg_b           ; 16.271 ;    ;    ; 16.271 ;
+; sw7        ; seg_c           ; 17.823 ;    ;    ; 17.823 ;
+; sw7        ; seg_d           ; 16.289 ;    ;    ; 16.289 ;
+; sw7        ; seg_e           ; 16.158 ;    ;    ; 16.158 ;
+; sw7        ; seg_f           ; 16.803 ;    ;    ; 16.803 ;
+; sw7        ; seg_g           ; 15.964 ;    ;    ; 15.964 ;
+; sw7        ; servo           ; 16.536 ;    ;    ; 16.536 ;
+; sw7        ; trig            ; 17.437 ;    ;    ; 17.437 ;
++------------+-----------------+--------+----+----+--------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-----------------+--------+----+----+--------+
+; Input Port ; Output Port     ; RR     ; RF ; FR ; FF     ;
++------------+-----------------+--------+----+----+--------+
+; sw7        ; buzzer          ; 17.319 ;    ;    ; 17.319 ;
+; sw7        ; cat_n[0]        ; 16.646 ;    ;    ; 16.646 ;
+; sw7        ; cat_n[1]        ; 15.088 ;    ;    ; 15.088 ;
+; sw7        ; cat_n[2]        ; 16.523 ;    ;    ; 16.523 ;
+; sw7        ; cat_n[3]        ; 15.454 ;    ;    ; 15.454 ;
+; sw7        ; cat_n[4]        ; 16.667 ;    ;    ; 16.667 ;
+; sw7        ; cat_n[5]        ; 15.521 ;    ;    ; 15.521 ;
+; sw7        ; cat_n[6]        ; 17.400 ;    ;    ; 17.400 ;
+; sw7        ; cat_n[7]        ; 16.339 ;    ;    ; 16.339 ;
+; sw7        ; led[0]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[1]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[2]          ; 17.578 ;    ;    ; 17.578 ;
+; sw7        ; led[3]          ; 17.606 ;    ;    ; 17.606 ;
+; sw7        ; led[4]          ; 17.303 ;    ;    ; 17.303 ;
+; sw7        ; led[5]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[6]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[7]          ; 17.320 ;    ;    ; 17.320 ;
+; sw7        ; led[8]          ; 20.230 ;    ;    ; 20.230 ;
+; sw7        ; led[9]          ; 20.230 ;    ;    ; 20.230 ;
+; sw7        ; led[10]         ; 19.719 ;    ;    ; 19.719 ;
+; sw7        ; led[11]         ; 19.719 ;    ;    ; 19.719 ;
+; sw7        ; led[12]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[13]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[14]         ; 16.662 ;    ;    ; 16.662 ;
+; sw7        ; led[15]         ; 16.056 ;    ;    ; 16.056 ;
+; sw7        ; matrix_col_g[0] ; 16.704 ;    ;    ; 16.704 ;
+; sw7        ; matrix_col_g[1] ; 16.503 ;    ;    ; 16.503 ;
+; sw7        ; matrix_col_g[2] ; 15.299 ;    ;    ; 15.299 ;
+; sw7        ; matrix_col_g[3] ; 16.475 ;    ;    ; 16.475 ;
+; sw7        ; matrix_col_g[4] ; 16.687 ;    ;    ; 16.687 ;
+; sw7        ; matrix_col_g[5] ; 16.347 ;    ;    ; 16.347 ;
+; sw7        ; matrix_col_g[6] ; 15.634 ;    ;    ; 15.634 ;
+; sw7        ; matrix_col_g[7] ; 15.657 ;    ;    ; 15.657 ;
+; sw7        ; matrix_col_r[0] ; 16.152 ;    ;    ; 16.152 ;
+; sw7        ; matrix_col_r[1] ; 16.416 ;    ;    ; 16.416 ;
+; sw7        ; matrix_col_r[2] ; 15.692 ;    ;    ; 15.692 ;
+; sw7        ; matrix_col_r[3] ; 17.059 ;    ;    ; 17.059 ;
+; sw7        ; matrix_col_r[4] ; 17.236 ;    ;    ; 17.236 ;
+; sw7        ; matrix_col_r[5] ; 17.124 ;    ;    ; 17.124 ;
+; sw7        ; matrix_col_r[6] ; 17.007 ;    ;    ; 17.007 ;
+; sw7        ; matrix_col_r[7] ; 16.135 ;    ;    ; 16.135 ;
+; sw7        ; matrix_row_n[0] ; 17.985 ;    ;    ; 17.985 ;
+; sw7        ; matrix_row_n[1] ; 17.707 ;    ;    ; 17.707 ;
+; sw7        ; matrix_row_n[2] ; 16.521 ;    ;    ; 16.521 ;
+; sw7        ; matrix_row_n[3] ; 19.393 ;    ;    ; 19.393 ;
+; sw7        ; matrix_row_n[4] ; 17.025 ;    ;    ; 17.025 ;
+; sw7        ; matrix_row_n[5] ; 17.741 ;    ;    ; 17.741 ;
+; sw7        ; matrix_row_n[6] ; 16.345 ;    ;    ; 16.345 ;
+; sw7        ; matrix_row_n[7] ; 17.043 ;    ;    ; 17.043 ;
+; sw7        ; seg_a           ; 15.571 ;    ;    ; 15.571 ;
+; sw7        ; seg_b           ; 16.271 ;    ;    ; 16.271 ;
+; sw7        ; seg_c           ; 17.823 ;    ;    ; 17.823 ;
+; sw7        ; seg_d           ; 16.289 ;    ;    ; 16.289 ;
+; sw7        ; seg_e           ; 16.158 ;    ;    ; 16.158 ;
+; sw7        ; seg_f           ; 16.803 ;    ;    ; 16.803 ;
+; sw7        ; seg_g           ; 15.964 ;    ;    ; 15.964 ;
+; sw7        ; servo           ; 16.536 ;    ;    ; 16.536 ;
+; sw7        ; trig            ; 17.437 ;    ;    ; 17.437 ;
++------------+-----------------+--------+----+----+--------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 20675    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 20675    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 125   ; 125  ;
+; Unconstrained Output Ports      ; 58    ; 58   ;
+; Unconstrained Output Port Paths ; 376   ; 376  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 14:40:30 2026
+Info: Command: quartus_sta radar_p4_safe -c radar_p4_safe
+Info: qsta_default_script.tcl version: #2
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Reading SDC File: 'radar_p4_safe.sdc'
+Info: Worst-case setup slack is 1.200
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.200         0.000 clk 
+Info: Worst-case hold slack is 1.649
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.649         0.000 clk 
+Info: Worst-case recovery slack is 9.800
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.800         0.000 clk 
+Info: Worst-case removal slack is 5.502
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     5.502         0.000 clk 
+Info: Worst-case minimum pulse width slack is 9.734
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     9.734         0.000 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4376 megabytes
+    Info: Processing ended: Thu Oct 15 14:40:32 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

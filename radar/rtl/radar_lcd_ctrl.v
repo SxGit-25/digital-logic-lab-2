@@ -8,7 +8,9 @@ module radar_lcd_ctrl #(
     parameter MIRROR_X=0,
     parameter [5:0] MIN_RADIUS=6,
     parameter FRACTION_BITS=8,
-    parameter SUPPORT_PLOT_ONLY=0
+    parameter SUPPORT_PLOT_ONLY=0,
+    parameter STABLE_REQUEST=0,
+    parameter SERIAL_ACCUMULATE=0
 )(
     input wire clk,rst,request,
     input wire [7:0] angle,
@@ -28,9 +30,12 @@ module radar_lcd_ctrl #(
     reg [2:0] state;
     reg erase;
     reg flushing_end;
-    reg [7:0] current_angle,ray_angle;
-    reg [5:0] target_radius;
-    reg target_valid;
+    reg [7:0] saved_angle,ray_angle;
+    reg [5:0] saved_radius;
+    reg saved_valid;
+    wire [7:0] current_angle=STABLE_REQUEST ? angle : saved_angle;
+    wire [5:0] target_radius=STABLE_REQUEST ? (radius<MIN_RADIUS ? MIN_RADIUS : radius) : saved_radius;
+    wire target_valid=STABLE_REQUEST ? (radius_valid && radius<=48) : saved_valid;
     wire ray_busy,ray_done,pixel_valid;
     wire [5:0] pixel_step;
     wire [6:0] pixel_x;
@@ -38,13 +43,18 @@ module radar_lcd_ctrl #(
     wire ring_point=pixel_step==16 || pixel_step==32 || pixel_step==48;
     wire selected=erase ? !ring_point : (ring_point || (target_valid && pixel_step==target_radius));
     wire pixel_ready=(state==RUN && !selected) || state==WAIT_RAY;
-    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),.FRACTION_BITS(FRACTION_BITS)) ray(
+    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),.FRACTION_BITS(FRACTION_BITS),.SERIAL_ACCUMULATE(SERIAL_ACCUMULATE)) ray(
         .clk(clk),.rst(rst),.start(state==START_A || state==START_B),.angle(ray_angle),
         .busy(ray_busy),.done(ray_done),.pixel_valid(pixel_valid),.pixel_ready(pixel_ready),
         .step(pixel_step),.x(pixel_x),.y(pixel_y));
-    reg [2:0] page;
-    reg [6:0] column;
-    reg [7:0] mask,new_byte;
+    // ray_engine holds this pixel until WAIT_RAY consumes it. Reuse those
+    // stable coordinates throughout RMW instead of duplicating 18 registers.
+    wire [2:0] page=pixel_y[5:3];
+    wire [6:0] column=pixel_x;
+    wire [7:0] mask=8'b1<<pixel_y[2:0];
+    // The bus read latch is held until the next read, which starts only after
+    // this write finishes. No second eight-bit modified-data latch is needed.
+    wire [7:0] new_byte=erase ? bus_read_data & ~mask : bus_read_data | mask;
     reg [3:0] transaction;
     reg pending;
     // 0:page,1:column high,2:column low,3:dummy,4:read,
@@ -65,16 +75,18 @@ module radar_lcd_ctrl #(
     assign bus_write_data=command;
     always @(posedge clk) begin
         if(rst) begin
-            state<=IDLE;erase<=0;flushing_end<=0;current_angle<=0;ray_angle<=0;
-            target_radius<=0;target_valid<=0;done<=0;
-            page<=0;column<=0;mask<=0;new_byte<=0;transaction<=0;pending<=0;
+            state<=IDLE;erase<=0;flushing_end<=0;saved_angle<=0;ray_angle<=0;
+            saved_radius<=0;saved_valid<=0;done<=0;
+            transaction<=0;pending<=0;
         end else begin
             done<=0;
             case(state)
             IDLE:if(request && angle<=180) begin
-                current_angle<=angle;
-                target_radius<=radius<MIN_RADIUS ? MIN_RADIUS : radius;
-                target_valid<=radius_valid && radius<=48;
+                if(!STABLE_REQUEST) begin
+                    saved_angle<=angle;
+                    saved_radius<=radius<MIN_RADIUS ? MIN_RADIUS : radius;
+                    saved_valid<=radius_valid && radius<=48;
+                end
                 // Endpoints carry the NEW direction. Clear the complete end
                 // zone before plotting this measurement, then resume normal A/B.
                 flushing_end<=0;
@@ -91,8 +103,7 @@ module radar_lcd_ctrl #(
             START_A,START_B:state<=RUN;
             RUN:begin
                 if(pixel_valid && selected) begin
-                    page<=pixel_y[5:3];column<=pixel_x;
-                    mask<=8'b1<<pixel_y[2:0];transaction<=0;pending<=0;state<=RMW;
+                    transaction<=0;pending<=0;state<=RMW;
                 end
                 if(ray_done) begin
                     if(erase) begin
@@ -110,7 +121,6 @@ module radar_lcd_ctrl #(
                 if(bus_request) pending<=1;
                 if(bus_done && pending) begin
                     pending<=0;
-                    if(transaction==4) new_byte<=erase ? bus_read_data & ~mask : bus_read_data | mask;
                     if(transaction==7) state<=WAIT_RAY;
                     else transaction<=transaction+1'b1;
                 end

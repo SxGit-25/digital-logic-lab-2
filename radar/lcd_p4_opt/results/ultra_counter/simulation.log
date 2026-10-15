@@ -1,0 +1,18 @@
+PASS ultra_counter_case ID=0 TRIG=1 TIMEOUT=1 RADIUS=0 cycle_pairs=175437 completions=389
+PASS ultra_counter_case ID=1 TRIG=1 TIMEOUT=1 RADIUS=1 cycle_pairs=175437 completions=388
+PASS ultra_counter_case ID=2 TRIG=2 TIMEOUT=117 RADIUS=0 cycle_pairs=175679 completions=388
+PASS ultra_counter_case ID=3 TRIG=2 TIMEOUT=117 RADIUS=1 cycle_pairs=175679 completions=388
+PASS ultra_counter_case ID=14 TRIG=4 TIMEOUT=118 RADIUS=0 cycle_pairs=175701 completions=388
+PASS ultra_counter_case ID=15 TRIG=4 TIMEOUT=118 RADIUS=1 cycle_pairs=175701 completions=387
+PASS ultra_counter_case ID=4 TRIG=15 TIMEOUT=119 RADIUS=0 cycle_pairs=175813 completions=388
+PASS ultra_counter_case ID=5 TRIG=15 TIMEOUT=119 RADIUS=1 cycle_pairs=175813 completions=387
+PASS ultra_counter_case ID=8 TRIG=16 TIMEOUT=23530 RADIUS=0 cycle_pairs=222654 completions=388
+PASS ultra_counter_case ID=9 TRIG=16 TIMEOUT=23530 RADIUS=1 cycle_pairs=222654 completions=387
+PASS ultra_counter_case ID=6 TRIG=31 TIMEOUT=23529 RADIUS=0 cycle_pairs=222802 completions=193
+PASS ultra_counter_case ID=7 TRIG=31 TIMEOUT=23529 RADIUS=1 cycle_pairs=222802 completions=193
+PASS ultra_counter_case ID=10 TRIG=15 TIMEOUT=30000 RADIUS=0 cycle_pairs=235599 completions=387
+PASS ultra_counter_case ID=11 TRIG=15 TIMEOUT=30000 RADIUS=1 cycle_pairs=235599 completions=388
+PASS ultra_counter_case ID=12 TRIG=3 TIMEOUT=100000 RADIUS=0 cycle_pairs=455504 completions=389
+PASS ultra_counter_case ID=13 TRIG=3 TIMEOUT=100000 RADIUS=1 cycle_pairs=455504 completions=389
+PASS tb_ultra_counter_integration: 16 parameter/radius configurations, full output cycle equivalence including boundaries, stale work, noecho, cancel/reset/tick pauses and repeated distance wraparound
+tb_ultra_counter_integration.v:66: $finish called at 4555040000 (1ps)

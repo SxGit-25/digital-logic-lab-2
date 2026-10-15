@@ -1,0 +1,17 @@
+PASS case=1 echo_us=117 mm=0 valid=0 radius=0 radius_valid=0
+PASS case=2 echo_us=118 mm=20 valid=1 radius=0 radius_valid=1
+PASS case=3 echo_us=139 mm=24 valid=1 radius=0 radius_valid=1
+PASS case=4 echo_us=145 mm=25 valid=1 radius=1 radius_valid=1
+PASS case=5 echo_us=150 mm=26 valid=1 radius=1 radius_valid=1
+PASS case=6 echo_us=7050 mm=1199 valid=1 radius=47 radius_valid=1
+PASS case=7 echo_us=7056 mm=1200 valid=1 radius=48 radius_valid=1
+PASS case=8 echo_us=7062 mm=1201 valid=1 radius=48 radius_valid=0
+PASS case=9 echo_us=23529 mm=4000 valid=1 radius=48 radius_valid=0
+PASS case=10 echo_us=23530 mm=0 valid=0 radius=0 radius_valid=0
+PASS case=11 echo_us=0 mm=0 valid=0 radius=0 radius_valid=0
+PASS case=12 echo_us=0 mm=0 valid=0 radius=0 radius_valid=0
+PASS case=13 echo_us=29988 mm=0 valid=0 radius=0 radius_valid=0
+PASS case=14 echo_us=145 mm=25 valid=1 radius=1 radius_valid=1
+PASS case=15 echo_us=145 mm=25 valid=1 radius=1 radius_valid=1
+PASS tb_ultrasonic_radius cases=15 cycle_equivalence_checks=167746 baseline=ca8ec99
+tb_ultrasonic_radius.v:184: $finish called at 1677460000 (1ps)

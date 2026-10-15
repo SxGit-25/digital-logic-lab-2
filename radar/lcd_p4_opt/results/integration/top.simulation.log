@@ -1,0 +1,3 @@
+LCD READBACK=0 beams=0 targets=0 valid=0 invalid=0 reads=0
+PASS tb_top_integration cycles=925030 basic_samples=6 continuous_samples=8 shots=15; ca8ec99 original pins cycle-identical; basic/continuous/mode/off/default readback
+tb_top_integration.v:94: $finish called at 18500600000 (1ps)

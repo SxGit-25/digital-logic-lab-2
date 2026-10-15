@@ -20,7 +20,7 @@ module lcd_p1_core #(
  localparam PAGE=0,HI=1,LO=2,DATA=3,RPAGE=4,RHI=5,RLO=6,DUMMY=7,READ=8,END=9;
  lcd_p1_pattern image({page,col},pattern);
  lcd_init #(.RESET_CYCLES(RESET_CYCLES),.WAIT_CYCLES(WAIT_CYCLES)) init(
-  clk,rst,ready,done,init_req,init_a0,init_data,lcd_rst_n,initialized);
+  clk,rst,ready,done,init_req,init_a0,init_data,lcd_rst_n,initialized,1'b1);
  lcd_bus #(.ENABLE_READBACK(ENABLE_READBACK)) bus(
   .clk(clk),.rst(rst),.request(initialized ? req : init_req),
   .read_op(initialized && read_op),.data_op(initialized ? a0 : init_a0),

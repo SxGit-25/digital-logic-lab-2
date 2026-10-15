@@ -23,7 +23,7 @@ module lcd_p2_core #(
     wire [7:0] bus_read_data,init_data,draw_data;
     wire init_request,init_a0,draw_request,draw_read_op,draw_data_op,draw_ready;
     lcd_init #(.RESET_CYCLES(RESET_CYCLES),.WAIT_CYCLES(WAIT_CYCLES)) init(
-        clk,rst,bus_ready,bus_done,init_request,init_a0,init_data,lcd_rst_n,initialized);
+        clk,rst,bus_ready,bus_done,init_request,init_a0,init_data,lcd_rst_n,initialized,1'b1);
     radar_lcd_ctrl #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS),.FRACTION_BITS(FRACTION_BITS)) draw(
         .clk(clk),.rst(rst || !initialized),.request(request && initialized && ENABLE_READBACK),
         .angle(angle),.direction_up(direction_up),.radius(radius),.radius_valid(radius_valid),

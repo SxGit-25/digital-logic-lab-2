@@ -1,0 +1,32 @@
+Shared radar controller timer: equivalence argument
+
+Baseline: f4507a8. state_ms only advances in SELF/STANDBY; slot_ms only in
+RUN. Every transition into these timing domains clears the new shared
+counter. Its width is max(count_width(max(SELF,STANDBY)),
+count_width(SUPPORT_CONTINUOUS ? max(SLOT,SAMPLE) : SLOT)).
+
+One timer_ms+1 expression is used for every increment. State-specific aliases
+keep only the relevant original counter width and return zero while inactive.
+The active low bits therefore have exactly the original modular counter
+sequence even when the other timing domain requires a larger width.
+
+Verification: 9 parameter configurations, 1080000 cycle-pairs versus
+f4507a8, comparing all 61 output bits plus state_ms/slot_ms/settle_ms probes.
+Directed basic/continuous windows and randomized rst/on/tick/applied/busy/
+done/valid/distance/live angle/direction. Width boundaries include
+1/257/513/1025/2049/4097 and SUPPORT_CONTINUOUS=0/1.
+Existing P3 continuous controller regression also passes all 362 samples.
+
+See simulation.log, p3_ctrl.log and verification.txt for logs/hashes.
+
+Final history/current-distance extraction:
+- Commit = system_on && RUN && measure_done && PH_WAIT_MEASURE.
+- Expire = system_on && RUN && tick_ms && !continuous_active &&
+  slot terminal && phase!=PH_HOLD && !measure_done. It cannot overlap commit.
+- Reset/off clears all history and current_distance as before.
+- Commit updates only the selected lane's level/seen/valid, including level
+  updates on invalid results. Expire marks only the current lane seen/invalid
+  and retains its level. current_distance uses the same shared commit.
+- The result registers moved to an independent flat always block. All timing,
+  phase, current_valid and current_level assignments remain unchanged.
+- Final source SHA256 and all full-output comparisons are in verification.txt.

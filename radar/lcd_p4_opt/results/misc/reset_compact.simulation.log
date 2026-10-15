@@ -1,0 +1,2 @@
+PASS reset power-up duration N=1/2/16/17/257
+tb_reset_compact.v:22: $finish called at 5171000 (1ps)

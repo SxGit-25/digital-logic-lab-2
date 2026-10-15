@@ -1,0 +1,11 @@
+PASS ctrl_counter_case ID=0 SELF=1 STANDBY=1 SLOT=1 SAMPLE=1 SUPPORT=1 cycles=120000 starts=2189
+PASS ctrl_counter_case ID=1 SELF=2 STANDBY=3 SLOT=5 SAMPLE=8 SUPPORT=1 cycles=120000 starts=4379
+PASS ctrl_counter_case ID=2 SELF=257 STANDBY=1 SLOT=3 SAMPLE=60 SUPPORT=1 cycles=120000 starts=2626
+PASS ctrl_counter_case ID=3 SELF=1 STANDBY=513 SLOT=3 SAMPLE=60 SUPPORT=1 cycles=120000 starts=1607
+PASS ctrl_counter_case ID=4 SELF=1 STANDBY=2 SLOT=1025 SAMPLE=60 SUPPORT=1 cycles=120000 starts=1124
+PASS ctrl_counter_case ID=5 SELF=3 STANDBY=4 SLOT=7 SAMPLE=2049 SUPPORT=1 cycles=120000 starts=2709
+PASS ctrl_counter_case ID=6 SELF=2000 STANDBY=2000 SLOT=2000 SAMPLE=60 SUPPORT=1 cycles=120000 starts=988
+PASS ctrl_counter_case ID=7 SELF=17 STANDBY=1 SLOT=1024 SAMPLE=2049 SUPPORT=0 cycles=120000 starts=113
+PASS ctrl_counter_case ID=8 SELF=1 STANDBY=4097 SLOT=1024 SAMPLE=2 SUPPORT=0 cycles=120000 starts=97
+PASS tb_ctrl_counter_integration: 1080000 cycle-pairs, all outputs and timer aliases, 9 width/parameter configurations, rst/on/basic/continuous/tick/busy/done randomization
+tb_ctrl_counter_integration.v:46: $finish called at 1200006000 (1ps)
