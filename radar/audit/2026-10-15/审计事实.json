@@ -1,0 +1,94 @@
+{
+  "audit_date_local": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "source_commit": "a84e619",
+  "programming_record_commit": "35c6e4d",
+  "audit_start_head": "35c6e4d11be9a9b118bdc4788883b918894fda21",
+  "selected_project": "radar_unified_bcd",
+  "top": "radar_unified_bcd_top",
+  "device_target": "EPM1270T144C5",
+  "clock_mhz": 50,
+  "logic_elements": 1089,
+  "registers": 437,
+  "io_used": 75,
+  "ufm_used": 0,
+  "setup_slack_ns": 3.786,
+  "hold_slack_ns": 1.078,
+  "preferred_le_budget": 1143,
+  "capacity_le": 1270,
+  "source_snapshot_files_verified": 32,
+  "current_rtl_files_verified": 27,
+  "current_wrapper_and_sdc_verified": true,
+  "pof_sha256": "709218E16D4B0618BD6656A9BA09BA896ADD2AD8B9CBEAEC44EC7C943FA4DFD3",
+  "library_default_enable_readback": 0,
+  "programmed_enable_readback": 1,
+  "programmed_measurement_bcd": 1,
+  "programmed_settle_from_pwm": 0,
+  "electrical_safety_confirmation": "explicit user confirmation; no measurement attachment",
+  "program_verify_succeeded": true,
+  "program_completed_local": "2026-10-15T21:24:20.339895+08:00",
+  "physical_function_acceptance_recorded": false,
+  "unconstrained_inputs": 1,
+  "unconstrained_outputs": 58,
+  "categories": [
+    {
+      "category": "测距",
+      "le": 137,
+      "registers": 67,
+      "budget": 120,
+      "share_percent": 12.58
+    },
+    {
+      "category": "扫描+ctrl",
+      "le": 229,
+      "registers": 100,
+      "budget": 230,
+      "share_percent": 21.03
+    },
+    {
+      "category": "共享显示及门控",
+      "le": 151,
+      "registers": 36,
+      "budget": 195,
+      "share_percent": 13.87
+    },
+    {
+      "category": "报警",
+      "le": 15,
+      "registers": 0,
+      "budget": 50,
+      "share_percent": 1.38
+    },
+    {
+      "category": "LCD总线",
+      "le": 62,
+      "registers": 29,
+      "budget": 95,
+      "share_percent": 5.69
+    },
+    {
+      "category": "绘图含init",
+      "le": 395,
+      "registers": 145,
+      "budget": 210,
+      "share_percent": 36.27
+    },
+    {
+      "category": "顶层其余",
+      "le": 100,
+      "registers": 60,
+      "budget": 100,
+      "share_percent": 9.18
+    }
+  ],
+  "remaining_items": [
+    "basic fast-scan image completeness with drops",
+    "measurement LE 137 > 120",
+    "drawing including init LE 395 > 210",
+    "full board I/O constraints",
+    "physical functional acceptance",
+    "direction mirror parameter",
+    "drop counter external visibility"
+  ],
+  "scope": "Read-only source/evidence audit; no compilation, programming or RTL modification in this audit task"
+}

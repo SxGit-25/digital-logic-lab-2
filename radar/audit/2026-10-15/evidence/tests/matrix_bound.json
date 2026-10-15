@@ -1,0 +1,15 @@
+{
+  "cases": 53760,
+  "maximum_difference_ns": 24000000,
+  "allowed_difference_ns": 28000000,
+  "worst_example": [
+    0,
+    1,
+    2,
+    0,
+    -1,
+    8000040,
+    32000040
+  ],
+  "scope": "shared scanner RUN history update; 20ms commit displacement"
+}

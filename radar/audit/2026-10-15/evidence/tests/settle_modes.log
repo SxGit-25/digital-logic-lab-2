@@ -1,0 +1,9 @@
+RUN us=40000
+SLOT sample=0 offset_us=300000
+PWM sample=0 offset_us=300000
+SLOT sample=1 offset_us=2300000
+PWM sample=1 offset_us=2320000
+SLOT sample=2 offset_us=4300000
+PWM sample=2 offset_us=4320000
+PASS SETTLE_FROM_PWM first0=300ms following=320ms, shared timing scan/PWM identical
+tb_scan_settle_modes.v:43: $finish called at 87200060000 (1ps)

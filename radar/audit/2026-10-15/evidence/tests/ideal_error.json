@@ -1,0 +1,12 @@
+{
+  "formula": "reported_mm=floor((echo_clocks-1)/294); ideal_mm=34*echo_clocks/10000",
+  "exhaustive_clock_widths": 1177059,
+  "valid_clock_widths": 1170414,
+  "max_absolute_error_mm": 1.5966,
+  "worst_echo_clocks": 1176001,
+  "worst_reported_mm": 4000,
+  "min_signed_error_mm": -0.9916,
+  "max_signed_error_mm": 1.5966,
+  "timeout": "31 global 1-ms ticks: 30..31 ms plus synchronizer/commit clocks",
+  "validity": "range is checked on reported mm (20..4000 inclusive), no legacy-boundary equivalence"
+}
