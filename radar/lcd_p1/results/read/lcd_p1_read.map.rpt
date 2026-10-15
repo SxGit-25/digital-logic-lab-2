@@ -1,0 +1,462 @@
+Analysis & Synthesis report for lcd_p1_read
+Thu Oct 15 11:13:51 2026
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |lcd_p1_read_top|lcd_p1_core:core|state
+  9. State Machine - |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: reset_ctrl:reset
+ 15. Parameter Settings for User Entity Instance: lcd_p1_core:core
+ 16. Parameter Settings for User Entity Instance: lcd_p1_core:core|lcd_init:init
+ 17. Parameter Settings for User Entity Instance: lcd_p1_core:core|lcd_bus:bus
+ 18. Port Connectivity Checks: "lcd_p1_core:core|lcd_p1_pattern:image"
+ 19. Port Connectivity Checks: "lcd_p1_core:core"
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:13:51 2026    ;
+; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; lcd_p1_read                              ;
+; Top-level Entity Name       ; lcd_p1_read_top                          ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 227                                      ;
+; Total pins                  ; 22                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                                      ; lcd_p1_read_top    ; lcd_p1_read        ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Power-Up Don't Care                                                        ; Off                ; On                 ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; lcd_p1_top.v                     ; yes             ; User Verilog HDL File  ; R:/lcd_p1/lcd_p1_top.v       ;
+; ../rtl/reset_ctrl.v              ; yes             ; User Verilog HDL File  ; R:/rtl/reset_ctrl.v          ;
+; ../rtl/lcd_bus.v                 ; yes             ; User Verilog HDL File  ; R:/rtl/lcd_bus.v             ;
+; ../rtl/lcd_init.v                ; yes             ; User Verilog HDL File  ; R:/rtl/lcd_init.v            ;
+; ../rtl/lcd_p1_pattern.v          ; yes             ; User Verilog HDL File  ; R:/rtl/lcd_p1_pattern.v      ;
+; ../rtl/lcd_p1_core.v             ; yes             ; User Verilog HDL File  ; R:/rtl/lcd_p1_core.v         ;
++----------------------------------+-----------------+------------------------+------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 227   ;
+;     -- Combinational with no register       ; 123   ;
+;     -- Register only                        ; 23    ;
+;     -- Combinational with a register        ; 81    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 93    ;
+;     -- 3 input functions                    ; 32    ;
+;     -- 2 input functions                    ; 75    ;
+;     -- 1 input functions                    ; 2     ;
+;     -- 0 input functions                    ; 2     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 198   ;
+;     -- arithmetic mode                      ; 29    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 53    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 104   ;
+; Total logic cells in carry chains           ; 32    ;
+; I/O pins                                    ; 22    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 104   ;
+; Total fan-out                               ; 914   ;
+; Average fan-out                             ; 3.67  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                             ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------+
+; |lcd_p1_read_top           ; 227 (1)     ; 104          ; 0          ; 22   ; 0            ; 123 (1)      ; 23 (0)            ; 81 (0)           ; 32 (0)          ; 0 (0)      ; |lcd_p1_read_top                                ; work         ;
+;    |lcd_p1_core:core|      ; 209 (30)    ; 88           ; 0          ; 0    ; 0            ; 121 (11)     ; 8 (1)             ; 80 (18)          ; 32 (0)          ; 0 (0)      ; |lcd_p1_read_top|lcd_p1_core:core               ; work         ;
+;       |lcd_bus:bus|        ; 78 (78)     ; 29           ; 0          ; 0    ; 0            ; 49 (49)      ; 5 (5)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus   ; work         ;
+;       |lcd_init:init|      ; 101 (101)   ; 40           ; 0          ; 0    ; 0            ; 61 (61)      ; 2 (2)             ; 38 (38)          ; 32 (32)         ; 0 (0)      ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init ; work         ;
+;    |reset_ctrl:reset|      ; 17 (17)     ; 16           ; 0          ; 0    ; 0            ; 1 (1)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lcd_p1_read_top|reset_ctrl:reset               ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |lcd_p1_read_top|lcd_p1_core:core|state                                                                                  ;
++-------------+-----------+------------+-------------+-----------+-----------+-------------+------------+----------+----------+------------+
+; Name        ; state.END ; state.READ ; state.DUMMY ; state.RLO ; state.RHI ; state.RPAGE ; state.DATA ; state.LO ; state.HI ; state.PAGE ;
++-------------+-----------+------------+-------------+-----------+-----------+-------------+------------+----------+----------+------------+
+; state.PAGE  ; 0         ; 0          ; 0           ; 0         ; 0         ; 0           ; 0          ; 0        ; 0        ; 0          ;
+; state.HI    ; 0         ; 0          ; 0           ; 0         ; 0         ; 0           ; 0          ; 0        ; 1        ; 1          ;
+; state.LO    ; 0         ; 0          ; 0           ; 0         ; 0         ; 0           ; 0          ; 1        ; 0        ; 1          ;
+; state.DATA  ; 0         ; 0          ; 0           ; 0         ; 0         ; 0           ; 1          ; 0        ; 0        ; 1          ;
+; state.RPAGE ; 0         ; 0          ; 0           ; 0         ; 0         ; 1           ; 0          ; 0        ; 0        ; 1          ;
+; state.RHI   ; 0         ; 0          ; 0           ; 0         ; 1         ; 0           ; 0          ; 0        ; 0        ; 1          ;
+; state.RLO   ; 0         ; 0          ; 0           ; 1         ; 0         ; 0           ; 0          ; 0        ; 0        ; 1          ;
+; state.DUMMY ; 0         ; 0          ; 1           ; 0         ; 0         ; 0           ; 0          ; 0        ; 0        ; 1          ;
+; state.READ  ; 0         ; 1          ; 0           ; 0         ; 0         ; 0           ; 0          ; 0        ; 0        ; 1          ;
+; state.END   ; 1         ; 0          ; 0           ; 0         ; 0         ; 0           ; 0          ; 0        ; 0        ; 1          ;
++-------------+-----------+------------+-------------+-----------+-----------+-------------+------------+----------+----------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus|state              ;
++--------------+--------------+-------------+------------+------------+------------+
+; Name         ; state.ACTIVE ; state.SETUP ; state.TURN ; state.IDLE ; state.HOLD ;
++--------------+--------------+-------------+------------+------------+------------+
+; state.IDLE   ; 0            ; 0           ; 0          ; 0          ; 0          ;
+; state.TURN   ; 0            ; 0           ; 1          ; 1          ; 0          ;
+; state.SETUP  ; 0            ; 1           ; 0          ; 1          ; 0          ;
+; state.ACTIVE ; 1            ; 0           ; 0          ; 1          ; 0          ;
+; state.HOLD   ; 0            ; 0           ; 0          ; 1          ; 1          ;
++--------------+--------------+-------------+------------+------------+------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; lcd_p1_core:core|page[0..2]           ; Stuck at GND due to stuck port data_in ;
+; lcd_p1_core:core|state~2              ; Lost fanout                            ;
+; lcd_p1_core:core|state~3              ; Lost fanout                            ;
+; lcd_p1_core:core|state~4              ; Lost fanout                            ;
+; lcd_p1_core:core|state~5              ; Lost fanout                            ;
+; lcd_p1_core:core|lcd_bus:bus|state~4  ; Lost fanout                            ;
+; lcd_p1_core:core|lcd_bus:bus|state~5  ; Lost fanout                            ;
+; Total Number of Removed Registers = 9 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 33    ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 69    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; reset_ctrl:reset|reset_pipe[15]         ; 79      ;
+; reset_ctrl:reset|reset_pipe[14]         ; 1       ;
+; reset_ctrl:reset|reset_pipe[13]         ; 1       ;
+; reset_ctrl:reset|reset_pipe[12]         ; 1       ;
+; reset_ctrl:reset|reset_pipe[11]         ; 1       ;
+; reset_ctrl:reset|reset_pipe[10]         ; 1       ;
+; reset_ctrl:reset|reset_pipe[9]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[8]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[7]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[6]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[5]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[4]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[3]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[2]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[1]          ; 1       ;
+; reset_ctrl:reset|reset_pipe[0]          ; 1       ;
+; Total number of inverted registers = 16 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|index[3]   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus|read_data[1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|result[1]                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|page[1]    ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|column[6]  ;
+; 20:1               ; 9 bits    ; 117 LEs       ; 18 LEs               ; 99 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|timer[14]  ;
+; 20:1               ; 11 bits   ; 143 LEs       ; 22 LEs               ; 121 LEs                ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|timer[11]  ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_init:init|state[2]   ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus|data_out[3]  ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 15 LEs               ; 24 LEs                 ; Yes        ; |lcd_p1_read_top|lcd_p1_core:core|lcd_bus:bus|data_out[0]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |lcd_p1_read_top|lcd_p1_core:core|state                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reset_ctrl:reset ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; RESET_CYCLES   ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_p1_core:core ;
++-----------------+---------+-----------------------------------+
+; Parameter Name  ; Value   ; Type                              ;
++-----------------+---------+-----------------------------------+
+; ENABLE_READBACK ; 1       ; Signed Integer                    ;
+; RESET_CYCLES    ; 50000   ; Signed Integer                    ;
+; WAIT_CYCLES     ; 1000000 ; Signed Integer                    ;
++-----------------+---------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_p1_core:core|lcd_init:init ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CONTRAST       ; 00011100 ; Unsigned Binary                                 ;
+; RESET_CYCLES   ; 50000    ; Signed Integer                                  ;
+; WAIT_CYCLES    ; 1000000  ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_p1_core:core|lcd_bus:bus ;
++-----------------+-------+-------------------------------------------------+
+; Parameter Name  ; Value ; Type                                            ;
++-----------------+-------+-------------------------------------------------+
+; ENABLE_READBACK ; 1     ; Signed Integer                                  ;
+; SETUP_CYCLES    ; 4     ; Signed Integer                                  ;
+; WRITE_CYCLES    ; 6     ; Signed Integer                                  ;
+; READ_CYCLES     ; 10    ; Signed Integer                                  ;
+; HOLD_CYCLES     ; 6     ; Signed Integer                                  ;
+; TURN_CYCLES     ; 20    ; Signed Integer                                  ;
++-----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_p1_core:core|lcd_p1_pattern:image"                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; value ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_p1_core:core"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; finished ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Oct 15 11:13:50 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_p1_read -c lcd_p1_read
+Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info: Found 2 design units, including 2 entities, in source file lcd_p1_top.v
+    Info: Found entity 1: lcd_p1_write_top
+    Info: Found entity 2: lcd_p1_read_top
+Info: Found 1 design units, including 1 entities, in source file /rtl/reset_ctrl.v
+    Info: Found entity 1: reset_ctrl
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_bus.v
+    Info: Found entity 1: lcd_bus
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_init.v
+    Info: Found entity 1: lcd_init
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_p1_pattern.v
+    Info: Found entity 1: lcd_p1_pattern
+Info: Found 1 design units, including 1 entities, in source file /rtl/lcd_p1_core.v
+    Info: Found entity 1: lcd_p1_core
+Info: Elaborating entity "lcd_p1_read_top" for the top level hierarchy
+Info: Elaborating entity "reset_ctrl" for hierarchy "reset_ctrl:reset"
+Info: Elaborating entity "lcd_p1_core" for hierarchy "lcd_p1_core:core"
+Info (10264): Verilog HDL Case Statement information at lcd_p1_core.v(36): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at lcd_p1_core.v(50): all case item expressions in this case statement are onehot
+Info: Elaborating entity "lcd_p1_pattern" for hierarchy "lcd_p1_core:core|lcd_p1_pattern:image"
+Info: Elaborating entity "lcd_init" for hierarchy "lcd_p1_core:core|lcd_init:init"
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(49): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(49): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(54): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(54): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(55): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(58): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(58): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(59): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(61): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(62): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "lcd_bus" for hierarchy "lcd_p1_core:core|lcd_bus:bus"
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(52): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(53): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(55): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(56): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at lcd_bus.v(60): truncated value with size 32 to match size of target (5)
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "lcd_p1_core:core|state~2" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p1_core:core|state~3" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p1_core:core|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p1_core:core|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p1_core:core|lcd_bus:bus|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "lcd_p1_core:core|lcd_bus:bus|state~5" lost all its fanouts during netlist optimizations.
+Info: Implemented 249 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 227 logic cells
+Info: Generated suppressed messages file R:/lcd_p1/lcd_p1_read.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4403 megabytes
+    Info: Processing ended: Thu Oct 15 11:13:51 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in R:/lcd_p1/lcd_p1_read.map.smsg.
+
+

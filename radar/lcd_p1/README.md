@@ -1,6 +1,6 @@
-# P1：独立液晶接口测试（待 Quartus 实测及上板验收）
+# P1：独立液晶接口测试（离线实测完成，待阶段确认及上板验收）
 
-本阶段不接入 radar_top，不改动原有基本要求模块。用户已确认沿用 A0/C8、对比度 0x1C。仅准备 P1；收到两份编译报告并经用户确认后才进入 P2。
+本阶段不接入 radar_top，不改动原有基本要求模块。用户已确认沿用 A0/C8、对比度 0x1C。P1 已完成两份 Quartus 编译和仿真；经用户确认后才进入 P2。
 
 ## Windows 编译
 
@@ -12,7 +12,7 @@ powershell -ExecutionPolicy Bypass -File radar/lcd_p1/compile.ps1
 powershell -ExecutionPolicy Bypass -File radar/lcd_p1/compile.ps1 -QuartusBin 'C:\altera\9.1\quartus\bin64'
 ```
 
-脚本隔离到 ASCII 临时目录编译两个工程，保留日志、完整报告、引脚表、编程文件和源码 SHA256。请回传整个 `radar/lcd_p1/results` 目录，失败时也保留日志。脚本从未自动下载到硬件。当前 Mac 无 Quartus，脚本尚未经 Windows 实跑；不可把仿真结果当作 Fitter/TimeQuest 结果。
+脚本隔离到 ASCII 临时目录编译两个工程，保留日志、完整报告、引脚表、编程文件和源码 SHA256。请回传整个 `radar/lcd_p1/results` 目录，失败时也保留日志。脚本从未自动下载到硬件。已在本机 Windows 实跑，write/read 均编译成功；原始报告、源码快照、仿真及回归日志见 `results/`，完整目录打包见 `results.zip`。
 
 | 工程 | 数据引脚 | 用途 |
 |---|---|---|
@@ -20,6 +20,16 @@ powershell -ExecutionPolicy Bypass -File radar/lcd_p1/compile.ps1 -QuartusBin 'C
 | lcd_p1_read | inout，写时驱动，读及空闲高阻 | 初始化、清屏、写 FF、重设地址、空读、真读、LED 输出 |
 
 通用 lcd_bus 和 lcd_p1_core 的 ENABLE_READBACK 默认仍为 0。只有名称明确的 read 顶层显式覆盖为 1，作为需电气确认的独立测试文件。MAX II 编译通常输出 `.pof`，以实际生成物为准。
+
+
+## 本次离线结果（2026-10-15）
+
+| 工程 | LE | 寄存器 | I/O | UFM | Setup / Hold slack | Fmax |
+|---|---:|---:|---:|---:|---:|---:|
+| write | 443/1270 | 91 | 22/116 | 0/1 | 3.049 / 1.078 ns | 58.99 MHz |
+| read | 218/1270 | 104 | 22/116 | 0/1 | 1.445 / 0.966 ns | 53.89 MHz |
+
+P1 仿真和六套基础回归全部通过。逐模块 LE、警告说明和完整原始证据见 `results/README.md`。尚未下载硬件；回读电气确认、实物显示与示波器时序验收仍待完成。通用默认 ENABLE_READBACK 保持 0。
 
 ## 实现与仿真
 
