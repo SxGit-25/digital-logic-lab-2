@@ -1,0 +1,13 @@
+{
+  "StartedUtc": "2026-10-15T13:24:01.5157971Z",
+  "Image": "E:\\codex\\数电实验2\\radar\\unified_scan\\results\\budget_final_index\\bcd\\radar_unified_bcd.pof",
+  "SHA256": "709218E16D4B0618BD6656A9BA09BA896ADD2AD8B9CBEAEC44EC7C943FA4DFD3",
+  "SourceCommit": "a84e619",
+  "EnableReadback": 1,
+  "ElectricalSafetyConfirmedByUser": true,
+  "Cable": "USB-Blaster [USB-0]",
+  "Device": "EPM1270",
+  "JtagId": "020A30DD",
+  "Operation": "PV",
+  "DeviceIndex": 1
+}
