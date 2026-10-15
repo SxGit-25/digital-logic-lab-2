@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_p2_safe
-Thu Oct 15 11:30:57 2026
+Thu Oct 15 11:57:14 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:30:57 2026    ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:57:14 2026    ;
 ; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; lcd_p2_safe                              ;
 ; Top-level Entity Name       ; lcd_p2_top                               ;
@@ -263,69 +263,68 @@ Encoding Type:  One-Hot
 +----------------+------------+----------------+---------------+----------------+---------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                              ;
-+---------------------------------------------------------------------------------+---------------------------------------------------------------+
-; Register name                                                                   ; Reason for Removal                                            ;
-+---------------------------------------------------------------------------------+---------------------------------------------------------------+
-; lcd_p2_core:core|lcd_bus:bus|read_data[0..7]                                    ; Stuck at GND due to stuck port data_in                        ;
-; radius[0..5]                                                                    ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                               ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0..5]                        ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|current_angle[0..7]                        ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|lcd_bus:bus|reading                                            ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[1..7]                            ; Merged with lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0] ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                               ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|erase                                      ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1,3,6]                ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x                  ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[0,2,4..5]             ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0..7] ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[0..7]             ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[0..7]             ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[0..7]                 ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[0..7]                 ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_A                              ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_B                              ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_REQ               ; Lost fanout                                                   ;
-; lcd_p2_core:core|lcd_bus:bus|state~4                                            ; Lost fanout                                                   ;
-; lcd_p2_core:core|lcd_bus:bus|state~5                                            ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state~2                                    ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state~3                                    ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state~4                                    ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~6                     ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~7                     ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~8                     ; Lost fanout                                                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE                                 ; Lost fanout                                                   ;
-; lcd_p2_core:core|lcd_bus:bus|state.TURN                                         ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT              ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[8]                ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ               ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8..13]                ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8]    ; Stuck at GND due to stuck port clock_enable                   ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done        ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|mask[0..6]                                 ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[0..6]                             ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK                  ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT              ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[8]                ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0..1]                 ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|done                        ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[8..13]                ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|done                                       ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|column[0..5]                               ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                                  ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[2..5]                 ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                                  ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[0..3]                          ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.WAIT_RAY                             ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|pending                                    ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN                                  ; Stuck at GND due to stuck port data_in                        ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|page[1..2]                                 ; Merged with lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]      ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|mask[7]                                    ; Merged with lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]      ;
-; lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]                                    ; Stuck at GND due to stuck port data_in                        ;
-; Total Number of Removed Registers = 161                                         ;                                                               ;
-+---------------------------------------------------------------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                         ;
++---------------------------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                                                   ; Reason for Removal                                       ;
++---------------------------------------------------------------------------------+----------------------------------------------------------+
+; lcd_p2_core:core|lcd_bus:bus|read_data[0..7]                                    ; Stuck at GND due to stuck port data_in                   ;
+; radius[0..5]                                                                    ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                               ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0..5]                        ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|current_angle[0..7]                        ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|lcd_bus:bus|reading                                            ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|flushing_end                               ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|erase                                      ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0..7]                            ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x                  ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[0..6]                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0..7] ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[0..7]             ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[0..7]             ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[0..7]                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[0..7]                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_A                              ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_B                              ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_REQ               ; Lost fanout                                              ;
+; lcd_p2_core:core|lcd_bus:bus|state~4                                            ; Lost fanout                                              ;
+; lcd_p2_core:core|lcd_bus:bus|state~5                                            ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state~2                                    ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state~3                                    ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state~4                                    ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~6                     ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~7                     ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~8                     ; Lost fanout                                              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE                                 ; Lost fanout                                              ;
+; lcd_p2_core:core|lcd_bus:bus|state.TURN                                         ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT              ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[8]                ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ               ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8..13]                ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8]    ; Stuck at GND due to stuck port clock_enable              ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done        ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|mask[0..6]                                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[0..6]                             ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK                  ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT              ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[8]                ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0..2]                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|done                        ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[8..13]                ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|done                                       ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|column[0..5]                               ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                                  ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[3..5]                 ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                                  ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[0..3]                          ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.WAIT_RAY                             ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|pending                                    ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN                                  ; Stuck at GND due to stuck port data_in                   ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|page[1..2]                                 ; Merged with lcd_p2_core:core|radar_lcd_ctrl:draw|page[0] ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|mask[7]                                    ; Merged with lcd_p2_core:core|radar_lcd_ctrl:draw|page[0] ;
+; lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]                                    ; Stuck at GND due to stuck port data_in                   ;
+; Total Number of Removed Registers = 162                                         ;                                                          ;
++---------------------------------------------------------------------------------+----------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -339,8 +338,8 @@ Encoding Type:  One-Hot
 ;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5], ;
 ;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4], ;
 ;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3], ;
-;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2], ;
 ;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1], ;
+;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2], ;
 ;                                                                   ;                           ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8]  ;
 ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[8]  ; Stuck at GND              ; lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8],                 ;
 ;                                                                   ; due to stuck port data_in ; lcd_p2_core:core|radar_lcd_ctrl:draw|mask[0],                                 ;
@@ -477,6 +476,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_READBACK ; 0       ; Signed Integer                    ;
 ; USE_UFM         ; 0       ; Signed Integer                    ;
 ; MIRROR_X        ; 0       ; Signed Integer                    ;
+; MIN_RADIUS      ; 000110  ; Unsigned Binary                   ;
 ; RESET_CYCLES    ; 50000   ; Signed Integer                    ;
 ; WAIT_CYCLES     ; 1000000 ; Signed Integer                    ;
 +-----------------+---------+-----------------------------------+
@@ -497,23 +497,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lcd_p2_core:core|radar_lcd_ctrl:draw ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; USE_UFM        ; 0     ; Signed Integer                                           ;
-; MIRROR_X       ; 0     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++----------------+--------+---------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                    ;
++----------------+--------+---------------------------------------------------------+
+; USE_UFM        ; 0      ; Signed Integer                                          ;
+; MIRROR_X       ; 0      ; Signed Integer                                          ;
+; MIN_RADIUS     ; 000110 ; Unsigned Binary                                         ;
++----------------+--------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; USE_UFM        ; 0     ; Signed Integer                                                          ;
-; MIRROR_X       ; 0     ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
++----------------+--------+------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                   ;
++----------------+--------+------------------------------------------------------------------------+
+; USE_UFM        ; 0      ; Signed Integer                                                         ;
+; MIRROR_X       ; 0      ; Signed Integer                                                         ;
+; MIN_RADIUS     ; 000110 ; Unsigned Binary                                                        ;
++----------------+--------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -577,7 +579,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:56 2026
+    Info: Processing started: Thu Oct 15 11:57:13 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_p2_safe -c lcd_p2_safe
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Found 3 design units, including 3 entities, in source file lcd_p2_top.v
@@ -619,7 +621,7 @@ Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated val
 Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
 Info: Elaborating entity "radar_lcd_ctrl" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw"
 Info: Elaborating entity "ray_engine" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray"
-Warning (10230): Verilog HDL assignment warning at ray_engine.v(48): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(49): truncated value with size 8 to match size of target (7)
 Info: Elaborating entity "lcd_sin_lut" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut"
 Info: Elaborating entity "lcd_bus" for hierarchy "lcd_p2_core:core|lcd_bus:bus"
 Warning (10230): Verilog HDL assignment warning at lcd_bus.v(53): truncated value with size 32 to match size of target (5)
@@ -664,7 +666,7 @@ Info: Implemented 197 device resources after synthesis - the final resource coun
 Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_safe.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
     Info: Peak virtual memory: 4405 megabytes
-    Info: Processing ended: Thu Oct 15 11:30:57 2026
+    Info: Processing ended: Thu Oct 15 11:57:14 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

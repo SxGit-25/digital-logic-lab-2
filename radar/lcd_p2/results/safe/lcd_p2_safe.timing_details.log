@@ -14,7 +14,7 @@ Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Thu Oct 15 11:31:00 2026
+    Info: Processing started: Thu Oct 15 11:57:18 2026
 Info: Command: quartus_sta -t timing_details.tcl lcd_p2_safe
 Info: Quartus(args): lcd_p2_safe
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -33,6 +33,6 @@ Info: Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 1.078
 Info: Evaluation of Tcl script timing_details.tcl was successful
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4355 megabytes
-    Info: Processing ended: Thu Oct 15 11:31:01 2026
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Oct 15 11:57:18 2026
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00

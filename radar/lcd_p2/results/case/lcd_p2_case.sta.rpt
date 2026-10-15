@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lcd_p2_case
-Thu Oct 15 11:35:02 2026
+Thu Oct 15 11:57:04 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -91,7 +91,7 @@ applicable agreement for further details.
 +-----------------+--------+--------------------------+
 ; SDC File Path   ; Status ; Read at                  ;
 +-----------------+--------+--------------------------+
-; lcd_p2_case.sdc ; OK     ; Thu Oct 15 11:35:02 2026 ;
+; lcd_p2_case.sdc ; OK     ; Thu Oct 15 11:57:04 2026 ;
 +-----------------+--------+--------------------------+
 
 
@@ -104,13 +104,13 @@ applicable agreement for further details.
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-------------------------------------------------+
-; Fmax Summary                                    ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 57.03 MHz ; 57.03 MHz       ; clk        ;      ;
-+-----------+-----------------+------------+------+
++------------------------------------------------+
+; Fmax Summary                                   ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 54.9 MHz ; 54.9 MHz        ; clk        ;      ;
++----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -119,7 +119,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 2.466 ; 0.000         ;
+; clk   ; 1.785 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -137,7 +137,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 9.658 ; 0.000         ;
+; clk   ; 9.237 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -146,7 +146,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 8.977 ; 0.000         ;
+; clk   ; 9.391 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -159,220 +159,220 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'clk'                                                                                                                                                                                                                                                        ;
-+-------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                         ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 2.466 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                      ; lcd_rst_n                                                                                         ; clk          ; clk         ; 20.000       ; -3.819     ; 8.715      ;
-; 2.563 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                      ; lcd_rst_n                                                                                         ; clk          ; clk         ; 20.000       ; -3.819     ; 8.618      ;
-; 2.768 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]                      ; lcd_rst_n                                                                                         ; clk          ; clk         ; 20.000       ; -3.819     ; 8.413      ;
-; 2.853 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_cs_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 8.328      ;
-; 3.090 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2]                      ; lcd_rst_n                                                                                         ; clk          ; clk         ; 20.000       ; -3.819     ; 8.091      ;
-; 3.448 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_rd_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 7.733      ;
-; 3.545 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[1]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.636      ;
-; 3.619 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_wr_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 7.562      ;
-; 3.743 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[0]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.438      ;
-; 3.743 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[2]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.438      ;
-; 3.777 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[3]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.404      ;
-; 3.777 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[4]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.404      ;
-; 3.777 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[5]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.404      ;
-; 3.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[1]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.393      ;
-; 3.851 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_cs_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 7.330      ;
-; 3.955 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.712     ;
-; 3.986 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[0]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.195      ;
-; 3.986 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[2]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.195      ;
-; 4.020 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[3]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.161      ;
-; 4.020 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[4]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.161      ;
-; 4.020 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[5]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.161      ;
-; 4.042 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[6]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.139      ;
-; 4.042 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                      ; lcd_data[7]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 7.139      ;
-; 4.234 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.433     ;
-; 4.285 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[6]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.896      ;
-; 4.285 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                         ; lcd_data[7]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.896      ;
-; 4.356 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.311     ;
-; 4.368 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 15.299     ;
-; 4.481 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.186     ;
-; 4.501 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 15.166     ;
-; 4.501 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.ACTIVE                    ; lcd_rd_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 6.680      ;
-; 4.536 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[7]                     ; lcd_data[7]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.645      ;
-; 4.543 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[1]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.638      ;
-; 4.609 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[6]                     ; lcd_data[6]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.572      ;
-; 4.652 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[1]                     ; lcd_data[1]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.529      ;
-; 4.672 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.ACTIVE                    ; lcd_wr_n                                                                                          ; clk          ; clk         ; 20.000       ; -3.819     ; 6.509      ;
-; 4.681 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.986     ;
-; 4.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[3]                     ; lcd_data[3]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.483      ;
-; 4.722 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[4]                     ; lcd_data[4]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.459      ;
-; 4.741 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[0]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.440      ;
-; 4.741 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[2]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.440      ;
-; 4.760 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.907     ;
-; 4.775 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[3]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.406      ;
-; 4.775 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[4]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.406      ;
-; 4.775 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[5]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.406      ;
-; 4.791 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.876     ;
-; 4.798 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.869     ;
-; 4.827 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.840     ;
-; 4.882 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.785     ;
-; 4.929 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.738     ;
-; 4.952 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.715     ;
-; 4.993 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.674     ;
-; 5.007 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.660     ;
-; 5.030 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[4]                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2]                                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.637     ;
-; 5.040 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[6]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.141      ;
-; 5.040 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                      ; lcd_data[7]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 6.141      ;
-; 5.185 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.482     ;
-; 5.192 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.475     ;
-; 5.231 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.436     ;
-; 5.236 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2]                                      ; clk          ; clk         ; 20.000       ; 0.000      ; 14.431     ;
-; 5.259 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.408     ;
-; 5.270 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[5]                     ; lcd_data[5]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 5.911      ;
-; 5.275 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.392     ;
-; 5.278 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[4] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.389     ;
-; 5.306 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.361     ;
-; 5.309 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.358     ;
-; 5.330 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.337     ;
-; 5.356 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[0]                     ; lcd_data[0]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 5.825      ;
-; 5.368 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[1]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.299     ;
-; 5.368 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[5]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.299     ;
-; 5.368 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[2]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.299     ;
-; 5.368 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[3]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.299     ;
-; 5.388 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]                                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.279     ;
-; 5.388 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[0]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.279     ;
-; 5.388 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|page[1]                                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.279     ;
-; 5.388 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|page[2]                                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.279     ;
-; 5.415 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[2]                     ; lcd_data[2]                                                                                       ; clk          ; clk         ; 20.000       ; -3.819     ; 5.766      ;
-; 5.427 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.240     ;
-; 5.431 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.236     ;
-; 5.483 ; lcd_p2_top:test_core|angle[1]                                                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.184     ;
-; 5.483 ; lcd_p2_top:test_core|angle[1]                                                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.184     ;
-; 5.483 ; lcd_p2_top:test_core|angle[1]                                                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.184     ;
-; 5.498 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.169     ;
-; 5.520 ; lcd_p2_top:test_core|angle[1]                                                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.147     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[4]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[2]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[3]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.528 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[1]                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.139     ;
-; 5.545 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; clk          ; clk         ; 20.000       ; 0.000      ; 14.122     ;
-; 5.553 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                      ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.114     ;
-; 5.553 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                      ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.114     ;
-; 5.553 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                      ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.114     ;
-; 5.560 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[1]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.107     ;
-; 5.560 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[5]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.107     ;
-; 5.560 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[2]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.107     ;
-; 5.560 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[3]                               ; clk          ; clk         ; 20.000       ; 0.000      ; 14.107     ;
-; 5.574 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[4] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 14.093     ;
-; 5.580 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]                                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.087     ;
-+-------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                                                                                                       ;
++-------+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                  ; To Node                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.785 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]               ; lcd_rst_n                                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 9.396      ;
+; 1.802 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2]               ; lcd_rst_n                                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 9.379      ;
+; 2.068 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]               ; lcd_rst_n                                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 9.113      ;
+; 2.118 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[6]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 9.063      ;
+; 2.118 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[7]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 9.063      ;
+; 2.124 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_cs_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 9.057      ;
+; 2.427 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]               ; lcd_rst_n                                                                               ; clk          ; clk         ; 20.000       ; -3.819     ; 8.754      ;
+; 2.570 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[1]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.611      ;
+; 2.628 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[3]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.553      ;
+; 2.628 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[4]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.553      ;
+; 2.628 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[5]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.553      ;
+; 2.795 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[0]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.386      ;
+; 2.795 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE               ; lcd_data[2]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 8.386      ;
+; 2.946 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.721     ;
+; 3.084 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_cs_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 8.097      ;
+; 3.097 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_wr_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 8.084      ;
+; 3.104 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.563     ;
+; 3.218 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[6]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.963      ;
+; 3.218 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[7]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.963      ;
+; 3.229 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.438     ;
+; 3.291 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_rd_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 7.890      ;
+; 3.297 ; lcd_p2_top:test_core|angle[7]                                              ; led[7]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.884      ;
+; 3.320 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.347     ;
+; 3.441 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[6]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.740      ;
+; 3.441 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[7]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.740      ;
+; 3.463 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.204     ;
+; 3.621 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 16.046     ;
+; 3.670 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[1]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.511      ;
+; 3.716 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.951     ;
+; 3.724 ; lcd_p2_top:test_core|angle[5]                                              ; led[5]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.457      ;
+; 3.728 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[3]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.453      ;
+; 3.728 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[4]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.453      ;
+; 3.728 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[5]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.453      ;
+; 3.746 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.921     ;
+; 3.753 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.914     ;
+; 3.790 ; lcd_p2_top:test_core|angle[3]                                              ; led[3]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.391      ;
+; 3.837 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.830     ;
+; 3.874 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.793     ;
+; 3.881 ; lcd_p2_top:test_core|angle[4]                                              ; led[4]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.300      ;
+; 3.893 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[1]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.288      ;
+; 3.895 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[0]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.286      ;
+; 3.895 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN               ; lcd_data[2]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.286      ;
+; 3.933 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.734     ;
+; 3.946 ; lcd_p2_top:test_core|angle[2]                                              ; led[2]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.235      ;
+; 3.951 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[3]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.230      ;
+; 3.951 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[4]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.230      ;
+; 3.951 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[5]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.230      ;
+; 3.963 ; lcd_p2_top:test_core|angle[6]                                              ; led[6]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.218      ;
+; 3.999 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.668     ;
+; 4.090 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.577     ;
+; 4.091 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.576     ;
+; 4.118 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[0]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.063      ;
+; 4.118 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|reading                  ; lcd_data[2]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 7.063      ;
+; 4.121 ; lcd_p2_top:test_core|angle[1]                                              ; led[1]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 7.060      ;
+; 4.212 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.ACTIVE             ; lcd_wr_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 6.969      ;
+; 4.216 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.451     ;
+; 4.244 ; lcd_p2_top:test_core|angle[0]                                              ; led[0]                                                                                  ; clk          ; clk         ; 20.000       ; -3.819     ; 6.937      ;
+; 4.261 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.406     ;
+; 4.270 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.397     ;
+; 4.275 ; lcd_p2_top:test_core|angle[2]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.392     ;
+; 4.307 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.360     ;
+; 4.405 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.ACTIVE             ; lcd_rd_n                                                                                ; clk          ; clk         ; 20.000       ; -3.819     ; 6.776      ;
+; 4.433 ; lcd_p2_top:test_core|angle[2]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.234     ;
+; 4.477 ; lcd_p2_top:test_core|angle[1]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.190     ;
+; 4.523 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.144     ;
+; 4.558 ; lcd_p2_top:test_core|angle[2]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.109     ;
+; 4.635 ; lcd_p2_top:test_core|angle[1]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.032     ;
+; 4.637 ; lcd_p2_top:test_core|angle[6]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[1]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.030     ;
+; 4.649 ; lcd_p2_top:test_core|angle[2]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 15.018     ;
+; 4.675 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.992     ;
+; 4.676 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_B                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.991     ;
+; 4.680 ; lcd_p2_top:test_core|angle[5]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.987     ;
+; 4.703 ; lcd_p2_top:test_core|angle[3]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[2]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.964     ;
+; 4.740 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.927     ;
+; 4.760 ; lcd_p2_top:test_core|angle[1]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.907     ;
+; 4.778 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.889     ;
+; 4.838 ; lcd_p2_top:test_core|angle[5]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.829     ;
+; 4.851 ; lcd_p2_top:test_core|angle[1]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.816     ;
+; 4.861 ; lcd_p2_top:test_core|angle[3]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.806     ;
+; 4.963 ; lcd_p2_top:test_core|angle[5]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.704     ;
+; 4.986 ; lcd_p2_top:test_core|angle[3]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.681     ;
+; 5.031 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.636     ;
+; 5.053 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[3]              ; lcd_data[3]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 6.128      ;
+; 5.054 ; lcd_p2_top:test_core|angle[5]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.613     ;
+; 5.077 ; lcd_p2_top:test_core|angle[3]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.590     ;
+; 5.082 ; lcd_p2_top:test_core|angle[2]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.585     ;
+; 5.138 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.529     ;
+; 5.138 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.529     ;
+; 5.138 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[3]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.529     ;
+; 5.151 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[0]              ; lcd_data[0]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 6.030      ;
+; 5.154 ; lcd_p2_top:test_core|angle[7]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[1]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.513     ;
+; 5.178 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.489     ;
+; 5.179 ; lcd_p2_top:test_core|angle[4]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_B                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.488     ;
+; 5.235 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT ; clk          ; clk         ; 20.000       ; 0.000      ; 14.432     ;
+; 5.236 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT ; clk          ; clk         ; 20.000       ; 0.000      ; 14.431     ;
+; 5.248 ; lcd_p2_top:test_core|angle[0]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[5]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.419     ;
+; 5.250 ; lcd_p2_top:test_core|frame_timer[6]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.START_A                 ; clk          ; clk         ; 20.000       ; 0.000      ; 14.417     ;
+; 5.253 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]               ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2]                            ; clk          ; clk         ; 20.000       ; 0.000      ; 14.414     ;
+; 5.284 ; lcd_p2_top:test_core|angle[1]                                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[4]                  ; clk          ; clk         ; 20.000       ; 0.000      ; 14.383     ;
+; 5.334 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[1]              ; lcd_data[1]                                                                             ; clk          ; clk         ; 20.000       ; -3.819     ; 5.847      ;
++-------+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'clk'                                                                                                                                                                                                                                                     ;
-+-------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                               ; To Node                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[0]                              ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|erase                         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|erase                         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending                       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[1]                              ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[1]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[2]                              ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[2]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[3]                              ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                  ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
-; 1.362 ; lcd_data[2]                                                                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[2]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 5.402      ;
-; 1.377 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[14]                                    ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.598      ;
-; 1.377 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[4]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[5]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.598      ;
-; 1.393 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[9]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[10]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.614      ;
-; 1.396 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[11]                                    ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[12]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.617      ;
-; 1.399 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[10]                                    ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[11]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
-; 1.640 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.861      ;
-; 1.642 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[7]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[8]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.863      ;
-; 1.650 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[13]                                    ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[14]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
-; 1.650 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[7]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[7]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
-; 1.650 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[5]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[6]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
-; 1.650 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[0]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[1]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
-; 1.655 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[0]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[0]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.876      ;
-; 1.655 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[8]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[9]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.876      ;
-; 1.659 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[19]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[19]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
-; 1.659 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[1]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[1]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
-; 1.660 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|pending                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|pending                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.881      ;
-; 1.661 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[2]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.882      ;
-; 1.662 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[3]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[4]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.883      ;
-; 1.663 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[1]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[2]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.884      ;
-; 1.664 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[2]                                     ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[3]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.885      ;
-; 1.666 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[6]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[6]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.887      ;
-; 1.695 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN                     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RUN                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.916      ;
-; 1.697 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.918      ;
-; 1.705 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.926      ;
-; 1.710 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.TURN                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.SETUP                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.931      ;
-; 1.731 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[3]                ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[3]                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.952      ;
-; 1.748 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.969      ;
-; 1.750 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|current_angle[6]              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.971      ;
-; 1.753 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[3]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[3]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.974      ;
-; 1.787 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[12]                                    ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[13]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.008      ;
-; 1.907 ; lcd_p2_top:test_core|pending                                                            ; lcd_p2_top:test_core|pending                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.128      ;
-; 1.907 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.128      ;
-; 1.912 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[5]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.133      ;
-; 1.915 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[3]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[3]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.136      ;
-; 1.944 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[4]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.165      ;
-; 1.978 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.199      ;
-; 1.984 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.205      ;
-; 2.005 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.226      ;
-; 2.013 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.234      ;
-; 2.049 ; lcd_p2_top:test_core|radius[0]                                                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.270      ;
-; 2.085 ; lcd_data[4]                                                                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[4]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.125      ;
-; 2.107 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[7]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
-; 2.111 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[1]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.332      ;
-; 2.111 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[1]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.332      ;
-; 2.114 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[7]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.335      ;
-; 2.116 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[0]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
-; 2.116 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[10]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[10]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[17]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[17]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.SIN_WAIT ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[9]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[9]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
-; 2.118 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[0]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.339      ;
-; 2.122 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[8]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[8]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.343      ;
-; 2.124 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[2]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.345      ;
-; 2.126 ; lcd_p2_top:test_core|angle[7]                                                           ; lcd_p2_top:test_core|angle[7]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[2]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[2]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[1]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[1]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[2]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[2]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[9]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[9]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[11]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[11]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[12]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[12]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
-; 2.127 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
-; 2.127 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[6]       ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
-; 2.128 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[0]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.349      ;
-; 2.133 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[2]   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.354      ;
-; 2.134 ; lcd_p2_top:test_core|angle[0]                                                           ; lcd_p2_top:test_core|angle[0]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.355      ;
-; 2.136 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[1]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[1]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.357      ;
-; 2.142 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[0]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[0]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.363      ;
-; 2.145 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[7]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[7]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.366      ;
-; 2.148 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.IDLE                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.369      ;
-; 2.151 ; lcd_p2_top:test_core|angle[1]                                                           ; lcd_p2_top:test_core|angle[1]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.372      ;
-; 2.152 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT ; clk          ; clk         ; 0.000        ; 0.000      ; 2.373      ;
-; 2.153 ; lcd_p2_top:test_core|angle[2]                                                           ; lcd_p2_top:test_core|angle[2]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.374      ;
-; 2.176 ; lcd_p2_top:test_core|radius[1]                                                          ; lcd_p2_top:test_core|radius[1]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.397      ;
-; 2.179 ; lcd_p2_top:test_core|radius[0]                                                          ; lcd_p2_top:test_core|radius[0]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.400      ;
-; 2.190 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.411      ;
-; 2.204 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[2]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[2]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.425      ;
-; 2.212 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[3]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[3]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
-; 2.212 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                  ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
-; 2.214 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.435      ;
-; 2.215 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[1]                ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[1]                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.436      ;
-; 2.215 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[4]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[4]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.436      ;
-; 2.217 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.438      ;
-; 2.220 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.441      ;
-; 2.221 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[18]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[18]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[3]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[3]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[8]                            ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[8]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[13]                           ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[13]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
-+-------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                                                                                                               ;
++-------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                         ; To Node                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[0]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|erase                                   ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|erase                         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending                                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[1]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[1]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[2]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[2]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[3]                                        ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|timer[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                            ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[0]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.078 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|flushing_end                            ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|flushing_end                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.375 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[0]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[1]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.596      ;
+; 1.377 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[9]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[10]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.598      ;
+; 1.395 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[8]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[9]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.616      ;
+; 1.397 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[3]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[4]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.399 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[13]                                              ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[14]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.399 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[2]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[3]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.399 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[1]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[2]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.400 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[14]                                              ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.621      ;
+; 1.639 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x               ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|negative_x     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.860      ;
+; 1.640 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                               ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[6]                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.861      ;
+; 1.643 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[5]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[6]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.864      ;
+; 1.644 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[11]                                              ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[12]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.865      ;
+; 1.650 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[6]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[7]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
+; 1.650 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[4]                                               ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[5]                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
+; 1.651 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[12]                                              ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[13]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.872      ;
+; 1.651 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[10]                                              ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[11]                                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.872      ;
+; 1.659 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[19]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[19]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.716 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[3]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[3]                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.937      ;
+; 1.726 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK               ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.WALK     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.947      ;
+; 1.742 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                               ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.963      ;
+; 1.743 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.RMW                               ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|pending                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.964      ;
+; 1.753 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[3]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[3]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.974      ;
+; 1.877 ; lcd_data[2]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[2]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 5.917      ;
+; 1.907 ; lcd_p2_top:test_core|pending                                                                      ; lcd_p2_top:test_core|pending                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.128      ;
+; 1.936 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT           ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT ; clk          ; clk         ; 0.000        ; 0.000      ; 2.157      ;
+; 1.974 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.ACTIVE                                    ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|state.HOLD                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.195      ;
+; 1.976 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.197      ;
+; 1.984 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.205      ;
+; 1.995 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.216      ;
+; 2.037 ; lcd_data[0]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[0]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.077      ;
+; 2.043 ; lcd_data[5]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[5]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.083      ;
+; 2.050 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[1]                                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[1]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.271      ;
+; 2.059 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[2]                                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.280      ;
+; 2.060 ; lcd_data[6]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[6]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.100      ;
+; 2.061 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|done                                    ; lcd_p2_top:test_core|direction_up                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.282      ;
+; 2.066 ; lcd_p2_top:test_core|radius[4]                                                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_valid                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.287      ;
+; 2.107 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[7]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; lcd_data[4]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[4]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.147      ;
+; 2.108 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[5]                                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.329      ;
+; 2.110 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[3]                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[3]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.331      ;
+; 2.111 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[2]                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.332      ;
+; 2.111 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[1]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.332      ;
+; 2.114 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[4]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.335      ;
+; 2.116 ; lcd_p2_top:test_core|angle[0]                                                                     ; lcd_p2_top:test_core|angle[0]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[0]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[10]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[10]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; lcd_p2_top:test_core|angle[7]                                                                     ; lcd_p2_top:test_core|angle[7]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[17]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[17]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[7]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[8]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[9]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.121 ; lcd_p2_top:test_core|radius[1]                                                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[1]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.342      ;
+; 2.123 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[5]                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.344      ;
+; 2.126 ; lcd_p2_top:test_core|direction_up                                                                 ; lcd_p2_top:test_core|direction_up                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[1]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[1]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[2]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[2]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[9]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[9]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[11]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[11]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[12]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[12]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[8]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[8]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[9]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.127 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[6]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.127 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[6]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.128 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[0]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.349      ;
+; 2.128 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[0]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.349      ;
+; 2.132 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[7]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.353      ;
+; 2.132 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.353      ;
+; 2.133 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[2]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.354      ;
+; 2.133 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[3]             ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.354      ;
+; 2.135 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[1]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[1]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.136 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[7]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[7]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.357      ;
+; 2.137 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|pending                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|pending                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.358      ;
+; 2.139 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[7]                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[7]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.360      ;
+; 2.141 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.362      ;
+; 2.141 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[0]                                    ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[0]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.362      ;
+; 2.143 ; lcd_p2_top:test_core|angle[1]                                                                     ; lcd_p2_top:test_core|angle[1]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.364      ;
+; 2.144 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[2]                                     ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[2]                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.145 ; lcd_p2_top:test_core|angle[2]                                                                     ; lcd_p2_top:test_core|angle[2]                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.366      ;
+; 2.155 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.376      ;
+; 2.157 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_REQ            ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state.COS_WAIT ; clk          ; clk         ; 0.000        ; 0.000      ; 2.378      ;
+; 2.159 ; lcd_data[7]                                                                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[7]                          ; clk          ; clk         ; 0.000        ; 3.819      ; 6.199      ;
+; 2.160 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE                              ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state.IDLE                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.381      ;
+; 2.161 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[1]                          ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[1]                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.382      ;
+; 2.164 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5]                 ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.385      ;
+; 2.175 ; lcd_p2_top:test_core|radius[0]                                                                    ; lcd_p2_top:test_core|radius[0]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.396      ;
+; 2.187 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.408      ;
+; 2.187 ; lcd_p2_top:test_core|radius[1]                                                                    ; lcd_p2_top:test_core|radius[1]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.408      ;
+; 2.188 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[1]                                       ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.409      ;
+; 2.190 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[2]                                      ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[2]                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.411      ;
++-------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -380,115 +380,115 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                    ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.658  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.009     ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.748  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.919      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.927  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.740      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 9.939  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.728      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
-; 10.469 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.198      ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.237  ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.430     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.379  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.288     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.466  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 10.201     ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 9.768  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.899      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
+; 10.055 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.612      ;
 +--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removal: 'clk'                                                                                                                                                                                                                                 ;
-+-------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                    ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 8.977 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.198      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.507 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.728      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.519 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.740      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.698 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.919      ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-; 9.788 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.009     ;
-+-------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'clk'                                                                                                                                                                                                                                  ;
++--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.391  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[0] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.612      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.678  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[1] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 9.899      ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 9.980  ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.201     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.067 ; lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[2] ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.288     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|done     ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
+; 10.209 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15]         ; lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut|value[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 10.430     ;
++--------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -604,15 +604,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; lcd_data[*]  ; clk        ; 3.315 ; 3.315 ; Rise       ; clk             ;
-;  lcd_data[0] ; clk        ; 2.995 ; 2.995 ; Rise       ; clk             ;
-;  lcd_data[1] ; clk        ; 2.861 ; 2.861 ; Rise       ; clk             ;
-;  lcd_data[2] ; clk        ; 1.916 ; 1.916 ; Rise       ; clk             ;
-;  lcd_data[3] ; clk        ; 3.088 ; 3.088 ; Rise       ; clk             ;
-;  lcd_data[4] ; clk        ; 2.639 ; 2.639 ; Rise       ; clk             ;
-;  lcd_data[5] ; clk        ; 3.315 ; 3.315 ; Rise       ; clk             ;
-;  lcd_data[6] ; clk        ; 3.202 ; 3.202 ; Rise       ; clk             ;
-;  lcd_data[7] ; clk        ; 3.302 ; 3.302 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; 3.224 ; 3.224 ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; 2.591 ; 2.591 ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; 2.857 ; 2.857 ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; 2.431 ; 2.431 ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; 3.224 ; 3.224 ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; 2.661 ; 2.661 ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; 2.597 ; 2.597 ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; 2.614 ; 2.614 ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; 2.713 ; 2.713 ; Rise       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -621,15 +621,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; lcd_data[*]  ; clk        ; -1.362 ; -1.362 ; Rise       ; clk             ;
-;  lcd_data[0] ; clk        ; -2.441 ; -2.441 ; Rise       ; clk             ;
-;  lcd_data[1] ; clk        ; -2.307 ; -2.307 ; Rise       ; clk             ;
-;  lcd_data[2] ; clk        ; -1.362 ; -1.362 ; Rise       ; clk             ;
-;  lcd_data[3] ; clk        ; -2.534 ; -2.534 ; Rise       ; clk             ;
-;  lcd_data[4] ; clk        ; -2.085 ; -2.085 ; Rise       ; clk             ;
-;  lcd_data[5] ; clk        ; -2.761 ; -2.761 ; Rise       ; clk             ;
-;  lcd_data[6] ; clk        ; -2.648 ; -2.648 ; Rise       ; clk             ;
-;  lcd_data[7] ; clk        ; -2.748 ; -2.748 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; -1.877 ; -1.877 ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; -2.037 ; -2.037 ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; -2.303 ; -2.303 ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; -1.877 ; -1.877 ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; -2.670 ; -2.670 ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; -2.107 ; -2.107 ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; -2.043 ; -2.043 ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; -2.060 ; -2.060 ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; -2.159 ; -2.159 ; Rise       ; clk             ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -638,29 +638,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; lcd_a0       ; clk        ; 9.005  ; 9.005  ; Rise       ; clk             ;
-; lcd_cs_n     ; clk        ; 12.147 ; 12.147 ; Rise       ; clk             ;
-; lcd_data[*]  ; clk        ; 11.455 ; 11.455 ; Rise       ; clk             ;
-;  lcd_data[0] ; clk        ; 11.257 ; 11.257 ; Rise       ; clk             ;
-;  lcd_data[1] ; clk        ; 11.455 ; 11.455 ; Rise       ; clk             ;
-;  lcd_data[2] ; clk        ; 11.257 ; 11.257 ; Rise       ; clk             ;
-;  lcd_data[3] ; clk        ; 11.223 ; 11.223 ; Rise       ; clk             ;
-;  lcd_data[4] ; clk        ; 11.223 ; 11.223 ; Rise       ; clk             ;
-;  lcd_data[5] ; clk        ; 11.223 ; 11.223 ; Rise       ; clk             ;
-;  lcd_data[6] ; clk        ; 10.958 ; 10.958 ; Rise       ; clk             ;
-;  lcd_data[7] ; clk        ; 10.958 ; 10.958 ; Rise       ; clk             ;
-; lcd_rd_n     ; clk        ; 11.552 ; 11.552 ; Rise       ; clk             ;
-; lcd_rst_n    ; clk        ; 12.534 ; 12.534 ; Rise       ; clk             ;
-; lcd_wr_n     ; clk        ; 11.381 ; 11.381 ; Rise       ; clk             ;
-; led[*]       ; clk        ; 9.328  ; 9.328  ; Rise       ; clk             ;
-;  led[0]      ; clk        ; 9.170  ; 9.170  ; Rise       ; clk             ;
-;  led[1]      ; clk        ; 9.169  ; 9.169  ; Rise       ; clk             ;
-;  led[2]      ; clk        ; 9.152  ; 9.152  ; Rise       ; clk             ;
-;  led[3]      ; clk        ; 9.126  ; 9.126  ; Rise       ; clk             ;
-;  led[4]      ; clk        ; 9.109  ; 9.109  ; Rise       ; clk             ;
-;  led[5]      ; clk        ; 9.273  ; 9.273  ; Rise       ; clk             ;
-;  led[6]      ; clk        ; 9.328  ; 9.328  ; Rise       ; clk             ;
-;  led[7]      ; clk        ; 9.094  ; 9.094  ; Rise       ; clk             ;
+; lcd_a0       ; clk        ; 9.079  ; 9.079  ; Rise       ; clk             ;
+; lcd_cs_n     ; clk        ; 12.876 ; 12.876 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; 12.882 ; 12.882 ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; 12.205 ; 12.205 ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; 12.430 ; 12.430 ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; 12.205 ; 12.205 ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; 12.372 ; 12.372 ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; 12.372 ; 12.372 ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; 12.372 ; 12.372 ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; 12.882 ; 12.882 ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; 12.882 ; 12.882 ; Rise       ; clk             ;
+; lcd_rd_n     ; clk        ; 11.709 ; 11.709 ; Rise       ; clk             ;
+; lcd_rst_n    ; clk        ; 13.215 ; 13.215 ; Rise       ; clk             ;
+; lcd_wr_n     ; clk        ; 11.903 ; 11.903 ; Rise       ; clk             ;
+; led[*]       ; clk        ; 11.703 ; 11.703 ; Rise       ; clk             ;
+;  led[0]      ; clk        ; 10.756 ; 10.756 ; Rise       ; clk             ;
+;  led[1]      ; clk        ; 10.879 ; 10.879 ; Rise       ; clk             ;
+;  led[2]      ; clk        ; 11.054 ; 11.054 ; Rise       ; clk             ;
+;  led[3]      ; clk        ; 11.210 ; 11.210 ; Rise       ; clk             ;
+;  led[4]      ; clk        ; 11.119 ; 11.119 ; Rise       ; clk             ;
+;  led[5]      ; clk        ; 11.276 ; 11.276 ; Rise       ; clk             ;
+;  led[6]      ; clk        ; 11.037 ; 11.037 ; Rise       ; clk             ;
+;  led[7]      ; clk        ; 11.703 ; 11.703 ; Rise       ; clk             ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -669,29 +669,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; lcd_a0       ; clk        ; 9.005  ; 9.005  ; Rise       ; clk             ;
-; lcd_cs_n     ; clk        ; 11.149 ; 11.149 ; Rise       ; clk             ;
-; lcd_data[*]  ; clk        ; 9.585  ; 9.585  ; Rise       ; clk             ;
-;  lcd_data[0] ; clk        ; 9.644  ; 9.644  ; Rise       ; clk             ;
-;  lcd_data[1] ; clk        ; 10.348 ; 10.348 ; Rise       ; clk             ;
-;  lcd_data[2] ; clk        ; 9.585  ; 9.585  ; Rise       ; clk             ;
-;  lcd_data[3] ; clk        ; 10.225 ; 10.225 ; Rise       ; clk             ;
-;  lcd_data[4] ; clk        ; 10.225 ; 10.225 ; Rise       ; clk             ;
-;  lcd_data[5] ; clk        ; 9.730  ; 9.730  ; Rise       ; clk             ;
-;  lcd_data[6] ; clk        ; 9.960  ; 9.960  ; Rise       ; clk             ;
-;  lcd_data[7] ; clk        ; 9.960  ; 9.960  ; Rise       ; clk             ;
-; lcd_rd_n     ; clk        ; 10.499 ; 10.499 ; Rise       ; clk             ;
-; lcd_rst_n    ; clk        ; 11.910 ; 11.910 ; Rise       ; clk             ;
-; lcd_wr_n     ; clk        ; 10.328 ; 10.328 ; Rise       ; clk             ;
-; led[*]       ; clk        ; 9.094  ; 9.094  ; Rise       ; clk             ;
-;  led[0]      ; clk        ; 9.170  ; 9.170  ; Rise       ; clk             ;
-;  led[1]      ; clk        ; 9.169  ; 9.169  ; Rise       ; clk             ;
-;  led[2]      ; clk        ; 9.152  ; 9.152  ; Rise       ; clk             ;
-;  led[3]      ; clk        ; 9.126  ; 9.126  ; Rise       ; clk             ;
-;  led[4]      ; clk        ; 9.109  ; 9.109  ; Rise       ; clk             ;
-;  led[5]      ; clk        ; 9.273  ; 9.273  ; Rise       ; clk             ;
-;  led[6]      ; clk        ; 9.328  ; 9.328  ; Rise       ; clk             ;
-;  led[7]      ; clk        ; 9.094  ; 9.094  ; Rise       ; clk             ;
+; lcd_a0       ; clk        ; 9.079  ; 9.079  ; Rise       ; clk             ;
+; lcd_cs_n     ; clk        ; 11.916 ; 11.916 ; Rise       ; clk             ;
+; lcd_data[*]  ; clk        ; 9.225  ; 9.225  ; Rise       ; clk             ;
+;  lcd_data[0] ; clk        ; 9.849  ; 9.849  ; Rise       ; clk             ;
+;  lcd_data[1] ; clk        ; 9.666  ; 9.666  ; Rise       ; clk             ;
+;  lcd_data[2] ; clk        ; 9.396  ; 9.396  ; Rise       ; clk             ;
+;  lcd_data[3] ; clk        ; 9.947  ; 9.947  ; Rise       ; clk             ;
+;  lcd_data[4] ; clk        ; 9.225  ; 9.225  ; Rise       ; clk             ;
+;  lcd_data[5] ; clk        ; 9.264  ; 9.264  ; Rise       ; clk             ;
+;  lcd_data[6] ; clk        ; 9.430  ; 9.430  ; Rise       ; clk             ;
+;  lcd_data[7] ; clk        ; 9.290  ; 9.290  ; Rise       ; clk             ;
+; lcd_rd_n     ; clk        ; 10.595 ; 10.595 ; Rise       ; clk             ;
+; lcd_rst_n    ; clk        ; 12.573 ; 12.573 ; Rise       ; clk             ;
+; lcd_wr_n     ; clk        ; 10.788 ; 10.788 ; Rise       ; clk             ;
+; led[*]       ; clk        ; 10.756 ; 10.756 ; Rise       ; clk             ;
+;  led[0]      ; clk        ; 10.756 ; 10.756 ; Rise       ; clk             ;
+;  led[1]      ; clk        ; 10.879 ; 10.879 ; Rise       ; clk             ;
+;  led[2]      ; clk        ; 11.054 ; 11.054 ; Rise       ; clk             ;
+;  led[3]      ; clk        ; 11.210 ; 11.210 ; Rise       ; clk             ;
+;  led[4]      ; clk        ; 11.119 ; 11.119 ; Rise       ; clk             ;
+;  led[5]      ; clk        ; 11.276 ; 11.276 ; Rise       ; clk             ;
+;  led[6]      ; clk        ; 11.037 ; 11.037 ; Rise       ; clk             ;
+;  led[7]      ; clk        ; 11.703 ; 11.703 ; Rise       ; clk             ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -700,7 +700,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 12596    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 14011    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -710,7 +710,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 12596    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 14011    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -767,29 +767,29 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:35:01 2026
+    Info: Processing started: Thu Oct 15 11:57:03 2026
 Info: Command: quartus_sta lcd_p2_case -c lcd_p2_case
 Info: qsta_default_script.tcl version: #2
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Info: Reading SDC File: 'lcd_p2_case.sdc'
-Info: Worst-case setup slack is 2.466
+Info: Worst-case setup slack is 1.785
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     2.466         0.000 clk 
+    Info:     1.785         0.000 clk 
 Info: Worst-case hold slack is 1.078
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
     Info:     1.078         0.000 clk 
-Info: Worst-case recovery slack is 9.658
+Info: Worst-case recovery slack is 9.237
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     9.658         0.000 clk 
-Info: Worst-case removal slack is 8.977
+    Info:     9.237         0.000 clk 
+Info: Worst-case removal slack is 9.391
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     8.977         0.000 clk 
+    Info:     9.391         0.000 clk 
 Info: Worst-case minimum pulse width slack is 9.734
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -799,7 +799,7 @@ Info: Design is fully constrained for setup requirements
 Info: Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4372 megabytes
-    Info: Processing ended: Thu Oct 15 11:35:02 2026
+    Info: Processing ended: Thu Oct 15 11:57:04 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

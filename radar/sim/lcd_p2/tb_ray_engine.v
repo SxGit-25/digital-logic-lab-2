@@ -16,7 +16,7 @@ module tb_ray_engine;
  generate for(g=0;g<3;g=g+1) begin: variants
   ray_engine #(.USE_UFM(g==1),.MIRROR_X(g==2)) dut(
    clk,rst,start,angle,busy[g],done[g],pv[g],ready[g],step[g],x[g],y[g]);
-  always @(posedge clk) if(capture && !rst && dut.state==5 && step[g]<4)
+  always @(posedge clk) if(capture && !rst && dut.state==5 && step[g]<6)
    $fwrite(f,"%0d,%0d,%0d,%0d,%0d\n",g,a,step[g],x[g],y[g]);
  end endgenerate
  always @(negedge clk) begin
@@ -27,7 +27,7 @@ module tb_ray_engine;
   if(stalled[j] && {step[j],x[j],y[j]}!==held[j]) $fatal(1,"Unstable backpressure variant %0d",j);
   stalled[j]=pv[j] && !ready[j];held[j]={step[j],x[j],y[j]};
   if(pv[j] && ready[j]) begin
-   if(step[j]!==count[j]+4 || y[j]<15 || x[j]<16 || x[j]>112) $fatal(1,"Ray step/bounds mismatch");
+   if(step[j]!==count[j]+6 || y[j]<15 || x[j]<16 || x[j]>112) $fatal(1,"Ray step/bounds mismatch");
    $fwrite(f,"%0d,%0d,%0d,%0d,%0d\n",j,a,step[j],x[j],y[j]);count[j]=count[j]+1;
   end
   if(done[j]) finished[j]=1;
@@ -50,9 +50,9 @@ module tb_ray_engine;
    // Mutate angle during the ray: accepted inputs must be latched.
    angle=255;
    wait(&finished);@(negedge clk);
-   for(i=0;i<3;i=i+1) if(count[i]!=45) $fatal(1,"Missing ray pixels");
+   for(i=0;i<3;i=i+1) if(count[i]!=43) $fatal(1,"Missing ray pixels");
   end
-  $fclose(f);$display("PASS ray: 181 angles x 45 steps x case/UFM/mirror; backpressure, reset, illegal angles, latched input");$finish;
+  $fclose(f);$display("PASS ray: 181 angles x 49 observed/43 valid steps x case/UFM/mirror; backpressure, reset, illegal angles, latched input");$finish;
  end
  initial begin #100000000;$fatal(1,"Ray timeout");end
 endmodule

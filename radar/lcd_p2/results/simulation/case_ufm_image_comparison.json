@@ -1,5 +1,5 @@
 {
-  "full_scan.pbm": true,
+  "outbound.pbm": true,
   "multiple_targets_turnaround.pbm": true,
-  "outbound.pbm": true
+  "full_scan.pbm": true
 }

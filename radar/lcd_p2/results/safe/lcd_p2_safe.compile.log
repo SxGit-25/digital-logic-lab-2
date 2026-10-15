@@ -14,7 +14,7 @@ Info: Running Quartus II 64-Bit Shell
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Thu Oct 15 11:30:55 2026
+    Info: Processing started: Thu Oct 15 11:57:13 2026
 Info: Command: quartus_sh --flow compile lcd_p2_safe
 Info: Quartus(args): compile lcd_p2_safe
 Info: Project Name = R:/lcd_p2/lcd_p2_safe
@@ -22,7 +22,7 @@ Info: Revision Name = lcd_p2_safe
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:56 2026
+    Info: Processing started: Thu Oct 15 11:57:13 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_p2_safe -c lcd_p2_safe
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Found 3 design units, including 3 entities, in source file lcd_p2_top.v
@@ -64,7 +64,7 @@ Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated val
 Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
 Info: Elaborating entity "radar_lcd_ctrl" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw"
 Info: Elaborating entity "ray_engine" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray"
-Warning (10230): Verilog HDL assignment warning at ray_engine.v(48): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(49): truncated value with size 8 to match size of target (7)
 Info: Elaborating entity "lcd_sin_lut" for hierarchy "lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut"
 Info: Elaborating entity "lcd_bus" for hierarchy "lcd_p2_core:core|lcd_bus:bus"
 Warning (10230): Verilog HDL assignment warning at lcd_bus.v(53): truncated value with size 32 to match size of target (5)
@@ -109,13 +109,13 @@ Info: Implemented 197 device resources after synthesis - the final resource coun
 Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_safe.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
     Info: Peak virtual memory: 4405 megabytes
-    Info: Processing ended: Thu Oct 15 11:30:57 2026
+    Info: Processing ended: Thu Oct 15 11:57:14 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:57 2026
+    Info: Processing started: Thu Oct 15 11:57:15 2026
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lcd_p2_safe -c lcd_p2_safe
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Selected device EPM1270T144C5 for design "lcd_p2_safe"
@@ -166,26 +166,26 @@ Warning: Following 8 pins have no output enable or a GND or VCC output enable - 
 Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_safe.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4520 megabytes
-    Info: Processing ended: Thu Oct 15 11:30:58 2026
+    Info: Processing ended: Thu Oct 15 11:57:16 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:59 2026
+    Info: Processing started: Thu Oct 15 11:57:16 2026
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lcd_p2_safe -c lcd_p2_safe
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:59 2026
+    Info: Processing started: Thu Oct 15 11:57:16 2026
 Info: Command: quartus_sta lcd_p2_safe -c lcd_p2_safe
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: qsta_default_script.tcl version: #2
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4358 megabytes
-    Info: Processing ended: Thu Oct 15 11:30:59 2026
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Oct 15 11:57:17 2026
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Started post-fitting delay annotation
@@ -210,13 +210,13 @@ Info: Design is fully constrained for setup requirements
 Info: Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4369 megabytes
-    Info: Processing ended: Thu Oct 15 11:31:00 2026
+    Info: Processing ended: Thu Oct 15 11:57:17 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 Info: Quartus II Full Compilation was successful. 0 errors, 32 warnings
 Info: Evaluation of Tcl script e:/quartus/quartusii91/quartus/common/tcl/internal/qsh_flow.tcl was successful
 Info: Quartus II 64-Bit Shell was successful. 0 errors, 32 warnings
     Info: Peak virtual memory: 4254 megabytes
-    Info: Processing ended: Thu Oct 15 11:31:00 2026
+    Info: Processing ended: Thu Oct 15 11:57:18 2026
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07

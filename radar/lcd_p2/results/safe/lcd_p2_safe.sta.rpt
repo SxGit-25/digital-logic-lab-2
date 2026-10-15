@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lcd_p2_safe
-Thu Oct 15 11:31:00 2026
+Thu Oct 15 11:57:17 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -85,7 +85,7 @@ applicable agreement for further details.
 +-----------------+--------+--------------------------+
 ; SDC File Path   ; Status ; Read at                  ;
 +-----------------+--------+--------------------------+
-; lcd_p2_safe.sdc ; OK     ; Thu Oct 15 11:30:59 2026 ;
+; lcd_p2_safe.sdc ; OK     ; Thu Oct 15 11:57:17 2026 ;
 +-----------------+--------+--------------------------+
 
 
@@ -583,7 +583,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:30:59 2026
+    Info: Processing started: Thu Oct 15 11:57:16 2026
 Info: Command: quartus_sta lcd_p2_safe -c lcd_p2_safe
 Info: qsta_default_script.tcl version: #2
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -609,7 +609,7 @@ Info: Design is fully constrained for setup requirements
 Info: Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4369 megabytes
-    Info: Processing ended: Thu Oct 15 11:31:00 2026
+    Info: Processing ended: Thu Oct 15 11:57:17 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

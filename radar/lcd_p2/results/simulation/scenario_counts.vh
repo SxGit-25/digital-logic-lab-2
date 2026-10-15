@@ -1,2 +1,2 @@
-`define SCENARIOS 596
-`define PIXELS 26245
+`define SCENARIOS 602
+`define PIXELS 27371

@@ -5,7 +5,8 @@
 // since those reads advance the LCD address. Never write to that advanced column.
 module radar_lcd_ctrl #(
     parameter USE_UFM=0,
-    parameter MIRROR_X=0
+    parameter MIRROR_X=0,
+    parameter [5:0] MIN_RADIUS=6
 )(
     input wire clk,rst,request,
     input wire [7:0] angle,
@@ -23,6 +24,7 @@ module radar_lcd_ctrl #(
     localparam IDLE=0,START_A=1,START_B=2,RUN=3,RMW=4,WAIT_RAY=5;
     reg [2:0] state;
     reg erase;
+    reg flushing_end;
     reg [7:0] current_angle,ray_angle;
     reg [5:0] target_radius;
     reg target_valid;
@@ -33,7 +35,7 @@ module radar_lcd_ctrl #(
     wire ring_point=pixel_step==16 || pixel_step==32 || pixel_step==48;
     wire selected=erase ? !ring_point : (ring_point || (target_valid && pixel_step==target_radius));
     wire pixel_ready=(state==RUN && !selected) || state==WAIT_RAY;
-    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X)) ray(
+    ray_engine #(.USE_UFM(USE_UFM),.MIRROR_X(MIRROR_X),.MIN_RADIUS(MIN_RADIUS)) ray(
         .clk(clk),.rst(rst),.start(state==START_A || state==START_B),.angle(ray_angle),
         .busy(ray_busy),.done(ray_done),.pixel_valid(pixel_valid),.pixel_ready(pixel_ready),
         .step(pixel_step),.x(pixel_x),.y(pixel_y));
@@ -60,16 +62,23 @@ module radar_lcd_ctrl #(
     assign bus_write_data=command;
     always @(posedge clk) begin
         if(rst) begin
-            state<=IDLE;erase<=0;current_angle<=0;ray_angle<=0;
+            state<=IDLE;erase<=0;flushing_end<=0;current_angle<=0;ray_angle<=0;
             target_radius<=0;target_valid<=0;done<=0;
             page<=0;column<=0;mask<=0;new_byte<=0;transaction<=0;pending<=0;
         end else begin
             done<=0;
             case(state)
             IDLE:if(request && angle<=180) begin
-                current_angle<=angle;target_radius<=radius;
-                target_valid<=radius_valid && radius>=4 && radius<=48;
-                if((direction_up && angle<=170) || (!direction_up && angle>=10)) begin
+                current_angle<=angle;
+                target_radius<=radius<MIN_RADIUS ? MIN_RADIUS : radius;
+                target_valid<=radius_valid && radius<=48;
+                // Endpoints carry the NEW direction. Clear the complete end
+                // zone before plotting this measurement, then resume normal A/B.
+                flushing_end<=0;
+                if((angle==180 && !direction_up) || (angle==0 && direction_up)) begin
+                    ray_angle<=angle==180 ? 8'd170 : 8'd0;
+                    flushing_end<=1;erase<=1;state<=START_A;
+                end else if((direction_up && angle<=170) || (!direction_up && angle>=10)) begin
                     ray_angle<=direction_up ? angle+8'd10 : angle-8'd10;
                     erase<=1;state<=START_A;
                 end else begin ray_angle<=angle;erase<=0;state<=START_B;end
@@ -81,7 +90,14 @@ module radar_lcd_ctrl #(
                     mask<=8'b1<<pixel_y[2:0];transaction<=0;pending<=0;state<=RMW;
                 end
                 if(ray_done) begin
-                    if(erase) begin erase<=0;ray_angle<=current_angle;state<=START_B;end
+                    if(erase) begin
+                        if(flushing_end && ((current_angle==180 && ray_angle!=180) ||
+                                            (current_angle==0 && ray_angle!=10))) begin
+                            ray_angle<=ray_angle+1'b1;state<=START_A;
+                        end else begin
+                            flushing_end<=0;erase<=0;ray_angle<=current_angle;state<=START_B;
+                        end
+                    end
                     else begin state<=IDLE;done<=1;end
                 end
             end

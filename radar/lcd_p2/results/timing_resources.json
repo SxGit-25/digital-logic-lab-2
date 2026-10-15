@@ -1,42 +1,38 @@
 {
   "case": {
     "entity": "|lcd_p2_case_read_test_top",
-    "LE": 588,
+    "LE": 656,
     "own_LE": 1,
-    "registers": 260,
+    "registers": 261,
     "UFM": 0,
-    "Fmax_MHz": 57.03,
+    "Fmax_MHz": 54.9,
     "slacks_ns": {
-      "Setup clk": 2.466,
+      "Setup clk": 1.785,
       "Hold clk": 1.078,
-      "Recovery clk": 9.658,
-      "Removal clk": 8.977,
+      "Recovery clk": 9.237,
+      "Removal clk": 9.391,
       "Minimum Pulse Width clk": 9.734
     },
-    "lcd_Tco_min_ns": 9.005,
-    "lcd_Tco_max_ns": 12.534,
-    "lcd_Tco_spread_ns": 3.529,
-    "board_skew_allowance_ns": 5,
     "entities": [
       {
         "entity": "|lcd_p2_case_read_test_top",
-        "LE": 588,
+        "LE": 656,
         "own_LE": 1,
-        "registers": 260,
+        "registers": 261,
         "UFM": 0
       },
       {
         "entity": "|lcd_p2_top:test_core|",
-        "LE": 587,
+        "LE": 655,
         "own_LE": 70,
-        "registers": 260,
+        "registers": 261,
         "UFM": 0
       },
       {
         "entity": "|lcd_p2_core:core|",
-        "LE": 500,
+        "LE": 568,
         "own_LE": 4,
-        "registers": 208,
+        "registers": 209,
         "UFM": 0
       },
       {
@@ -48,22 +44,22 @@
       },
       {
         "entity": "|lcd_init:init|",
-        "LE": 98,
-        "own_LE": 98,
+        "LE": 99,
+        "own_LE": 99,
         "registers": 40,
         "UFM": 0
       },
       {
         "entity": "|radar_lcd_ctrl:draw|",
-        "LE": 313,
-        "own_LE": 112,
-        "registers": 139,
+        "LE": 380,
+        "own_LE": 180,
+        "registers": 140,
         "UFM": 0
       },
       {
         "entity": "|ray_engine:ray|",
-        "LE": 201,
-        "own_LE": 132,
+        "LE": 200,
+        "own_LE": 131,
         "registers": 77,
         "UFM": 0
       },
@@ -81,52 +77,51 @@
         "registers": 16,
         "UFM": 0
       }
-    ]
+    ],
+    "lcd_Tco_min_ns": 9.079,
+    "lcd_Tco_max_ns": 13.215,
+    "lcd_Tco_spread_ns": 4.135999999999999
   },
   "ufm": {
     "entity": "|lcd_p2_ufm_read_test_top",
-    "LE": 570,
+    "LE": 640,
     "own_LE": 1,
-    "registers": 287,
+    "registers": 288,
     "UFM": 1,
-    "Fmax_MHz": 56.13,
+    "Fmax_MHz": 56.72,
     "slacks_ns": {
-      "Setup clk": 2.185,
-      "Setup ufm_drclk": 298.04,
-      "Setup ufm_arclk": 299.206,
-      "Hold clk": 1.055,
+      "Setup clk": 2.37,
+      "Setup ufm_drclk": 298.256,
+      "Setup ufm_arclk": 299.921,
+      "Hold clk": 1.078,
       "Hold ufm_arclk": 60.0,
       "Hold ufm_drclk": 60.0,
-      "Recovery clk": 8.451,
-      "Removal clk": 8.646,
+      "Recovery clk": 7.883,
+      "Removal clk": 10.061,
       "Minimum Pulse Width clk": 9.734,
       "Minimum Pulse Width ufm_arclk": 290.0,
       "Minimum Pulse Width ufm_drclk": 290.0
     },
-    "lcd_Tco_min_ns": 9.028,
-    "lcd_Tco_max_ns": 12.815,
-    "lcd_Tco_spread_ns": 3.786999999999999,
-    "board_skew_allowance_ns": 5,
     "entities": [
       {
         "entity": "|lcd_p2_ufm_read_test_top",
-        "LE": 570,
+        "LE": 640,
         "own_LE": 1,
-        "registers": 287,
+        "registers": 288,
         "UFM": 1
       },
       {
         "entity": "|lcd_p2_top:test_core|",
-        "LE": 569,
-        "own_LE": 70,
-        "registers": 287,
+        "LE": 639,
+        "own_LE": 69,
+        "registers": 288,
         "UFM": 1
       },
       {
         "entity": "|lcd_p2_core:core|",
-        "LE": 482,
+        "LE": 553,
         "own_LE": 4,
-        "registers": 235,
+        "registers": 236,
         "UFM": 1
       },
       {
@@ -138,29 +133,29 @@
       },
       {
         "entity": "|lcd_init:init|",
-        "LE": 98,
-        "own_LE": 98,
+        "LE": 99,
+        "own_LE": 99,
         "registers": 40,
         "UFM": 0
       },
       {
         "entity": "|radar_lcd_ctrl:draw|",
-        "LE": 295,
-        "own_LE": 109,
-        "registers": 166,
+        "LE": 365,
+        "own_LE": 180,
+        "registers": 167,
         "UFM": 1
       },
       {
         "entity": "|ray_engine:ray|",
-        "LE": 186,
-        "own_LE": 129,
+        "LE": 185,
+        "own_LE": 127,
         "registers": 104,
         "UFM": 1
       },
       {
         "entity": "|lcd_sin_lut:lut|",
-        "LE": 57,
-        "own_LE": 57,
+        "LE": 58,
+        "own_LE": 58,
         "registers": 37,
         "UFM": 1
       },
@@ -185,7 +180,10 @@
         "registers": 16,
         "UFM": 0
       }
-    ]
+    ],
+    "lcd_Tco_min_ns": 8.508,
+    "lcd_Tco_max_ns": 12.63,
+    "lcd_Tco_spread_ns": 4.122000000000002
   },
   "safe": {
     "entity": "|lcd_p2_top",
@@ -199,10 +197,6 @@
       "Hold clk": 1.078,
       "Minimum Pulse Width clk": 9.734
     },
-    "lcd_Tco_min_ns": 8.673,
-    "lcd_Tco_max_ns": 11.381,
-    "lcd_Tco_spread_ns": 2.708,
-    "board_skew_allowance_ns": 5,
     "entities": [
       {
         "entity": "|lcd_p2_top",
@@ -239,6 +233,9 @@
         "registers": 16,
         "UFM": 0
       }
-    ]
+    ],
+    "lcd_Tco_min_ns": 8.673,
+    "lcd_Tco_max_ns": 11.381,
+    "lcd_Tco_spread_ns": 2.708
   }
 }

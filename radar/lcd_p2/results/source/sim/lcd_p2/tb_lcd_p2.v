@@ -20,7 +20,7 @@ module tb_lcd_p2 #(parameter USE_UFM=0);
   8'hff,safe_dout,safe_oe,safe_rd,safe_wr,safe_a0,safe_res,safe_cs);
  always @(posedge clk) if(!rst && (!safe_oe || !safe_rd || safe_ready || safe_done))
   $fatal(1,"Default readback safety policy violated");
- reg [23:0] scenarios[0:`SCENARIOS-1];
+ reg [31:0] scenarios[0:`SCENARIOS-1];
  reg [18:0] pixels[0:`PIXELS-1];
  reg [7:0] expected[0:1055];
  integer scenario,ptr=0,tx=0,nops,oldptr,j,index,commands=0;
@@ -71,9 +71,9 @@ module tb_lcd_p2 #(parameter USE_UFM=0);
   if(!ready || done) $fatal(1,"Controller accepted illegal angle");
   for(scenario=0;scenario<`SCENARIOS;scenario=scenario+1) begin
    wait(ready);@(negedge clk);
-   angle=scenarios[scenario][23:16];direction_up=scenarios[scenario][15];
-   radius=scenarios[scenario][14:9];radius_valid=scenarios[scenario][8];
-   nops=scenarios[scenario][7:0];oldptr=ptr;request=1;
+   angle=scenarios[scenario][31:24];direction_up=scenarios[scenario][23];
+   radius=scenarios[scenario][22:17];radius_valid=scenarios[scenario][16];
+   nops=scenarios[scenario][15:0];oldptr=ptr;request=1;
    @(negedge clk);request=0;
    // Later external changes and spurious requests while busy cannot alter
    // this update's latched angle, direction, radius, or validity.

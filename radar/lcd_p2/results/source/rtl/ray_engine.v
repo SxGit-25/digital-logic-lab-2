@@ -3,7 +3,8 @@
 // unsigned Q6.8 magnitudes, round-to-nearest only at the pixel output.
 module ray_engine #(
     parameter USE_UFM=0,
-    parameter MIRROR_X=0
+    parameter MIRROR_X=0,
+    parameter [5:0] MIN_RADIUS=6
 )(
     input wire clk, rst, start,
     input wire [7:0] angle,
@@ -36,7 +37,7 @@ module ray_engine #(
     assign y=6'd63-dy;
     assign step=count;
     assign busy=state!=IDLE;
-    assign pixel_valid=state==WALK && count>=4;
+    assign pixel_valid=state==WALK && count>=MIN_RADIUS;
     always @(posedge clk) begin
         if(rst) begin
             state<=IDLE;theta<=0;negative_x<=0;sin_value<=0;cos_value<=0;
@@ -53,7 +54,7 @@ module ray_engine #(
             SIN_WAIT:if(lut_done) begin sin_value<=lut_value;state<=COS_REQ;end
             COS_REQ:state<=COS_WAIT;
             COS_WAIT:if(lut_done) begin cos_value<=lut_value;state<=WALK;end
-            WALK:if(count<4 || pixel_ready) begin
+            WALK:if(count<MIN_RADIUS || pixel_ready) begin
                 if(count==48) begin state<=IDLE;done<=1;end
                 else begin
                     count<=count+1'b1;

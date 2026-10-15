@@ -1,5 +1,5 @@
 Flow report for lcd_p2_ufm
-Thu Oct 15 11:35:09 2026
+Thu Oct 15 11:57:11 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Flow Summary                                                         ;
 +---------------------------+------------------------------------------+
-; Flow Status               ; Successful - Thu Oct 15 11:35:09 2026    ;
+; Flow Status               ; Successful - Thu Oct 15 11:57:11 2026    ;
 ; Quartus II 64-Bit Version ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name             ; lcd_p2_ufm                               ;
 ; Top-level Entity Name     ; lcd_p2_ufm_read_test_top                 ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                    ; EPM1270T144C5                            ;
 ; Timing Models             ; Final                                    ;
 ; Met timing requirements   ; N/A                                      ;
-; Total logic elements      ; 570 / 1,270 ( 45 % )                     ;
+; Total logic elements      ; 640 / 1,270 ( 50 % )                     ;
 ; Total pins                ; 22 / 116 ( 19 % )                        ;
 ; Total virtual pins        ; 0                                        ;
 ; UFM blocks                ; 1 / 1 ( 100 % )                          ;
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/15/2026 11:35:04 ;
+; Start date & time ; 10/15/2026 11:57:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lcd_p2_ufm          ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ applicable agreement for further details.
 ; Assignment Name               ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------+---------------------------------+---------------+-------------+------------+
 ; ALLOW_POWER_UP_DONT_CARE      ; Off                             ; On            ; --          ; --         ;
-; COMPILER_SIGNATURE_ID         ; 106650998336547.179203530417444 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID         ; 106650998336547.179203662627336 ; --            ; --          ; --         ;
 ; TOP_LEVEL_ENTITY              ; lcd_p2_ufm_read_test_top        ; lcd_p2_ufm    ; --          ; --         ;
 ; USE_TIMEQUEST_TIMING_ANALYZER ; On                              ; Off           ; --          ; --         ;
 +-------------------------------+---------------------------------+---------------+-------------+------------+
@@ -81,11 +81,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4420 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4420 MB             ; 00:00:02                           ;
 ; Fitter                    ; 00:00:02     ; 1.0                     ; 4524 MB             ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4372 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4359 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4360 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:04     ; --                      ; --                  ; 00:00:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_p2_case
-Thu Oct 15 11:34:59 2026
+Thu Oct 15 11:57:00 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -57,12 +57,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:34:59 2026    ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 15 11:57:00 2026    ;
 ; Quartus II 64-Bit Version   ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; lcd_p2_case                              ;
 ; Top-level Entity Name       ; lcd_p2_case_read_test_top                ;
 ; Family                      ; MAX II                                   ;
-; Total logic elements        ; 611                                      ;
+; Total logic elements        ; 680                                      ;
 ; Total pins                  ; 22                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
@@ -173,33 +173,33 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 611   ;
-;     -- Combinational with no register       ; 351   ;
-;     -- Register only                        ; 46    ;
+; Total logic elements                        ; 680   ;
+;     -- Combinational with no register       ; 419   ;
+;     -- Register only                        ; 47    ;
 ;     -- Combinational with a register        ; 214   ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 251   ;
-;     -- 3 input functions                    ; 148   ;
-;     -- 2 input functions                    ; 154   ;
-;     -- 1 input functions                    ; 10    ;
+;     -- 4 input functions                    ; 293   ;
+;     -- 3 input functions                    ; 143   ;
+;     -- 2 input functions                    ; 183   ;
+;     -- 1 input functions                    ; 12    ;
 ;     -- 0 input functions                    ; 2     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 483   ;
-;     -- arithmetic mode                      ; 128   ;
+;     -- normal mode                          ; 539   ;
+;     -- arithmetic mode                      ; 141   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 159   ;
+;     -- synchronous clear/load mode          ; 160   ;
 ;     -- asynchronous clear/load mode         ; 10    ;
 ;                                             ;       ;
-; Total registers                             ; 260   ;
-; Total logic cells in carry chains           ; 144   ;
+; Total registers                             ; 261   ;
+; Total logic cells in carry chains           ; 159   ;
 ; I/O pins                                    ; 22    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 260   ;
-; Total fan-out                               ; 2493  ;
-; Average fan-out                             ; 3.94  ;
+; Maximum fan-out                             ; 261   ;
+; Total fan-out                               ; 2696  ;
+; Average fan-out                             ; 3.84  ;
 +---------------------------------------------+-------+
 
 
@@ -208,13 +208,13 @@ applicable agreement for further details.
 +----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                 ; Library Name ;
 +----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |lcd_p2_case_read_test_top       ; 611 (1)     ; 260          ; 0          ; 22   ; 0            ; 351 (1)      ; 46 (0)            ; 214 (0)          ; 144 (0)         ; 0 (0)      ; |lcd_p2_case_read_test_top                                                                                          ; work         ;
-;    |lcd_p2_top:test_core|        ; 610 (70)    ; 260          ; 0          ; 0    ; 0            ; 350 (34)     ; 46 (0)            ; 214 (36)         ; 144 (34)        ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core                                                                     ; work         ;
-;       |lcd_p2_core:core|         ; 523 (4)     ; 208          ; 0          ; 0    ; 0            ; 315 (4)      ; 31 (0)            ; 177 (0)          ; 110 (0)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core                                                    ; work         ;
+; |lcd_p2_case_read_test_top       ; 680 (1)     ; 261          ; 0          ; 22   ; 0            ; 419 (1)      ; 47 (0)            ; 214 (0)          ; 159 (0)         ; 0 (0)      ; |lcd_p2_case_read_test_top                                                                                          ; work         ;
+;    |lcd_p2_top:test_core|        ; 679 (70)    ; 261          ; 0          ; 0    ; 0            ; 418 (34)     ; 47 (0)            ; 214 (36)         ; 159 (34)        ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core                                                                     ; work         ;
+;       |lcd_p2_core:core|         ; 592 (4)     ; 209          ; 0          ; 0    ; 0            ; 383 (4)      ; 32 (0)            ; 177 (0)          ; 125 (0)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core                                                    ; work         ;
 ;          |lcd_bus:bus|           ; 91 (91)     ; 29           ; 0          ; 0    ; 0            ; 62 (62)      ; 5 (5)             ; 24 (24)          ; 0 (0)           ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus                                        ; work         ;
-;          |lcd_init:init|         ; 101 (101)   ; 40           ; 0          ; 0    ; 0            ; 61 (61)      ; 2 (2)             ; 38 (38)          ; 32 (32)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init                                      ; work         ;
-;          |radar_lcd_ctrl:draw|   ; 327 (115)   ; 139          ; 0          ; 0    ; 0            ; 188 (53)     ; 24 (4)            ; 115 (58)         ; 78 (11)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw                                ; work         ;
-;             |ray_engine:ray|     ; 212 (142)   ; 77           ; 0          ; 0    ; 0            ; 135 (75)     ; 20 (19)           ; 57 (48)          ; 67 (67)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray                 ; work         ;
+;          |lcd_init:init|         ; 102 (102)   ; 40           ; 0          ; 0    ; 0            ; 62 (62)      ; 2 (2)             ; 38 (38)          ; 32 (32)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init                                      ; work         ;
+;          |radar_lcd_ctrl:draw|   ; 395 (184)   ; 140          ; 0          ; 0    ; 0            ; 255 (121)    ; 25 (5)            ; 115 (58)         ; 93 (26)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw                                ; work         ;
+;             |ray_engine:ray|     ; 211 (141)   ; 77           ; 0          ; 0    ; 0            ; 134 (74)     ; 20 (19)           ; 57 (48)          ; 67 (67)         ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray                 ; work         ;
 ;                |lcd_sin_lut:lut| ; 70 (70)     ; 10           ; 0          ; 0    ; 0            ; 60 (60)      ; 1 (1)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut ; work         ;
 ;       |reset_ctrl:reset|         ; 17 (17)     ; 16           ; 0          ; 0    ; 0            ; 1 (1)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|reset_ctrl:reset                                                    ; work         ;
 +----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------+--------------+
@@ -287,12 +287,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 260   ;
-; Number of registers using Synchronous Clear  ; 132   ;
-; Number of registers using Synchronous Load   ; 37    ;
+; Total registers                              ; 261   ;
+; Number of registers using Synchronous Clear  ; 133   ;
+; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 184   ;
+; Number of registers using Clock Enable       ; 185   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -302,7 +302,7 @@ Encoding Type:  One-Hot
 +------------------------------------------------------+---------+
 ; Inverted Register                                    ; Fan out ;
 +------------------------------------------------------+---------+
-; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15] ; 130     ;
+; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[15] ; 126     ;
 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[14] ; 1       ;
 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[13] ; 1       ;
 ; lcd_p2_top:test_core|reset_ctrl:reset|reset_pipe[12] ; 1       ;
@@ -328,30 +328,32 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|angle[7]                                                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[0]                          ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[5]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|index[1]                          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|current_angle[2]            ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|page[0]                     ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[7] ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[7] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|radius[0]                                                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[2]                        ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|frame_timer[9]                                                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|sin_value[3] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|cos_value[8] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|radius[4]                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|read_data[0]                        ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|frame_timer[14]                                                  ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|page[0]                           ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[1]                   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|column[5]                   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|target_radius[0]            ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|theta[0]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[7]                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[2]                     ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[3]                 ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[2]              ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[0]     ;
-; 7:1                ; 28 bits   ; 112 LEs       ; 28 LEs               ; 84 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|x_acc[10]    ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[7]                         ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[1]                ;
-; 20:1               ; 9 bits    ; 117 LEs       ; 18 LEs               ; 99 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[3]                          ;
-; 20:1               ; 11 bits   ; 143 LEs       ; 22 LEs               ; 121 LEs                ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[5]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[5]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|mask[0]                     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|new_byte[7]                 ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|transaction[3]              ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|count[3]     ;
+; 7:1                ; 28 bits   ; 112 LEs       ; 28 LEs               ; 84 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|y_acc[7]     ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|column[5]                         ;
+; 20:1               ; 9 bits    ; 117 LEs       ; 18 LEs               ; 99 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[1]                          ;
+; 20:1               ; 11 bits   ; 143 LEs       ; 22 LEs               ; 121 LEs                ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|timer[16]                         ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 12 LEs               ; 9 LEs                  ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[6]                ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_angle[7]                ;
 ; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_init:init|state[3]                          ;
-; 35:1               ; 3 bits    ; 69 LEs        ; 30 LEs               ; 39 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[4]                         ;
-; 35:1               ; 3 bits    ; 69 LEs        ; 21 LEs               ; 48 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[0]                         ;
+; 35:1               ; 3 bits    ; 69 LEs        ; 30 LEs               ; 39 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[5]                         ;
+; 35:1               ; 3 bits    ; 69 LEs        ; 21 LEs               ; 48 LEs                 ; Yes        ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus|data_out[1]                         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state        ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|state                       ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |lcd_p2_case_read_test_top|lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state        ;
@@ -390,6 +392,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_READBACK ; 1       ; Signed Integer                                         ;
 ; USE_UFM         ; 0       ; Signed Integer                                         ;
 ; MIRROR_X        ; 0       ; Signed Integer                                         ;
+; MIN_RADIUS      ; 000110  ; Unsigned Binary                                        ;
 ; RESET_CYCLES    ; 50000   ; Signed Integer                                         ;
 ; WAIT_CYCLES     ; 1000000 ; Signed Integer                                         ;
 +-----------------+---------+--------------------------------------------------------+
@@ -410,23 +413,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; USE_UFM        ; 0     ; Signed Integer                                                                ;
-; MIRROR_X       ; 0     ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
++----------------+--------+------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                         ;
++----------------+--------+------------------------------------------------------------------------------+
+; USE_UFM        ; 0      ; Signed Integer                                                               ;
+; MIRROR_X       ; 0      ; Signed Integer                                                               ;
+; MIN_RADIUS     ; 000110 ; Unsigned Binary                                                              ;
++----------------+--------+------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; USE_UFM        ; 0     ; Signed Integer                                                                               ;
-; MIRROR_X       ; 0     ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
++----------------+--------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                        ;
++----------------+--------+---------------------------------------------------------------------------------------------+
+; USE_UFM        ; 0      ; Signed Integer                                                                              ;
+; MIRROR_X       ; 0      ; Signed Integer                                                                              ;
+; MIN_RADIUS     ; 000110 ; Unsigned Binary                                                                             ;
++----------------+--------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -480,7 +485,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Oct 15 11:34:57 2026
+    Info: Processing started: Thu Oct 15 11:56:58 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_p2_case -c lcd_p2_case
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Found 3 design units, including 3 entities, in source file lcd_p2_top.v
@@ -523,7 +528,7 @@ Warning (10230): Verilog HDL assignment warning at lcd_init.v(67): truncated val
 Warning (10230): Verilog HDL assignment warning at lcd_init.v(70): truncated value with size 32 to match size of target (4)
 Info: Elaborating entity "radar_lcd_ctrl" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw"
 Info: Elaborating entity "ray_engine" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray"
-Warning (10230): Verilog HDL assignment warning at ray_engine.v(48): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at ray_engine.v(49): truncated value with size 8 to match size of target (7)
 Info: Elaborating entity "lcd_sin_lut" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|lcd_sin_lut:lut"
 Info: Elaborating entity "lcd_bus" for hierarchy "lcd_p2_top:test_core|lcd_p2_core:core|lcd_bus:bus"
 Warning (10230): Verilog HDL assignment warning at lcd_bus.v(52): truncated value with size 32 to match size of target (5)
@@ -540,15 +545,15 @@ Info: 8 registers lost all their fanouts during netlist optimizations. The first
     Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~4" lost all its fanouts during netlist optimizations.
     Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~5" lost all its fanouts during netlist optimizations.
     Info: Register "lcd_p2_top:test_core|lcd_p2_core:core|radar_lcd_ctrl:draw|ray_engine:ray|state~6" lost all its fanouts during netlist optimizations.
-Info: Implemented 633 device resources after synthesis - the final resource count might be different
+Info: Implemented 702 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 13 output pins
     Info: Implemented 8 bidirectional pins
-    Info: Implemented 611 logic cells
+    Info: Implemented 680 logic cells
 Info: Generated suppressed messages file R:/lcd_p2/lcd_p2_case.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 4405 megabytes
-    Info: Processing ended: Thu Oct 15 11:34:59 2026
+    Info: Processing ended: Thu Oct 15 11:57:00 2026
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

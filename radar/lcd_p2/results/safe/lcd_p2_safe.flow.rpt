@@ -1,5 +1,5 @@
 Flow report for lcd_p2_safe
-Thu Oct 15 11:31:00 2026
+Thu Oct 15 11:57:17 2026
 Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Flow Summary                                                         ;
 +---------------------------+------------------------------------------+
-; Flow Status               ; Successful - Thu Oct 15 11:30:59 2026    ;
+; Flow Status               ; Successful - Thu Oct 15 11:57:17 2026    ;
 ; Quartus II 64-Bit Version ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name             ; lcd_p2_safe                              ;
 ; Top-level Entity Name     ; lcd_p2_top                               ;
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/15/2026 11:30:56 ;
+; Start date & time ; 10/15/2026 11:57:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lcd_p2_safe         ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ applicable agreement for further details.
 ; Assignment Name               ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------+---------------------------------+---------------+-------------+------------+
 ; ALLOW_POWER_UP_DONT_CARE      ; Off                             ; On            ; --          ; --         ;
-; COMPILER_SIGNATURE_ID         ; 106650998336547.179203505624976 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID         ; 106650998336547.179203663326932 ; --            ; --          ; --         ;
 ; TOP_LEVEL_ENTITY              ; lcd_p2_top                      ; lcd_p2_safe   ; --          ; --         ;
 ; USE_TIMEQUEST_TIMING_ANALYZER ; On                              ; Off           ; --          ; --         ;
 +-------------------------------+---------------------------------+---------------+-------------+------------+
@@ -84,7 +84,7 @@ applicable agreement for further details.
 ; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4405 MB             ; 00:00:01                           ;
 ; Fitter                    ; 00:00:01     ; 1.0                     ; 4520 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4369 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 4358 MB             ; 00:00:00                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4358 MB             ; 00:00:00                           ;
 ; Total                     ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

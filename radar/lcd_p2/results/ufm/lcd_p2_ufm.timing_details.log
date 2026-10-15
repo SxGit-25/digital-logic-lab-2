@@ -14,24 +14,24 @@ Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Thu Oct 15 11:35:10 2026
+    Info: Processing started: Thu Oct 15 11:57:12 2026
 Info: Command: quartus_sta -t timing_details.tcl lcd_p2_ufm
 Info: Quartus(args): lcd_p2_ufm
 Info: Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info: Reading SDC File: 'lcd_p2_ufm.sdc'
-Info: Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 2.185
+Info: Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 2.370
     Info: -setup
     Info: -npaths 5
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
-Info: Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 1.055
+Info: Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 1.078
     Info: -hold
     Info: -npaths 5
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
 LCD capture registers: 8
-Info: Report Timing: Found 8 setup paths (0 violated).  Worst case slack is 67.767
+Info: Report Timing: Found 8 setup paths (0 violated).  Worst case slack is 66.777
     Info: -from [get_ports {lcd_data[*]}]
     Info: -to [get_registers {*|read_data[*]}]
     Info: -setup
@@ -39,7 +39,7 @@ Info: Report Timing: Found 8 setup paths (0 violated).  Worst case slack is 67.7
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 8 hold paths (0 violated).  Worst case slack is 1.055
+Info: Report Timing: Found 8 hold paths (0 violated).  Worst case slack is 1.321
     Info: -from [get_ports {lcd_data[*]}]
     Info: -to [get_registers {*|read_data[*]}]
     Info: -hold
@@ -48,7 +48,7 @@ Info: Report Timing: Found 8 hold paths (0 violated).  Worst case slack is 1.055
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
 UFM capture registers: 9; serial: 1; address: 1
-Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 610.063
+Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 608.559
     Info: -from [get_registers {*|ufm_drdout}]
     Info: -to [get_registers {*|lcd_sin_lut:lut|value[*]}]
     Info: -setup
@@ -56,7 +56,7 @@ Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 610.
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 9.383
+Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 10.887
     Info: -from [get_registers {*|ufm_drdout}]
     Info: -to [get_registers {*|lcd_sin_lut:lut|value[*]}]
     Info: -hold
@@ -64,7 +64,7 @@ Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 9.383
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 299.206
+Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 299.921
     Info: -from [get_registers {*|g_ufm.addr_shift[8]}]
     Info: -to [get_registers {*OBSERVABLEADDRESSREGOUT}]
     Info: -setup
@@ -72,7 +72,7 @@ Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 299.
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 300.794
+Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 300.079
     Info: -from [get_registers {*|g_ufm.addr_shift[8]}]
     Info: -to [get_registers {*OBSERVABLEADDRESSREGOUT}]
     Info: -hold
@@ -80,7 +80,7 @@ Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 300.7
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 298.040
+Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 298.256
     Info: -from [get_registers {*|g_ufm.drshft}]
     Info: -to [get_registers {*|ufm_drdout}]
     Info: -setup
@@ -88,7 +88,7 @@ Info: Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 298.
     Info: -detail full_path
     Info: -file {lcd_p2_ufm.timing_details.rpt}
     Info: -append
-Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 301.960
+Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 301.744
     Info: -from [get_registers {*|g_ufm.drshft}]
     Info: -to [get_registers {*|ufm_drdout}]
     Info: -hold
@@ -99,6 +99,6 @@ Info: Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 301.9
 Info: Evaluation of Tcl script timing_details.tcl was successful
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4358 megabytes
-    Info: Processing ended: Thu Oct 15 11:35:11 2026
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Oct 15 11:57:12 2026
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00

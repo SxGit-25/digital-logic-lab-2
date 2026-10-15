@@ -1,7 +1,7 @@
 {
   "coordinates": 26607,
   "unique_unmirrored": 8869,
-  "valid_output_combinations": 8145,
+  "valid_output_combinations": 7783,
   "rounded_reference_chebyshev_error": {
     "0": 8435,
     "1": 434
@@ -16,13 +16,15 @@
   "mirror_identical": true,
   "max_euclidean_error_against_unrounded_float": 0.7364662030526636,
   "images": {
-    "alias_after": {
+    "endpoint_turnaround": {
       "exact_reference_match": true,
-      "target_38_59": 0
+      "old_r20_at_174": 0,
+      "new_r35_at_174": 1
     },
-    "alias_before": {
+    "endpoint_turnaround_original": {
       "exact_reference_match": true,
-      "target_38_59": 1
+      "old_r20_at_174": 1,
+      "new_r35_at_174": 1
     },
     "full_scan": {
       "exact_reference_match": true,
@@ -119,6 +121,58 @@
         }
       }
     },
+    "multiple_targets_turnaround_original": {
+      "exact_reference_match": true,
+      "ring_coverage": {
+        "16": {
+          "total_pixels": 65,
+          "lit_pixels": 64,
+          "missing_pixels": [
+            [
+              53,
+              52
+            ]
+          ],
+          "reference_components_8": [
+            65
+          ],
+          "actual_components_8": [
+            64
+          ]
+        },
+        "32": {
+          "total_pixels": 113,
+          "lit_pixels": 111,
+          "missing_pixels": [
+            [
+              41,
+              40
+            ],
+            [
+              43,
+              38
+            ]
+          ],
+          "reference_components_8": [
+            113
+          ],
+          "actual_components_8": [
+            111
+          ]
+        },
+        "48": {
+          "total_pixels": 149,
+          "lit_pixels": 149,
+          "missing_pixels": [],
+          "reference_components_8": [
+            149
+          ],
+          "actual_components_8": [
+            149
+          ]
+        }
+      }
+    },
     "outbound": {
       "exact_reference_match": true,
       "ring_coverage": {
@@ -162,5 +216,10 @@
         }
       }
     }
+  },
+  "baseline_scene_comparison": {
+    "baseline_commit": "3231197",
+    "replayed_current_602_scenarios": true,
+    "original_final_ram_matches_baseline_true_bus_snapshot": true
   }
 }
