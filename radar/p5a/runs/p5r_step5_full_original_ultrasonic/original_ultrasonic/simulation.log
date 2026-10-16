@@ -1,0 +1,2 @@
+PASS tb_ultrasonic
+tb_ultrasonic.v:75: $finish called at 50916000 (1ps)

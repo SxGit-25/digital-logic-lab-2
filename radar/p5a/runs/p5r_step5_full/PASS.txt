@@ -1,0 +1,3 @@
+PASS all 20 original regressions after draw dependency retry.
+Original failed compilation is retained in status.csv. No test assertions changed.
+19 original tests passed; draw re-run passed from the same RTL snapshot: E:\codex\数电实验2\radar\p5a\runs\p5r_step5_draw_dependency_retry

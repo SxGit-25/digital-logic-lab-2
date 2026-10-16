@@ -13,6 +13,10 @@ foreach($name in $Variants) {
  $oldTemp=$env:TEMP;$oldTmp=$env:TMP
  try {
   foreach($file in @('radar_minsky_draw','radar_minsky_draw_compact','radar_minsky_draw_compact_v2','minsky_serial_datapath','lcd_init','lcd_bus','radar_lcd_micro','lcd_bus_phase')) {Copy-Item (Join-Path $SourceDir "$file.v") $stage}
+  foreach($dependency in @('p5_ui_columns','p5_ufm_reader')) {
+   $dependencyPath=Join-Path $SourceDir "$dependency.v"
+   if(Test-Path $dependencyPath){Copy-Item -LiteralPath $dependencyPath -Destination $stage}
+  }
   Copy-Item (Join-Path $root 'radar\sim\lcd\st7565_model.v'),(Join-Path $PSScriptRoot 'tb_budget_draw.v') $stage
   $tbPath=Join-Path $stage 'tb_budget_draw.v'
   [IO.File]::WriteAllText($tbPath,([IO.File]::ReadAllText($tbPath).Replace('radar_minsky_draw_compact','radar_minsky_draw_compact_v2')),[Text.Encoding]::ASCII)

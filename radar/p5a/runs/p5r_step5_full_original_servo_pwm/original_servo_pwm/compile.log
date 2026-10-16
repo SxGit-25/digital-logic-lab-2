@@ -1,0 +1,2 @@
+tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
+tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.

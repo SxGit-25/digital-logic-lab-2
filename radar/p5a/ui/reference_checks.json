@@ -1,0 +1,9 @@
+{
+  "vectors": 1160,
+  "numeric_codes": "0..15, every position and column 0..7",
+  "modes": [
+    "5tEP",
+    "5CAn"
+  ],
+  "levels": "0..5, offsets 0..31"
+}
