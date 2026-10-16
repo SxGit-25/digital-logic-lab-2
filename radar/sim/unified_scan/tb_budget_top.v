@@ -26,6 +26,7 @@ module tb_budget_top;
  integer echo_length=29400,mode_resets=0,reads_before;
  reg [11:0] accepted_angle;
  reg accepted_direction;
+ reg latest_is_sample=0;
  always @(posedge pins1[57]) begin
   shots=shots+1;
   @(negedge pins1[57]);
@@ -44,12 +45,15 @@ module tb_budget_top;
  always @(posedge clk) begin
   cycles=cycles+1;
   if(readback.lcd_reset || !readback.initialized) expected_drops=0;
-  else if((readback.sample_event || (readback.step_event && !readback.measurement_pending)) && readback.system_state==3 && sw7 &&
-          readback.draw.state!=0 && expected_drops<255) expected_drops=expected_drops+1;
-  if(readback.draw.accept && readback.sample_event) begin
+  else if(readback.draw.request && expected_drops<255 &&
+          (readback.draw.P5_FIXES ? (readback.draw.pending && !readback.draw.accept) : readback.draw.state!=0))
+    expected_drops=expected_drops+1;
+  // Pending dispatch occurs after the original request; retain the request tag.
+  if(readback.draw.accept && (readback.draw.P5_FIXES ? latest_is_sample : readback.sample_event)) begin
    if(readback.mode_continuous) continuous_targets=continuous_targets+1;
    else basic_targets=basic_targets+1;
   end
+  if(readback.draw.request) latest_is_sample=readback.sample_event;
   if(readback.measure_start) begin
    accepted_angle=readback.angle_bcd;accepted_direction=readback.direction_up;
   end
@@ -97,9 +101,12 @@ module tb_budget_top;
   if(continuous_drops!=0 || continuous_targets<2 || basic_targets<2) $fatal(1,"Normal samples lost to redundant step drawing");
   switch_mode(0);
   repeat(150000) @(negedge clk);
-  #3;sw7=0;#1;
+  #3;sw7=0;
+  // Production output gating now uses the un-debounced second synchronizer
+  // stage. Allow its two clock edges, preserving the immediate gate check then.
+  repeat(2) @(posedge clk);#1;
   if(pins0!=={3'b000,16'h0,7'h0,8'hff,8'hff,8'h0,8'h0} || pins1!==pins0)
-    $fatal(1,"SW7 asynchronous output gate");
+    $fatal(1,"SW7 output gate after two synchronizer clocks");
   $display("PASS tb_unified_top cycles=%0d shots=%0d basic_samples=%0d continuous_samples=%0d mode_resets=%0d readback_reads=%0d",cycles,shots,basic_samples,continuous_samples,mode_resets,model1.reads);
   $display("LCD_COUNTS basic_targets=%0d continuous_targets=%0d basic_fast_step_drops=%0d continuous_drops=%0d",basic_targets,continuous_targets,basic_drops,continuous_drops);
   $finish;

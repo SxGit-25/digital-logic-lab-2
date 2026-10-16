@@ -3,9 +3,11 @@
 module switch_pair_sampled(
  input wire clk,rst,sample_tick,
  input wire sw6,sw7,
- output reg mode_continuous,system_on
+ output reg mode_continuous,system_on,
+ output wire sw7_sync
 );
  reg [1:0] sw_meta,sw_sync,previous;
+ assign sw7_sync=sw_sync[0];
  always @(posedge clk) begin
   if(rst) begin sw_meta<=0;sw_sync<=0;previous<=0;mode_continuous<=0;system_on<=0;end
   else begin

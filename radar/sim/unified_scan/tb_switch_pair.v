@@ -2,7 +2,7 @@
 module tb_switch_pair;
  reg clk=0,rst=1,tick=0,a=0,b=0;always #10 clk=~clk;
  wire x,y;
- switch_pair_sampled s(clk,rst,tick,a,b,x,y);
+ switch_pair_sampled s(clk,rst,tick,a,b,x,y,);
  task sample;
  begin @(negedge clk);tick=1;@(negedge clk);tick=0;#1;end
  endtask

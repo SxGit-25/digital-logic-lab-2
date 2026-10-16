@@ -1,0 +1,2 @@
+PASS tb_radar_top
+tb_radar_top.v:60: $finish called at 110586000 (1ps)

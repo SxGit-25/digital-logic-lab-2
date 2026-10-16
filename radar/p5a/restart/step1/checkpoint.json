@@ -1,0 +1,72 @@
+{
+  "step": 1,
+  "features": "A0_pending_snapshot_syncSW7",
+  "seed": 1,
+  "build": "p5r_step1_pipe",
+  "le": 1101,
+  "fitter_success": true,
+  "setup_ns": 3.555,
+  "hold_ns": 1.078,
+  "modules": [
+    {
+      "instance": "|radar_unified_bcd_top",
+      "le_self": 1
+    },
+    {
+      "instance": "|radar_unified_top:system|",
+      "le_self": 9
+    },
+    {
+      "instance": "|alarm_global:u_alarm|",
+      "le_self": 15
+    },
+    {
+      "instance": "|lcd_bus_phase:bus|",
+      "le_self": 62
+    },
+    {
+      "instance": "|radar_display_gated:u_display|",
+      "le_self": 31
+    },
+    {
+      "instance": "|radar_display_shared:core|",
+      "le_self": 120
+    },
+    {
+      "instance": "|radar_global_timebase_alarm:u_timebase|",
+      "le_self": 67
+    },
+    {
+      "instance": "|radar_lcd_micro:draw|",
+      "le_self": 301
+    },
+    {
+      "instance": "|minsky_serial_registers:datapath|",
+      "le_self": 112
+    },
+    {
+      "instance": "|radar_unified_scan:scan|",
+      "le_self": 229
+    },
+    {
+      "instance": "|reset_ctrl:u_reset|",
+      "le_self": 8
+    },
+    {
+      "instance": "|switch_pair_sampled:u_switch_pair|",
+      "le_self": 9
+    },
+    {
+      "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+      "le_self": 137
+    }
+  ],
+  "previous_build": "p5a0_audit",
+  "le_delta": 12,
+  "setup_delta_ns": -0.231,
+  "setup_target_pass": true,
+  "regression_pass": "radar\\p5a\\runs\\p5r_step1_full\\PASS.txt",
+  "pof": "step1_A0_pending_snapshot_syncSW7_1101LE.pof",
+  "pof_sha256": "eb47b63467e0c306381902f1d18c6fcfaf82011199c92ae02dd99059ec6de0d1",
+  "notes": "1a、1b均保留。旧失败前10路径表明sample_event经pending/快照选择到position_count为主因（6级、布线77%），SW7不是最坏起点。请求收取与绘图启动分成两拍，启动延迟增加20ns，setup由旧候选0.970提高至3.555ns；相对原版3.786下降0.231ns，新增latest/pending控制与装载选择是剩余开销。目标已达到，无需seed搜索；默认seed1已明确写入QSF。17项既有回归及3项新增通过；连续合并0，基本快走合并177。最坏接受帧2.544780ms，加输入排程20ns为2.544800ms，距60ms余量57.455200ms。CDC三组实际网表断言通过，未约束输入0，输出58口/456路径增减0。UFM未实例化，初始化仍为原清屏。"
+}

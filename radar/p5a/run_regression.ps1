@@ -1,5 +1,5 @@
 param([Parameter(Mandatory=$true)][string]$RunName,[string]$IverilogBin='',
- [string[]]$Suites=@('original','units','measurement','scan','display','matrix','draw','top'))
+ [string[]]$Suites=@('original','units','measurement','scan','display','matrix','draw','top'),[string]$SourceDir='', [string]$OnlyTest='')
 $ErrorActionPreference='Stop'
 $root=(Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
 if(!$IverilogBin){$IverilogBin=Join-Path $root '数电实验2/radar/sim/tools/iverilog/app/bin'}
@@ -10,15 +10,18 @@ if(Test-Path $out){throw "Evidence directory exists; choose a fresh RunName: $ou
 New-Item -ItemType Directory $out | Out-Null
 $work=Join-Path ([IO.Path]::GetTempPath()) ('p5_regression_'+[guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory $work | Out-Null
-Copy-Item "$root/radar/rtl/*.v","$root/radar/sim/lcd/st7565_model.v" $work
+$env:TEMP=$work;$env:TMP=$work
+if(!$SourceDir){$SourceDir="$root/radar/rtl"}
+Copy-Item "$SourceDir/*.v","$root/radar/sim/lcd/st7565_model.v" $work
 $sim=Join-Path $root 'radar/sim/unified_scan'
 $statuses=@()
 function Run-Test([string]$name,[string]$test,[string[]]$options=@()) {
+ if($OnlyTest -and $name -ne $OnlyTest){return}
  $dest=Join-Path $out $name;New-Item -ItemType Directory $dest | Out-Null
- $sources=@(Get-ChildItem "$work/*.v" | ForEach-Object FullName)
- & $iv -g2005-sv -Wall -s $test @options -o "$dest/test.vvp" @sources *> "$dest/compile.log"
+ $sources=@(Get-ChildItem "$work/*.v" | ForEach-Object Name)
+ & $iv -g2005-sv -Wall -s $test @options -o test.vvp @sources *> "$dest/compile.log"
  if($LASTEXITCODE){throw "$name compilation failed; $dest/compile.log"}
- & $vvp "$dest/test.vvp" *> "$dest/simulation.log"
+ & $vvp "$work/test.vvp" *> "$dest/simulation.log"
  $code=$LASTEXITCODE;Get-Content "$dest/simulation.log" -Tail 5
  $script:statuses += [pscustomobject]@{Suite=$name;Exit=$code}
  $script:statuses | Export-Csv "$out/status.csv" -NoTypeInformation
@@ -62,7 +65,7 @@ try {
  if($Suites -contains 'draw') {
   # Existing direct-draw reference/model remains authoritative and retains its
   # own source hashes and pixel comparisons. A unique run name avoids overwrite.
-  & "$sim/run_budget_draw.ps1" -RunName "p5_$RunName" -IverilogBin $IverilogBin
+  & "$sim/run_budget_draw.ps1" -RunName "p5_$RunName" -IverilogBin $IverilogBin -SourceDir $work
   Copy-Item "$root/radar/unified_scan/results/p5_$RunName" "$out/draw" -Recurse
  }
  "PASS selected production regression suites" | Set-Content "$out/PASS.txt"

@@ -1,0 +1,152 @@
+{
+  "stage": "p5r_step1_full",
+  "pass": true,
+  "suites": [
+    {
+      "Suite": "original_servo_pwm",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.42",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_servo_pwm"
+    },
+    {
+      "Suite": "original_ultrasonic",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.42",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_ultrasonic"
+    },
+    {
+      "Suite": "original_radar_ctrl",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.38",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_radar_ctrl"
+    },
+    {
+      "Suite": "original_radar_top",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.59",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_radar_top"
+    },
+    {
+      "Suite": "original_alarm_ctrl",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.53",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_alarm_ctrl"
+    },
+    {
+      "Suite": "original_counter_equivalence",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "54.36",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_original_counter_equivalence"
+    },
+    {
+      "Suite": "tb_global_budget",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "10.02",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_tb_global_budget"
+    },
+    {
+      "Suite": "tb_alarm_global",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.5",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_tb_alarm_global"
+    },
+    {
+      "Suite": "tb_switch_pair",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "1.45",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_tb_switch_pair"
+    },
+    {
+      "Suite": "measurement",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "46.66",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_measurement"
+    },
+    {
+      "Suite": "display",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "4.58",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_display"
+    },
+    {
+      "Suite": "matrix",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "5.3",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_matrix"
+    },
+    {
+      "Suite": "top",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "45.11",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_top"
+    },
+    {
+      "Suite": "draw",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "95.11",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_draw"
+    },
+    {
+      "Suite": "scan_control",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "3.11",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_scan_control"
+    },
+    {
+      "Suite": "scan_production_basic",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "490.86",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_scan_production_basic"
+    },
+    {
+      "Suite": "scan_production_continuous",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "247.16",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_scan_production_continuous"
+    },
+    {
+      "Suite": "step1",
+      "Exit": "0",
+      "Pass": "True",
+      "Seconds": "177.55",
+      "Evidence": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_step1"
+    }
+  ],
+  "frames": [
+    {
+      "file": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_draw\\draw\\budget_f15\\busy_walltime.csv",
+      "requests": 375,
+      "worst_ns": 2544780,
+      "margin_to_60ms_ns": 57455220
+    },
+    {
+      "file": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_step1\\basic\\busy_walltime.csv",
+      "requests": 375,
+      "worst_ns": 2544780,
+      "margin_to_60ms_ns": 57455220
+    },
+    {
+      "file": "E:\\codex\\数电实验2\\radar\\p5a\\runs\\p5r_step1_full_step1\\continuous\\busy_walltime.csv",
+      "requests": 375,
+      "worst_ns": 2544780,
+      "margin_to_60ms_ns": 57455220
+    }
+  ]
+}

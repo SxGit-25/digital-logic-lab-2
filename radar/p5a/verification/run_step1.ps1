@@ -1,15 +1,18 @@
-param([Parameter(Mandatory=$true)][string]$RunName,[string]$IverilogBin='')
+param([Parameter(Mandatory=$true)][string]$RunName,[string]$IverilogBin='', [string]$SourceDir='', [string[]]$Modes=@('basic','continuous','pending'))
 $ErrorActionPreference='Stop'
 $root=(Resolve-Path "$PSScriptRoot/../../..").Path
+if(!$SourceDir){$SourceDir="$root/radar/rtl"}
 if(!$IverilogBin){$IverilogBin="$root/数电实验2/radar/sim/tools/iverilog/app/bin"}
 $python='C:/Users/Metro/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
 $out="$PSScriptRoot/../runs/$RunName"
 if(Test-Path $out){throw "Output exists: $out"}
 New-Item -ItemType Directory -Force $out | Out-Null
-foreach($mode in 'basic','continuous','pending') {
- $stage=Join-Path ([IO.Path]::GetTempPath()) ('p5_step1_'+[guid]::NewGuid().ToString('N'))
+$tempRoot=[IO.Path]::GetTempPath()
+foreach($mode in $Modes) {
+ $stage=Join-Path $tempRoot ('p5_step1_'+[guid]::NewGuid().ToString('N'))
  $dest="$out/$mode";New-Item -ItemType Directory -Force $stage,$dest | Out-Null
- Copy-Item "$root/radar/rtl/*.v","$root/radar/sim/lcd/st7565_model.v" $stage
+ $env:TEMP=$stage;$env:TMP=$stage
+ Copy-Item "$SourceDir/*.v","$root/radar/sim/lcd/st7565_model.v" $stage
  if($mode -eq 'pending'){Copy-Item "$PSScriptRoot/tb_step1_pending.v" $stage;$top='tb_step1_pending';$argsForCase=@()}
  else {
   & $python "$PSScriptRoot/prepare_step1.py" $stage --mode $mode

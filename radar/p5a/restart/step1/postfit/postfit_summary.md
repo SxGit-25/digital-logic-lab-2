@@ -1,0 +1,25 @@
+# Postfit 实测报告
+
+|排名|Setup ns|起点|终点|逻辑级|数据布线 ns|布线占比|
+|---|---|---|---|---|---|---|
+|1|3.555|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|position_count[4]|6|11.300|70%|
+|2|3.581|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[6]|10|10.052|62%|
+|3|3.630|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[6]|10|10.052|62%|
+|4|3.837|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[5]|10|10.009|63%|
+|5|3.886|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[5]|10|10.009|63%|
+|6|3.921|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[3]|8|10.469|66%|
+|7|3.960|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|dropped[3]|8|10.469|66%|
+|8|3.983|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|position_count[3]|5|11.856|75%|
+|9|3.988|radar_unified_top:system|lcd_bus_phase:bus|lcd_wr_n|lcd_wr_n|0|4.495|62%|
+|10|3.989|radar_unified_top:system|radar_unified_scan:scan|system_state[0]|radar_unified_top:system|radar_lcd_micro:draw|position_count[1]|6|11.528|73%|
+
+CDC 三项断言：PASS。
+
+|未约束项目|Setup|Hold|基线|Setup 增减|Hold 增减|
+|---|---|---|---|---|---|
+|Illegal Clocks|0|0|0|0|0|
+|Unconstrained Clocks|0|0|0|0|0|
+|Unconstrained Input Ports|0|0|0|0|0|
+|Unconstrained Input Port Paths|0|0|0|0|0|
+|Unconstrained Output Ports|58|58|58|0|0|
+|Unconstrained Output Port Paths|456|456|456|0|0|

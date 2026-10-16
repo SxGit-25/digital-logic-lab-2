@@ -6,6 +6,7 @@
 // use exact forward/inverse degree microsteps. No absolute renderer angle tag.
 module radar_lcd_micro #(
     parameter ENABLE_READBACK=0,
+    parameter P5_FIXES=0,
     parameter [7:0] CONTRAST=8'h1c,
     parameter KEEP_END_BATCH=1,
     parameter FRACTION_BITS=15,
@@ -16,6 +17,7 @@ module radar_lcd_micro #(
     parameter MICRO_BASE=2
 )(
     input wire clk,rst,request,tick_ms,
+    input wire continuous_mode,
     output reg initialized,
     output wire lcd_rst_n,
     input wire [11:0] angle_bcd,
@@ -39,8 +41,20 @@ module radar_lcd_micro #(
     reg return_up,end_same;
     // Input digits are the sole externally maintained scan angle. Conversion
     // occurs only at request acceptance; there is no multiplier or second scan.
-    wire ordinary_a=(direction_up && angle_bcd<=12'h170) ||
-                    (!direction_up && angle_bcd>=12'h010);
+    reg latest_direction,latest_valid,return_ten;
+    reg [11:0] latest_angle;
+    reg [5:0] latest_radius;
+    wire queued=P5_FIXES && pending;
+    // Production requests are always captured first. Rendering starts on a
+    // later clock, so sample_event/request never traverses an input mux plus
+    // the angle conversion/position-load chain in one cycle.
+    wire [11:0] draw_angle=P5_FIXES ? latest_angle : angle_bcd;
+    wire draw_direction=P5_FIXES ? latest_direction : direction_up;
+    wire [5:0] draw_radius=P5_FIXES ? latest_radius : radius;
+    wire draw_valid=P5_FIXES ? latest_valid : radius_valid;
+    wire basic_zero=P5_FIXES && !continuous_mode;
+    wire ordinary_a=basic_zero || (draw_direction && draw_angle<=12'h170) ||
+                    (!draw_direction && draw_angle>=12'h010);
     reg [PHASE_BITS-1:0] phase;
     localparam [PHASE_BITS-1:0] PHASE_FORWARD=PHASE_ADD;
     localparam [PHASE_BITS-1:0] PHASE_BACKWARD=-PHASE_ADD;
@@ -70,11 +84,11 @@ module radar_lcd_micro #(
     minsky_serial_registers #(.FRACTION_BITS(FRACTION_BITS),.ROT_SHIFT(ROT_SHIFT),.RESET_DATA(0)) datapath(
        .clk(clk),.rst(rst),.begin_command(begin_op),.command(command),
        .step_enable(run_bits),.bit_index(bit_index),.c(c),.s(s),.x_acc(x_acc),.y_acc(y_acc));
-    wire accept=request && ENABLE_READBACK && state==IDLE && angle_bcd<=12'h180;
-    wire endpoint_high=KEEP_END_BATCH && angle_bcd==12'h180 && !direction_up;
-    wire endpoint_low=KEEP_END_BATCH && angle_bcd==0 && direction_up;
+    wire accept=(P5_FIXES ? (queued && !request) : request) && ENABLE_READBACK && state==IDLE && draw_angle<=12'h180;
+    wire endpoint_high=KEEP_END_BATCH && draw_angle==12'h180 && !draw_direction;
+    wire endpoint_low=KEEP_END_BATCH && draw_angle==0 && draw_direction;
     wire [7:0] initial_degrees=endpoint_high ? 8'd170 : endpoint_low ? 8'd0 :
-        {4'b0,angle_bcd[3:0]}+(angle_bcd[8] ? 8'd100 : 8'd0);
+        {4'b0,draw_angle[3:0]}+(draw_angle[8] ? 8'd100 : 8'd0);
     wire degree_done=state==ROT_BITS && bit_index==FRACTION_BITS+1 && second_op && micro_left==1;
     wire after_erase=state==AFTER_RAY && erase;
     wire [4:0] last_bit=state==ROT_BITS ? FRACTION_BITS+1 : FRACTION_BITS+6;
@@ -96,15 +110,15 @@ module radar_lcd_micro #(
             else if(flush_left==10) position_count<=131;
             else if(flush_left==11 && position_count!=0) position_count<=position_next;
         end else if(accept) position_count<=initial_degrees;
-        else if(degree_done || ray_step_done || (state==CONVERT_ANGLE && bit_index!=0) || (state==ANGLE_OFFSET && erase && flush_left==0)) position_count<=position_next;
-        else if(after_erase) position_count<=flush_left!=0 ? 8'd1 : end_same ? 8'd0 : 8'd10;
+        else if(degree_done || ray_step_done || (state==CONVERT_ANGLE && bit_index!=0) || (state==ANGLE_OFFSET && erase && flush_left==0 && !basic_zero)) position_count<=position_next;
+        else if(after_erase) position_count<=flush_left!=0 ? 8'd1 : P5_FIXES ? (return_ten ? 8'd10 : 8'd0) : end_same ? 8'd0 : 8'd10;
         else if(state==RAY_RESET) position_count<=0;
     end
     wire start_pixel=state==PIXEL && selected;
     wire bus_advance=state==RMW && bus_done && transaction!=7;
     // RMW transactions and serial arithmetic likewise share five count bits.
     always @(posedge clk) begin
-        if(accept) bit_index<=endpoint_high || endpoint_low ? 5'd0 : {1'b0,angle_bcd[7:4]};
+        if(accept) bit_index<=endpoint_high || endpoint_low ? 5'd0 : {1'b0,draw_angle[7:4]};
         else if(state==ROT_BEGIN || state==ADD_BEGIN || start_pixel) bit_index<=0;
         else if((state==CONVERT_ANGLE && bit_index!=0) || (run_bits && bit_index!=last_bit) || bus_advance) bit_index<=bit_index+(state==CONVERT_ANGLE ? 5'd31 : 5'd1);
     end
@@ -139,10 +153,17 @@ module radar_lcd_micro #(
           state<=INIT_RESET;initialized<=0;return_up<=0;end_same<=0;
           rotate_up<=1;second_op<=0;axis<=0;micro_left<=0;
           erase<=0;flush_left<=0;target_radius<=6;target_valid<=0;
-          pending<=0;dropped<=0;done<=0;
+          pending<=0;dropped<=0;done<=0;return_ten<=0;
        end else begin
           done<=0;
-          if(request && state!=IDLE && dropped!=255) dropped<=dropped+1'b1;
+          if(P5_FIXES) begin
+             if(request && ENABLE_READBACK && initialized) begin
+                latest_angle<=angle_bcd;latest_direction<=direction_up;
+                latest_radius<=radius;latest_valid<=radius_valid;
+                pending<=!accept;
+                if(pending && !accept && dropped!=255) dropped<=dropped+1'b1;
+             end else if(accept) pending<=0;
+          end else if(request && state!=IDLE && dropped!=255) dropped<=dropped+1'b1;
           case(state)
           INIT_RESET:if(tick_ms && position_count==0) state<=INIT_WAIT;
           INIT_WAIT:if(tick_ms && position_count==0) state<=INIT_SEND;
@@ -155,15 +176,16 @@ module radar_lcd_micro #(
                 else begin micro_left<=micro_left+1'b1;flush_left<=8;state<=INIT_SEND;end
              end else begin flush_left<=flush_left+1'b1;state<=INIT_SEND;end
           end
-          IDLE:if(request && ENABLE_READBACK && angle_bcd<=12'h180) begin
-             return_up<=!direction_up;end_same<=0;
+          IDLE:if(accept) begin
+             return_up<=!draw_direction;end_same<=0;
+             return_ten<=endpoint_low || (!endpoint_high && !basic_zero);
              rotate_up<=1;
-             target_radius<=radius<6 ? 6'd6 : radius;
-             target_valid<=radius_valid && radius<=48;
+             target_radius<=draw_radius<6 ? 6'd6 : draw_radius;
+             target_valid<=draw_valid && draw_radius<=48;
              flush_left<=0;erase<=1;
-             if(KEEP_END_BATCH && angle_bcd==12'h180 && !direction_up) begin
+             if(endpoint_high) begin
                 flush_left<=10;end_same<=1;
-             end else if(KEEP_END_BATCH && angle_bcd==0 && direction_up) begin
+             end else if(endpoint_low) begin
                 flush_left<=10;
              end else if(!ordinary_a) erase<=0;
              state<=CONVERT_ANGLE;
@@ -186,7 +208,7 @@ module radar_lcd_micro #(
              else state<=ORIENT;
           end
           RAY_RESET:state<=PIXEL;
-          PIXEL:if(selected) begin pending<=0;state<=RMW;end
+          PIXEL:if(selected) begin if(!P5_FIXES) pending<=0;state<=RMW;end
              else if(step==48) state<=AFTER_RAY;
              else begin axis<=0;state<=ADD_BEGIN;end
           ADD_BEGIN:state<=ADD_BITS;
@@ -196,7 +218,7 @@ module radar_lcd_micro #(
           end
           RMW:begin
              if(bus_done) begin
-                pending<=0;
+                if(!P5_FIXES) pending<=0;
                 if(transaction==7) begin
                    if(step==48) state<=AFTER_RAY;
                    else begin axis<=0;state<=ADD_BEGIN;end

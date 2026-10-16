@@ -1,0 +1,7 @@
+radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
+radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.
+radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
+radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
+radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.
+radar_top.v:122: warning: Instantiating module display_compose with dangling input port 16 (continuous_mode) floating.
+radar_top.v:122: warning: Instantiating module display_compose with dangling input port 17 (continuous_angle_bcd) floating.

@@ -1,0 +1,15 @@
+PREPARED f15 375 requests 18567 independent RMW pixels
+PASS_FUNCTIONAL Minsky draw F=15 K=7 scenarios=375 pixels=18567 A=435 B=375 bus_transactions=148536 dropped=0; all pixels/RAM/order/vector/latches verified
+TIMING_RESULT max_busy_cycles=127239 max_busy_ns=2544780 endpoint_max_cycles=127239 endpoint_max_ns=2544780 requests_failing_applicable_limit=0
+PASS step1_basic merged=0
+tb_step1_draw.v:122: $finish called at 163837780000 (1ps)
+Work retained: C:\Users\Metro\AppData\Local\Temp\p5_step1_dc11e39a9bfc445693f8e10f414a930a
+PREPARED f15 375 requests 17807 independent RMW pixels
+PASS_FUNCTIONAL Minsky draw F=15 K=7 scenarios=375 pixels=17807 A=416 B=375 bus_transactions=142456 dropped=0; all pixels/RAM/order/vector/latches verified
+TIMING_RESULT max_busy_cycles=127239 max_busy_ns=2544780 endpoint_max_cycles=127239 endpoint_max_ns=2544780 requests_failing_applicable_limit=0
+PASS step1_continuous merged=0
+tb_step1_draw.v:122: $finish called at 165962340000 (1ps)
+Work retained: C:\Users\Metro\AppData\Local\Temp\p5_step1_dc11e39a9bfc445693f8e10f414a930a\p5_step1_267724747d574427938a2dbf9e43c12b
+PASS step1 pending: accepted 10/12 then 30/32, superseded 20/22, merged=1, snapshots stable
+tb_step1_pending.v:42: $finish called at 320780000 (1ps)
+Work retained: C:\Users\Metro\AppData\Local\Temp\p5_step1_dc11e39a9bfc445693f8e10f414a930a\p5_step1_267724747d574427938a2dbf9e43c12b\p5_step1_1f9e35ce5c3748e49193ccf04fc09c27

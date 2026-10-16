@@ -24,6 +24,9 @@ module.prepare(a.stage, 'f15', False)
 tb = (ROOT / 'radar/sim/unified_scan/tb_budget_draw.v').read_text(encoding='utf-8')
 tb = tb.replace('.ENABLE_READBACK(1),.FRACTION_BITS', '.ENABLE_READBACK(1),.P5_FIXES(1),.FRACTION_BITS')
 tb = tb.replace('.clk(clk),.rst(rst),.tick_ms', f'.continuous_mode(1\'b{int(continuous)}),.clk(clk),.rst(rst),.tick_ms')
+tb = tb.replace('if(initialized && request && ready)', 'if(initialized && dut.accept)')
+# The pending request is accepted one clock after its input strobe.
+tb = tb.replace('request=1;step_clock;request=0;', 'request=1;step_clock;request=0;step_clock;')
 if not continuous:
     tb = tb.replace('else ray_index=accepted_direction?wanted_angle+10:wanted_angle-10;', 'else ray_index=wanted_angle;')
     tb = tb.replace('(direction_up && wanted_angle<=170)||(!direction_up && wanted_angle>=10)?1:0;', '1;')

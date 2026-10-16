@@ -31,7 +31,7 @@ module radar_unified_top #(
     output wire lcd_rd_n,lcd_wr_n,lcd_a0,lcd_rst_n,lcd_cs_n
 );
 
- wire rst,tick_us,tick_ms,blink_2hz,system_on,mode_continuous;
+ wire rst,tick_us,tick_ms,blink_2hz,system_on,mode_continuous,sw7_sync;
  wire tick_250us,tick_20ms,tick_switch,carrier_2khz,window_50ms;
  wire [2:0] rhythm_phase;
  wire [14:0] global_frame_us;
@@ -50,14 +50,14 @@ module radar_unified_top #(
  wire [23:0] row_colors;
  wire [6:0] seg_bus;
  wire [7:0] cat_int,row_int,col_r_int,col_g_int;
- wire outputs_enabled=sw7 && system_on && system_state!=0;
+ wire outputs_enabled=sw7_sync && system_on && system_state!=0;
  reset_ctrl u_reset(clk,rst);
  radar_global_timebase_alarm #(.CLK_HZ(CLK_HZ),.SWITCH_SAMPLE_MS(SWITCH_MS)) u_timebase(
  .clk(clk),.rst(rst),.tick_us(tick_us),.tick_ms(tick_ms),.blink_2hz(blink_2hz),
  .tick_250us(tick_250us),.tick_20ms(tick_20ms),.tick_switch(tick_switch),.window_50ms(window_50ms),.rhythm_phase(rhythm_phase),.frame_us(global_frame_us),
  .display_index(display_index),.color_phase(color_phase),.carrier_2khz(carrier_2khz));
  switch_pair_sampled u_switch_pair(.clk(clk),.rst(rst),.sample_tick(tick_switch),
- .sw6(sw6),.sw7(sw7),.mode_continuous(mode_continuous),.system_on(system_on));
+ .sw6(sw6),.sw7(sw7),.mode_continuous(mode_continuous),.system_on(system_on),.sw7_sync(sw7_sync));
  generate if(MEASUREMENT_BCD) begin:g_bcd_measurement
  ultrasonic_bcd_budget_compact #(.ENABLE_RADIUS(1)) u_ultrasonic(
   .clk(clk),.rst(rst),.tick_us(tick_us),.measure_start(measure_start),.cancel(measure_cancel),
@@ -117,11 +117,12 @@ module radar_unified_top #(
  wire [7:0] init_data,draw_data,read_data,data_out;
  wire [7:0] dropped;
  wire lcd_reset=rst || !system_on || system_state==0;
- radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),
+ radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),.P5_FIXES(1),
   .FRACTION_BITS(MINSKY_F),.ROT_SHIFT(MINSKY_K),.PHASE_BITS(MINSKY_PHASE_BITS),.PHASE_ADD(MINSKY_PHASE_ADD),
   .PHASE_INITIAL(MINSKY_PHASE_INITIAL),.MICRO_BASE(MINSKY_MICRO_BASE)) draw(
   .clk(clk),.rst(lcd_reset),.tick_ms(tick_ms),.initialized(initialized),.lcd_rst_n(lcd_rst_n),
-  .request((sample_event || (step_event && !measurement_pending)) && initialized && system_state==3 && sw7),
+  .request((sample_event || (step_event && !measurement_pending)) && initialized && system_state==3 && sw7_sync),
+  .continuous_mode(mode_continuous),
   .angle_bcd(sample_event ? sample_angle_bcd : angle_bcd),
   .direction_up(sample_event ? sample_direction_up : direction_up),
   .radius(radius),.radius_valid(sample_event && radius_valid),.dropped(dropped),
