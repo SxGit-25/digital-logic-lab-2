@@ -1,0 +1,2 @@
+PASS tb_scan_control full50MHz invalid_result/valid_result/history/slot_expiry_cancel/mode_restart/disable
+tb_scan_control.v:66: $finish called at 10000131000 (1ps)

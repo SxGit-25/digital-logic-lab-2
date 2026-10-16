@@ -1,0 +1,76 @@
+{
+  "basic": {
+    "real_timing": false,
+    "requests": 1091,
+    "worst": {
+      "request": 181,
+      "angle_bcd": "180",
+      "total_cycles": 243727,
+      "ufm_cycles": 167990,
+      "lcd_read_cycles": 2224,
+      "lcd_write_cycles": 6672,
+      "overhead_cycles": 66841,
+      "ufm_fetches": 469,
+      "bound_cycles": 344170
+    },
+    "bound_ms": 6.8834,
+    "margin_to_60ms": 53.1166,
+    "initialization": {
+      "cycles_including_5_reset": 164168,
+      "writes": 1056,
+      "ufm_cycles": 159828,
+      "lcd_read_cycles": 0,
+      "lcd_write_cycles": 2178,
+      "overhead_cycles": 2157,
+      "first_ufm_cycle": 82,
+      "copy_cycles": 164086,
+      "production_tick": 0
+    },
+    "bound_components_cycles": {
+      "UFM_including_phase_allowance": 175025,
+      "LCD_read": 45592,
+      "LCD_write": 56712,
+      "FSM_other": 66841
+    },
+    "with_one_inverse_command_cycles": 344190,
+    "with_one_inverse_command_ms": 6.8838,
+    "with_one_inverse_margin_to_60ms": 53.1162
+  },
+  "continuous": {
+    "real_timing": false,
+    "requests": 1091,
+    "worst": {
+      "request": 181,
+      "angle_bcd": "180",
+      "total_cycles": 243734,
+      "ufm_cycles": 167997,
+      "lcd_read_cycles": 2224,
+      "lcd_write_cycles": 6672,
+      "overhead_cycles": 66841,
+      "ufm_fetches": 469,
+      "bound_cycles": 344177
+    },
+    "bound_ms": 6.88354,
+    "margin_to_60ms": 53.116460000000004,
+    "initialization": {
+      "cycles_including_5_reset": 164168,
+      "writes": 1056,
+      "ufm_cycles": 159828,
+      "lcd_read_cycles": 0,
+      "lcd_write_cycles": 2178,
+      "overhead_cycles": 2157,
+      "first_ufm_cycle": 82,
+      "copy_cycles": 164086,
+      "production_tick": 0
+    },
+    "bound_components_cycles": {
+      "UFM_including_phase_allowance": 175032,
+      "LCD_read": 45592,
+      "LCD_write": 56712,
+      "FSM_other": 66841
+    },
+    "with_one_inverse_command_cycles": 344197,
+    "with_one_inverse_command_ms": 6.88394,
+    "with_one_inverse_margin_to_60ms": 53.11606
+  }
+}

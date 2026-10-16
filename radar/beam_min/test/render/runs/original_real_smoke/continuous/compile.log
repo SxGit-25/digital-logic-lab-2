@@ -1,0 +1,2 @@
+tb_render.v:21: warning: Instantiating module radar_lcd_micro with dangling input port 6 (alarm_active) floating.
+tb_render.v:21: warning: Instantiating module radar_lcd_micro with dangling input port 7 (inverse_phase) floating.

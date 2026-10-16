@@ -1,0 +1,7 @@
+BUSY_STOP_PASS mode=1 phase=0 wait_clocks=4920
+BUSY_STOP_PASS mode=1 phase=1 wait_clocks=2982
+BUSY_STOP_PASS mode=1 phase=2 wait_clocks=21402
+BUSY_STOP_PASS mode=1 phase=3 wait_clocks=17111
+BUSY_STOP_PASS mode=1 phase=4 wait_clocks=17976
+PASS busy_stop mode=1 phases=5 RAM_bytes_compared=10560 beam_valid_zero=1 pending_zero=1
+tb_busy_stop.v:60: $finish called at 9263451000 (1ps)

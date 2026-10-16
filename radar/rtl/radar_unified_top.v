@@ -5,7 +5,9 @@ module radar_unified_top #(
  parameter integer SETTLE_MS=300, SWITCH_MS=20, CONTINUOUS_STEP_MS=60, FAST_STEP_US=16,
  parameter ENABLE_READBACK=0, KEEP_END_BATCH=1, SETTLE_FROM_PWM=0,
  parameter P5_UFM=0,
+ parameter P5_UFM_BYTE=0,
  parameter P5_INVERT=0,
+ parameter P5_BEAM=0,
  parameter MEASUREMENT_BCD=0, CONTINUOUS_DEGREE_STEP=1,
  parameter MINSKY_F=15, MINSKY_K=7, MINSKY_PHASE_BITS=6,
  parameter MINSKY_PHASE_ADD=15, MINSKY_PHASE_INITIAL=63, MINSKY_MICRO_BASE=2
@@ -118,13 +120,24 @@ module radar_unified_top #(
  wire initialized,bus_ready,bus_done,init_request,init_a0,draw_request,draw_read,draw_a0,oe;
  wire [7:0] init_data,draw_data,read_data,data_out;
  wire [7:0] dropped;
- wire lcd_reset=rst || !system_on || system_state==0;
- radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),.P5_FIXES(1),.P5_UFM(P5_UFM),.P5_INVERT(P5_INVERT),
+ // A one-clock mode restart is held until the XOR task has been withdrawn.
+ reg lcd_restart_pending;
+ wire draw_quiescent;
+ wire lcd_stop=!system_on || system_state==0 || lcd_restart_pending;
+ wire lcd_reset=P5_BEAM ? rst || (lcd_stop && draw_quiescent) :
+                         rst || !system_on || system_state==0;
+ always @(posedge clk) begin
+   if(rst) lcd_restart_pending<=1;
+   else if(!system_on || system_state==0) lcd_restart_pending<=1;
+   else if(lcd_reset) lcd_restart_pending<=0;
+ end
+ radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),.P5_FIXES(1),.P5_UFM(P5_UFM),.P5_UFM_BYTE(P5_UFM_BYTE),.P5_INVERT(P5_INVERT),.P5_BEAM(P5_BEAM),
   .FRACTION_BITS(MINSKY_F),.ROT_SHIFT(MINSKY_K),.PHASE_BITS(MINSKY_PHASE_BITS),.PHASE_ADD(MINSKY_PHASE_ADD),
   .PHASE_INITIAL(MINSKY_PHASE_INITIAL),.MICRO_BASE(MINSKY_MICRO_BASE)) draw(
   .clk(clk),.rst(lcd_reset),.tick_ms(tick_ms),.initialized(initialized),.lcd_rst_n(lcd_rst_n),
   .request((sample_event || (step_event && !measurement_pending)) && initialized && system_state==3 && sw7_sync),
   .continuous_mode(mode_continuous),
+  .stop_request(lcd_stop),.quiescent(draw_quiescent),
   .alarm_active(outputs_enabled && system_state==3 && current_valid && current_level==5),.inverse_phase(blink_2hz),
   .angle_bcd(sample_event ? sample_angle_bcd : angle_bcd),
   .direction_up(sample_event ? sample_direction_up : direction_up),

@@ -57,14 +57,16 @@ module minsky_serial_registers #(
     parameter FRACTION_BITS=17,
     parameter ROT_SHIFT=8,
     parameter [FRACTION_BITS+6:0] XY_INITIAL=(1 << (FRACTION_BITS-1)),
-    parameter RESET_DATA=1
+    parameter RESET_DATA=1,
+    parameter TRACK_INTEGER_CHANGE=0
 )(
     input wire clk,rst,begin_command,
     input wire [2:0] command,
     input wire step_enable,
     input wire [4:0] bit_index,
     output reg signed [FRACTION_BITS+1:0] c,s,
-    output reg signed [FRACTION_BITS+6:0] x_acc,y_acc
+    output reg signed [FRACTION_BITS+6:0] x_acc,y_acc,
+    output reg integer_changed
 );
     reg carry,source_sign;
     wire ray_add=command[2];
@@ -77,6 +79,17 @@ module minsky_serial_registers #(
         (destination_c ? c[0] : s[0]);
     // The sole datapath arithmetic expression. Subtraction uses ~source+1.
     wire [1:0] full_sum={1'b0,destination_bit}+{1'b0,(source_bit^subtract)}+carry;
+    // Observe the integer bits while the serial adder replaces them. Both
+    // axes contribute to one flag; no previous coordinate registers exist.
+    always @(posedge clk) begin
+        if(TRACK_INTEGER_CHANGE) begin
+            if(rst) integer_changed<=0;
+            else if(begin_command && command==6) integer_changed<=1;
+            else if(begin_command && command==4) integer_changed<=0;
+            else if(step_enable && ray_add && bit_index>=FRACTION_BITS)
+                integer_changed<=integer_changed | (full_sum[0]^destination_bit);
+        end else integer_changed<=0;
+    end
     always @(posedge clk) begin
         if(RESET_DATA && rst) begin
             c<=(1 << FRACTION_BITS);s<=0;x_acc<=XY_INITIAL;y_acc<=XY_INITIAL;

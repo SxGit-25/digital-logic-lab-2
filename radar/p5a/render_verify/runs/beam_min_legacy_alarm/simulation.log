@@ -1,0 +1,9 @@
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+BUSY_ALARM_LATENCY kind=phase event_to_command_clocks=21876
+BUSY_ALARM_LATENCY kind=release event_to_command_clocks=12802
+CONCURRENT_ALARM_PASS frames=2 Python_expected_bytes=2112 busy_commands_deferred=1
+PASS alarm_inverse commands=9 phase_edges=7 phase_period_ns=250000000 normal_release_A6=1 inverse_release_A6=1 ram_unchanged=1056 no_A5=1
+tb_alarm_inverse.v:136: $finish called at 1793854000000 (1ps)

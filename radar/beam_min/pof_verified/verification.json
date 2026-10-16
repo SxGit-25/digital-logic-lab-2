@@ -1,0 +1,61 @@
+{
+  "pof": "E:\\codex\\数电实验2\\radar\\unified_scan\\results\\beam_min_byte_a\\bcd\\radar_unified_bcd.pof",
+  "pof_sha256": "45963657dbc6975a83e8de8b566d6ee072bb1a34025de2c2e890bc1647ee71f3",
+  "device": "EPM1270T144C5",
+  "records": [
+    {
+      "tag": "0x01",
+      "offset": 12,
+      "size": 78
+    },
+    {
+      "tag": "0x02",
+      "offset": 96,
+      "size": 14
+    },
+    {
+      "tag": "0x03",
+      "offset": 116,
+      "size": 9
+    },
+    {
+      "tag": "0x05",
+      "offset": 131,
+      "size": 2
+    },
+    {
+      "tag": "0x11",
+      "offset": 139,
+      "size": 26124
+    },
+    {
+      "tag": "0x18",
+      "offset": 26269,
+      "size": 1036
+    },
+    {
+      "tag": "0x08",
+      "offset": 27311,
+      "size": 2
+    }
+  ],
+  "ufm_payload_bytes": 1024,
+  "ufm_payload_sha256": "35429e476e654d50528c97445057251dde70102eb242e4d0c2fce27333546b70",
+  "ufm_words": 512,
+  "ufm_all_erased": false,
+  "official_svf_crosscheck": {
+    "converter": "E:\\quartus\\QuartusII91\\quartus\\bin64\\quartus_cpf.exe",
+    "conversion": "quartus_cpf -c -q 4.5MHz -g 3.3 -n p image.pof image.svf",
+    "full_svf_sha256": "8e033232c077becfa29afcb2b773dde00e9d4c9153142c8fc1b5c83911b043d8",
+    "ufm_program_word_count": 512,
+    "ufm_select_address": "0001",
+    "isc_program_instruction": "2F4",
+    "all_words_match_direct_pof_payload": true
+  },
+  "mif": "E:\\codex\\数电实验2\\radar\\unified_scan\\results\\beam_min_byte_a\\bcd\\source\\lcd_p4\\background.mif",
+  "mif_sha256": "8f76939d882e128e7569fe07b613cc75e5f8a9ea2bbe35bd569a72e8e163f7e9",
+  "compared_words": 512,
+  "mismatch_count": 0,
+  "first_mismatches": [],
+  "pass": true
+}

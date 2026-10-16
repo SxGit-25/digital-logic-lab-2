@@ -1,0 +1,58 @@
+{
+  "basic": {
+    "real_timing": true,
+    "requests": 7,
+    "worst": {
+      "request": 5,
+      "angle_bcd": "180",
+      "total_cycles": 340623,
+      "ufm_cycles": 171588,
+      "lcd_read_cycles": 45592,
+      "lcd_write_cycles": 56712,
+      "overhead_cycles": 66731,
+      "ufm_fetches": 469,
+      "bound_cycles": 340623
+    },
+    "bound_ms": 6.81246,
+    "margin_to_60ms": 53.18754,
+    "initialization": {
+      "cycles_including_5_reset": 181586,
+      "writes": 1056,
+      "ufm_cycles": 160911,
+      "lcd_read_cycles": 0,
+      "lcd_write_cycles": 18513,
+      "overhead_cycles": 2157,
+      "first_ufm_cycle": 247,
+      "copy_cycles": 181339,
+      "production_tick": 0
+    }
+  },
+  "continuous": {
+    "real_timing": true,
+    "requests": 7,
+    "worst": {
+      "request": 5,
+      "angle_bcd": "180",
+      "total_cycles": 340615,
+      "ufm_cycles": 171580,
+      "lcd_read_cycles": 45592,
+      "lcd_write_cycles": 56712,
+      "overhead_cycles": 66731,
+      "ufm_fetches": 469,
+      "bound_cycles": 340615
+    },
+    "bound_ms": 6.8123,
+    "margin_to_60ms": 53.1877,
+    "initialization": {
+      "cycles_including_5_reset": 181586,
+      "writes": 1056,
+      "ufm_cycles": 160911,
+      "lcd_read_cycles": 0,
+      "lcd_write_cycles": 18513,
+      "overhead_cycles": 2157,
+      "first_ufm_cycle": 247,
+      "copy_cycles": 181339,
+      "production_tick": 0
+    }
+  }
+}

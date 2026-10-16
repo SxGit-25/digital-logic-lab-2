@@ -6,7 +6,7 @@ $stage=Join-Path ([IO.Path]::GetTempPath()) ('radar_p4_'+[Guid]::NewGuid().ToStr
 New-Item -ItemType Directory -Force "$stage/rtl","$stage/lcd_p4" | Out-Null
 $radar=Split-Path $PSScriptRoot -Parent
 $names=@('radar_global_timebase_alarm','alarm_global','switch_pair_sampled','radar_display_gated','radar_global_timebase','radar_display_shared','reset_ctrl','timebase','switch_filter','ultrasonic','bin12_to_bcd','display_compose','seg_scan','matrix_scan','alarm_ctrl','radar_unified_scan','radar_unified_top','minsky_serial_datapath','radar_minsky_draw_compact','radar_minsky_draw_compact_v2','ultrasonic_bcd_experiment','ultrasonic_bcd_budget','ultrasonic_bcd_budget_compact','radar_lcd_micro','lcd_bus_phase','lcd_bus','lcd_init')
-$names+=@('p5_ufm_reader')
+$names+=@('p5_ufm_reader','p5_ufm_byte_reader')
 foreach($name in $names){Copy-Item "$radar/rtl/$name.v" "$stage/rtl"}
 if($RtlSource){Copy-Item "$RtlSource/*.v" "$stage/rtl" -Force}
 if($ScanSource){Copy-Item -LiteralPath $ScanSource -Destination "$stage/rtl/radar_unified_scan.v" -Force}
