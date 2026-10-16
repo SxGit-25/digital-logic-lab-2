@@ -1,0 +1,2 @@
+PASS global alarm 8000 phase cases, four rates, 50ms windows, masks, invalid/off/self
+C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_alarm_global.v:35: $finish called at 8005000 (1ps)

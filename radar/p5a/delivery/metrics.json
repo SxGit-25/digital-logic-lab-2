@@ -1,0 +1,152 @@
+{
+  "status": "STOPPED: mandatory step1 setup slack below 1 ns; step1 reverted; steps2-7 not attempted",
+  "retained": {
+    "build": "unified_scan\\results\\p5a0_audit\\bcd",
+    "le": 1089,
+    "modules": [
+      {
+        "instance": "|radar_unified_bcd_top",
+        "le_self": 1
+      },
+      {
+        "instance": "|radar_unified_top:system|",
+        "le_self": 15
+      },
+      {
+        "instance": "|alarm_global:u_alarm|",
+        "le_self": 15
+      },
+      {
+        "instance": "|lcd_bus_phase:bus|",
+        "le_self": 62
+      },
+      {
+        "instance": "|radar_display_gated:u_display|",
+        "le_self": 31
+      },
+      {
+        "instance": "|radar_display_shared:core|",
+        "le_self": 120
+      },
+      {
+        "instance": "|radar_global_timebase_alarm:u_timebase|",
+        "le_self": 67
+      },
+      {
+        "instance": "|radar_lcd_micro:draw|",
+        "le_self": 283
+      },
+      {
+        "instance": "|minsky_serial_registers:datapath|",
+        "le_self": 112
+      },
+      {
+        "instance": "|radar_unified_scan:scan|",
+        "le_self": 229
+      },
+      {
+        "instance": "|reset_ctrl:u_reset|",
+        "le_self": 8
+      },
+      {
+        "instance": "|switch_pair_sampled:u_switch_pair|",
+        "le_self": 9
+      },
+      {
+        "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+        "le_self": 137
+      }
+    ],
+    "fitter": "Successful",
+    "setup_ns": 3.786,
+    "hold_ns": 1.078,
+    "new_threshold_pass": true,
+    "unconstrained": {
+      "Unconstrained Input Ports": 1,
+      "Unconstrained Input Port Paths": 140,
+      "Unconstrained Output Ports": 58,
+      "Unconstrained Output Port Paths": 456
+    }
+  },
+  "failed_step1": {
+    "build": "unified_scan\\results\\p5_step1_candidate\\bcd",
+    "le": 1109,
+    "modules": [
+      {
+        "instance": "|radar_unified_bcd_top",
+        "le_self": 1
+      },
+      {
+        "instance": "|radar_unified_top:system|",
+        "le_self": 16
+      },
+      {
+        "instance": "|alarm_global:u_alarm|",
+        "le_self": 15
+      },
+      {
+        "instance": "|lcd_bus_phase:bus|",
+        "le_self": 62
+      },
+      {
+        "instance": "|radar_display_gated:u_display|",
+        "le_self": 31
+      },
+      {
+        "instance": "|radar_display_shared:core|",
+        "le_self": 120
+      },
+      {
+        "instance": "|radar_global_timebase_alarm:u_timebase|",
+        "le_self": 67
+      },
+      {
+        "instance": "|radar_lcd_micro:draw|",
+        "le_self": 305
+      },
+      {
+        "instance": "|minsky_serial_registers:datapath|",
+        "le_self": 110
+      },
+      {
+        "instance": "|radar_unified_scan:scan|",
+        "le_self": 228
+      },
+      {
+        "instance": "|reset_ctrl:u_reset|",
+        "le_self": 8
+      },
+      {
+        "instance": "|switch_pair_sampled:u_switch_pair|",
+        "le_self": 9
+      },
+      {
+        "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+        "le_self": 137
+      }
+    ],
+    "fitter": "Successful",
+    "setup_ns": 0.97,
+    "hold_ns": 1.078,
+    "new_threshold_pass": false,
+    "unconstrained": {
+      "Unconstrained Input Ports": 0,
+      "Unconstrained Input Port Paths": 0,
+      "Unconstrained Output Ports": 58,
+      "Unconstrained Output Port Paths": 456
+    }
+  },
+  "successful_pofs": [
+    {
+      "file": "p5a0_original_SW6_readback_1089LE.pof",
+      "features": "P5a-0 original: SW6 dual mode, readback, MIN6, 1 degree",
+      "sha256": "709218e16d4b0618bd6656a9ba09ba896add2ad8b9cbeaec44ec7c943fa4dfd3"
+    }
+  ],
+  "unconstrained_candidate_delta": {
+    "Unconstrained Input Ports": -1,
+    "Unconstrained Input Port Paths": -140,
+    "Unconstrained Output Ports": 0,
+    "Unconstrained Output Port Paths": 0
+  }
+}

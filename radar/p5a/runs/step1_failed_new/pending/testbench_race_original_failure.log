@@ -1,0 +1,2 @@
+FATAL: tb_step1_pending.v:42: pending watchdog
+       Time: 100000000000  Scope: tb_step1_pending

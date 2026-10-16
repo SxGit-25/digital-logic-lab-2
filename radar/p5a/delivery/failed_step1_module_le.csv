@@ -1,0 +1,14 @@
+﻿instance,le_self
+|radar_unified_bcd_top,1
+|radar_unified_top:system|,16
+|alarm_global:u_alarm|,15
+|lcd_bus_phase:bus|,62
+|radar_display_gated:u_display|,31
+|radar_display_shared:core|,120
+|radar_global_timebase_alarm:u_timebase|,67
+|radar_lcd_micro:draw|,305
+|minsky_serial_registers:datapath|,110
+|radar_unified_scan:scan|,228
+|reset_ctrl:u_reset|,8
+|switch_pair_sampled:u_switch_pair|,9
+|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|,137

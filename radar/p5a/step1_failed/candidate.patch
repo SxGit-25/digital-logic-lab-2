@@ -1,0 +1,248 @@
+diff --git a/radar/rtl/radar_lcd_micro.v b/radar/rtl/radar_lcd_micro.v
+index fcc0c8a..3f59c60 100644
+--- a/radar/rtl/radar_lcd_micro.v
++++ b/radar/rtl/radar_lcd_micro.v
+@@ -6,6 +6,7 @@
+ // use exact forward/inverse degree microsteps. No absolute renderer angle tag.
+ module radar_lcd_micro #(
+     parameter ENABLE_READBACK=0,
++    parameter P5_FIXES=0,
+     parameter [7:0] CONTRAST=8'h1c,
+     parameter KEEP_END_BATCH=1,
+     parameter FRACTION_BITS=15,
+@@ -16,6 +17,7 @@ module radar_lcd_micro #(
+     parameter MICRO_BASE=2
+ )(
+     input wire clk,rst,request,tick_ms,
++    input wire continuous_mode,
+     output reg initialized,
+     output wire lcd_rst_n,
+     input wire [11:0] angle_bcd,
+@@ -39,8 +41,17 @@ module radar_lcd_micro #(
+     reg return_up,end_same;
+     // Input digits are the sole externally maintained scan angle. Conversion
+     // occurs only at request acceptance; there is no multiplier or second scan.
+-    wire ordinary_a=(direction_up && angle_bcd<=12'h170) ||
+-                    (!direction_up && angle_bcd>=12'h010);
++    reg latest_direction,latest_valid,return_ten;
++    reg [11:0] latest_angle;
++    reg [5:0] latest_radius;
++    wire queued=P5_FIXES && pending;
++    wire [11:0] draw_angle=request ? angle_bcd : latest_angle;
++    wire draw_direction=request ? direction_up : latest_direction;
++    wire [5:0] draw_radius=request ? radius : latest_radius;
++    wire draw_valid=request ? radius_valid : latest_valid;
++    wire basic_zero=P5_FIXES && !continuous_mode;
++    wire ordinary_a=basic_zero || (draw_direction && draw_angle<=12'h170) ||
++                    (!draw_direction && draw_angle>=12'h010);
+     reg [PHASE_BITS-1:0] phase;
+     localparam [PHASE_BITS-1:0] PHASE_FORWARD=PHASE_ADD;
+     localparam [PHASE_BITS-1:0] PHASE_BACKWARD=-PHASE_ADD;
+@@ -70,11 +81,11 @@ module radar_lcd_micro #(
+     minsky_serial_registers #(.FRACTION_BITS(FRACTION_BITS),.ROT_SHIFT(ROT_SHIFT),.RESET_DATA(0)) datapath(
+        .clk(clk),.rst(rst),.begin_command(begin_op),.command(command),
+        .step_enable(run_bits),.bit_index(bit_index),.c(c),.s(s),.x_acc(x_acc),.y_acc(y_acc));
+-    wire accept=request && ENABLE_READBACK && state==IDLE && angle_bcd<=12'h180;
+-    wire endpoint_high=KEEP_END_BATCH && angle_bcd==12'h180 && !direction_up;
+-    wire endpoint_low=KEEP_END_BATCH && angle_bcd==0 && direction_up;
++    wire accept=(request || queued) && ENABLE_READBACK && state==IDLE && draw_angle<=12'h180;
++    wire endpoint_high=KEEP_END_BATCH && draw_angle==12'h180 && !draw_direction;
++    wire endpoint_low=KEEP_END_BATCH && draw_angle==0 && draw_direction;
+     wire [7:0] initial_degrees=endpoint_high ? 8'd170 : endpoint_low ? 8'd0 :
+-        {4'b0,angle_bcd[3:0]}+(angle_bcd[8] ? 8'd100 : 8'd0);
++        {4'b0,draw_angle[3:0]}+(draw_angle[8] ? 8'd100 : 8'd0);
+     wire degree_done=state==ROT_BITS && bit_index==FRACTION_BITS+1 && second_op && micro_left==1;
+     wire after_erase=state==AFTER_RAY && erase;
+     wire [4:0] last_bit=state==ROT_BITS ? FRACTION_BITS+1 : FRACTION_BITS+6;
+@@ -96,15 +107,15 @@ module radar_lcd_micro #(
+             else if(flush_left==10) position_count<=131;
+             else if(flush_left==11 && position_count!=0) position_count<=position_next;
+         end else if(accept) position_count<=initial_degrees;
+-        else if(degree_done || ray_step_done || (state==CONVERT_ANGLE && bit_index!=0) || (state==ANGLE_OFFSET && erase && flush_left==0)) position_count<=position_next;
+-        else if(after_erase) position_count<=flush_left!=0 ? 8'd1 : end_same ? 8'd0 : 8'd10;
++        else if(degree_done || ray_step_done || (state==CONVERT_ANGLE && bit_index!=0) || (state==ANGLE_OFFSET && erase && flush_left==0 && !basic_zero)) position_count<=position_next;
++        else if(after_erase) position_count<=flush_left!=0 ? 8'd1 : P5_FIXES ? (return_ten ? 8'd10 : 8'd0) : end_same ? 8'd0 : 8'd10;
+         else if(state==RAY_RESET) position_count<=0;
+     end
+     wire start_pixel=state==PIXEL && selected;
+     wire bus_advance=state==RMW && bus_done && transaction!=7;
+     // RMW transactions and serial arithmetic likewise share five count bits.
+     always @(posedge clk) begin
+-        if(accept) bit_index<=endpoint_high || endpoint_low ? 5'd0 : {1'b0,angle_bcd[7:4]};
++        if(accept) bit_index<=endpoint_high || endpoint_low ? 5'd0 : {1'b0,draw_angle[7:4]};
+         else if(state==ROT_BEGIN || state==ADD_BEGIN || start_pixel) bit_index<=0;
+         else if((state==CONVERT_ANGLE && bit_index!=0) || (run_bits && bit_index!=last_bit) || bus_advance) bit_index<=bit_index+(state==CONVERT_ANGLE ? 5'd31 : 5'd1);
+     end
+@@ -139,10 +150,17 @@ module radar_lcd_micro #(
+           state<=INIT_RESET;initialized<=0;return_up<=0;end_same<=0;
+           rotate_up<=1;second_op<=0;axis<=0;micro_left<=0;
+           erase<=0;flush_left<=0;target_radius<=6;target_valid<=0;
+-          pending<=0;dropped<=0;done<=0;
++          pending<=0;dropped<=0;done<=0;return_ten<=0;
+        end else begin
+           done<=0;
+-          if(request && state!=IDLE && dropped!=255) dropped<=dropped+1'b1;
++          if(P5_FIXES) begin
++             if(request && ENABLE_READBACK && initialized) begin
++                latest_angle<=angle_bcd;latest_direction<=direction_up;
++                latest_radius<=radius;latest_valid<=radius_valid;
++                pending<=!accept;
++                if(pending && !accept && dropped!=255) dropped<=dropped+1'b1;
++             end else if(accept) pending<=0;
++          end else if(request && state!=IDLE && dropped!=255) dropped<=dropped+1'b1;
+           case(state)
+           INIT_RESET:if(tick_ms && position_count==0) state<=INIT_WAIT;
+           INIT_WAIT:if(tick_ms && position_count==0) state<=INIT_SEND;
+@@ -155,15 +173,16 @@ module radar_lcd_micro #(
+                 else begin micro_left<=micro_left+1'b1;flush_left<=8;state<=INIT_SEND;end
+              end else begin flush_left<=flush_left+1'b1;state<=INIT_SEND;end
+           end
+-          IDLE:if(request && ENABLE_READBACK && angle_bcd<=12'h180) begin
+-             return_up<=!direction_up;end_same<=0;
++          IDLE:if(accept) begin
++             return_up<=!draw_direction;end_same<=0;
++             return_ten<=endpoint_low || (!endpoint_high && !basic_zero);
+              rotate_up<=1;
+-             target_radius<=radius<6 ? 6'd6 : radius;
+-             target_valid<=radius_valid && radius<=48;
++             target_radius<=draw_radius<6 ? 6'd6 : draw_radius;
++             target_valid<=draw_valid && draw_radius<=48;
+              flush_left<=0;erase<=1;
+-             if(KEEP_END_BATCH && angle_bcd==12'h180 && !direction_up) begin
++             if(endpoint_high) begin
+                 flush_left<=10;end_same<=1;
+-             end else if(KEEP_END_BATCH && angle_bcd==0 && direction_up) begin
++             end else if(endpoint_low) begin
+                 flush_left<=10;
+              end else if(!ordinary_a) erase<=0;
+              state<=CONVERT_ANGLE;
+@@ -186,7 +205,7 @@ module radar_lcd_micro #(
+              else state<=ORIENT;
+           end
+           RAY_RESET:state<=PIXEL;
+-          PIXEL:if(selected) begin pending<=0;state<=RMW;end
++          PIXEL:if(selected) begin if(!P5_FIXES) pending<=0;state<=RMW;end
+              else if(step==48) state<=AFTER_RAY;
+              else begin axis<=0;state<=ADD_BEGIN;end
+           ADD_BEGIN:state<=ADD_BITS;
+@@ -196,7 +215,7 @@ module radar_lcd_micro #(
+           end
+           RMW:begin
+              if(bus_done) begin
+-                pending<=0;
++                if(!P5_FIXES) pending<=0;
+                 if(transaction==7) begin
+                    if(step==48) state<=AFTER_RAY;
+                    else begin axis<=0;state<=ADD_BEGIN;end
+diff --git a/radar/rtl/radar_unified_top.v b/radar/rtl/radar_unified_top.v
+index cf3f257..c43845e 100644
+--- a/radar/rtl/radar_unified_top.v
++++ b/radar/rtl/radar_unified_top.v
+@@ -31,7 +31,7 @@ module radar_unified_top #(
+     output wire lcd_rd_n,lcd_wr_n,lcd_a0,lcd_rst_n,lcd_cs_n
+ );
+ 
+- wire rst,tick_us,tick_ms,blink_2hz,system_on,mode_continuous;
++ wire rst,tick_us,tick_ms,blink_2hz,system_on,mode_continuous,sw7_sync;
+  wire tick_250us,tick_20ms,tick_switch,carrier_2khz,window_50ms;
+  wire [2:0] rhythm_phase;
+  wire [14:0] global_frame_us;
+@@ -50,14 +50,14 @@ module radar_unified_top #(
+  wire [23:0] row_colors;
+  wire [6:0] seg_bus;
+  wire [7:0] cat_int,row_int,col_r_int,col_g_int;
+- wire outputs_enabled=sw7 && system_on && system_state!=0;
++ wire outputs_enabled=sw7_sync && system_on && system_state!=0;
+  reset_ctrl u_reset(clk,rst);
+  radar_global_timebase_alarm #(.CLK_HZ(CLK_HZ),.SWITCH_SAMPLE_MS(SWITCH_MS)) u_timebase(
+  .clk(clk),.rst(rst),.tick_us(tick_us),.tick_ms(tick_ms),.blink_2hz(blink_2hz),
+  .tick_250us(tick_250us),.tick_20ms(tick_20ms),.tick_switch(tick_switch),.window_50ms(window_50ms),.rhythm_phase(rhythm_phase),.frame_us(global_frame_us),
+  .display_index(display_index),.color_phase(color_phase),.carrier_2khz(carrier_2khz));
+  switch_pair_sampled u_switch_pair(.clk(clk),.rst(rst),.sample_tick(tick_switch),
+- .sw6(sw6),.sw7(sw7),.mode_continuous(mode_continuous),.system_on(system_on));
++ .sw6(sw6),.sw7(sw7),.mode_continuous(mode_continuous),.system_on(system_on),.sw7_sync(sw7_sync));
+  generate if(MEASUREMENT_BCD) begin:g_bcd_measurement
+  ultrasonic_bcd_budget_compact #(.ENABLE_RADIUS(1)) u_ultrasonic(
+   .clk(clk),.rst(rst),.tick_us(tick_us),.measure_start(measure_start),.cancel(measure_cancel),
+@@ -117,11 +117,12 @@ module radar_unified_top #(
+  wire [7:0] init_data,draw_data,read_data,data_out;
+  wire [7:0] dropped;
+  wire lcd_reset=rst || !system_on || system_state==0;
+- radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),
++ radar_lcd_micro #(.ENABLE_READBACK(ENABLE_READBACK),.KEEP_END_BATCH(KEEP_END_BATCH),.P5_FIXES(1),
+   .FRACTION_BITS(MINSKY_F),.ROT_SHIFT(MINSKY_K),.PHASE_BITS(MINSKY_PHASE_BITS),.PHASE_ADD(MINSKY_PHASE_ADD),
+   .PHASE_INITIAL(MINSKY_PHASE_INITIAL),.MICRO_BASE(MINSKY_MICRO_BASE)) draw(
+   .clk(clk),.rst(lcd_reset),.tick_ms(tick_ms),.initialized(initialized),.lcd_rst_n(lcd_rst_n),
+-  .request((sample_event || (step_event && !measurement_pending)) && initialized && system_state==3 && sw7),
++  .request((sample_event || (step_event && !measurement_pending)) && initialized && system_state==3 && sw7_sync),
++  .continuous_mode(mode_continuous),
+   .angle_bcd(sample_event ? sample_angle_bcd : angle_bcd),
+   .direction_up(sample_event ? sample_direction_up : direction_up),
+   .radius(radius),.radius_valid(sample_event && radius_valid),.dropped(dropped),
+diff --git a/radar/rtl/switch_pair_sampled.v b/radar/rtl/switch_pair_sampled.v
+index 39836e4..2325cfa 100644
+--- a/radar/rtl/switch_pair_sampled.v
++++ b/radar/rtl/switch_pair_sampled.v
+@@ -3,9 +3,11 @@
+ module switch_pair_sampled(
+  input wire clk,rst,sample_tick,
+  input wire sw6,sw7,
+- output reg mode_continuous,system_on
++ output reg mode_continuous,system_on,
++ output wire sw7_sync
+ );
+  reg [1:0] sw_meta,sw_sync,previous;
++ assign sw7_sync=sw_sync[0];
+  always @(posedge clk) begin
+   if(rst) begin sw_meta<=0;sw_sync<=0;previous<=0;mode_continuous<=0;system_on<=0;end
+   else begin
+diff --git a/radar/sim/unified_scan/tb_budget_top.v b/radar/sim/unified_scan/tb_budget_top.v
+index 2117ff9..5fc9192 100644
+--- a/radar/sim/unified_scan/tb_budget_top.v
++++ b/radar/sim/unified_scan/tb_budget_top.v
+@@ -44,8 +44,8 @@ module tb_budget_top;
+  always @(posedge clk) begin
+   cycles=cycles+1;
+   if(readback.lcd_reset || !readback.initialized) expected_drops=0;
+-  else if((readback.sample_event || (readback.step_event && !readback.measurement_pending)) && readback.system_state==3 && sw7 &&
+-          readback.draw.state!=0 && expected_drops<255) expected_drops=expected_drops+1;
++  else if((readback.sample_event || (readback.step_event && !readback.measurement_pending)) && readback.system_state==3 && readback.sw7_sync &&
++          readback.draw.state!=0 && readback.draw.pending && expected_drops<255) expected_drops=expected_drops+1;
+   if(readback.draw.accept && readback.sample_event) begin
+    if(readback.mode_continuous) continuous_targets=continuous_targets+1;
+    else basic_targets=basic_targets+1;
+@@ -97,9 +97,15 @@ module tb_budget_top;
+   if(continuous_drops!=0 || continuous_targets<2 || basic_targets<2) $fatal(1,"Normal samples lost to redundant step drawing");
+   switch_mode(0);
+   repeat(150000) @(negedge clk);
++  // P5 step1 contract: shutdown uses the un-debounced TWO-STAGE signal.
++  // Check both latency and eventual shutdown; debounced control is unchanged.
+   #3;sw7=0;#1;
++  if(readback.sw7_sync!==1) $fatal(1,"SW7 bypasses synchronizer");
++  @(posedge clk);#1;
++  if(readback.sw7_sync!==1) $fatal(1,"SW7 gate uses first stage");
++  @(posedge clk);#1;
+   if(pins0!=={3'b000,16'h0,7'h0,8'hff,8'hff,8'h0,8'h0} || pins1!==pins0)
+-    $fatal(1,"SW7 asynchronous output gate");
++    $fatal(1,"SW7 synchronized output gate");
+   $display("PASS tb_unified_top cycles=%0d shots=%0d basic_samples=%0d continuous_samples=%0d mode_resets=%0d readback_reads=%0d",cycles,shots,basic_samples,continuous_samples,mode_resets,model1.reads);
+   $display("LCD_COUNTS basic_targets=%0d continuous_targets=%0d basic_fast_step_drops=%0d continuous_drops=%0d",basic_targets,continuous_targets,basic_drops,continuous_drops);
+   $finish;
+diff --git a/radar/sim/unified_scan/tb_switch_pair.v b/radar/sim/unified_scan/tb_switch_pair.v
+index 9908b3a..d418d3e 100644
+--- a/radar/sim/unified_scan/tb_switch_pair.v
++++ b/radar/sim/unified_scan/tb_switch_pair.v
+@@ -2,7 +2,7 @@
+ module tb_switch_pair;
+  reg clk=0,rst=1,tick=0,a=0,b=0;always #10 clk=~clk;
+  wire x,y;
+- switch_pair_sampled s(clk,rst,tick,a,b,x,y);
++ switch_pair_sampled s(clk,rst,tick,a,b,x,y,);
+  task sample;
+  begin @(negedge clk);tick=1;@(negedge clk);tick=0;#1;end
+  endtask
+@@ -18,3 +18,4 @@ module tb_switch_pair;
+   $display("PASS paired switch sampling: shared tick, two stable samples, bounce and independent bits");$finish;
+  end
+ endmodule
++

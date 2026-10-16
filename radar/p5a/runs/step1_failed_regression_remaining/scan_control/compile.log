@@ -1,0 +1,3 @@
+C:\Users\Metro\AppData\Local\Temp\p5_regression_2bb2b01b324148e48c7423cb64bc8849\tb_scan_control.v:23: warning: Instantiating module radar_unified_scan with dangling input port 35 (distance_bcd) floating.
+C:\Users\Metro\AppData\Local\Temp\p5_regression_2bb2b01b324148e48c7423cb64bc8849\tb_scan_control.v:23: warning: Instantiating module radar_unified_scan with dangling input port 38 (global_frame_us) floating.
+C:\Users\Metro\AppData\Local\Temp\p5_regression_2bb2b01b324148e48c7423cb64bc8849\tb_scan_control.v:23: warning: Instantiating module radar_unified_scan with dangling input port 39 (global_frame_tick) floating.
