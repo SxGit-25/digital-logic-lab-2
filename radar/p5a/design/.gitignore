@@ -1,0 +1,3 @@
+# These full staging copies are reproducible from the tracked core candidates,
+# prepare_*_top.py, and the production source at the checkpoint tag.
+*_source/

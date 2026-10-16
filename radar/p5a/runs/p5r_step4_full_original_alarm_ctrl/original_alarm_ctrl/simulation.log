@@ -1,0 +1,2 @@
+PASS tb_alarm_ctrl: all four rhythms, period shortening, invalid/off
+tb_alarm_ctrl.v:44: $finish called at 45596000 (1ps)

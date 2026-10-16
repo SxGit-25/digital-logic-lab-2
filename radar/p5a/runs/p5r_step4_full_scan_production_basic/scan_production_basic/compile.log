@@ -1,0 +1,3 @@
+tb_scan_engine.v:40: warning: Instantiating module radar_unified_scan with dangling input port 35 (distance_bcd) floating.
+tb_scan_engine.v:40: warning: Instantiating module radar_unified_scan with dangling input port 38 (global_frame_us) floating.
+tb_scan_engine.v:40: warning: Instantiating module radar_unified_scan with dangling input port 39 (global_frame_tick) floating.

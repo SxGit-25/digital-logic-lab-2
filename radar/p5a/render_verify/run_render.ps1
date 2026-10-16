@@ -23,7 +23,7 @@ foreach($mode in $Modes){
  $dest="$out/$mode"
  New-Item -ItemType Directory -Force $stage,$dest | Out-Null
  $env:TEMP=$stage;$env:TMP=$stage
- Copy-Item "$SourceDir/*.v","$PSScriptRoot/*.v" -Destination $stage
+ Copy-Item "$SourceDir/*.v","$PSScriptRoot/lcd_ram_bfm.v","$PSScriptRoot/tb_render.v" -Destination $stage
  # Behavior UFM model and its initialization words share exactly the image used
  # by synthesis. Production model naming is left unmodified.
  $backgroundDir=Split-Path -Parent $Background
