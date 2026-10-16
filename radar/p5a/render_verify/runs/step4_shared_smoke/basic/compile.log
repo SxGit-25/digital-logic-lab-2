@@ -1,0 +1,4 @@
+tb_busy_stop.v:3: Include file busy_mode.vh not found
+error: Unable to find the root module "tb_render" in the Verilog source.
+     : Perhaps ``-s tb_render'' is incorrect?
+1 error(s) during elaboration.

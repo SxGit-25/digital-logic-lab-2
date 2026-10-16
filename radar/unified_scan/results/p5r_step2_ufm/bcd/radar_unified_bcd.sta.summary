@@ -1,0 +1,49 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'ufm_arclk'
+Slack : 0.815
+TNS   : 0.000
+
+Type  : Setup 'clk'
+Slack : 3.414
+TNS   : 0.000
+
+Type  : Setup 'ufm_drclk'
+Slack : 140.005
+TNS   : 0.000
+
+Type  : Hold 'ufm_arclk'
+Slack : -20.820
+TNS   : -20.820
+
+Type  : Hold 'clk'
+Slack : 1.078
+TNS   : 0.000
+
+Type  : Hold 'ufm_drclk'
+Slack : 60.000
+TNS   : 0.000
+
+Type  : Recovery 'clk'
+Slack : 8.534
+TNS   : 0.000
+
+Type  : Removal 'clk'
+Slack : 7.941
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : 9.734
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'ufm_arclk'
+Slack : 130.000
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'ufm_drclk'
+Slack : 130.000
+TNS   : 0.000
+
+------------------------------------------------------------

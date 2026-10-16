@@ -1,0 +1,5 @@
+tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 5 (continuous_mode) floating.
+tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 6 (alarm_active) floating.
+tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 7 (inverse_phase) floating.
+tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 11 (distance_bcd) floating.
+tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 12 (level) floating.

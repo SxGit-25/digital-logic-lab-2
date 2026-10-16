@@ -1,0 +1,5 @@
+radar_lcd_micro.v:60: error: Unknown module type: p5_ui_columns
+2 error(s) during elaboration.
+*** These modules were missing:
+        p5_ui_columns referenced 1 times.
+***
