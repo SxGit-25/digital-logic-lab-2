@@ -16,6 +16,7 @@ for f in a.source_dir.glob('*.v'): shutil.copy2(f,snapshot/f.name)
 assert list(snapshot.glob('*.v')),'Source directory must contain .v production RTL'
 (out/'sources_sha256.json').write_text(json.dumps({f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(snapshot.glob('*.v'))},indent=2))
 test_files=list((ROOT/'radar/sim').glob('tb_*.v'))+list((ROOT/'radar/sim/unified_scan').glob('tb_*.v'))+list(Path(__file__).parent.glob('*.v'))
+test_files += [ROOT/'radar/sim/unified_scan/minsky_draw_fixtures.py',Path(__file__).with_name('prepare_step1.py')]
 test_snapshot=out/'test_snapshot';test_snapshot.mkdir()
 test_hashes={str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in test_files}
 for f in test_files:

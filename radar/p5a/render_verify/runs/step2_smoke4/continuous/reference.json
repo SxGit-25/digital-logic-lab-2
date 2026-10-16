@@ -1,0 +1,50 @@
+{
+  "mode": "continuous",
+  "beam": false,
+  "requests": [
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    }
+  ],
+  "full_roundtrips": 0,
+  "vector_algorithm": "F15/K7; phase63 +15 mod64; 2+carry microsteps"
+}

@@ -1,0 +1,109 @@
+{
+  "pof": "E:\\codex\\数电实验2\\radar\\lcd_p2\\results\\ufm\\lcd_p2_ufm.pof",
+  "pof_sha256": "f8618aedaed60af70e4bd1d5ddd30ba19989149d88bf51b111e56c828963b0ab",
+  "device": "EPM1270T144C5",
+  "records": [
+    {
+      "tag": "0x01",
+      "offset": 12,
+      "size": 78
+    },
+    {
+      "tag": "0x02",
+      "offset": 96,
+      "size": 14
+    },
+    {
+      "tag": "0x03",
+      "offset": 116,
+      "size": 9
+    },
+    {
+      "tag": "0x05",
+      "offset": 131,
+      "size": 2
+    },
+    {
+      "tag": "0x11",
+      "offset": 139,
+      "size": 26124
+    },
+    {
+      "tag": "0x18",
+      "offset": 26269,
+      "size": 1036
+    },
+    {
+      "tag": "0x08",
+      "offset": 27311,
+      "size": 2
+    }
+  ],
+  "ufm_payload_bytes": 1024,
+  "ufm_payload_sha256": "8285c12c67fdf441f4e90938927e253c9e11be8402210af16e90e511ac5631f3",
+  "ufm_words": 512,
+  "ufm_all_erased": false,
+  "official_svf_crosscheck": {
+    "converter": "E:\\quartus\\QuartusII91\\quartus\\bin64\\quartus_cpf.exe",
+    "conversion": "quartus_cpf -c -q 4.5MHz -g 3.3 -n p image.pof image.svf",
+    "full_svf_sha256": "6191d5bb6ca6724d7cac1cd07208b347b11d89543acd58d459a986e15735c2c2",
+    "ufm_program_word_count": 512,
+    "ufm_select_address": "0001",
+    "isc_program_instruction": "2F4",
+    "all_words_match_direct_pof_payload": true
+  },
+  "mif": "E:\\codex\\数电实验2\\radar\\lcd_p2\\lcd_sin_q8.mif",
+  "mif_sha256": "0ef25024656dfdeaf3437dcd2707ae52f1ebcbeab9334ccf7bd02d1f3d486c55",
+  "compared_words": 512,
+  "mismatch_count": 0,
+  "first_mismatches": [],
+  "baseline": {
+    "pof": "E:\\codex\\数电实验2\\radar\\p5a\\delivery\\p5a0_original_SW6_readback_1089LE.pof",
+    "pof_sha256": "709218e16d4b0618bd6656a9ba09ba896add2ad8b9cbeaec44ec7c943fa4dfd3",
+    "device": "EPM1270T144C5",
+    "records": [
+      {
+        "tag": "0x01",
+        "offset": 12,
+        "size": 78
+      },
+      {
+        "tag": "0x02",
+        "offset": 96,
+        "size": 14
+      },
+      {
+        "tag": "0x03",
+        "offset": 116,
+        "size": 9
+      },
+      {
+        "tag": "0x05",
+        "offset": 131,
+        "size": 2
+      },
+      {
+        "tag": "0x11",
+        "offset": 139,
+        "size": 26124
+      },
+      {
+        "tag": "0x18",
+        "offset": 26269,
+        "size": 1036
+      },
+      {
+        "tag": "0x08",
+        "offset": 27311,
+        "size": 2
+      }
+    ],
+    "ufm_payload_bytes": 1024,
+    "ufm_payload_sha256": "5f4ecdb7b71c3e403983fe405cddcdc2f2576b655fdb3e80d94a6f7c32e58bc2",
+    "ufm_words": 512,
+    "ufm_all_erased": true,
+    "words_different_from_candidate": 91,
+    "words_different_from_expected": 91
+  },
+  "pass": true
+}

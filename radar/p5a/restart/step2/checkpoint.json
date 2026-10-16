@@ -1,0 +1,84 @@
+{
+  "step": 2,
+  "features": "A0_pending_snapshot_syncSW7_UFM",
+  "seed": 1,
+  "build": "p5r_step2_address_timing",
+  "le": 1225,
+  "fitter_success": true,
+  "setup_ns": 3.19,
+  "hold_ns": 1.078,
+  "modules": [
+    {
+      "instance": "|radar_unified_bcd_top",
+      "le_self": 1
+    },
+    {
+      "instance": "|radar_unified_top:system|",
+      "le_self": 9
+    },
+    {
+      "instance": "|alarm_global:u_alarm|",
+      "le_self": 15
+    },
+    {
+      "instance": "|lcd_bus_phase:bus|",
+      "le_self": 57
+    },
+    {
+      "instance": "|radar_display_gated:u_display|",
+      "le_self": 31
+    },
+    {
+      "instance": "|radar_display_shared:core|",
+      "le_self": 120
+    },
+    {
+      "instance": "|radar_global_timebase_alarm:u_timebase|",
+      "le_self": 67
+    },
+    {
+      "instance": "|radar_lcd_micro:draw|",
+      "le_self": 360
+    },
+    {
+      "instance": "|minsky_serial_registers:datapath|",
+      "le_self": 112
+    },
+    {
+      "instance": "|p5_ufm_reader:g_background.background_reader|",
+      "le_self": 69
+    },
+    {
+      "instance": "|altufm_none:flash|",
+      "le_self": 0
+    },
+    {
+      "instance": "|altufm_none_1km:auto_generated|",
+      "le_self": 0
+    },
+    {
+      "instance": "|radar_unified_scan:scan|",
+      "le_self": 230
+    },
+    {
+      "instance": "|reset_ctrl:u_reset|",
+      "le_self": 8
+    },
+    {
+      "instance": "|switch_pair_sampled:u_switch_pair|",
+      "le_self": 9
+    },
+    {
+      "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+      "le_self": 137
+    }
+  ],
+  "previous_build": "p5r_step1_pipe",
+  "le_delta": 124,
+  "setup_delta_ns": -0.365,
+  "setup_target_pass": true,
+  "regression_pass": "radar\\p5a\\runs\\p5r_step2_full\\PASS.txt",
+  "pof": "step2_A0_pending_snapshot_syncSW7_UFM_1225LE.pof",
+  "pof_sha256": "73051dbaf410269866862823816719e3036ebcc88f7383984c4670983153e464",
+  "notes": "全部20项既有回归通过；两模式各1091请求和1152096字节Python比对通过。最坏帧6.77330ms，连续60ms余量53.22670ms；上电47.46536ms。UFM地址计数节拍证明setup>=40ns/hold>=160ns，修复相应多周期约束后全部时钟正裕量。实际POF中512个UFM字经原始记录与quartus_cpf双重校验一致。异步首级三项断言通过，未约束输出58/456，相对基线0。setup变化来自UFM及字节掩码控制加入后的布线。"
+}

@@ -1,0 +1,34 @@
+{
+  "basic": {
+    "real_timing": true,
+    "requests": 7,
+    "worst": {
+      "request": 5,
+      "angle_bcd": "180",
+      "total_cycles": 335199,
+      "ufm_cycles": 202039,
+      "lcd_read_cycles": 38540,
+      "lcd_write_cycles": 47940,
+      "overhead_cycles": 46680,
+      "bound_cycles": 335199
+    },
+    "bound_ms": 6.70398,
+    "margin_to_60ms": 53.29602
+  },
+  "continuous": {
+    "real_timing": true,
+    "requests": 7,
+    "worst": {
+      "request": 5,
+      "angle_bcd": "180",
+      "total_cycles": 335208,
+      "ufm_cycles": 202048,
+      "lcd_read_cycles": 38540,
+      "lcd_write_cycles": 47940,
+      "overhead_cycles": 46680,
+      "bound_cycles": 335208
+    },
+    "bound_ms": 6.70416,
+    "margin_to_60ms": 53.29584
+  }
+}

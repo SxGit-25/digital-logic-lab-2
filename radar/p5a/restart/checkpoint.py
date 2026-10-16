@@ -48,7 +48,9 @@ with (out/'module_le.csv').open('w',encoding='utf-8-sig',newline='') as f:
 lines=[f'# 第{a.step}项检查点', '',f'保留：{a.features}；seed={a.seed}。', '',
        f'整机 {current["le"]} LE（较上一保留项 {record["le_delta"]:+d}），Fitter 成功；setup {current["setup_ns"]:.3f} ns（变化 {record["setup_delta_ns"]:+.3f} ns），hold {current["hold_ns"]:.3f} ns。', '',a.notes,'',
        '| 模块 | 自身 LE |','|---|---:|']
-lines += [f'| `{m["instance"]}` | {m["le_self"]} |' for m in current['modules']]
+def mdcell(value):
+    return str(value).replace('|', r'\|')
+lines += [f'| `{mdcell(m["instance"])}` | {m["le_self"]} |' for m in current['modules']]
 lines += ['',f'全部既有回归通过凭据：`{a.regression_pass}`。',f'POF：`../pofs/{name}`；SHA-256 `{record["pof_sha256"]}`。','']
 (out/'报告.md').write_text('\n'.join(lines),encoding='utf-8')
 print(json.dumps({k:v for k,v in record.items() if k!='modules'},ensure_ascii=False))

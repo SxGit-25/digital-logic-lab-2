@@ -29,7 +29,7 @@ cdc=(d/'cdc_assertions.txt').read_text(errors='replace')
 summary['CDC_PASS']=('CDC_FAILURES=0' in cdc and cdc.count('PASS ')==3)
 (d/'postfit_summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
 lines=['# Postfit 实测报告','', '|排名|Setup ns|起点|终点|逻辑级|数据布线 ns|布线占比|','|---|---|---|---|---|---|---|']
-for r in paths: lines.append('|'+ '|'.join(str(r[k]) for k in r)+'%|')
+for r in paths: lines.append('|'+ '|'.join(str(r[k]).replace('|', r'\|') for k in r)+'%|')
 lines += ['',f'CDC 三项断言：{"PASS" if summary["CDC_PASS"] else "FAIL"}。','', '|未约束项目|Setup|Hold|基线|Setup 增减|Hold 增减|','|---|---|---|---|---|---|']
 for name,r in summary.items():
     if isinstance(r,dict): lines.append('|'+name+'|'+'|'.join(str(v) for v in r.values())+'|')

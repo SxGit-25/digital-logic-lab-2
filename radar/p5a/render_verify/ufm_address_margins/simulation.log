@@ -1,0 +1,2 @@
+PASS address_margins checks=32 phase_mask=0000ffff first_edge_min_ns=40.0 setup_min_ns=40.0 hold_min_ns=160.0
+tb_ufm_address_margins.v:65: $finish called at 236600000 (1ps)

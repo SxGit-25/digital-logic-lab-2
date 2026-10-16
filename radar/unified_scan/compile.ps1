@@ -6,10 +6,12 @@ $stage=Join-Path ([IO.Path]::GetTempPath()) ('radar_p4_'+[Guid]::NewGuid().ToStr
 New-Item -ItemType Directory -Force "$stage/rtl","$stage/lcd_p4" | Out-Null
 $radar=Split-Path $PSScriptRoot -Parent
 $names=@('radar_global_timebase_alarm','alarm_global','switch_pair_sampled','radar_display_gated','radar_global_timebase','radar_display_shared','reset_ctrl','timebase','switch_filter','ultrasonic','bin12_to_bcd','display_compose','seg_scan','matrix_scan','alarm_ctrl','radar_unified_scan','radar_unified_top','minsky_serial_datapath','radar_minsky_draw_compact','radar_minsky_draw_compact_v2','ultrasonic_bcd_experiment','ultrasonic_bcd_budget','ultrasonic_bcd_budget_compact','radar_lcd_micro','lcd_bus_phase','lcd_bus','lcd_init')
+$names+=@('p5_ufm_reader')
 foreach($name in $names){Copy-Item "$radar/rtl/$name.v" "$stage/rtl"}
 if($ScanSource){Copy-Item -LiteralPath $ScanSource -Destination "$stage/rtl/radar_unified_scan.v" -Force}
 Copy-Item "$PSScriptRoot/*.qpf","$PSScriptRoot/*.qsf","$PSScriptRoot/*.sdc","$PSScriptRoot/radar_unified_variants.v" "$stage/lcd_p4"
 Copy-Item "$radar/lcd_p2/timing_details.tcl" "$stage/lcd_p4"
+Get-ChildItem "$PSScriptRoot/background.*" -File -ErrorAction SilentlyContinue | Copy-Item -Destination "$stage/lcd_p4"
 $drive=$null
 foreach($letter in 'R','S','T','U','V','W','X','Y','Z'){
     if(!(Test-Path "${letter}:\")){$drive="${letter}:";break}
@@ -63,6 +65,7 @@ try {
         $snapshot=Join-Path $out 'source'
         New-Item -ItemType Directory -Force "$snapshot/rtl","$snapshot/lcd_p4" | Out-Null
         Copy-Item "$stage/rtl/*.v" "$snapshot/rtl"
+        Get-ChildItem "$stage/lcd_p4/background.*" -File -ErrorAction SilentlyContinue | Copy-Item -Destination "$snapshot/lcd_p4"
         Copy-Item "$stage/lcd_p4/radar_unified_variants.v","$stage/lcd_p4/timing_details.tcl","$stage/lcd_p4/$project.qpf","$stage/lcd_p4/$project.qsf","$stage/lcd_p4/$project.sdc" "$snapshot/lcd_p4"
         Get-ChildItem -LiteralPath $snapshot -Recurse -File | Sort-Object FullName | ForEach-Object{
             [PSCustomObject]@{File=$_.FullName.Substring($snapshot.Length+1).Replace('\','/');SHA256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash}
