@@ -1,0 +1,7 @@
+PREPARED f15 375 requests 17807 independent RMW pixels
+Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step7_full_draw ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_b678ec4692cd42fcbc8a1a49366c072f
+Exception: E:\codex\数电实验2\radar\sim\unified_scan\run_budget_draw.ps1:33
+Line |
+  33 |     if($compileCode){throw "Draw compile failed $name"}
+     |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Draw compile failed budget_f15

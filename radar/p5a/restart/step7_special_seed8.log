@@ -1,0 +1,12 @@
+Info: Generated suppressed messages file S:/lcd_p4/radar_unified_bcd.fit.smsg
+Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 0 warnings
+    Error: Peak virtual memory: 4493 megabytes
+    Error: Processing ended: Fri Oct 16 14:19:34 2026
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
+Error: Quartus II Full Compilation was unsuccessful. 4 errors, 12 warnings
+Error: Flow compile (for project S:/lcd_p4/radar_unified_bcd) was not successful
+Error: ERROR: Error(s) found while running an executable. See report file(s) for error message(s). Message log indicates which executable was run last.
+
+Build evidence retained: C:\Users\Metro\AppData\Local\Temp\radar_p4_210e1ec7b0b844c7bbc0794713de8573
+Compile/timing failed: bcd; all reports retained.
