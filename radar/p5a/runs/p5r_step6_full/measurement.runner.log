@@ -1,0 +1,4 @@
+PASS exhaustive_mod25_and_radius_range values=5301
+PASS tb_ultrasonic_bcd_budget_compact samples=20 max_ideal_error_mm=1.596600
+tb_ultrasonic_bcd_budget_compact.v:79: $finish called at 212366171000 (1ps)
+Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step6_full_measurement ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_ee8783f6c04a4b2888d66eec5bbdd06e

@@ -1,0 +1,2 @@
+PASS paired switch sampling: shared tick, two stable samples, bounce and independent bits
+tb_switch_pair.v:18: $finish called at 541000 (1ps)
