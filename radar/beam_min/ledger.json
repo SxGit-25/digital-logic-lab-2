@@ -1,0 +1,4248 @@
+{
+  "builds": {
+    "p5a0_audit": {
+      "status": "Successful - Fri Oct 16 11:53:12 2026",
+      "successful": true,
+      "seed": null,
+      "measurement": "Fitter完成布局布线的LE",
+      "total_le": 1089,
+      "total_registers": 437,
+      "flags": {
+        "P5_UFM": null,
+        "P5_INVERT": null,
+        "P5_BEAM": null
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1089,
+          "le_self": 1,
+          "registers_subtree": 437,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 481,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1088,
+          "le_self": 15,
+          "registers_subtree": 437,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 482,
+          "registers_self": 0
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 15,
+          "le_self": 15,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 483,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 62,
+          "le_self": 62,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 484,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 151,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 485,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 120,
+          "le_self": 120,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 486,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 487,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 395,
+          "le_self": 283,
+          "registers_subtree": 145,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 488,
+          "registers_self": 65
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 112,
+          "le_self": 112,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 489,
+          "registers_self": 80
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 229,
+          "le_self": 229,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 490,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 491,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 492,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 137,
+          "le_self": 137,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 493,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1125,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1125,
+          "le_self": 1,
+          "registers_subtree": 437,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 223,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1124,
+          "le_self": 16,
+          "registers_subtree": 437,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 224,
+          "registers_self": 0
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 15,
+          "le_self": 15,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 225,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 62,
+          "le_self": 62,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 226,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 173,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 227,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 142,
+          "le_self": 142,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 228,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 229,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 404,
+          "le_self": 291,
+          "registers_subtree": 145,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 230,
+          "registers_self": 65
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 113,
+          "le_self": 113,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 231,
+          "registers_self": 80
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 232,
+          "le_self": 232,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 232,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 233,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 234,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5a0_audit/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 235,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "e0d8af306d687f450e5ca7d1e7f978a697459b74f8b988733dcd7b65d237e0f6"
+    },
+    "p5r_step3_alarm_gate": {
+      "status": "Successful - Fri Oct 16 14:05:13 2026",
+      "successful": true,
+      "seed": 1,
+      "measurement": "Fitter完成布局布线的LE",
+      "total_le": 1253,
+      "total_registers": 528,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": null
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1253,
+          "le_self": 1,
+          "registers_subtree": 528,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 481,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1252,
+          "le_self": 9,
+          "registers_subtree": 528,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 482,
+          "registers_self": 0
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 15,
+          "le_self": 15,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 483,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 57,
+          "le_self": 57,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 484,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 151,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 485,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 120,
+          "le_self": 120,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 486,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 487,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 571,
+          "le_self": 391,
+          "registers_subtree": 236,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 488,
+          "registers_self": 112
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 111,
+          "le_self": 111,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 489,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 490,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 491,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 492,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 229,
+          "le_self": 229,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 493,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 494,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 495,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 136,
+          "le_self": 136,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 496,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1320,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1320,
+          "le_self": 1,
+          "registers_subtree": 528,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 245,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1319,
+          "le_self": 10,
+          "registers_subtree": 528,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 246,
+          "registers_self": 0
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 15,
+          "le_self": 15,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 57,
+          "le_self": 57,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 173,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 142,
+          "le_self": 142,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 611,
+          "le_self": 429,
+          "registers_subtree": 236,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 112
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 112,
+          "le_self": 112,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 232,
+          "le_self": 232,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 137,
+          "le_self": 137,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step3_alarm_gate/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "d1ae3c3c0dae1874cc57e15eea17960f1fe9a42d8f605f4ee5203a0ad708ef80"
+    },
+    "p5r_step4_initial": {
+      "status": "Failed - Fri Oct 16 14:01:22 2026",
+      "successful": false,
+      "seed": 1,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_initial/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "8357882d617e06d8eb86e75dc188f1de91a9594382ccd752ce9ffbff6a0a1ca0"
+    },
+    "p5r_step4_shared": {
+      "status": "Failed - Fri Oct 16 14:02:42 2026",
+      "successful": false,
+      "seed": 1,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1328,
+      "total_registers": 540,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1328,
+          "le_self": 1,
+          "registers_subtree": 540,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1327,
+          "le_self": 14,
+          "registers_subtree": 540,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 151,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 120,
+          "le_self": 120,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 656,
+          "le_self": 484,
+          "registers_subtree": 247,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 132
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 111,
+          "le_self": 111,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 61,
+          "le_self": 61,
+          "registers_subtree": 35,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 35
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 222,
+          "le_self": 222,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 130,
+          "le_self": 130,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1387,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1387,
+          "le_self": 1,
+          "registers_subtree": 540,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1386,
+          "le_self": 15,
+          "registers_subtree": 540,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 173,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 142,
+          "le_self": 142,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 683,
+          "le_self": 508,
+          "registers_subtree": 247,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 132
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 113,
+          "le_self": 113,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 62,
+          "le_self": 62,
+          "registers_subtree": 35,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 35
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 225,
+          "le_self": 225,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 136,
+          "le_self": 136,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_shared/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "396604a761a12ff63f16ae06ed6fc8708d622b6a6966af35053e15d55e85a2ed"
+    },
+    "p5r_step4_area": {
+      "status": "Failed - Fri Oct 16 14:03:16 2026",
+      "successful": false,
+      "seed": 1,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1368,
+      "total_registers": 532,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1368,
+          "le_self": 1,
+          "registers_subtree": 532,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1367,
+          "le_self": 13,
+          "registers_subtree": 532,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 684,
+          "le_self": 495,
+          "registers_subtree": 243,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 122
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 114,
+          "le_self": 114,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 75,
+          "le_self": 75,
+          "registers_subtree": 41,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 41
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 141,
+          "le_self": 141,
+          "registers_subtree": 63,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 63
+        }
+      ],
+      "map_total_cells": 1451,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1451,
+          "le_self": 1,
+          "registers_subtree": 532,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1450,
+          "le_self": 15,
+          "registers_subtree": 532,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 173,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 142,
+          "le_self": 142,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 735,
+          "le_self": 544,
+          "registers_subtree": 243,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 122
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 115,
+          "le_self": 115,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 76,
+          "le_self": 76,
+          "registers_subtree": 41,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 41
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 147,
+          "le_self": 147,
+          "registers_subtree": 63,
+          "source": "radar/unified_scan/results/p5r_step4_area/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 63
+        }
+      ],
+      "fit_report_sha256": "769d448d069fa9478af9b589fdbfd95eb3c1f0e32e18b76ccb0591f04941e8b5"
+    },
+    "p5r_step4_seed2": {
+      "status": "Failed - Fri Oct 16 14:04:06 2026",
+      "successful": false,
+      "seed": 2,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed2/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "bb53639e69204e21fb9416bf0a55ab926e9a0c6bed55f8fde9d0e751c9886e74"
+    },
+    "p5r_step4_seed3": {
+      "status": "Failed - Fri Oct 16 14:04:18 2026",
+      "successful": false,
+      "seed": 3,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed3/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "916f9b32bedb61e3d9c72f551b3c4c263fb39d9a315f8cb32414b50948861b8e"
+    },
+    "p5r_step4_seed4": {
+      "status": "Failed - Fri Oct 16 14:04:30 2026",
+      "successful": false,
+      "seed": 4,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed4/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "4017aa51b13639ee36904689f1bfa56abd3b6e0a13609c45c57c18d575d1d6fc"
+    },
+    "p5r_step4_seed5": {
+      "status": "Failed - Fri Oct 16 14:04:41 2026",
+      "successful": false,
+      "seed": 5,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed5/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "50aec015dd972366f06066556c7813d9398255bd67bf9891d6c67211152b2417"
+    },
+    "p5r_step4_seed6": {
+      "status": "Failed - Fri Oct 16 14:04:53 2026",
+      "successful": false,
+      "seed": 6,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed6/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "b4494a0727da1197925b96ed66bcfb0c6f16ab72ccb52b45d5a3277e1e5f713e"
+    },
+    "p5r_step4_seed7": {
+      "status": "Failed - Fri Oct 16 14:05:05 2026",
+      "successful": false,
+      "seed": 7,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed7/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "7a859bbf16a30a90a2a015ea1674f693e2ce68d3beee9c513949726be071c68d"
+    },
+    "p5r_step4_seed8": {
+      "status": "Failed - Fri Oct 16 14:05:18 2026",
+      "successful": false,
+      "seed": 8,
+      "measurement": "失败Fitter报告的打包后逻辑单元需求；未完成布局布线",
+      "total_le": 1321,
+      "total_registers": 557,
+      "flags": {
+        "P5_UFM": 1,
+        "P5_INVERT": 1,
+        "P5_BEAM": 1
+      },
+      "fit_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1321,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 447,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1320,
+          "le_self": 14,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 448,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 449,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 450,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 152,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 451,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 121,
+          "le_self": 121,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 452,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 453,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 645,
+          "le_self": 468,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 454,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 108,
+          "le_self": 108,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 455,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 69,
+          "le_self": 69,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 456,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 457,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 458,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 223,
+          "le_self": 223,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 459,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 460,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 461,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 132,
+          "le_self": 132,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.fit.rpt",
+          "source_line": 462,
+          "registers_self": 67
+        }
+      ],
+      "map_total_cells": 1404,
+      "map_rows": [
+        {
+          "instance": "|radar_unified_bcd_top",
+          "full_hierarchy": "|radar_unified_bcd_top",
+          "le_subtree": 1404,
+          "le_self": 1,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 247,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_top:system|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system",
+          "le_subtree": 1403,
+          "le_self": 15,
+          "registers_subtree": 557,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 248,
+          "registers_self": 1
+        },
+        {
+          "instance": "|alarm_global:u_alarm|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+          "le_subtree": 14,
+          "le_self": 14,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 249,
+          "registers_self": 0
+        },
+        {
+          "instance": "|lcd_bus_phase:bus|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+          "le_subtree": 56,
+          "le_self": 56,
+          "registers_subtree": 29,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 250,
+          "registers_self": 29
+        },
+        {
+          "instance": "|radar_display_gated:u_display|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+          "le_subtree": 174,
+          "le_self": 31,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 251,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_display_shared:core|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+          "le_subtree": 143,
+          "le_self": 143,
+          "registers_subtree": 36,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 252,
+          "registers_self": 36
+        },
+        {
+          "instance": "|radar_global_timebase_alarm:u_timebase|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+          "le_subtree": 67,
+          "le_self": 67,
+          "registers_subtree": 47,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 253,
+          "registers_self": 47
+        },
+        {
+          "instance": "|radar_lcd_micro:draw|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+          "le_subtree": 696,
+          "le_self": 516,
+          "registers_subtree": 264,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 254,
+          "registers_self": 140
+        },
+        {
+          "instance": "|minsky_serial_registers:datapath|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+          "le_subtree": 110,
+          "le_self": 110,
+          "registers_subtree": 80,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 255,
+          "registers_self": 80
+        },
+        {
+          "instance": "|p5_ufm_reader:g_background.background_reader|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+          "le_subtree": 70,
+          "le_self": 70,
+          "registers_subtree": 44,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 256,
+          "registers_self": 44
+        },
+        {
+          "instance": "|altufm_none:flash|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 257,
+          "registers_self": 0
+        },
+        {
+          "instance": "|altufm_none_1km:auto_generated|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+          "le_subtree": 0,
+          "le_self": 0,
+          "registers_subtree": 0,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 258,
+          "registers_self": 0
+        },
+        {
+          "instance": "|radar_unified_scan:scan|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+          "le_subtree": 226,
+          "le_self": 226,
+          "registers_subtree": 100,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 259,
+          "registers_self": 100
+        },
+        {
+          "instance": "|reset_ctrl:u_reset|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+          "le_subtree": 8,
+          "le_self": 8,
+          "registers_subtree": 5,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 260,
+          "registers_self": 5
+        },
+        {
+          "instance": "|switch_pair_sampled:u_switch_pair|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+          "le_subtree": 9,
+          "le_self": 9,
+          "registers_subtree": 8,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 261,
+          "registers_self": 8
+        },
+        {
+          "instance": "|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic|",
+          "full_hierarchy": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+          "le_subtree": 138,
+          "le_self": 138,
+          "registers_subtree": 67,
+          "source": "radar/unified_scan/results/p5r_step4_seed8/bcd/radar_unified_bcd.map.rpt",
+          "source_line": 262,
+          "registers_self": 67
+        }
+      ],
+      "fit_report_sha256": "24791a8cb6534fa98621ed732c577cfbc9449a94967054a0c1e2c0b823b3cdf4"
+    }
+  },
+  "module_comparison": [
+    {
+      "instance": "|radar_unified_bcd_top",
+      "baseline1089_fitter_self_le": 1,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 1,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 1,
+      "failed1321_registers_self": 0,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system",
+      "baseline1089_fitter_self_le": 15,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 9,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 14,
+      "failed1321_registers_self": 1,
+      "current_minus_baseline_le": -6,
+      "failed_minus_current_le": 5,
+      "failed_minus_current_registers": 1
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|alarm_global:u_alarm",
+      "baseline1089_fitter_self_le": 15,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 15,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 14,
+      "failed1321_registers_self": 0,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": -1,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|lcd_bus_phase:bus",
+      "baseline1089_fitter_self_le": 62,
+      "baseline1089_registers_self": 29,
+      "current1253_fitter_self_le": 57,
+      "current1253_registers_self": 29,
+      "failed1321_fitter_self_le": 56,
+      "failed1321_registers_self": 29,
+      "current_minus_baseline_le": -5,
+      "failed_minus_current_le": -1,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display",
+      "baseline1089_fitter_self_le": 31,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 31,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 31,
+      "failed1321_registers_self": 0,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_display_gated:u_display|radar_display_shared:core",
+      "baseline1089_fitter_self_le": 120,
+      "baseline1089_registers_self": 36,
+      "current1253_fitter_self_le": 120,
+      "current1253_registers_self": 36,
+      "failed1321_fitter_self_le": 121,
+      "failed1321_registers_self": 36,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 1,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_global_timebase_alarm:u_timebase",
+      "baseline1089_fitter_self_le": 67,
+      "baseline1089_registers_self": 47,
+      "current1253_fitter_self_le": 67,
+      "current1253_registers_self": 47,
+      "failed1321_fitter_self_le": 67,
+      "failed1321_registers_self": 47,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw",
+      "baseline1089_fitter_self_le": 283,
+      "baseline1089_registers_self": 65,
+      "current1253_fitter_self_le": 391,
+      "current1253_registers_self": 112,
+      "failed1321_fitter_self_le": 468,
+      "failed1321_registers_self": 140,
+      "current_minus_baseline_le": 108,
+      "failed_minus_current_le": 77,
+      "failed_minus_current_registers": 28
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|minsky_serial_registers:datapath",
+      "baseline1089_fitter_self_le": 112,
+      "baseline1089_registers_self": 80,
+      "current1253_fitter_self_le": 111,
+      "current1253_registers_self": 80,
+      "failed1321_fitter_self_le": 108,
+      "failed1321_registers_self": 80,
+      "current_minus_baseline_le": -1,
+      "failed_minus_current_le": -3,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader",
+      "baseline1089_fitter_self_le": 0,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 69,
+      "current1253_registers_self": 44,
+      "failed1321_fitter_self_le": 69,
+      "failed1321_registers_self": 44,
+      "current_minus_baseline_le": 69,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash",
+      "baseline1089_fitter_self_le": 0,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 0,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 0,
+      "failed1321_registers_self": 0,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_lcd_micro:draw|p5_ufm_reader:g_background.background_reader|altufm_none:flash|altufm_none_1km:auto_generated",
+      "baseline1089_fitter_self_le": 0,
+      "baseline1089_registers_self": 0,
+      "current1253_fitter_self_le": 0,
+      "current1253_registers_self": 0,
+      "failed1321_fitter_self_le": 0,
+      "failed1321_registers_self": 0,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|radar_unified_scan:scan",
+      "baseline1089_fitter_self_le": 229,
+      "baseline1089_registers_self": 100,
+      "current1253_fitter_self_le": 229,
+      "current1253_registers_self": 100,
+      "failed1321_fitter_self_le": 223,
+      "failed1321_registers_self": 100,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": -6,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|reset_ctrl:u_reset",
+      "baseline1089_fitter_self_le": 8,
+      "baseline1089_registers_self": 5,
+      "current1253_fitter_self_le": 8,
+      "current1253_registers_self": 5,
+      "failed1321_fitter_self_le": 8,
+      "failed1321_registers_self": 5,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|switch_pair_sampled:u_switch_pair",
+      "baseline1089_fitter_self_le": 9,
+      "baseline1089_registers_self": 8,
+      "current1253_fitter_self_le": 9,
+      "current1253_registers_self": 8,
+      "failed1321_fitter_self_le": 9,
+      "failed1321_registers_self": 8,
+      "current_minus_baseline_le": 0,
+      "failed_minus_current_le": 0,
+      "failed_minus_current_registers": 0
+    },
+    {
+      "instance": "|radar_unified_bcd_top|radar_unified_top:system|ultrasonic_bcd_budget_compact:g_bcd_measurement.u_ultrasonic",
+      "baseline1089_fitter_self_le": 137,
+      "baseline1089_registers_self": 67,
+      "current1253_fitter_self_le": 136,
+      "current1253_registers_self": 67,
+      "failed1321_fitter_self_le": 132,
+      "failed1321_registers_self": 67,
+      "current_minus_baseline_le": -1,
+      "failed_minus_current_le": -4,
+      "failed_minus_current_registers": 0
+    }
+  ],
+  "rtl_named_register_additions": [
+    {
+      "module": "radar_lcd_micro",
+      "name": "draw_mode",
+      "width": 1
+    },
+    {
+      "module": "radar_lcd_micro",
+      "name": "beam_valid",
+      "width": 1
+    },
+    {
+      "module": "radar_lcd_micro",
+      "name": "beam_drawn_angle",
+      "width": 8
+    },
+    {
+      "module": "radar_lcd_micro",
+      "name": "request_angle_bin",
+      "width": 8
+    },
+    {
+      "module": "radar_lcd_micro",
+      "name": "beam_len",
+      "width": 6
+    },
+    {
+      "module": "radar_lcd_micro",
+      "name": "beam_phase",
+      "width": 2
+    },
+    {
+      "module": "radar_unified_top",
+      "name": "lcd_restart_pending",
+      "width": 1
+    }
+  ],
+  "notes": [
+    "失败Fitter的Resource Usage Summary为Not available，但其Utilization by Entity表确实可得；不能称其已成功fit。",
+    "MAP是综合逻辑单元，单独存储并明确标记；不作为实际Fitter LE比较。",
+    "旧beam有动态beam_len与stop协议；本账不把旧功能要求自动带入beam-min新目标。"
+  ]
+}
