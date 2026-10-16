@@ -18,6 +18,7 @@ try {
  $staExit=$LASTEXITCODE
 } finally {Pop-Location}
 if($toolOutput -ne $outputPath){Copy-Item "$toolOutput/*" -Destination $outputPath -Force}
+if($staExit -ne 0){throw "TimeQuest could not create fitted timing reports; see $outputPath/postfit_execution.log"}
 & python "$PSScriptRoot/summarize_postfit.py" $outputPath
 if($LASTEXITCODE -ne 0){throw 'Postfit report parse failed'}
 if($staExit -ne 0){throw "Postfit assertions failed; see $outputPath"}

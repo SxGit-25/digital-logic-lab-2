@@ -8,6 +8,7 @@ module radar_lcd_micro #(
     parameter ENABLE_READBACK=0,
     parameter P5_FIXES=0,
     parameter P5_UFM=0,
+    parameter P5_INVERT=0,
     parameter [7:0] CONTRAST=8'h1c,
     parameter KEEP_END_BATCH=1,
     parameter FRACTION_BITS=15,
@@ -19,6 +20,7 @@ module radar_lcd_micro #(
 )(
     input wire clk,rst,request,tick_ms,
     input wire continuous_mode,
+    input wire alarm_active,inverse_phase,
     output reg initialized,
     output wire lcd_rst_n,
     input wire [11:0] angle_bcd,
@@ -35,7 +37,7 @@ module radar_lcd_micro #(
 );
     localparam IDLE=0,ORIENT=1,DEGREE=2,ROT_BEGIN=3,ROT_BITS=4,
       RAY_RESET=5,PIXEL=6,ADD_BEGIN=7,ADD_BITS=8,RMW=9,AFTER_RAY=10,VECTOR_RESET=11,INIT_RESET=12,INIT_WAIT=13,INIT_SEND=14,INIT_ACK=15,CONVERT_ANGLE=16,ANGLE_OFFSET=17,
-      BG_REQUEST=18,BG_WAIT=19,INIT_BG_REQUEST=20,INIT_BG_WAIT=21;
+      BG_REQUEST=18,BG_WAIT=19,INIT_BG_REQUEST=20,INIT_BG_WAIT=21,INVERSE_SEND=22;
     reg [4:0] state;
     reg [7:0] position_count;
     wire [7:0] degrees_left=position_count;
@@ -71,6 +73,9 @@ module radar_lcd_micro #(
     reg target_valid;
     wire [2:0] transaction=bit_index[2:0];
     reg pending;
+    reg last_inverse,alarm_seen,alarm_now,inverse_requested;
+    wire invert_needed=P5_INVERT && initialized &&
+        ((last_inverse!=inverse_requested) || (alarm_seen && !alarm_now));
     wire signed [FRACTION_BITS+1:0] c,s;
     wire signed [FRACTION_BITS+6:0] x_acc,y_acc;
     wire [6:0] column={~x_acc[FRACTION_BITS+6],x_acc[FRACTION_BITS+5:FRACTION_BITS]};
@@ -107,7 +112,7 @@ module radar_lcd_micro #(
     minsky_serial_registers #(.FRACTION_BITS(FRACTION_BITS),.ROT_SHIFT(ROT_SHIFT),.RESET_DATA(0)) datapath(
        .clk(clk),.rst(rst),.begin_command(begin_op),.command(command),
        .step_enable(run_bits),.bit_index(bit_index),.c(c),.s(s),.x_acc(x_acc),.y_acc(y_acc));
-    wire accept=(P5_FIXES ? (queued && !request) : request) && ENABLE_READBACK && state==IDLE && draw_angle<=12'h180;
+    wire accept=(P5_FIXES ? (queued && !request) : request) && ENABLE_READBACK && state==IDLE && draw_angle<=12'h180 && !invert_needed;
     wire endpoint_high=KEEP_END_BATCH && draw_angle==12'h180 && !draw_direction;
     wire endpoint_low=KEEP_END_BATCH && draw_angle==0 && draw_direction;
     wire [7:0] initial_degrees=endpoint_high ? 8'd170 : endpoint_low ? 8'd0 :
@@ -151,13 +156,14 @@ module radar_lcd_micro #(
         if(accept) phase<=PHASE_INITIAL;
         else if(state==DEGREE) phase<=phase_sum[PHASE_BITS-1:0];
     end
-    assign ready=ENABLE_READBACK && initialized && state==IDLE;
+    assign ready=ENABLE_READBACK && initialized && state==IDLE && !invert_needed;
     assign lcd_rst_n=state!=INIT_RESET;
-    assign bus_request=(state==RMW || state==INIT_SEND) && bus_ready && !bus_done;
-    assign bus_read_op=initialized && (transaction==3 || transaction==4);
-    assign bus_data_op=initialized ? (bus_read_op || transaction==7) : flush_left==11;
+    assign bus_request=(state==RMW || state==INIT_SEND || state==INVERSE_SEND) && bus_ready && !bus_done;
+    assign bus_read_op=initialized && state!=INVERSE_SEND && (transaction==3 || transaction==4);
+    assign bus_data_op=state==INVERSE_SEND ? 1'b0 : initialized ? (bus_read_op || transaction==7) : flush_left==11;
     always @* begin
-       if(!initialized) begin
+       if(state==INVERSE_SEND) bus_write_data=last_inverse ? 8'ha7 : 8'ha6;
+       else if(!initialized) begin
           case(flush_left)
              0:bus_write_data=8'ha2;1:bus_write_data=8'ha0;2:bus_write_data=8'hc8;
              3:bus_write_data=8'h2f;4:bus_write_data=8'h24;5:bus_write_data=8'h81;
@@ -182,8 +188,13 @@ module radar_lcd_micro #(
           erase<=0;flush_left<=0;target_radius<=6;target_valid<=0;
           pending<=0;dropped<=0;done<=0;return_ten<=0;
           byte_valid<=0;resume_pixel<=0;
+          last_inverse<=0;alarm_seen<=0;alarm_now<=0;inverse_requested<=0;
        end else begin
           done<=0;
+          if(P5_INVERT) begin
+             alarm_now<=alarm_active;inverse_requested<=alarm_active && inverse_phase;
+             if(alarm_now) alarm_seen<=1;
+          end
           if(P5_FIXES) begin
              if(request && ENABLE_READBACK && initialized) begin
                 latest_angle<=angle_bcd;latest_direction<=direction_up;
@@ -212,7 +223,12 @@ module radar_lcd_micro #(
           INIT_BG_WAIT:if(ufm_done) state<=INIT_SEND;
           BG_REQUEST:state<=BG_WAIT;
           BG_WAIT:if(ufm_done) state<=RMW;
-          IDLE:if(accept) begin
+          INVERSE_SEND:if(bus_done) state<=IDLE;
+          IDLE:if(invert_needed) begin
+             last_inverse<=inverse_requested;
+             if(!alarm_now) alarm_seen<=0;
+             state<=INVERSE_SEND;
+          end else if(accept) begin
              return_up<=!draw_direction;end_same<=0;
              return_ten<=endpoint_low || (!endpoint_high && !basic_zero);
              rotate_up<=1;

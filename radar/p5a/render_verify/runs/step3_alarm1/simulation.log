@@ -1,0 +1,2 @@
+PASS alarm_inverse commands=7 phase_edges=6 phase_period_ns=250000000 normal_release_A6=1 inverse_release_A6=1 ram_unchanged=1056 no_A5=1
+tb_alarm_inverse.v:103: $finish called at 1500044000000 (1ps)

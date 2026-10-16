@@ -135,3 +135,4 @@ set_global_assignment -name VERILOG_FILE ../rtl/p5_ufm_reader.v
 set_global_assignment -name MIF_FILE background.mif
 set_global_assignment -name SDC_FILE radar_unified_ufm.sdc
 set_parameter -name P5_UFM 1
+set_parameter -name P5_INVERT 1

@@ -1,4 +1,4 @@
-param([string]$QuartusBin='E:\quartus\QuartusII91\quartus\bin64',[string]$RunName='unified1',[string[]]$Variants=@('read','safe','noend'),[switch]$Compact,[switch]$Area,[switch]$PwmSettle,[string]$ScanSource='', [int]$Seed=1)
+param([string]$QuartusBin='E:\quartus\QuartusII91\quartus\bin64',[string]$RunName='unified1',[string[]]$Variants=@('read','safe','noend'),[switch]$Compact,[switch]$Area,[switch]$PwmSettle,[string]$ScanSource='', [int]$Seed=1,[string]$RtlSource='', [string[]]$DefineParameters=@(),[string[]]$ExtraVerilog=@())
 $ErrorActionPreference='Stop'
 $exe=Join-Path $QuartusBin 'quartus_sh.exe'
 if(!(Test-Path -LiteralPath $exe)){throw "Quartus not found: $exe"}
@@ -8,10 +8,21 @@ $radar=Split-Path $PSScriptRoot -Parent
 $names=@('radar_global_timebase_alarm','alarm_global','switch_pair_sampled','radar_display_gated','radar_global_timebase','radar_display_shared','reset_ctrl','timebase','switch_filter','ultrasonic','bin12_to_bcd','display_compose','seg_scan','matrix_scan','alarm_ctrl','radar_unified_scan','radar_unified_top','minsky_serial_datapath','radar_minsky_draw_compact','radar_minsky_draw_compact_v2','ultrasonic_bcd_experiment','ultrasonic_bcd_budget','ultrasonic_bcd_budget_compact','radar_lcd_micro','lcd_bus_phase','lcd_bus','lcd_init')
 $names+=@('p5_ufm_reader')
 foreach($name in $names){Copy-Item "$radar/rtl/$name.v" "$stage/rtl"}
+if($RtlSource){Copy-Item "$RtlSource/*.v" "$stage/rtl" -Force}
 if($ScanSource){Copy-Item -LiteralPath $ScanSource -Destination "$stage/rtl/radar_unified_scan.v" -Force}
 Copy-Item "$PSScriptRoot/*.qpf","$PSScriptRoot/*.qsf","$PSScriptRoot/*.sdc","$PSScriptRoot/radar_unified_variants.v" "$stage/lcd_p4"
+if($RtlSource -and (Test-Path "$RtlSource/radar_unified_variants.v")){Copy-Item "$RtlSource/radar_unified_variants.v" "$stage/lcd_p4" -Force}
+if($RtlSource){Get-ChildItem "$RtlSource/*.sdc" -ErrorAction SilentlyContinue | Copy-Item -Destination "$stage/lcd_p4" -Force}
+foreach($definition in $DefineParameters){
+    $pair=$definition.Split('=');if($pair.Count -ne 2){throw "Invalid parameter: $definition"}
+    Get-ChildItem "$stage/lcd_p4/*.qsf" | ForEach-Object {Add-Content -LiteralPath $_.FullName -Value "set_parameter -name $($pair[0]) $($pair[1])" -Encoding ascii}
+}
+foreach($fileName in $ExtraVerilog){
+    Get-ChildItem "$stage/lcd_p4/*.qsf" | ForEach-Object {Add-Content -LiteralPath $_.FullName -Value "set_global_assignment -name VERILOG_FILE ../rtl/$fileName" -Encoding ascii}
+}
 Copy-Item "$radar/lcd_p2/timing_details.tcl" "$stage/lcd_p4"
 Get-ChildItem "$PSScriptRoot/background.*" -File -ErrorAction SilentlyContinue | Copy-Item -Destination "$stage/lcd_p4"
+if($RtlSource){Get-ChildItem "$RtlSource/background.*" -File -ErrorAction SilentlyContinue | Copy-Item -Destination "$stage/lcd_p4" -Force}
 $drive=$null
 foreach($letter in 'R','S','T','U','V','W','X','Y','Z'){
     if(!(Test-Path "${letter}:\")){$drive="${letter}:";break}
@@ -67,6 +78,7 @@ try {
         Copy-Item "$stage/rtl/*.v" "$snapshot/rtl"
         Get-ChildItem "$stage/lcd_p4/background.*" -File -ErrorAction SilentlyContinue | Copy-Item -Destination "$snapshot/lcd_p4"
         Copy-Item "$stage/lcd_p4/radar_unified_variants.v","$stage/lcd_p4/timing_details.tcl","$stage/lcd_p4/$project.qpf","$stage/lcd_p4/$project.qsf","$stage/lcd_p4/$project.sdc" "$snapshot/lcd_p4"
+        Copy-Item "$stage/lcd_p4/*.sdc" "$snapshot/lcd_p4" -Force
         Get-ChildItem -LiteralPath $snapshot -Recurse -File | Sort-Object FullName | ForEach-Object{
             [PSCustomObject]@{File=$_.FullName.Substring($snapshot.Length+1).Replace('\','/');SHA256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash}
         } | Export-Csv "$out/source_sha256.csv" -NoTypeInformation -Encoding utf8
