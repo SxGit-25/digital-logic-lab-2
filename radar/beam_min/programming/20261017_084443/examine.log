@@ -1,0 +1,31 @@
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Programmer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Oct 17 08:45:02 2026
+Info: Command: quartus_pgm -c "USB-Blaster [USB-0]" -m JTAG -o E;C:\Users\Metro\AppData\Local\Temp\beam_program_cf343a2ee4504164b930ae80c93f3dc3/readback.pof;EPM1270@1
+Info: Using programming cable "USB-Blaster [USB-0]"
+Info: Started Programmer operation at Sat Oct 17 08:45:02 2026
+Info: Device 1 contains JTAG ID code 0x020A30DD
+Info: Device 1 silicon ID is ALTERA04-1
+Info: Examining devices
+Info: Successfully performed operation(s)
+Info: Ended Programmer operation at Sat Oct 17 08:45:15 2026
+Writing examined data from device EPM1270 at position 1 to file C:/Users/Metro/AppData/Local/Temp/beam_program_cf343a2ee4504164b930ae80c93f3dc3/readback.pof...
+Info: Quartus II 64-Bit Programmer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4240 megabytes
+    Info: Processing ended: Sat Oct 17 08:45:15 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:00
