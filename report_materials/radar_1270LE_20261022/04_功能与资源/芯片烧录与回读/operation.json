@@ -1,0 +1,10 @@
+{
+  "Source": "E:\\codex\\数电实验2\\radar\\beam_min\\delivery\\beam_min_full_r6-48_XOR_UFM8_keepInverse_1270LE.pof",
+  "SHA256": "45963657DBC6975A83E8DE8B566D6EE072BB1A34025DE2C2E890BC1647EE71F3",
+  "Cable": "USB-Blaster [USB-0]",
+  "Device": "EPM1270",
+  "JTAG_ID": "0x020A30DD",
+  "Operation": "PV entire POF (CFM and UFM), followed by JTAG Examine",
+  "Stage": "C:\\Users\\Metro\\AppData\\Local\\Temp\\beam_program_cf343a2ee4504164b930ae80c93f3dc3",
+  "Time": "2026-10-17T08:44:43.0812367+08:00"
+}

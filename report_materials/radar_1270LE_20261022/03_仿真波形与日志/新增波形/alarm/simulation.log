@@ -1,0 +1,10 @@
+VCD info: dumpfile trace.vcd opened for output.
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+ALARM_PHASE_LATENCY clocks=19
+BUSY_ALARM_LATENCY kind=phase event_to_command_clocks=24845
+BUSY_ALARM_LATENCY kind=release event_to_command_clocks=15836
+CONCURRENT_ALARM_PASS frames=2 Python_expected_bytes=2112 busy_commands_deferred=1 beam=1 ufm_byte=1 per_command_ram_checks=9
+PASS alarm_inverse commands=9 phase_edges=7 phase_period_ns=250000000 normal_release_A6=1 inverse_release_A6=1 ram_unchanged=1056 no_A5=1
+input_tb.v:152: $finish called at 1810920000000 (1ps)

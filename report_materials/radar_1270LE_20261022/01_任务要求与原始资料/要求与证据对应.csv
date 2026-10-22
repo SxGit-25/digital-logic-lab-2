@@ -1,0 +1,9 @@
+要求,资料及实现位置,证据边界
+基本1_SW7和2Hz自检,完整工程/rtl/radar_unified_top.v及radar_unified_scan.v和显示报警模块,仿真日志及设计参数；实物照片待补
+基本2_两秒后待机,radar_unified_scan.v状态SYS_SELF到SYS_STANDBY,生产参数仿真日志
+基本3_两秒45度停靠与角度数码管,radar_unified_scan.v与radar_display_shared.v,基本模式生产测试日志；真实PWM保持规则见分块资料
+基本4_超声测距及无效显示,ultrasonic_bcd_budget_compact.v与radar_display_shared.v,测距原始回归及新导出波形
+基本5_五条角度历史颜色,radar_unified_scan.v五线历史与radar_display_shared.v,颜色分档及点阵复用资料；颜色实物照片待补
+基本6_LED蜂鸣器分档报警,alarm_global.v与radar_global_timebase_alarm.v,原始报警测试；LED物理颜色需对板标识核对
+提高1_连续扫描LCD雷达图,连续60ms每1度及UFM背景/XOR扫描线,双模式各1091帧显存参考对比通过；实物匀速效果需验收
+提高2_自拟其他功能,近距离最高等级LCD反显250ms交替A7/A6,9条反显命令及显存不变专项；可作为自拟增强说明

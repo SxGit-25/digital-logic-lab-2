@@ -1,0 +1,27 @@
+[
+  {
+    "name": "measurement",
+    "pass_": true,
+    "vcd_bytes": 5632
+  },
+  {
+    "name": "beam",
+    "pass_": true,
+    "vcd_bytes": 2906
+  },
+  {
+    "name": "scan_continuous",
+    "pass_": true,
+    "vcd_bytes": 1892
+  },
+  {
+    "name": "scan_basic",
+    "pass_": true,
+    "vcd_bytes": 13735
+  },
+  {
+    "name": "alarm",
+    "pass_": true,
+    "vcd_bytes": 1817
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "Illegal Clocks": {
+    "setup": 0,
+    "hold": 0,
+    "baseline": 0,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "Unconstrained Clocks": {
+    "setup": 0,
+    "hold": 0,
+    "baseline": 0,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "Unconstrained Input Ports": {
+    "setup": 0,
+    "hold": 0,
+    "baseline": 0,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "Unconstrained Input Port Paths": {
+    "setup": 0,
+    "hold": 0,
+    "baseline": 0,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "Unconstrained Output Ports": {
+    "setup": 58,
+    "hold": 58,
+    "baseline": 58,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "Unconstrained Output Port Paths": {
+    "setup": 456,
+    "hold": 456,
+    "baseline": 456,
+    "setup_delta": 0,
+    "hold_delta": 0
+  },
+  "CDC_PASS": true
+}

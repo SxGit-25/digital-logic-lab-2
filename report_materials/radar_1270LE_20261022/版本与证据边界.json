@@ -1,0 +1,18 @@
+{
+  "collection_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "repository_head": "d784693d2271f2178877f7365b7346bbc165a4f6",
+  "firmware_tag": "beam-min-1270",
+  "firmware_build_commit": "0881d4c",
+  "programming_commit": "ac95e38",
+  "pof_sha256": "45963657dbc6975a83e8de8b566d6ee072bb1a34025de2c2e890bc1647ee71f3",
+  "le": 1270,
+  "setup_ns": 2.994,
+  "hold_ns": 1.078,
+  "actual_source": "radar/unified_scan/results/beam_min_byte_a/bcd/source",
+  "worktree_rtl_modified": true,
+  "uncommitted_rtl_used": false,
+  "original_report_written": false,
+  "physical_acceptance": "not comprehensively confirmed",
+  "raw_sources_copied": 275
+}

@@ -1,0 +1,149 @@
+$date
+	Thu Oct 22 11:03:52 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_report_scan $end
+$var reg 1 ! enable $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 2 " state [1:0] $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 # servo $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 12 $ angle [11:0] $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 % up $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 & measure_start $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 ' sample_event $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 12 ( sample_angle [11:0] $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 ) fast $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 1 * current_valid $end
+$upscope $end
+$scope module tb_report_scan $end
+$var wire 3 + level [2:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+x*
+x)
+bx (
+x'
+x&
+x%
+bx $
+0#
+bx "
+0!
+$end
+#10000
+1%
+b0 $
+0'
+b0 +
+0*
+b0 (
+0&
+0)
+b0 "
+#100000
+1!
+#110000
+b1 "
+#2000090000
+1#
+b10 "
+#2500090000
+0#
+#4000090000
+1&
+b11 "
+#4000110000
+0&
+#4005110000
+1'
+b10 +
+1*
+#4005130000
+0'
+#22000090000
+1#
+#22500090000
+0#
+#42000090000
+1#
+#42500090000
+0#
+#62000090000
+1#
+#62500090000
+0#
+#64000090000
+b1 $
+#82000090000
+1#
+1&
+#82000110000
+b1 (
+0&
+#82005110000
+1'
+#82005130000
+0'
+#82511090000
+0#
+#102000090000
+1#
+#102511090000
+0#
+#122000090000
+1#
+#122511090000
+0#
+#124000090000
+b10 $
+#142000090000
+1#
+1&
+#142000110000
+b10 (
+0&
+#142005110000
+1'
+#142005130000
+0'
+#142522090000
+0#
+#162000090000
+1#
+#162522090000
+0#
+#182000090000
+1#
+#182522090000
+0#
+#184000090000
+b11 $
+#195000100000

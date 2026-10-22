@@ -1,0 +1,139 @@
+$date
+	Thu Oct 22 11:04:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_alarm_inverse $end
+$var wire 1 ! alarm_active $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$var wire 1 " inverse_phase $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$var reg 1 # current_valid $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$var reg 3 $ current_level [2:0] $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$scope module dut $end
+$var reg 1 % last_inverse $end
+$upscope $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$var reg 8 & report_command [7:0] $end
+$upscope $end
+$scope module tb_alarm_inverse $end
+$var integer 32 ' command_count [31:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+x%
+b0 $
+0#
+x"
+0!
+$end
+#500000
+0"
+0%
+#181586000000
+1#
+#181626000000
+b1 $
+#181666000000
+b10 $
+#181706000000
+b11 $
+#181746000000
+b100 $
+#181786000000
+0!
+0#
+b101 $
+#181826000000
+0!
+1#
+#181906000000
+1!
+#250004500000
+1"
+#250006500000
+1%
+#250023500000
+b10100111 &
+b1 '
+#500004500000
+0"
+#500006500000
+0%
+#500023500000
+b10100110 &
+b10 '
+#750004500000
+1"
+#750006500000
+1%
+#750023500000
+b10100111 &
+b11 '
+#1000004500000
+0"
+#1000006500000
+0%
+#1000023500000
+b10100110 &
+b100 '
+#1000029000000
+0!
+0#
+#1000047500000
+b101 '
+#1250004500000
+1!
+1#
+1"
+#1250006500000
+1%
+#1250023500000
+b10100111 &
+b110 '
+#1250029000000
+0!
+0#
+#1250030500000
+0%
+#1250047500000
+b10100110 &
+b111 '
+#1500004500000
+0"
+#1500044000000
+1!
+1#
+#1750004500000
+1"
+#1774832500000
+1%
+#1774849500000
+b10100111 &
+b1000 '
+#1795078000000
+0!
+0#
+#1810897500000
+0%
+#1810914500000
+b10100110 &
+b1001 '
+#1810920000000

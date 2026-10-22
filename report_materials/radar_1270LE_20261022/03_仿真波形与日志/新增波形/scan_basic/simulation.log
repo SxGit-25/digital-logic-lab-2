@@ -1,0 +1,3 @@
+VCD info: dumpfile trace.vcd opened for output.
+PASS report_scan mode=0 samples=10 angle_bcd=045; clk50MHz SELF2ms STANDBY2ms basicSLOT20ms SETTLE3ms continuousSTEP60ms
+input_tb.v:39: $finish called at 195000100000 (1ps)

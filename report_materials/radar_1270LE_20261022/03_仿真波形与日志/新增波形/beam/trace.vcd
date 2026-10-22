@@ -1,0 +1,263 @@
+$date
+	Thu Oct 22 11:04:04 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_render $end
+$var wire 1 ! initialized $end
+$upscope $end
+$scope module tb_render $end
+$var reg 1 " request $end
+$upscope $end
+$scope module tb_render $end
+$var reg 12 # angle_bcd [11:0] $end
+$upscope $end
+$scope module tb_render $end
+$var reg 6 $ radius [5:0] $end
+$upscope $end
+$scope module tb_render $end
+$var wire 1 % done $end
+$upscope $end
+$scope module tb_render $end
+$scope module dut $end
+$var reg 1 & beam_valid $end
+$upscope $end
+$upscope $end
+$scope module tb_render $end
+$scope module dut $end
+$var reg 8 ' beam_angle [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_render $end
+$var wire 3 ( report_task [2:0] $end
+$upscope $end
+$scope module tb_render $end
+$var reg 1 ) stop_request $end
+$upscope $end
+$scope module tb_render $end
+$var wire 1 * quiescent $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x*
+0)
+bx (
+bx '
+x&
+x%
+b0 $
+b0 #
+0"
+x!
+$end
+#10000
+1*
+b101 (
+0&
+0%
+0!
+#3631710000
+1*
+b0 (
+1!
+#3631711000
+1"
+b1000 $
+#3631730000
+0*
+#3631731000
+0"
+#3631750000
+b10 (
+0*
+#3631770000
+b0 '
+#5213890000
+b10 (
+#9416770000
+b11 (
+#9482770000
+b100 (
+#9693910000
+b0 (
+1%
+1&
+#9693930000
+0%
+#9693931000
+1"
+b110 $
+b1 #
+#9693951000
+0"
+#9693970000
+b1 (
+#9905150000
+b0 (
+0&
+#9905170000
+b10 (
+0*
+#9905190000
+b1 '
+#10433730000
+b11 (
+#10482770000
+b100 (
+#10693910000
+b0 (
+1%
+1&
+#10693930000
+0%
+#10693931000
+1"
+b10000 $
+b1000101 #
+#10693951000
+0"
+#10693970000
+b1 (
+#10907350000
+b0 (
+0&
+#10907370000
+b10 (
+0*
+#10907470000
+b101101 '
+#11373890000
+b11 (
+#11422930000
+b100 (
+#11587750000
+b0 (
+1%
+1&
+#11587770000
+0%
+#11587771000
+1"
+b110000 $
+b10010000 #
+#11587791000
+0"
+#11587810000
+b1 (
+#11827190000
+b0 (
+0&
+#11827210000
+b10 (
+0*
+#11827410000
+b1011010 '
+#12090370000
+b11 (
+#12139410000
+b100 (
+#12211590000
+b0 (
+1%
+1&
+#12211610000
+0%
+#12211611000
+1"
+b110001 $
+b101111001 #
+#12211631000
+0"
+#12211650000
+b1 (
+#12432910000
+b0 (
+0&
+#12432930000
+b10 (
+0*
+#12433090000
+b10110011 '
+#13254530000
+b11 (
+#13299730000
+b100 (
+#13510870000
+b0 (
+1%
+1&
+#13510890000
+0%
+#13510891000
+1"
+b11111 $
+b110000000 #
+#13510911000
+0"
+#13510930000
+b1 (
+#14017270000
+b0 (
+0&
+#14017290000
+b10 (
+0*
+#14017310000
+b10110100 '
+#15850370000
+b10 (
+#20063170000
+b11 (
+#20112210000
+b100 (
+#20323350000
+b0 (
+1%
+1&
+#20323370000
+0%
+#20323371000
+1"
+b0 $
+b0 #
+#20323391000
+0"
+#20323410000
+b1 (
+#20831950000
+b0 (
+0&
+#20831970000
+b10 (
+0*
+#20831990000
+b0 '
+#22414210000
+b10 (
+#26617090000
+b11 (
+#26679250000
+b100 (
+#26890390000
+b0 (
+1%
+1&
+#26890410000
+0%
+#26890411000
+1)
+#26890430000
+b1 (
+#27101610000
+1*
+b0 (
+0&
+#27101611000

@@ -1,0 +1,9 @@
+VCD info: dumpfile trace.vcd opened for output.
+MEASURE time_ps=132971000 mm=20 bcd=0020 level=5 radius=0
+MEASURE time_ps=1517491000 mm=199 bcd=0199 level=5 radius=7
+MEASURE time_ps=2908371000 mm=200 bcd=0200 level=4 radius=8
+MEASURE time_ps=7827371000 mm=800 bcd=0800 level=1 radius=32
+MEASURE time_ps=15098371000 mm=1200 bcd=1200 level=1 radius=48
+MEASURE time_ps=38833371000 mm=4000 bcd=4000 level=1 radius=48
+PASS report_measure six valid distances and no-echo timeout; physical clock 50MHz
+input_tb.v:37: $finish called at 70000091000 (1ps)

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "file_count": 364,
+  "all_file_checksums_match": true,
+  "archives": [
+    {
+      "file": "radar_1270LE_20261022.zip",
+      "bytes": 7211709,
+      "sha256": "f15e3b16447ef7e0e90cbdce8ec79500ff76ff9b375cdf57a9c7d8c42cfa9fa0"
+    },
+    {
+      "file": "radar_1270LE_project_20261022.zip",
+      "bytes": 75514,
+      "sha256": "c199c07ed76a9f5b4426ccb0c487cb073e6fe47adf1bb26316b9805d7613b4f2"
+    }
+  ]
+}

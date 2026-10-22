@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "reference_version": "beam-min-1270",
+  "source_files_verified": 275,
+  "old_regressions": 20,
+  "new_vcd_runs": 5,
+  "waveform_figures_png": 8,
+  "full_modes_each_frames": 1091,
+  "full_modes_each_bytes": 1152096,
+  "project_pof_sha256": "45963657dbc6975a83e8de8b566d6ee072bb1a34025de2c2e890bc1647ee71f3",
+  "original_report_written": false,
+  "physical_photos_provided": false,
+  "quartus_gui_screenshot_provided": false,
+  "quartus_text_excerpt_provided": true,
+  "source_code_from_frozen_build": true
+}

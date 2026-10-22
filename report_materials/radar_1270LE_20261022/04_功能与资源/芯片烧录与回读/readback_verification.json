@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "time": "2026-10-17T08:44:43.0812367+08:00",
+  "cable": "USB-Blaster [USB-0]",
+  "device": "EPM1270",
+  "jtag_id": "0x020A30DD",
+  "source_pof": "radar\\beam_min\\delivery\\beam_min_full_r6-48_XOR_UFM8_keepInverse_1270LE.pof",
+  "source_sha256": "45963657dbc6975a83e8de8b566d6ee072bb1a34025de2c2e890bc1647ee71f3",
+  "readback_sha256": "1be4d9565e2ab6c970dfe9d2a81532d120254da234fe63666532e3c824b8695e",
+  "program_verify": "PASS",
+  "jtag_examine": "PASS",
+  "cfm_record_byte_identical": true,
+  "cfm_data_bytes": 26112,
+  "ufm_record_byte_identical": true,
+  "ufm_data_bytes": 1024,
+  "ufm_words_equal_mif": 512,
+  "frozen_1253_pof_unchanged": true,
+  "physical_display_acceptance": "not yet confirmed"
+}

@@ -1,0 +1,6554 @@
+{
+  "mode": "continuous",
+  "beam": true,
+  "requests": [
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 1,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 4,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 5,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 6,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 7,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 8,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 11,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 12,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 13,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 14,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 15,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 18,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 19,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 20,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 21,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 22,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 25,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 26,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 27,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 28,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 29,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 32,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 33,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 34,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 35,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 36,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 39,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 40,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 41,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 42,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 43,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 46,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 47,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 48,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 49,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 50,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 53,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 54,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 55,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 56,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 57,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 60,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 61,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 62,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 63,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 64,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 67,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 68,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 69,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 70,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 71,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 74,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 75,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 76,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 77,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 78,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 81,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 82,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 83,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 84,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 85,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 88,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 89,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 91,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 92,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 95,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 96,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 97,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 98,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 99,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 102,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 103,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 104,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 105,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 106,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 109,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 110,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 111,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 112,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 113,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 116,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 117,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 118,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 119,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 120,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 123,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 124,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 125,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 126,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 127,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 130,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 131,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 132,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 133,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 134,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 137,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 138,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 139,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 140,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 141,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 144,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 145,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 146,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 147,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 148,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 151,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 152,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 153,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 154,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 155,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 158,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 159,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 160,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 161,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 162,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 165,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 166,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 167,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 168,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 169,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 172,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 173,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 174,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 175,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 176,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 176,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 175,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 174,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 173,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 172,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 169,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 168,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 167,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 166,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 165,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 162,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 161,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 160,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 159,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 158,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 155,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 154,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 153,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 152,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 151,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 148,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 147,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 146,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 145,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 144,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 141,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 140,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 139,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 138,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 137,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 134,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 133,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 132,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 131,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 130,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 127,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 126,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 125,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 124,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 123,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 120,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 119,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 118,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 117,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 116,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 113,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 112,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 111,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 110,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 109,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 106,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 105,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 104,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 103,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 102,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 99,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 98,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 97,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 96,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 95,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 92,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 91,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 90,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 89,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 88,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 85,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 84,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 83,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 82,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 81,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 78,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 77,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 76,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 75,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 74,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 71,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 70,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 69,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 68,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 67,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 64,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 63,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 62,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 61,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 60,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 57,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 56,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 55,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 54,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 53,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 50,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 49,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 48,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 47,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 46,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 43,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 42,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 41,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 40,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 39,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 36,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 35,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 34,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 33,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 32,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 29,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 28,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 27,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 26,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 25,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 22,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 21,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 20,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 19,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 18,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 15,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 14,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 13,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 12,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 11,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 8,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 7,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 6,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 5,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 4,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 4,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 5,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 6,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 7,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 8,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 11,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 12,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 13,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 14,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 15,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 18,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 19,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 20,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 21,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 22,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 25,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 26,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 27,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 28,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 29,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 32,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 33,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 34,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 35,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 36,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 39,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 40,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 41,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 42,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 43,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 46,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 47,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 48,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 49,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 50,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 53,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 54,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 55,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 56,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 57,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 60,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 61,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 62,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 63,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 64,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 67,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 68,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 69,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 70,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 71,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 74,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 75,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 76,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 77,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 78,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 81,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 82,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 83,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 84,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 85,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 88,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 89,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 91,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 92,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 95,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 96,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 97,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 98,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 99,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 102,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 103,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 104,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 105,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 106,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 109,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 110,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 111,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 112,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 113,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 116,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 117,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 118,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 119,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 120,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 123,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 124,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 125,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 126,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 127,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 130,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 131,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 132,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 133,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 134,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 137,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 138,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 139,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 140,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 141,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 144,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 145,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 146,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 147,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 148,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 151,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 152,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 153,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 154,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 155,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 158,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 159,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 160,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 161,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 162,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 165,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 166,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 167,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 168,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 169,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 172,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 173,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 174,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 175,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 176,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 176,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 175,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 174,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 173,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 172,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 169,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 168,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 167,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 166,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 165,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 162,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 161,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 160,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 159,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 158,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 155,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 154,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 153,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 152,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 151,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 148,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 147,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 146,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 145,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 144,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 141,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 140,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 139,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 138,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 137,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 134,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 133,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 132,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 131,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 130,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 127,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 126,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 125,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 124,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 123,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 120,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 119,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 118,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 117,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 116,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 113,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 112,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 111,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 110,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 109,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 106,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 105,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 104,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 103,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 102,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 99,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 98,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 97,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 96,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 95,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 92,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 91,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 89,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 88,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 85,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 84,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 83,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 82,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 81,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 78,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 77,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 76,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 75,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 74,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 71,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 70,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 69,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 68,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 67,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 64,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 63,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 62,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 61,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 60,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 57,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 56,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 55,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 54,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 53,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 50,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 49,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 48,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 47,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 46,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 43,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 42,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 41,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 40,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 39,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 36,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 35,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 34,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 33,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 32,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 29,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 28,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 27,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 26,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 25,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 22,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 21,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 20,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 19,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 18,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 15,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 14,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 13,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 12,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 11,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 8,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 7,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 6,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 5,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 4,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 4,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 5,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 6,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 7,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 8,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 11,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 12,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 13,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 14,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 15,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 18,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 19,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 20,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 21,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 22,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 25,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 26,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 27,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 28,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 29,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 32,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 33,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 34,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 35,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 36,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 39,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 40,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 41,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 42,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 43,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 46,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 47,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 48,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 49,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 50,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 53,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 54,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 55,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 56,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 57,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 60,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 61,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 62,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 63,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 64,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 67,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 68,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 69,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 70,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 71,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 74,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 75,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 76,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 77,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 78,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 81,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 82,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 83,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 84,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 85,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 88,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 89,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 90,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 91,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 92,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 95,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 96,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 97,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 98,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 99,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 102,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 103,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 104,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 105,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 106,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 109,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 110,
+      "up": true,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 111,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 112,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 113,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 116,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 117,
+      "up": true,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 118,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 119,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 120,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 123,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 124,
+      "up": true,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 125,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 126,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 127,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 130,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 131,
+      "up": true,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 132,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 133,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 134,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 137,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 138,
+      "up": true,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 139,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 140,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 141,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 144,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 145,
+      "up": true,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 146,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 147,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 148,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 151,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 152,
+      "up": true,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 153,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 154,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 155,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 158,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 159,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 160,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 161,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 162,
+      "up": true,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 165,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 166,
+      "up": true,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 167,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 168,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 169,
+      "up": true,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": true,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": true,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 172,
+      "up": true,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 173,
+      "up": true,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 174,
+      "up": true,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 175,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 176,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": true,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": true,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 179,
+      "up": true,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": true,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 180,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 179,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 178,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 177,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 176,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 175,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 174,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 173,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 172,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 171,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 170,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 169,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 168,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 167,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 166,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 165,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 164,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 163,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 162,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 161,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 160,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 159,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 158,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 157,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 156,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 155,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 154,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 153,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 152,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 151,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 150,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 149,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 148,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 147,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 146,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 145,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 144,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 143,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 142,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 141,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 140,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 139,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 138,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 137,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 136,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 135,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 134,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 133,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 132,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 131,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 130,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 129,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 128,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 127,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 126,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 125,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 124,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 123,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 122,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 121,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 120,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 119,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 118,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 117,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 116,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 115,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 114,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 113,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 112,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 111,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 110,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 109,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 108,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 107,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 106,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 105,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 104,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 103,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 102,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 101,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 100,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 99,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 98,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 97,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 96,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 95,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 94,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 93,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 92,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 91,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 89,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 88,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 87,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 86,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 85,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 84,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 83,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 82,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 81,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 80,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 79,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 78,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 77,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 76,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 75,
+      "up": false,
+      "radius": 7,
+      "valid": false
+    },
+    {
+      "angle": 74,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 73,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 72,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 71,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 70,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 69,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 68,
+      "up": false,
+      "radius": 48,
+      "valid": false
+    },
+    {
+      "angle": 67,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 66,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 65,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 64,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 63,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 62,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 61,
+      "up": false,
+      "radius": 2,
+      "valid": false
+    },
+    {
+      "angle": 60,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 59,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 58,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 57,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 56,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 55,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 54,
+      "up": false,
+      "radius": 8,
+      "valid": false
+    },
+    {
+      "angle": 53,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 52,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 51,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 50,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 49,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 48,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 47,
+      "up": false,
+      "radius": 49,
+      "valid": false
+    },
+    {
+      "angle": 46,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 45,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 44,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 43,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 42,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 41,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 40,
+      "up": false,
+      "radius": 5,
+      "valid": false
+    },
+    {
+      "angle": 39,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 38,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 37,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 36,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 35,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 34,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 33,
+      "up": false,
+      "radius": 16,
+      "valid": false
+    },
+    {
+      "angle": 32,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 31,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 30,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 29,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 28,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 27,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 26,
+      "up": false,
+      "radius": 63,
+      "valid": false
+    },
+    {
+      "angle": 25,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 24,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 23,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 22,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 21,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 20,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 19,
+      "up": false,
+      "radius": 6,
+      "valid": false
+    },
+    {
+      "angle": 18,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 17,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 16,
+      "up": false,
+      "radius": 0,
+      "valid": true
+    },
+    {
+      "angle": 15,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 14,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 13,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 12,
+      "up": false,
+      "radius": 31,
+      "valid": false
+    },
+    {
+      "angle": 11,
+      "up": false,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 10,
+      "up": false,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 9,
+      "up": false,
+      "radius": 7,
+      "valid": true
+    },
+    {
+      "angle": 8,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 7,
+      "up": false,
+      "radius": 5,
+      "valid": true
+    },
+    {
+      "angle": 6,
+      "up": false,
+      "radius": 2,
+      "valid": true
+    },
+    {
+      "angle": 5,
+      "up": false,
+      "radius": 0,
+      "valid": false
+    },
+    {
+      "angle": 4,
+      "up": false,
+      "radius": 63,
+      "valid": true
+    },
+    {
+      "angle": 3,
+      "up": false,
+      "radius": 49,
+      "valid": true
+    },
+    {
+      "angle": 2,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 1,
+      "up": false,
+      "radius": 31,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 16,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": true,
+      "radius": 8,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": true,
+      "radius": 38,
+      "valid": true
+    },
+    {
+      "angle": 90,
+      "up": false,
+      "radius": 6,
+      "valid": true
+    },
+    {
+      "angle": 180,
+      "up": false,
+      "radius": 48,
+      "valid": true
+    },
+    {
+      "angle": 0,
+      "up": true,
+      "radius": 0,
+      "valid": false
+    }
+  ],
+  "full_roundtrips": 3,
+  "vector_algorithm": "F15/K7; phase63 +15 mod64; 2+carry microsteps"
+}
