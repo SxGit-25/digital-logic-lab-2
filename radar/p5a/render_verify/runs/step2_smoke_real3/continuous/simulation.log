@@ -1,4 +1,0 @@
-INIT_PASS cycles=173396 writes=1056 ufm=153233 lcd_read=0 lcd_write=18513 overhead=1645
-FRAME_PASS index=0 cycles=323287
-PASS render mode=1 requests=7 max_frame_cycles=335208 rmw_bytes=1498 ufm_reads=1493 real_timing=1
-tb_render.v:137: $finish called at 25037671000 (1ps)

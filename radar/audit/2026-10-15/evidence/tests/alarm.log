@@ -1,2 +1,0 @@
-PASS global alarm 8000 phase cases, four rates, 50ms windows, masks, invalid/off/self
-tb_alarm_global.v:35: $finish called at 8005000 (1ps)

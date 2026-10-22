@@ -1,3 +1,0 @@
-PASS step1 pending: accepted 10/12 then 30/32, superseded 20/22, merged=1, snapshots stable
-tb_step1_pending.v:42: $finish called at 320780000 (1ps)
-Work retained: C:\Users\Metro\AppData\Local\Temp\p5_step1_874bce82c59746a7b4d97786b2d5931e

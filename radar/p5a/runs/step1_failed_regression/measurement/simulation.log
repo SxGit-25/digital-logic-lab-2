@@ -1,3 +1,0 @@
-PASS exhaustive_mod25_and_radius_range values=5301
-PASS tb_ultrasonic_bcd_budget_compact samples=20 max_ideal_error_mm=1.596600
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_ultrasonic_bcd_budget_compact.v:79: $finish called at 212366171000 (1ps)

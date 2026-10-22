@@ -1,5 +1,0 @@
-variant,fitter_le,registers,setup_slack_ns,hold_slack_ns
-legacy,261,158,1.581,1.078
-optimized,252,145,1.877,1.078
-fractional,210,98,3.647,1.078
-integer294,211,94,3.769,1.078

@@ -1,2 +1,0 @@
-PASS shared_display oracle_checks=41088 frames=500Hz per_LED_PWM=125Hz blank=40ns
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_display_shared.v:91: $finish called at 3287120000 (1ps)

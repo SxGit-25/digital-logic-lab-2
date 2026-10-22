@@ -1,4 +1,0 @@
-INIT_PASS cycles=155979 writes=1056
-FRAME_PASS index=0 cycles=240384
-PASS render mode=1 requests=7 max_frame_cycles=252664 rmw_bytes=1498 ufm_reads=1493 abstract_bus=1
-tb_render.v:123: $finish called at 19429831000 (1ps)

@@ -1,7 +1,0 @@
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:85: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:102: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:122: warning: Instantiating module display_compose with dangling input port 16 (continuous_mode) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\radar_top.v:122: warning: Instantiating module display_compose with dangling input port 17 (continuous_angle_bcd) floating.

@@ -1,2 +1,0 @@
-PASS ray: 181 angles x 49 observed/43 valid steps x case/UFM/mirror; backpressure, reset, illegal angles, latched input
-tb_ray_engine.v:55: $finish called at 4865820000 (1ps)

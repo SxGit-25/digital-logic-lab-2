@@ -1,3 +1,0 @@
-PASS tb_ultrasonic
-tb_ultrasonic.v:75: $finish called at 50916000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\beam_min_a_full_original_ultrasonic ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_de90eda8b5c3458db40aa27ccec3cfbb

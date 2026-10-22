@@ -1,2 +1,0 @@
-PASS tb_bridge_integration requests=7; beam priority, sampled target, busy stability, both epoch turns, disable queue reset
-tb_bridge_integration.v:52: $finish called at 1960000 (1ps)

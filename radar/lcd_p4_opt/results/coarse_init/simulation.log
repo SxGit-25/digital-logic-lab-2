@@ -1,9 +1,0 @@
-PASS coarse init phase=3 reset_cycles=22 clear=1056 RD=high
-PASS coarse init phase=4 reset_cycles=23 clear=1056 RD=high
-PASS coarse init phase=5 reset_cycles=24 clear=1056 RD=high
-PASS coarse init phase=6 reset_cycles=25 clear=1056 RD=high
-PASS coarse init phase=0 reset_cycles=26 clear=1056 RD=high
-PASS coarse init phase=1 reset_cycles=27 clear=1056 RD=high
-PASS coarse init phase=2 reset_cycles=28 clear=1056 RD=high
-PASS tb_init_coarse all 7 tick phases, protocol model and delay minima
-tb_init_coarse.v:41: $finish called at 394291000 (1ps)

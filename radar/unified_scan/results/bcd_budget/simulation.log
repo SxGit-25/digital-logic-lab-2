@@ -1,2 +1,0 @@
-PASS tb_ultrasonic_bcd_budget samples=20 max_ideal_error_mm=1.596600
-tb_ultrasonic_bcd_budget.v:62: $finish called at 212154120000 (1ps)

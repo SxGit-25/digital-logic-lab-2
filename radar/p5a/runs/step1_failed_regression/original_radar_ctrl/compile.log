@@ -1,3 +1,0 @@
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.

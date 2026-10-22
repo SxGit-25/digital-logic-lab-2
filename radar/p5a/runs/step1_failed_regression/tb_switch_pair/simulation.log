@@ -1,2 +1,0 @@
-PASS paired switch sampling: shared tick, two stable samples, bounce and independent bits
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_switch_pair.v:18: $finish called at 541000 (1ps)

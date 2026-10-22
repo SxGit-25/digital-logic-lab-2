@@ -1,4 +1,0 @@
-variant,functional_pass,strict_under_1ms_pass,completed_requests,deadline_failures,max_busy_ns,max_ordinary_busy_ns,max_endpoint_busy_ns
-compact_f15,True,False,375,6,2544740,569860,2544740
-baseline_f15,True,False,375,6,2572600,440880,2572600
-baseline_f17_smoke,True,False,26,6,3009560,665040,3009560

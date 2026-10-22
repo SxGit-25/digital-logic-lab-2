@@ -1,9 +1,0 @@
-PASS P1: both bus policies, clear 1056 bytes, ring image, dummy+FF readback, 30% timing margin and turnaround
-radar/sim/lcd/tb_lcd_p1.v:38: $finish called at 770590000 (1ps)
-Verilog-2001 elaboration: lcd_p1_write_top PASS; lcd_p1_read_top PASS
-Baseline regression: tb_servo_pwm PASS; tb_ultrasonic PASS; tb_radar_ctrl PASS; tb_radar_top PASS; tb_alarm_ctrl PASS
-Baseline comparison: tb_radar_ctrl PASS; tb_counter_equivalence PASS (610000 cycles)
-Fault injection: WRITE_CYCLES=3 rejected (Write low below 104 ns)
-Fault injection: READ_CYCLES=5 rejected (Read low below 182 ns)
-Fault injection: TURN_CYCLES=1 rejected (Insufficient high-Z turnaround)
-Quartus: NOT RUN; Windows reports pending

@@ -1,3 +1,0 @@
-# Full input staging copies are preserved by the actual build snapshots and
-# final source commit; keep only authored independent alternative modules here.
-*_source/

@@ -1,6 +1,0 @@
-first_boundary_us,old_final_apply_us,logical_fastwalk_done_us,new_final_apply_us,old_sample_ideal_us,new_sample_with_full_settle_ideal_us,sample_delay_us,new_settle_if_old_sample_retained_us,old_seg_target_change_us,new_seg_logical_stop_us,new_seg_applied_stop_us
-0,20000,45000,60000,320000,360000,40000,260000,0,45000,60000
-5000,5000,45000,65000,305000,365000,60000,240000,0,45000,65000
-10000,10000,45000,50000,310000,350000,40000,260000,0,45000,50000
-15000,15000,45000,55000,315000,355000,40000,260000,0,45000,55000
-19999,19999,45000,59999,319999,359999,40000,260000,0,45000,59999

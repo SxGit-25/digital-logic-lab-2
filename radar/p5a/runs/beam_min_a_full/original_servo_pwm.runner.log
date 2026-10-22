@@ -1,3 +1,0 @@
-PASS tb_servo_pwm
-tb_servo_pwm.v:60: $finish called at 210056000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\beam_min_a_full_original_servo_pwm ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_f7532f8fb5d44d46a9f40a49674df97d

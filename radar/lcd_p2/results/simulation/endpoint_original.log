@@ -1,2 +1,0 @@
-PASS endpoint ORIGINAL=1: normal170..180..174; 174deg oldr20=1 newr35=1
-tb_lcd_endpoint.v:48: $finish called at 2606060000 (1ps)

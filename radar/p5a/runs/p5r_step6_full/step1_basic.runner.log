@@ -1,6 +1,0 @@
-PREPARED f15 375 requests 18567 independent RMW pixels
-PASS_FUNCTIONAL Minsky draw F=15 K=7 scenarios=375 pixels=18567 A=435 B=375 bus_transactions=148536 dropped=0; all pixels/RAM/order/vector/latches verified
-TIMING_RESULT max_busy_cycles=127239 max_busy_ns=2544780 endpoint_max_cycles=127239 endpoint_max_ns=2544780 requests_failing_applicable_limit=0
-PASS step1_basic merged=0
-tb_step1_draw.v:122: $finish called at 163837780000 (1ps)
-Work retained: C:\Users\Metro\AppData\Local\Temp\p5_step1_08d10a4574d24e938a68e7ac0b9529a7

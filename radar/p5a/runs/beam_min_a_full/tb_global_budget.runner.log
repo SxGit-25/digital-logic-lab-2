@@ -1,3 +1,0 @@
-PASS global timebase/scan ratios frames=45 ms=909 q=3639 blink=3 slots=9 fast_steps=405 full_PWM=45 samples=9
-tb_global_budget.v:77: $finish called at 18200080000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\beam_min_a_full_tb_global_budget ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_c8e7ce60b6024aa5bbf4acdc2f464023

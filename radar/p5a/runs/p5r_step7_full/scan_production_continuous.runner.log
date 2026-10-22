@@ -1,6 +1,0 @@
-MEASURE new n=0 ns=3999999011 offset_ns=0 angle=000 active_pulse=500
-MEASURE new n=1 ns=4059999011 offset_ns=60000000 angle=001 active_pulse=511
-MEASURE new n=2 ns=4119999011 offset_ns=120000000 angle=002 active_pulse=522
-PASS tb_scan_engine production=1 mode=1 hold=1 degree=1 samples=3 commits=3 steps=2 frames=109 intermediate_pulses=0
-tb_scan_engine.v:182: $finish called at 4170000000000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step7_full_scan_production_continuous ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_6aef869346104483a926abcc1e2e6a83

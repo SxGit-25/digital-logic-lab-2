@@ -1,3 +1,0 @@
-PASS exhaustive_mod25_and_radius_range values=5301
-PASS tb_ultrasonic_bcd_budget_compact samples=20 max_ideal_error_mm=1.596600
-tb_ultrasonic_bcd_budget_compact.v:79: $finish called at 212366171000 (1ps)

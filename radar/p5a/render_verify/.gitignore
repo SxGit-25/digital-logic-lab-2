@@ -1,6 +1,0 @@
-__pycache__/
-# RAM dumps and generated per-frame fixtures are reproducible from source;
-# retain the compact logs, byte-comparison results and final preview PNGs.
-runs/**/*.mem
-runs/**/*.v
-runs/**/*.vh

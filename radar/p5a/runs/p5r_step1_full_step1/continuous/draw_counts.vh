@@ -1,3 +1,0 @@
-`define DRAW_SCENARIOS 375
-`define DRAW_PIXELS 17807
-`define FULL_INDEX 361

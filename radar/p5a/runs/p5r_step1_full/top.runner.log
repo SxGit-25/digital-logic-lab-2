@@ -1,4 +1,0 @@
-PASS tb_unified_top cycles=1275548 shots=17 basic_samples=7 continuous_samples=8 mode_resets=2 readback_reads=3880
-LCD_COUNTS basic_targets=6 continuous_targets=7 basic_fast_step_drops=177 continuous_drops=0
-tb_budget_top.v:112: $finish called at 25510951000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step1_full_top ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_29d001676478457a9e8b44452c85225c

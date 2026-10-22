@@ -1,2 +1,0 @@
-PASS tb_servo_pwm
-tb_servo_pwm.v:60: $finish called at 210056000 (1ps)

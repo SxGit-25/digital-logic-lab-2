@@ -1,9 +1,0 @@
-{
-  "snapshot_files_verified": 1634,
-  "selected_live_rtl_files_verified": 27,
-  "selected_build": "budget_final_index/bcd",
-  "le": 1089,
-  "registers": 437,
-  "source_default_readback": 0,
-  "hardware_programmed": false
-}

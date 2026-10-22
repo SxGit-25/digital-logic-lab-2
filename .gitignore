@@ -1,5 +1,7 @@
-.DS_Store
-**/sim/build/
-**/sim/tools/iverilog/
-**/constraints/db/
-**/constraints/incremental_db/
+build/
+**/db/
+**/incremental_db/
+**/output_files/
+*.qws
+*.smsg
+__pycache__/

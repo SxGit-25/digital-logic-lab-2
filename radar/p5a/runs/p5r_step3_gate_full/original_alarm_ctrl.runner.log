@@ -1,3 +1,0 @@
-PASS tb_alarm_ctrl: all four rhythms, period shortening, invalid/off
-tb_alarm_ctrl.v:44: $finish called at 45596000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step3_gate_full_original_alarm_ctrl ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_4c167e833ea04e9fb848cae1610fd864

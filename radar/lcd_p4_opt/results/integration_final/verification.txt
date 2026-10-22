@@ -1,7 +1,0 @@
-baseline_commit=ca8ec99
-bridge=PASS
-lcd=PASS
-lcd_serial=PASS
-top=PASS
-top_readback=PASS
-top_serial_readback=PASS

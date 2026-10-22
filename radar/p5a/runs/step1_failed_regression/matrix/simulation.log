@@ -1,3 +1,0 @@
-MATRIX_LATENCY sample_delta_ns=20000000 new_visible_ns=4750091 old_visible_ns=28000091 visible_delta_ns=23250000
-CONFIRMED_BOUND_EXCEEDED: unchanged matrix multiplexing amplifies a 20ms history update shift; no old expectation changed
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_matrix_latency.v:40: $finish called at 28000092000 (1ps)

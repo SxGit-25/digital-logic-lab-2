@@ -1,3 +1,0 @@
-PASS tb_radar_top
-tb_radar_top.v:60: $finish called at 110586000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step5_full_original_radar_top ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_cde5d51f9bc8480eac23412c7b26b0a8

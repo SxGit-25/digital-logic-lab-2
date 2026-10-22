@@ -1,2 +1,0 @@
-PASS shared_display oracle_checks=41088 frames=500Hz per_LED_PWM=125Hz blank=40ns
-tb_display_shared.v:91: $finish called at 3287120000 (1ps)

@@ -1,3 +1,0 @@
-PASS paired switch sampling: shared tick, two stable samples, bounce and independent bits
-tb_switch_pair.v:18: $finish called at 541000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\beam_min_a_full_tb_switch_pair ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_7152f50916b649de8ecd32a561cd165f

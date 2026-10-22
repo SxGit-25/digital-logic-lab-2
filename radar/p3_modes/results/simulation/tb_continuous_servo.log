@@ -1,2 +1,0 @@
-PASS servo baseline 100000 randomized cycles; continuous 801 full 20000-us frames, 500..2500 us, 0->180->0, binary/BCD/direction every frame
-tb_continuous_servo.v:35: $finish called at 161200066000 (1ps)

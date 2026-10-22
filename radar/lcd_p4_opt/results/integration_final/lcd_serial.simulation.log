@@ -1,2 +1,0 @@
-PASS tb_lcd_integration beams=185 targets=4 updates=189 A=205 B=189 model_reads=17538; all181 integer beams, sample-bound B-only, invalid target, both endpoint batches
-tb_lcd_integration.v:79: $finish called at 39996760000 (1ps)

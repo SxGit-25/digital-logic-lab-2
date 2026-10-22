@@ -1,9 +1,0 @@
-PREPARED f15 375 requests 18567 independent RMW pixels
-Work retained: C:\Users\Metro\AppData\Local\Packages\sandbox.{7fb8b954-d039-4264-a177-c4777ece2655}\AC\Temp\p5_step1_55dd4c07d2b547ed983bfd5a08a68eb8
-E:\codex\数电实验2\radar\p5a\verification\run_step1.ps1 : The term 'E:\codex\数电实验2/鏁扮數瀹為獙2/radar/sim/tools/iverilog/app/bin
-/iverilog.exe' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spellin
-g of the name, or if a path was included, verify that the path is correct and try again.
-    + CategoryInfo          : ObjectNotFound: (E:\codex\数电实验2/...in/iverilog.exe:String) [run_step1.ps1], CommandNotFo 
-   undException
-    + FullyQualifiedErrorId : CommandNotFoundException,run_step1.ps1
- 

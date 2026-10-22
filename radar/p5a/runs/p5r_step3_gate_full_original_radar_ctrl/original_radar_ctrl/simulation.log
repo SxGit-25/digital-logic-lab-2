@@ -1,2 +1,0 @@
-PASS tb_radar_ctrl
-tb_radar_ctrl.v:128: $finish called at 786000 (1ps)

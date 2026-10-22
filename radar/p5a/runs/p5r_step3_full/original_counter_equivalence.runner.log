@@ -1,3 +1,0 @@
-PASS tb_counter_equivalence: 610000 cycles, N=1/3/250/257 HZ=1/3/50/65MHz, ultrasonic TIMEOUT=1/256/257/30000
-tb_counter_equivalence.v:68: $finish called at 6100060000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step3_full_original_counter_equivalence ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_3d8d2552807349329e18b55877a9d226

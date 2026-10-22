@@ -1,2 +1,0 @@
-PASS UFM words=1025 random_cycles=417..432 sequential_cycles=289..304; ARCLK/DRCLK min period320ns high/low160ns; MSB-first verified; output settling180ns
-tb_p5_ufm_reader.v:80: $finish called at 7606840000 (1ps)

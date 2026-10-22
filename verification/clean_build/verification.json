@@ -1,0 +1,14 @@
+{
+  "delivery_sha256": "45963657dbc6975a83e8de8b566d6ee072bb1a34025de2c2e890bc1647ee71f3",
+  "historical_cfm_match": true,
+  "historical_ufm_match": true,
+  "background_words": 512,
+  "source_manifest_files": 49,
+  "clean_build": {
+    "le": 1270,
+    "setup_ns": 2.994,
+    "hold_ns": 1.078,
+    "cfm_record_identical": true,
+    "ufm_record_identical": true
+  }
+}

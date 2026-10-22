@@ -1,3 +1,0 @@
-PASS shared_display oracle_checks=41088 frames=500Hz per_LED_PWM=125Hz blank=40ns
-tb_display_shared.v:91: $finish called at 3287120000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step6_full_display ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_6f1c102acde04fcd82a10f9fe171b3af

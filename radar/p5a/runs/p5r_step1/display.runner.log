@@ -1,7 +1,0 @@
-Icarus not found: E:\codex\数电实验2\鏁扮數瀹為獙2\radar\sim\tools\iverilog\app\bin\iverilog.exe
-At E:\codex\数电实验2\radar\p5a\run_regression.ps1:7 char:22
-+ if(!(Test-Path $iv)){throw "Icarus not found: $iv"}
-+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : OperationStopped: (Icarus not foun...in\iverilog.exe:String) [], RuntimeException
-    + FullyQualifiedErrorId : Icarus not found: E:\codex\数电实验2\鏁扮數瀹為獙2\radar\sim\tools\iverilog\app\bin\iverilog.exe
- 

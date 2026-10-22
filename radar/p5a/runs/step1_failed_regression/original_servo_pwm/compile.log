@@ -1,2 +1,0 @@
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 8 (continuous_mode) floating.
-C:\Users\Metro\AppData\Local\Temp\p5_regression_33c695e0914a4331844519dc93b1288e\tb_servo_pwm.v:15: warning: Instantiating module servo_pwm with dangling input port 9 (sweep_run) floating.

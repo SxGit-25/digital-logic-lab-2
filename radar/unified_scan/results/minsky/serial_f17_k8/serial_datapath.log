@@ -1,5 +1,0 @@
-E:\codex\数电实验2\数电实验2\radar\sim\tools\iverilog\app\bin\iverilog.exe -g2012 -Pminsky_serial_tb.FRACTION_BITS=17 -Pminsky_serial_tb.ROT_SHIFT=8 -s minsky_serial_tb -o serial.vvp minsky_serial_datapath.v minsky_serial_tb.v
-
-E:\codex\数电实验2\数电实验2\radar\sim\tools\iverilog\app\bin\vvp.exe serial.vvp
-PASS serial datapath 24871 commands, independent Python bit-exact reference, random pauses/busy requests
-minsky_serial_tb.v:50: $finish called at 13384680000 (1ps)

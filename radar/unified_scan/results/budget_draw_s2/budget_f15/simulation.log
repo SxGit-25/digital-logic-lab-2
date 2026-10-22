@@ -1,4 +1,0 @@
-PASS_FUNCTIONAL Minsky draw F=15 K=7 scenarios=375 pixels=17807 A=416 B=375 bus_transactions=142456 dropped=255; all pixels/RAM/order/vector/latches verified
-TIMING_RESULT max_busy_cycles=127239 max_busy_ns=2544780 endpoint_max_cycles=127239 endpoint_max_ns=2544780 requests_failing_strict_under_1ms=0
-PASS tb_minsky_draw
-tb_budget_draw.v:127: $finish called at 165954840000 (1ps)

@@ -1,2 +1,0 @@
-PASS top/composer/controller mode0 baseline equivalence: 500000 cycles, two tops, random echo, SW7 restart
-tb_equivalence.v:84: $finish called at 5000006000 (1ps)

@@ -1,2 +1,0 @@
-PASS P1: both bus policies, clear 1056 bytes, ring image, dummy+FF readback, 30% timing margin and turnaround
-C:\Users\Metro\AppData\Local\Temp\lcd_p1_sim_9aae5f06820741a1abbc9a06ba2f3e47\radar\sim\lcd\tb_lcd_p1.v:41: $finish called at 770590000 (1ps)

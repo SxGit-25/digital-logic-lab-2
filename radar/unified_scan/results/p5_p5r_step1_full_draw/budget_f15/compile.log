@@ -1,1 +1,0 @@
-tb_budget_draw.v:11: warning: Instantiating module radar_lcd_micro with dangling input port 5 (continuous_mode) floating.

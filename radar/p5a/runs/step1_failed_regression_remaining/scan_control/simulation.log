@@ -1,2 +1,0 @@
-PASS tb_scan_control full50MHz invalid_result/valid_result/history/slot_expiry_cancel/mode_restart/disable
-C:\Users\Metro\AppData\Local\Temp\p5_regression_2bb2b01b324148e48c7423cb64bc8849\tb_scan_control.v:66: $finish called at 10000131000 (1ps)

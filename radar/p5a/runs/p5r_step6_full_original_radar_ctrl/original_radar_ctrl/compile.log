@@ -1,3 +1,0 @@
-tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 26 (continuous_mode) floating.
-tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 27 (continuous_angle) floating.
-tb_radar_ctrl.v:32: warning: Instantiating module radar_ctrl with dangling input port 28 (continuous_direction_up) floating.

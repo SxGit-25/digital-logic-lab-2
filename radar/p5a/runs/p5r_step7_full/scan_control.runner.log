@@ -1,3 +1,0 @@
-PASS tb_scan_control full50MHz invalid_result/valid_result/history/slot_expiry_cancel/mode_restart/disable
-tb_scan_control.v:66: $finish called at 10000131000 (1ps)
-Evidence: E:\codex\数电实验2\radar\p5a\runs\p5r_step7_full_scan_control ; isolated sources/work: C:\Users\Metro\AppData\Local\Temp\p5_regression_28e68cbe885845a0a919fc7714ee12a9
